@@ -1,0 +1,16 @@
+<% 
+
+var username = request.getParameter("username");
+var  password = request.getParameter("password");
+
+if(username==="sudheera" && password==="pass"){
+session.put("username",username);
+session.put("role", "admin");
+
+	response.sendRedirect("../../products_home.jag")
+}
+else{
+
+}
+
+%>

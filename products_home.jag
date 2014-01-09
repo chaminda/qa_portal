@@ -1,3 +1,10 @@
+ <% var name = session.get("username");
+ if(name===null){
+   response.sendRedirect("index.jag");
+}
+%>
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
@@ -80,20 +87,25 @@
                            <ul>
                               <li class="middle">
                                  <label id="logged-user">
-                                    <strong>Signed-in as:</strong>&nbsp;admin@qa_portal.super
+                                    <strong>Signed-in as:</strong>&nbsp;
+                                       <%
+                                             print(name);
+                                       %>
+
+
                                  </label>
                               </li>
                               <li class="middle">|</li>
                               <li class="right">
-                                 <a href="https://localhost:9443/carbon/admin/logout_action.jsp">Sign-out</a>
+                                 <a href="resources/jaggery/logout_action.jag">Sign-out</a>
                               </li>
                               <li class="middle">|</li>
                               <li class="middle">
-                                 <a target="_blank" href="http://docs.wso2.org/wiki/display/AS521/WSO2+Application+Server+Documentation">Docs</a>
+                                 <a target="_blank" href="/AS521/WSO2+Application+Server+Documentation">Docs</a>
                               </li>
                               <li class="middle">|</li>
                               <li class="left">
-                                 <a target="_blank" href="https://localhost:9443/carbon/docs/about.jag">About</a>
+                                 <a target="_blank" href="/docs/about.jag">About</a>
                               </li>
                            </ul>
                         </div>

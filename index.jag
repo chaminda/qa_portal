@@ -333,7 +333,7 @@ progress.</p>
                     <div id="loginbox">
                         <h2>Sign-in</h2>
 
-                        <form action="../admin/login_action.jsp" method="POST" onsubmit="return doValidation();" target="_self">
+                        <form action="resources/jaggery/login_action.jag" method="POST" onsubmit="return doValidation();" target="_self">
                             <table>
                                  
                                 <tbody><tr>
@@ -341,7 +341,7 @@ progress.</p>
                                         <label for="txtUserName">Username</label>
                                     </td>
                                     <td>
-                                        <input value="admin" id="txtUserName" name="username" class="user" tabindex="1" type="text">
+                                        <input id="txtUserName" name="username" class="user" tabindex="1" type="text">
                                     </td>
                                 </tr>
                                 <tr>

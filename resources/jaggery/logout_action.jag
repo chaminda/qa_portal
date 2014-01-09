@@ -1,0 +1,6 @@
+<%
+session.put("username", null);
+response.sendRedirect("../../index.jag");
+
+
+%>
