@@ -1,0 +1,903 @@
+<body>
+    <noscript>
+        &lt;div class="something-wrong"&gt;
+           &lt;div class="title"&gt;JavaScript is disabled on your browser&lt;/div&gt;
+           &lt;div class="content"&gt;Please enable JavaScript or upgrade to a JavaScript-capable browser to use WSO2 Products.&lt;/div&gt;
+       &lt;/div&gt;
+   </noscript>
+<!--[if lte IE 6]>
+<div class="something-wrong">
+    <div class="title">Did you know that your Internet Explorer is out of date?</div>
+    <div class="content">To get the best possible experience using our website we recommend that you upgrade to a newer version.</div>
+</div>
+<![endif]-->
+
+<div id="dcontainer"></div>
+<script type="text/javascript" src="resources/dialog.js"></script>
+
+<!-- JS imports for collapsible menu -->
+<script src="resources/yahoo-dom-event.js" type="text/javascript"></script>
+<script src="resources/animation-min.js" type="text/javascript"></script>
+<script src="resources/template.js" type="text/javascript"></script>
+<script src="resources/yahoo-min.js" type="text/javascript"></script>
+<script src="resources/selector-min.js" type="text/javascript"></script>
+
+<table id="main-table" border="0" cellspacing="0">
+    <tbody><tr>
+        <td id="header" colspan="3">
+
+
+
+<!--[IF IE 7]>
+    <style>
+        div#header-div div.right-links{
+            position:absolute;
+        }
+    </style>
+    <![endif]-->
+
+
+    <div id="header-div">
+        <div class="right-logo">QA Portal</div>
+        <div class="left-logo">
+            <a href="index.html" class="header-home"><img src="resources/1px.gif" width="300px" height="32px"></a>
+        </div>
+        <div class="middle-ad">
+
+        </div>
+        <div class="header-links">
+          <div class="right-links">            
+             <ul>
+
+
+
+              <li class="middle">
+                  <label id="logged-user">
+                      <strong>Signed-in as:</strong>&nbsp;admin@qa_portal.super
+                  </label>
+              </li>
+              <li class="middle">|</li>
+              <li class="right">
+                  <a href="https://localhost:9443/carbon/admin/logout_action.jsp">Sign-out</a>
+              </li>
+
+              <li class="middle">|</li>
+              <li class="middle">
+                  <a target="_blank" href="http://docs.wso2.org/wiki/display/AS521/WSO2+Application+Server+Documentation">Docs</a>
+              </li>
+              <li class="middle">|</li>
+
+              <li class="left">
+                  <a target="_blank" href="https://localhost:9443/carbon/docs/about.html">About</a>
+              </li>
+          </ul>
+      </div>
+  </div>
+</div>
+
+
+</td>
+</tr>
+<tr>
+    <td class="vertical-menu-container" id="vertical-menu-container" style="">
+        <div class="showToHidden" id="menu-panel-button0"></div>
+        <div id="menu-panel-button1" class="menu-panel-buttons selected"><span>Main</span></div>
+        <div id="menu-panel-button2" class="menu-panel-buttons"><span>Monitor</span></div>
+        <div id="menu-panel-button3" class="menu-panel-buttons"><span>Configure</span></div>
+        <div id="menu-panel-button4" class="menu-panel-buttons"><span>Tools</span></div>
+        <div style="display: none;" id="menu-panel-button5" class="menu-panel-buttons"><span>Extensions</span></div>
+        <div id="menu-panel-button_dummy" style="display:none"></div>
+    </td>
+    <td id="menu-panel" valign="top">
+        <table id="menu-table" border="0" cellspacing="0">
+            <tbody><tr>
+                <td id="region1">
+
+
+
+
+
+
+
+
+                    <div id="menu"> <ul class="main"><li><a href="https://localhost:9443/carbon/admin/index.jsp" class="menu-home">Home</a></li><li id="region1_configure_menu" class="menu-header" onclick="mainMenuCollapse(this.childNodes[0])" style="cursor: pointer; display: none;"><img src="../admin/images/up-arrow.gif" class="mMenuHeaders" id="region1_configure_menu">Configure</li><li style="display: none;" class="normal"><ul class="sub"><li><a href="https://localhost:9443/carbon/userstore/index.jsp?region=region1&amp;item=userstores_menu" class="menu-default" style="background-image: url(../userstore/images/user-store.gif);">Users and Roles</a></li>
+                        <li><a href="https://localhost:9443/carbon/userstore_config/index.jsp?region=region1&amp;item=userstores_mgt_menu" class="menu-default" style="background-image: url(../userstore_config/images/multiple-user-stores.png);">User Store Management</a></li>
+                        <li><a href="https://localhost:9443/carbon/feature-mgt/index.jsp?region=region1&amp;item=comp-mgt_menu" class="menu-default" style="background-image: url(../feature-mgt/images/comp-manager.gif);">Features</a></li>
+                        <li><a href="https://localhost:9443/carbon/keystoremgt/keystore-mgt.jsp?region=region1&amp;item=keystores_menu" class="menu-default" style="background-image: url(../keystoremgt/images/keystore.gif);">KeyStores</a></li>
+                        <li><a href="https://localhost:9443/carbon/idpmgt/idp-mgt-list-load.jsp?region=region1&amp;item=idp_menu" class="menu-default" style="background-image: url(../idpmgt/images/trust.png);">Trusted Identity Providers</a></li>
+                        <li><a href="https://localhost:9443/carbon/log-admin/log-admin.jsp?region=region1&amp;item=logging_menu" class="menu-default" style="background-image: url(../log-admin/images/log.gif);">Logging</a></li>
+                        <li><a href="https://localhost:9443/carbon/ndatasource/index.jsp?region=region1&amp;item=new_datasource_menu" class="menu-default" style="background-image: url(../ndatasource/images/data-sources-icon.gif);">Data Sources</a></li>
+                        <li><a href="https://localhost:9443/carbon/discovery-admin/index.jsp?region=region1&amp;item=ws_discovery_admin_menu" class="menu-default" style="background-image: url(../discovery-admin/images/wsdiscovery.gif);">Service Discovery</a></li>
+                        <li class="menu-disabled-link" style="background-image: url(../repomanager-axis2/images/repository.gif);">Repositories</li>
+                        <li class="normal"><ul class="sub"><li><a href="https://localhost:9443/carbon/repomanager-axis2/index.jsp?region=region1&amp;item=axis2_repo_mgt_menu" class="menu-default" style="background-image: url(../repomanager-axis2/images/axis2.gif);">Carbon</a></li>
+                    </ul></li><li><a href="https://localhost:9443/carbon/bampubsvcstat/configure_service_publisher.jsp?region=region1&amp;item=bam_service_data_publisher_menu" class="menu-default" style="background-image: url(../bampubsvcstat/images/chart_bar.gif);">Service Data Publishing</a></li>
+                    <li><a href="https://localhost:9443/carbon/bampubsvcstat/configure_webapp_publisher.jsp?region=region1&amp;item=bam_webapp_stat_publisher_menu" class="menu-default" style="background-image: url(../bampubsvcstat/images/chart_bar.gif);">Webapp Data Publishing</a></li>
+                    <li><a href="https://localhost:9443/carbon/roles-mgt/server-roles-mgt.jsp?region=region1&amp;item=server-roles-mgt_menu" class="menu-default" style="background-image: url(../roles-mgt/images/server-role.gif);">Server Roles</a></li>
+                    <li class="menu-disabled-link" style="background-image: url(../tenant-mgt/images/multi_tenancy.png);">Multitenancy</li>
+                    <li class="normal"><ul class="sub"><li><a href="https://localhost:9443/carbon/tenant-mgt/add_tenant.jsp?region=region1&amp;item=govern_add_tenants_menu" class="menu-default" style="background-image: url(../tenant-mgt/images/services.gif);">Add New Tenant</a></li>
+                    <li><a href="https://localhost:9443/carbon/tenant-mgt/view_tenants.jsp?region=region1&amp;item=govern_view_tenants_menu" class="menu-default" style="background-image: url(../tenant-mgt/images/services1.gif);">View Tenants</a></li>
+                </ul></li></ul></li><li id="region1_manage_menu" class="menu-header" onclick="mainMenuCollapse(this.childNodes[0])" style="cursor: pointer;"><img src="../admin/images/up-arrow.gif" class="mMenuHeaders" id="region1_manage_menu">Manage</li><li class="normal"><ul class="sub"><li class="menu-disabled-link" style="background-image: url(../webapp-list/images/application.png);">Applications</li>
+                <li class="normal"><ul class="sub"><li><a href="https://localhost:9443/carbon/webapp-list/index.jsp?region=region1&amp;item=webapps_list_menu" class="menu-default" style="background-image: url(../webapp-list/images/list.gif);">List</a></li>
+                <li class="menu-disabled-link" style="background-image: url(../webapp-list/images/add.gif);">Add</li>
+                <li class="normal"><ul class="sub"><li><a href="https://localhost:9443/carbon/webapp-mgt/upload.jsp?region=region1&amp;item=webapps_add" class="menu-default" style="background-image: url(../webapp-mgt/images/webapps.gif);">Web Applications</a></li>
+                <li><a href="https://localhost:9443/carbon/jax-webapp-mgt/upload.jsp?region=region1&amp;item=jax_webapps_add_menu" class="menu-default" style="background-image: url(../jax-webapp-mgt/images/jax_type.gif);">JAX-WS/JAX-RS</a></li>
+                <li><a href="https://localhost:9443/carbon/jaggeryapp-mgt/uploadjaggeryapp.jsp?region=region1&amp;item=jagger_webapps_add_menu" class="menu-default" style="background-image: url(../jaggeryapp-mgt/images/webapps.gif);">Jaggery</a></li>
+            </ul></li></ul></li><li class="menu-disabled-link" style="background-image: url(../service-mgt/images/service.gif);">Services</li>
+            <li class="normal"><ul class="sub"><li><a href="https://localhost:9443/carbon/service-mgt/index.jsp?region=region1&amp;item=services_list_menu" class="menu-default" style="background-image: url(../service-mgt/images/list.gif);">List</a></li>
+            <li class="menu-disabled-link" style="background-image: url(../service-mgt/images/add.gif);">Add</li>
+            <li class="normal"><ul class="sub"><li><a href="https://localhost:9443/carbon/aarservices/index.jsp?region=region1&amp;item=aar_menu" class="menu-default" style="background-image: url(../aarservices/images/axis2_01.gif);">AAR Service</a></li>
+            <li><a href="https://localhost:9443/carbon/jarservices/index.jsp?region=region1&amp;item=jar_menu" class="menu-default" style="background-image: url(../jarservice/images/type.gif);">Jar Service</a></li>
+            <li><a href="https://localhost:9443/carbon/spring/index.jsp?region=region1&amp;item=spring_menu" class="menu-default" style="background-image: url(../spring/images/type.gif);">Spring Service</a></li>
+            <li class="menu-disabled-link" style="background-image: url(../data_service/images/data-services.gif);">Data Service</li>
+            <li class="normal"><ul class="sub"><li><a href="https://localhost:9443/carbon/ds/scriptAddSource.jsp?region=region1&amp;item=ds_generate_menu" class="menu-default" style="background-image: url(../data_service/images/dbsimport.gif);">Generate</a></li>
+            <li><a href="https://localhost:9443/carbon/ds/serviceDetails.jsp?region=region1&amp;item=ds_create_menu" class="menu-default" style="background-image: url(../data_service/images/data-services-create.gif);">Create</a></li>
+            <li><a href="https://localhost:9443/carbon/ds/upload.jsp?region=region1&amp;item=ds_upload_menu" class="menu-default" style="background-image: url(../data_service/images/data-services-upload.gif);">Upload</a></li>
+        </ul></li><li class="menu-disabled-link" style="background-image: url(../js_service/images/js-service.gif);">Mashup Service</li>
+        <li class="normal"><ul class="sub"><li><a href="https://localhost:9443/carbon/js_service/newMashup.jsp?region=region1&amp;item=js_create_menu" class="menu-default" style="background-image: url(../js_service/images/create-js-service.gif);">Create</a></li>
+        <li><a href="https://localhost:9443/carbon/js_service/upload.jsp?region=region1&amp;item=js_upload_menu" class="menu-default" style="background-image: url(../js_service/images/mashup-uploading.gif);">Upload</a></li>
+    </ul></li></ul></li></ul></li><li class="menu-disabled-link" style="background-image: url(../carbonapps/images/applications.gif);">Carbon Applications</li>
+    <li class="normal"><ul class="sub"><li><a href="https://localhost:9443/carbon/carbonapps/index.jsp?region=region1&amp;item=apps_list_menu" class="menu-default" style="background-image: url(../carbonapps/images/list.gif);">List</a></li>
+    <li><a href="https://localhost:9443/carbon/carbonapps/app_upload.jsp?region=region1&amp;item=apps_add_menu" class="menu-default" style="background-image: url(../carbonapps/images/add.gif);">Add</a></li>
+</ul></li><li class="menu-disabled-link" style="background-image: url(../modulemgt/images/bricks.gif);">Modules</li>
+<li class="normal"><ul class="sub"><li><a href="https://localhost:9443/carbon/modulemgt/index.jsp?region=region1&amp;item=modules_list_menu" class="menu-default" style="background-image: url(../modulemgt/images/list.gif);">List</a></li>
+<li><a href="https://localhost:9443/carbon/modulemgt/add_modules.jsp?region=region1&amp;item=modules_add_menu" class="menu-default" style="background-image: url(../modulemgt/images/add.gif);">Add</a></li>
+</ul></li><li class="menu-disabled-link" style="background-image: url(../eventing/images/topics.gif);">Topics</li>
+<li class="normal"><ul class="sub"><li><a href="https://localhost:9443/carbon/topics/topics.jsp?region=region1&amp;item=topics_tree_menu" class="menu-default" style="background-image: url(../eventing/images/list.gif);">Browse</a></li>
+<li><a href="https://localhost:9443/carbon/topics/topic_add.jsp?region=region1&amp;item=topics_add_menu" class="menu-default" style="background-image: url(../eventing/images/add.gif);">Add</a></li>
+</ul></li><li><a href="https://localhost:9443/carbon/server-admin/index.jsp?region=region1&amp;item=shutdown_restart_menu" class="menu-default" style="background-image: url(../server-admin/images/restart.gif);">Shutdown/Restart</a></li>
+</ul></li> </ul></div>
+
+
+</td>
+</tr>
+<tr>
+    <td id="region2">
+
+
+
+        <div id="menu"> <ul class="main"> </ul></div>
+    </td>
+</tr>
+<tr>
+    <td id="region3">
+
+
+
+        <div id="menu"> <ul class="main"><li id="region3_registry_menu" class="menu-header" onclick="mainMenuCollapse(this.childNodes[0])" style="cursor: pointer;"><img src="../admin/images/up-arrow.gif" class="mMenuHeaders" id="region3_registry_menu">Registry</li><li class="normal"><ul class="sub"><li><a href="https://localhost:9443/carbon/resources/resource.jsp?region=region3&amp;item=resource_browser_menu&amp;path=/" class="menu-default" style="background-image: url(../resources/images/resources.gif);">Browse</a></li>
+            <li><a href="https://localhost:9443/carbon/search/advancedSearch.jsp?region=region3&amp;item=registry_search_menu" class="menu-default" style="background-image: url(../search/images/search-top.png);">Search</a></li>
+        </ul></li> </ul></div>
+
+    </td>
+</tr>
+<tr>
+    <td id="region4">
+
+
+
+        <div id="menu"> <ul class="main"><li id="region4_monitor_menu" class="menu-header" onclick="mainMenuCollapse(this.childNodes[0])" style="cursor: pointer; display: none;"><img src="../admin/images/up-arrow.gif" class="mMenuHeaders" id="region4_monitor_menu">Monitor</li><li style="display: none;" class="normal"><ul class="sub"><li><a href="https://localhost:9443/carbon/log-view/application_log_viewer.jsp?region=region4&amp;item=app_log_menu" class="menu-default" style="background-image: url(../log-view/images/script_gear.gif);">Application Logs</a></li>
+            <li><a href="https://localhost:9443/carbon/statistics/index.jsp?region=region4&amp;item=statistics_menu" class="menu-default" style="background-image: url(../statistics/images/chart_bar.gif);">System Statistics</a></li>
+            <li><a href="https://localhost:9443/carbon/log-view/index.jsp?region=region4&amp;item=logs_menu" class="menu-default" style="background-image: url(../log-view/images/script_gear.gif);">System Logs</a></li>
+            <li><a href="https://localhost:9443/carbon/tracer/index.jsp?region=region4&amp;item=tracer_menu" class="menu-default" style="background-image: url(../tracer/images/tracer.gif);">SOAP Tracer</a></li>
+            <li><a href="https://localhost:9443/carbon/viewflows/index.jsp?region=region4&amp;item=flows_menu" class="menu-default" style="background-image: url(../viewflows/extensions/core/images/handler_flow.gif);">Message Flows</a></li>
+        </ul></li> </ul></div>
+
+    </td>
+</tr>
+<tr>
+    <td id="region5">
+
+
+
+        <div id="menu"> <ul class="main"><li id="region5_tools_menu" class="menu-header" onclick="mainMenuCollapse(this.childNodes[0])" style="cursor: pointer; display: none;"><img src="../admin/images/up-arrow.gif" class="mMenuHeaders" id="region5_tools_menu">Tools</li><li style="display: none;" class="normal"><ul class="sub"><li><a href="https://localhost:9443/carbon/wsdl2code/index.jsp?region=region5&amp;item=wsdl2java_menu" class="menu-default" style="background-image: url(../wsdl2code/images/dump_aar.gif);">WSDL2Java</a></li>
+            <li><a href="https://localhost:9443/carbon/java2wsdl/index.jsp?region=region5&amp;item=java2wsdl_menu" class="menu-default" style="background-image: url(../java2wsdl/images/java2wsdl.gif);">Java2WSDL</a></li>
+            <li><a href="https://localhost:9443/carbon/tryit/index.jsp?region=region5&amp;item=tryit" class="menu-default" style="background-image: url(../tryit/images/tryit.gif);">Try It</a></li>
+            <li><a href="https://localhost:9443/carbon/js_stub_generator/index.jsp?region=region5&amp;item=js_stub_generator_menu" class="menu-default" style="background-image: url(../js_stub_generator/images/stub-generator.gif);">JavaScript Stub Generator</a></li>
+            <li><a href="https://localhost:9443/carbon/js_scraper/index.jsp?region=region5&amp;item=js_scraper_menu" class="menu-default" style="background-image: url(../js_scraper/images/scraper.gif);">Scraping Assistant</a></li>
+            <li><a href="https://localhost:9443/carbon/wsdl_validator/index.jsp?region=region5&amp;item=wsdl_validator_menu" class="menu-default" style="background-image: url(../wsdl_validator/images/wsdlValidate.gif);">WSDL Validator</a></li>
+        </ul></li> </ul></div>
+    </td>
+</tr>
+<tr>
+    <td><img src="resources/1px.gif" width="225px" height="1px"></td>
+</tr>
+</tbody></table>
+</td>
+<td id="middle-content">
+    <table id="content-table" border="0" cellspacing="0">
+        <tbody><tr>
+            <td id="page-header-links">
+
+
+
+
+
+               <table class="page-header-links-table" cellspacing="0">
+                  <tbody><tr>
+                     <td class="breadcrumbs">
+                         <table class="breadcrumb-table" cellspacing="0">
+                            <tbody><tr>                              
+                                <td>
+                                   <div id="breadcrumb-div"><table cellspacing="0"><tbody><tr><td class="breadcrumb-link"><a href="../admin/index.jsp">QA Home</a></td><td class="breadcrumb-link">&nbsp;&gt;&nbsp;Manage</td><td class="breadcrumb-link">&nbsp;&gt;&nbsp;Applications</td><td class="breadcrumb-link">&nbsp;&gt;&nbsp;List</td></tr></tbody></table></div>
+                               </td>
+                           </tr>
+
+                       </tbody></table>
+                   </td>
+
+                   <td class="page-header-help"><a href="https://localhost:9443/carbon/webapp-list/docs/userguide.html" target="_blank">Help</a></td>
+
+               </tr>
+           </tbody></table>
+       </td>
+   </tr>
+   <tr>
+    <td id="body">
+        <img src="resources/1px.gif" width="735px" height="1px">
+                        <!--
+ ~ Copyright (c) 2005-2010, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
+ ~
+ ~ WSO2 Inc. licenses this file to you under the Apache License,
+ ~ Version 2.0 (the "License"); you may not use this file except
+ ~ in compliance with the License.
+ ~ You may obtain a copy of the License at
+ ~
+ ~    http://www.apache.org/licenses/LICENSE-2.0
+ ~
+ ~ Unless required by applicable law or agreed to in writing,
+ ~ software distributed under the License is distributed on an
+ ~ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ ~ KIND, either express or implied.  See the License for the
+ ~ specific language governing permissions and limitations
+ ~ under the License.
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+var msgId;
+
+msgId = 'MSG13891780124300.19163215448530113';
+
+</script>
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+setCookie('current-breadcrumb', 'manage_menu,webapps_menu,webapps_list_menu#');
+document.onload=setBreadcrumDiv();
+function setBreadcrumDiv () {
+    var breadcrumbDiv = document.getElementById('breadcrumb-div');
+    breadcrumbDiv.innerHTML = '<table cellspacing="0"><tr><td class="breadcrumb-link"><a href="../admin/index.jsp">Home</a></td><td class="breadcrumb-link">&nbsp;>&nbsp;Manage</td><td class="breadcrumb-link">&nbsp;>&nbsp;Applications</td><td class="breadcrumb-link">&nbsp;>&nbsp;List</td>';
+}
+</script>
+
+
+<!--
+ ~ Copyright (c) 2005-2010, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
+ ~
+ ~ WSO2 Inc. licenses this file to you under the Apache License,
+ ~ Version 2.0 (the "License"); you may not use this file except
+ ~ in compliance with the License.
+ ~ You may obtain a copy of the License at
+ ~
+ ~    http://www.apache.org/licenses/LICENSE-2.0
+ ~
+ ~ Unless required by applicable law or agreed to in writing,
+ ~ software distributed under the License is distributed on an
+ ~ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ ~ KIND, either express or implied.  See the License for the
+ ~ specific language governing permissions and limitations
+ ~ under the License.
+-->
+<script type="text/javascript" src="resources/global-params.js"></script>
+<script type="text/javascript">
+wso2.wsf.Util.initURLs();
+var frontendURL = wso2.wsf.Util.getServerURL() + "/";
+</script>
+<script type="text/javascript">
+var allWebappsSelected = false;
+
+function expireSessions() {
+    var selected = isWebappSelected();
+    if (!selected) {
+        CARBON.showInfoDialog('Select the applications for session expiry');
+        return;
+    }
+    if (allWebappsSelected) {
+        CARBON.showConfirmationDialog("Do you want to expire the sessions in all 4 started applications?",
+          function() {
+              location.href = 'expire_sessions.jsp?expireAll=true';
+          }
+          );
+    } else {
+        CARBON.showConfirmationDialog("Do you want to expire the sessions in the selected applications?",
+          function() {
+              document.webappsForm.action = 'expire_sessions.jsp';
+              document.webappsForm.submit();
+          }
+          );
+    }
+}
+
+function reloadWebapps() {
+    var selected = isWebappSelected();
+    if (!selected) {
+        CARBON.showInfoDialog('Select applications to be reloaded');
+        return;
+    }
+    if (allWebappsSelected) {
+        CARBON.showConfirmationDialog("Do you want to reload all 4 applications?",
+          function() {
+              location.href = 'reload_webapps.jsp?reloadAll=true';
+          }
+          );
+    } else {
+        CARBON.showConfirmationDialog("Do you want to reload the selected applications?",
+          function() {
+              document.webappsForm.action = 'reload_webapps.jsp';
+              document.webappsForm.submit();
+          }
+          );
+    }
+}
+
+function stopWebapps() {
+    var selected = isWebappSelected();
+    if (!selected) {
+        CARBON.showInfoDialog('Select applications to be stopped');
+        return;
+    }
+    if (allWebappsSelected) {
+        CARBON.showConfirmationDialog("Do you want to stop all 4 applications?",
+          function() {
+              location.href = 'stop_webapps.jsp?reloadAll=true';
+          }
+          );
+    } else {
+        CARBON.showConfirmationDialog("Do you want to stop the selected applications?",
+          function() {
+              document.webappsForm.action = 'stop_webapps.jsp';
+              document.webappsForm.submit();
+          }
+          );
+    }
+}
+
+function startWebapps() {
+    var selected = isWebappSelected();
+    if (!selected) {
+        CARBON.showInfoDialog('Select applications to be started');
+        return;
+    }
+    if (allWebappsSelected) {
+        CARBON.showConfirmationDialog("Do you want to start all 4 applications?",
+          function() {
+              location.href = 'start_webapps.jsp?reloadAll=true';
+          }
+          );
+    } else {
+        CARBON.showConfirmationDialog("Do you want to start the selected applications?",
+          function() {
+              document.webappsForm.action = 'start_webapps.jsp';
+              document.webappsForm.submit();
+          }
+          );
+    }
+}
+
+function isWebappSelected() {
+    var selected = false;
+        if (document.webappsForm.webappFileName[0] != null) { // there is more than 1
+            for (var j = 0; j < document.webappsForm.webappFileName.length; j++) {
+                selected = document.webappsForm.webappFileName[j].checked;
+                if (selected) break;
+            }
+        } else if (document.webappsForm.webappFileName != null) { // only 1
+            selected = document.webappsForm.webappFileName.checked;
+        }
+        return selected;
+    }
+
+    function deleteWebapps() {
+        var selected = isWebappSelected();
+        if (!selected) {
+            CARBON.showInfoDialog('Please select the applications to be deleted.');
+            return;
+        }
+        if (allWebappsSelected) {
+            CARBON.showConfirmationDialog("Do you want to delete all 4 started applications?",
+              function() {
+                  location.href = 'delete_webapps.jsp?deleteAllWebapps=true&webappState=all';
+              }
+              );
+        } else {
+            CARBON.showConfirmationDialog("Do you want to delete the selected applications?",
+              function() {
+                  document.webappsForm.action = 'delete_webapps.jsp';
+                  document.webappsForm.submit();
+              }
+              );
+        }
+    }
+
+    function selectAllInThisPage(isSelected) {
+        allWebappsSelected = false;
+        if (document.webappsForm.webappFileName != null &&
+            document.webappsForm.webappFileName[0] != null) { // there is more than 1
+            if (isSelected) {
+                for (var j = 0; j < document.webappsForm.webappFileName.length; j++) {
+                    document.webappsForm.webappFileName[j].checked = true;
+                }
+            } else {
+                for (j = 0; j < document.webappsForm.webappFileName.length; j++) {
+                    document.webappsForm.webappFileName[j].checked = false;
+                }
+            }
+        } else if (document.webappsForm.webappFileName != null) { // only 1
+            document.webappsForm.webappFileName.checked = isSelected;
+        }
+        return false;
+    }
+
+    function selectAllInAllPages() {
+        selectAllInThisPage(true);
+        allWebappsSelected = true;
+        return false;
+    }
+
+    function resetVars() {
+        allWebappsSelected = false;
+
+        var isSelected = false;
+        if (document.webappsForm.webappFileName[0] != null) { // there is more than 1 sg
+            for (var j = 0; j < document.webappsForm.webappFileName.length; j++) {
+                if (document.webappsForm.webappFileName[j].checked) {
+                    isSelected = true;
+                }
+            }
+        } else if (document.webappsForm.webappFileName != null) { // only 1 sg
+            if (document.webappsForm.webappFileName.checked) {
+                isSelected = true;
+            }
+        }
+        return false;
+    }
+    </script>
+
+    <script type="text/javascript">
+    function searchWebapps() {
+        document.searchForm.submit();
+    }
+    </script>
+
+    <div id="middle">
+        <h2>Running Applications</h2>
+
+        <div id="workArea">
+            <form action="index.jsp" name="searchForm">
+                <table class="styledLeft">
+                    <tbody><tr>
+                        <td style="border:0; !important">
+                            <nobr>
+                                4 Running Applications.&nbsp;
+
+                            </nobr>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border:0; !important">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table style="border:0; !important">
+                                <tbody>
+                                    <tr style="border:0; !important">
+                                        <td style="border:0; !important">
+                                            <nobr>
+                                                State
+                                                <select name="webappState">
+
+                                                    <option value="Started">Started
+                                                    </option>
+
+                                                    <option value="Stopped">Stopped
+                                                    </option>
+
+                                                    <option value="All" selected="selected">
+                                                        All
+                                                    </option>
+
+                                                </select>
+                                            </nobr>
+                                        </td>
+                                        <td style="border:0; !important">
+                                            <nobr>
+                                                Type
+                                                <select name="webappType">
+
+                                                    <option value="All" selected="selected">
+                                                        All
+                                                    </option>
+
+                                                    <option value="JaggeryWebApp">Jaggery Webapp
+                                                    </option>
+
+                                                    <option value="JaxWebApp">JAX-WS/RS Webapp
+                                                    </option>
+
+                                                    <option value="WebApp">Webapp
+                                                    </option>
+
+                                                </select>
+                                            </nobr>
+                                        </td>
+                                        <td style="border:0; !important">
+                                            <nobr>
+                                                Application
+                                                <input name="webappSearchString" type="text">&nbsp;
+                                            </nobr>
+                                        </td>
+                                        <td style="border:0; !important">
+                                            <a class="icon-link" href="#" style="background-image: url(images/search.gif);" onclick="searchWebapps(); return false;" alt="Search">
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody></table>
+            </form>
+
+            <p>&nbsp;</p>
+
+
+            <table><tbody><tr></tr></tbody></table> 
+            <table><tbody><tr><td><a href="#" onclick="selectAllInThisPage(true);return false;" style="cursor:pointer">Select all in this page</a>&nbsp;<b>|</b>&nbsp;</td><td><a href="#" onclick="selectAllInThisPage(false);return false;" style="cursor:pointer">Select none</a></td><td width="20%">&nbsp;</td><td><a href="#" id="delete1" onclick="deleteWebapps();return false;">Delete</a></td><td><a href="#" onclick="expireSessions()" class="item-selector-link" style="background-image:url(images/expire_session.gif)" ;="">Expire Sessions</a><a href="#" onclick="reloadWebapps()" class="item-selector-link" style="background-image:url(images/reload.gif)" ;=""> Reload</a><a href="#" onclick="startWebapps()" class="item-selector-link" style="background-image:url(images/start.gif)" ;=""> Start</a><a href="#" onclick="stopWebapps()" class="item-selector-link" style="background-image:url(images/stop.gif)" ;=""> Stop</a></td></tr></tbody></table>
+            <p>&nbsp;</p>
+            <form action="delete_webapps.jsp" name="webappsForm" method="post">
+                <input name="pageNumber" value="0" type="hidden">
+                <input name="webappState" value="all" type="hidden">
+                <input name="webappType" value="all" type="hidden">
+                <table class="styledLeft" id="webappsTable" width="100%">
+                    <thead>
+                        <tr>
+                            <th>&nbsp;</th>
+                            <th>Context</th>
+                            <th>Version</th>
+                            <th>
+                                <nobr>Display Name</nobr>
+                            </th>
+                            <th>
+                                <nobr>State</nobr>
+                            </th>
+                            <th>
+                                <nobr>Type</nobr>
+                            </th>
+                            <th style="text-align: right; padding-right: 5px; !important" width="8%">Sessions</th>
+                            <th>
+                                <nobr>File</nobr>
+                            </th>
+                            <th>
+                                <nobr>Last Modified</nobr>
+                            </th>
+
+                            <th colspan="2">Actions</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+
+
+
+                        <tr bgcolor="white">
+                            <td style="text-align:center; !important" width="10px">
+                                <input name="webappFileName" value="docs" onclick="resetVars()" class="chkBox" type="checkbox">
+                            </td>
+
+                            <td>
+                             <a href="https://localhost:9443/carbon/webapp-list/webapp_info.jsp?webappFileName=docs&amp;webappState=all&amp;hostName=127.0.0.1&amp;httpPort=9763&amp;webappType=jaggeryWebapp">
+                              /docs
+                          </a>
+                      </td>
+
+
+
+                      <td> &nbsp;
+
+                        /default
+
+                    </td>
+                    <td>Jaggery Documentation
+                    </td>
+                    <td>Started
+                    </td>
+                    <td>
+
+                        <nobr>
+                            <img src="resources/webapps.gif" title="jaggeryWebapp" alt="jaggeryWebapp">
+                            JaggeryWebApp
+                        </nobr>
+                    </td>
+
+                    <td style="text-align: right; !important">
+
+                        0
+
+                    </td>
+                    <td>
+                        docs
+                    </td>
+                    <td>
+
+                        <nobr>2013-12-05 14:22:28
+                        </nobr>
+                    </td>
+
+                    <td>
+                        <a href="http://127.0.0.1:9763/docs/" target="_blank" style="background:url(images/goto_url.gif) no-repeat;padding-left:20px;display:block;white-space: nowrap;height:16px;">
+
+                            Go To URL
+
+                        </a>
+                    </td>
+
+                    <td>  &nbsp;
+                        <a href="https://localhost:9443/carbon/webapp-list/download-ajaxprocessor.jsp?name=docs&amp;type=jaggeryWebapp" target="_self" style="background:url(images/download.gif) no-repeat;padding-left:20px;display:block;white-space: nowrap;height:16px;">
+                            Download
+                        </a>
+                    </td>
+                </tr>
+
+
+
+
+                <tr bgcolor="#EEEFFB">
+                    <td style="text-align:center; !important" width="10px">
+                        <input name="webappFileName" value="example.war" onclick="resetVars()" class="chkBox" type="checkbox">
+                    </td>
+
+                    <td>
+                     <a href="https://localhost:9443/carbon/webapp-list/webapp_info.jsp?webappFileName=example.war&amp;webappState=all&amp;hostName=127.0.0.1&amp;httpPort=9763&amp;webappType=webapp">
+                      /example
+                  </a>
+              </td>
+
+            
+
+              <td> &nbsp;
+
+                /default
+
+            </td>
+            <td>Servlet and JSP Examples
+            </td>
+            <td>Started
+            </td>
+            <td>
+
+                <nobr>
+                    <img src="resources/webapps_002.gif" title="webapp" alt="webapp">
+                    WebApp
+                </nobr>
+            </td>
+
+            <td style="text-align: right; !important">
+
+                0
+
+            </td>
+            <td>
+                example.war
+            </td>
+            <td>
+
+                <nobr>2013-12-06 18:35:24
+                </nobr>
+            </td>
+
+            <td>
+                <a href="http://127.0.0.1:9763/example/" target="_blank" style="background:url(images/goto_url.gif) no-repeat;padding-left:20px;display:block;white-space: nowrap;height:16px;">
+
+                    Go To URL
+
+                </a>
+            </td>
+
+            <td>  &nbsp;
+                <a href="https://localhost:9443/carbon/webapp-list/download-ajaxprocessor.jsp?name=example.war&amp;type=webapp" target="_self" style="background:url(images/download.gif) no-repeat;padding-left:20px;display:block;white-space: nowrap;height:16px;">
+                    Download
+                </a>
+            </td>
+        </tr>
+
+
+
+
+        <tr bgcolor="white">
+            <td style="text-align:center; !important" width="10px">
+                <input name="webappFileName" value="jaxrs_basic.war" onclick="resetVars()" class="chkBox" type="checkbox">
+            </td>
+
+            <td>
+             <a href="https://localhost:9443/carbon/webapp-list/webapp_info.jsp?webappFileName=jaxrs_basic.war&amp;webappState=all&amp;hostName=127.0.0.1&amp;httpPort=9763&amp;webappType=jaxWebapp">
+              /jaxrs_basic
+          </a>
+      </td>
+
+
+
+      <td> &nbsp;
+
+        /default
+        
+    </td>
+    <td>JAX-WS/JAX-RS Webapp
+    </td>
+    <td>Started
+    </td>
+    <td>
+
+        <nobr>
+            <img src="resources/jax_type.gif" title="jaxWebapp" alt="jaxWebapp">
+            JAX-WS/RS Webapp
+        </nobr>
+    </td>
+
+    <td style="text-align: right; !important">
+
+    </td>
+    <td>
+        jaxrs_basic.war
+    </td>
+    <td>
+
+        <nobr>2013-12-06 18:34:54
+        </nobr>
+    </td>
+    
+    <td>
+        <a href="http://127.0.0.1:9763/jaxrs_basic/services/services" target="_blank" style="background:url(images/goto_url.gif) no-repeat;padding-left:20px;display:block;white-space: nowrap;height:16px;">
+
+            Find Services
+            
+        </a>
+    </td>
+    
+    <td>  &nbsp;
+        <a href="https://localhost:9443/carbon/webapp-list/download-ajaxprocessor.jsp?name=jaxrs_basic.war&amp;type=jaxWebapp" target="_self" style="background:url(images/download.gif) no-repeat;padding-left:20px;display:block;white-space: nowrap;height:16px;">
+            Download
+        </a>
+    </td>
+</tr>
+
+
+
+
+<tr bgcolor="#EEEFFB">
+    <td style="text-align:center; !important" width="10px">
+        <input name="webappFileName" value="qa_portal.war" onclick="resetVars()" class="chkBox" type="checkbox">
+    </td>
+    
+    <td>
+     <a href="https://localhost:9443/carbon/webapp-list/webapp_info.jsp?webappFileName=qa_portal.war&amp;webappState=all&amp;hostName=127.0.0.1&amp;httpPort=9763&amp;webappType=webapp">
+      /qa_portal
+  </a>
+</td>
+
+
+
+<td> &nbsp;
+
+    /default
+
+</td>
+<td>
+</td>
+<td>Started
+</td>
+<td>
+
+    <nobr>
+        <img src="resources/webapps_002.gif" title="webapp" alt="webapp">
+        WebApp
+    </nobr>
+</td>
+
+<td style="text-align: right; !important">
+
+    0
+
+</td>
+<td>
+    qa_portal.war
+</td>
+<td>
+
+    <nobr>2014-01-08 13:08:40
+    </nobr>
+</td>
+
+<td>
+    <a href="http://127.0.0.1:9763/qa_portal/" target="_blank" style="background:url(images/goto_url.gif) no-repeat;padding-left:20px;display:block;white-space: nowrap;height:16px;">
+
+        Go To URL
+
+    </a>
+</td>
+
+<td>  &nbsp;
+    <a href="https://localhost:9443/carbon/webapp-list/download-ajaxprocessor.jsp?name=qa_portal.war&amp;type=webapp" target="_self" style="background:url(images/download.gif) no-repeat;padding-left:20px;display:block;white-space: nowrap;height:16px;">
+        Download
+    </a>
+</td>
+</tr>
+
+
+
+
+</tbody>
+</table>
+</form>
+<p>&nbsp;</p>
+<table><tbody><tr><td><a href="#" onclick="selectAllInThisPage(true);return false;" style="cursor:pointer">Select all in this page</a>&nbsp;<b>|</b>&nbsp;</td><td><a href="#" onclick="selectAllInThisPage(false);return false;" style="cursor:pointer">Select none</a></td><td width="20%">&nbsp;</td><td><a href="#" id="delete2" onclick="deleteWebapps();return false;">Delete</a></td><td><a href="#" onclick="expireSessions()" class="item-selector-link" style="background-image:url(images/expire_session.gif)" ;="">Expire Sessions</a><a href="#" onclick="reloadWebapps()" class="item-selector-link" style="background-image:url(images/reload.gif)" ;=""> Reload</a><a href="#" onclick="startWebapps()" class="item-selector-link" style="background-image:url(images/start.gif)" ;=""> Start</a><a href="#" onclick="stopWebapps()" class="item-selector-link" style="background-image:url(images/stop.gif)" ;=""> Stop</a></td></tr></tbody></table>
+<table><tbody><tr></tr></tbody></table> 
+
+</div>
+</div>
+
+
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+    <td id="footer" colspan="3">
+
+        <div id="footer-div">
+           <div class="footer-content">
+              <div class="copyright">
+                  © 2005 - 2013 WSO2 Inc. All Rights Reserved.
+              </div>
+        <!--div class="poweredby">
+  </div-->
+</div>
+</div>
+
+</td>
+</tr>
+</tbody></table>
+<script type="text/javascript">
+if (Function('/*@cc_on return document.documentMode===10@*/')()){
+    document.documentElement.className+=' ie10';
+}
+</script>
+
+
+
+</body>

@@ -1,0 +1,10 @@
+   <!DOCTYPE html>
+    <html>
+    <body>
+   <% 
+   response.sendredirect("google.com");
+
+%>
+   
+    </body>
+    </html>
