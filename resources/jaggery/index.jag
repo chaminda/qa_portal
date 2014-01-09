@@ -1,7 +1,0 @@
-<html>
-  <form action="login.jag">
-			Product Name : <input type="text" name="pname"><br>
-			 <input type="submit" value="Submit">
-		</form>
-
-</html>
