@@ -24,7 +24,7 @@ div#messagebox p {
 }
 
 div#messagebox-warning {
-    background-image: url(../img/warning.gif);
+    background-image: url(../images/warning.gif);
     background-position: 15px 15px;
     background-repeat: no-repeat;
     background-attachment: scroll;

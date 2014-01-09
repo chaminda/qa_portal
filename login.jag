@@ -1,10 +1,8 @@
 
  <% var name = session.get("username");
  if(name===null){
-   response.sendRedirect("login.jag");
 }
 %>
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
@@ -97,20 +95,18 @@
 		<div class="right-links">            
 			<ul>
 		                
-		              <li class="middle">
-                                 <label id="logged-user">
-                                    <strong>Signed-in as:</strong>&nbsp;
-                                       <%
-                                             print(name);
-                                       %>
+		                <li class="right">
+                            <%
+                            if(name==null){
+                                print(" <a href=\"index.jag\">Sign-in</a>");
+                            }
+                            else{
+                                print("<a href=\"resources/jaggery/logout_action.jag\">Sign-out</a>");
+                            }
 
-
-                                 </label>
-                              </li>
-                              <li class="middle">|</li>
-                              <li class="right">
-                                 <a href="resources/jaggery/logout_action.jag">Sign-out</a>
-                              </li>
+                            %>
+		                   
+		                </li>
 		                
 		                <li class="middle">|</li>
 		                <li class="middle">
@@ -130,6 +126,15 @@
         </td>
     </tr>
     <tr>
+        <td class="vertical-menu-container" id="vertical-menu-container" style="display:none;">
+            <div id="menu-panel-button0"></div>
+            <div id="menu-panel-button1" class="menu-panel-buttons"></div>
+            <div id="menu-panel-button2" class="menu-panel-buttons"></div>
+            <div id="menu-panel-button3" class="menu-panel-buttons"></div>
+            <div id="menu-panel-button4" class="menu-panel-buttons"></div>
+            <div id="menu-panel-button5" class="menu-panel-buttons"></div>
+            <div id="menu-panel-button_dummy" style="display:none"></div>
+        </td>
         <td style="display: none;" id="menu-panel" valign="top">
             <table id="menu-table" border="0" cellspacing="0">
                 <tbody><tr>
@@ -353,8 +358,52 @@ progress.</p>
                         </tbody></table>
                     </div>
                 </td>
-                <td width="10%">&nbsp;</td>
-                
+                <td width="20%">
+                    <div id="loginbox">
+                        <h2>Sign-in</h2>
+
+                        <form action="resources/jaggery/login_action.jag" method="POST" onsubmit="return doValidation();" target="_self">
+                            <table>
+                                 
+                                <tbody><tr>
+                                    <td>
+                                        <label for="txtUserName">Username</label>
+                                    </td>
+                                    <td>
+                                        <input id="txtUserName" name="username" class="user" tabindex="1" type="text">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="txtPassword">Password</label>
+                                    </td>
+                                    <td>
+                                        <input id="txtPassword" name="password" class="password" tabindex="2" type="password">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        
+                                    </td>
+                                    <td>
+                                    	<input name="rememberMe" value="rememberMe" tabindex="3" type="checkbox">
+                                        <label for="txtRememberMe">Remember Me</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;</td>
+                                    <td>
+                                        <input value="Sign-in" class="button" tabindex="3" type="submit">
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </form>
+                        <br>
+			            <a target="_blank" href="https://localhost:9443/carbon/docs/signin_userguide.jag" tabindex="4">
+                            Sign-in Help
+                        </a>
+                    </div>
+                </td>
             </tr>
         </tbody></table>
     </div>
