@@ -1,0 +1,741 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<title>WSO2 QA Portal</title>
+
+<link href="resources/css/global.css" rel="stylesheet" type="text/css" media="all"> 
+
+<link href="resources/css/main.css" rel="stylesheet" type="text/css" media="all"> 
+<link href="resources/css/jqueryui-themeroller.css" rel="stylesheet" type="text/css" media="all">
+<link href="resources/css/dialog.css" rel="stylesheet" type="text/css" media="all">
+<link rel="stylesheet" href="resources/css/carbonFormStyles.css">
+
+    <!--[if gte IE 8]>
+    <link href="../dialog/css/dialog-ie8.css" rel="stylesheet" type="text/css" media="all"/>        
+    <![endif]-->
+    <!--[if gte IE 7]>
+    <link href="../dialog/css/dialog-ie8.css" rel="stylesheet" type="text/css" media="all"/>
+    <![endif]-->
+    <link rel="icon" href="resources/images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="resources/images/favicon.ico" type="image/x-icon">
+
+    <script type="text/javascript" src="resources/js/jquery-1.js"></script>
+    <script type="text/javascript" src="resources/js/jquery.js"></script>
+    <script type="text/javascript" src="resources/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="resources/js/jquery_004.js"></script>    
+    <script type="text/javascript" src="resources/js/jquery_005.js"></script>
+    <script type="text/javascript" src="resources/js/jquery_002.js"></script>
+    <script type="text/javascript" src="resources/js/jquery_006.js"></script>
+    <script type="text/javascript" src="resources/js/jquery_003.js"></script>
+    <script type="text/javascript" src="resources/js/main.js"></script>
+    <script type="text/javascript" src="resources/js/WSRequest.js"></script>
+    <script type="text/javascript" src="resources/js/cookies.js"></script>
+
+    <script type="text/javascript" src="resources/customControls.js"></script>
+
+ </head>
+
+ <body>
+   <noscript>
+      <div class="something-wrong">
+         <div class="title">JavaScript is disabled on your browser</div>
+         <div class="content">Please enable JavaScript or upgrade to a JavaScript-capable browser to use WSO2 Products.</div>
+      </div>
+   </noscript>
+      <!--[if lte IE 6]>
+      <div class="something-wrong">
+         <div class="title">Did you know that your Internet Explorer is out of date?</div>
+         <div class="content">To get the best possible experience using our website we recommend that you upgrade to a newer version.</div>
+      </div>
+      <![endif]-->
+      <div id="dcontainer"></div>
+      <script type="text/javascript" src="resources/dialog.js"></script>
+      <!-- JS imports for collapsible menu -->
+      <script src="resources/js/yahoo-dom-event.js" type="text/javascript"></script>
+      <script src="resources/js/animation-min.js" type="text/javascript"></script>
+      <script src="resources/js/template.js" type="text/javascript"></script>
+      <script src="resources/js/yahoo-min.js" type="text/javascript"></script>
+      <script src="resources/js/selector-min.js" type="text/javascript"></script>
+      <table id="main-table" border="0" cellspacing="0">
+         <tbody>
+            <tr>
+               <td id="header" colspan="3">
+                  <!--[IF IE 7]>
+                  <style>
+                     div#header-div div.right-links{
+                     position:absolute;
+                     }
+                  </style>
+                  <![endif]-->
+                  <div id="header-div">
+                     <div class="right-logo">QA Portal</div>
+                     <div class="left-logo">
+                        <a href="index.html" class="header-home"><img src="resources/images/1px.gif" width="300px" height="32px"></a>
+                     </div>
+                     <div class="middle-ad">
+                     </div>
+                     <div class="header-links">
+                        <div class="right-links">
+                           <ul>
+                              <li class="middle">
+                                 <label id="logged-user">
+                                    <strong>Signed-in as:</strong>&nbsp;admin@qa_portal.super
+                                 </label>
+                              </li>
+                              <li class="middle">|</li>
+                              <li class="right">
+                                 <a href="https://localhost:9443/carbon/admin/logout_action.jsp">Sign-out</a>
+                              </li>
+                              <li class="middle">|</li>
+                              <li class="middle">
+                                 <a target="_blank" href="http://docs.wso2.org/wiki/display/AS521/WSO2+Application+Server+Documentation">Docs</a>
+                              </li>
+                              <li class="middle">|</li>
+                              <li class="left">
+                                 <a target="_blank" href="https://localhost:9443/carbon/docs/about.html">About</a>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="vertical-menu-container" id="vertical-menu-container" style="">
+                  <div class="showToHidden" id="menu-panel-button0"></div>
+                  <div id="menu-panel-button1" class="menu-panel-buttons selected"><span>Main</span></div>
+                  <div id="menu-panel-button2" class="menu-panel-buttons"><span>Monitor</span></div>
+                  <div id="menu-panel-button3" class="menu-panel-buttons"><span>Configure</span></div>
+                  <div id="menu-panel-button4" class="menu-panel-buttons"><span>Tools</span></div>
+                  <div style="display: none;" id="menu-panel-button5" class="menu-panel-buttons"><span>Extensions</span></div>
+                  <div id="menu-panel-button_dummy" style="display:none"></div>
+               </td>
+               <td id="menu-panel" valign="top">
+                  <table id="menu-table" border="0" cellspacing="0">
+                     <tbody>
+                        <tr>
+                           <td id="region1">
+                              <div id="menu">
+                                 <ul class="main">
+                                    <li id="region1_products_menu" class="menu-header" onclick="mainMenuCollapse(this.childNodes[0])" style="cursor: pointer;"><img src="resources/up-arrow.gif" class="mMenuHeaders" id="region1_products_menu">Products</li>
+                                    <li class="normal">
+                                       <ul class="sub">
+                                          <li><a href="https://localhost:9443/carbon/resources/resource.jsp?region=region3&amp;item=resource_browser_menu&amp;path=/" class="menu-default" style="background-image: url(../resources/images/resources.gif);">List</a></li>
+                                          <li><a href="https://localhost:9443/carbon/search/advancedSearch.jsp?region=region3&amp;item=registry_search_menu" class="menu-default" style="background-image: url(../search/images/search-top.png);">Add Project</a></li>
+                                       </ul>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td id="region4">
+                              <div id="menu">
+                                 <ul class="main">
+                                    <li id="region4_monitor_menu" class="menu-header" onclick="mainMenuCollapse(this.childNodes[0])" style="cursor: pointer; display: none;"><img src="resources/up-arrow.gif" class="mMenuHeaders" id="region4_monitor_menu">Monitor</li>
+                                    <li style="display: none;" class="normal">
+                                       <ul class="sub">
+                                          <li><a href="https://localhost:9443/carbon/log-view/application_log_viewer.jsp?region=region4&amp;item=app_log_menu" class="menu-default" style="background-image: url(../log-view/images/script_gear.gif);">Application Logs</a></li>
+                                          <li><a href="https://localhost:9443/carbon/statistics/index.jsp?region=region4&amp;item=statistics_menu" class="menu-default" style="background-image: url(../statistics/images/chart_bar.gif);">System Statistics</a></li>
+                                          <li><a href="https://localhost:9443/carbon/log-view/index.jsp?region=region4&amp;item=logs_menu" class="menu-default" style="background-image: url(../log-view/images/script_gear.gif);">System Logs</a></li>
+                                          <li><a href="https://localhost:9443/carbon/tracer/index.jsp?region=region4&amp;item=tracer_menu" class="menu-default" style="background-image: url(../tracer/images/tracer.gif);">SOAP Tracer</a></li>
+                                          <li><a href="https://localhost:9443/carbon/viewflows/index.jsp?region=region4&amp;item=flows_menu" class="menu-default" style="background-image: url(../viewflows/extensions/core/images/handler_flow.gif);">Message Flows</a></li>
+                                       </ul>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td id="region5">
+                              <div id="menu">
+                                 <ul class="main">
+                                    <li id="region5_tools_menu" class="menu-header" onclick="mainMenuCollapse(this.childNodes[0])" style="cursor: pointer; display: none;"><img src="resources/up-arrow.gif" class="mMenuHeaders" id="region5_tools_menu">Tools</li>
+                                    <li style="display: none;" class="normal">
+                                       <ul class="sub">
+                                          <li><a href="https://localhost:9443/carbon/wsdl2code/index.jsp?region=region5&amp;item=wsdl2java_menu" class="menu-default" style="background-image: url(../wsdl2code/images/dump_aar.gif);">WSDL2Java</a></li>
+                                          <li><a href="https://localhost:9443/carbon/java2wsdl/index.jsp?region=region5&amp;item=java2wsdl_menu" class="menu-default" style="background-image: url(../java2wsdl/images/java2wsdl.gif);">Java2WSDL</a></li>
+                                          <li><a href="https://localhost:9443/carbon/tryit/index.jsp?region=region5&amp;item=tryit" class="menu-default" style="background-image: url(../tryit/images/tryit.gif);">Try It</a></li>
+                                          <li><a href="https://localhost:9443/carbon/js_stub_generator/index.jsp?region=region5&amp;item=js_stub_generator_menu" class="menu-default" style="background-image: url(../js_stub_generator/images/stub-generator.gif);">JavaScript Stub Generator</a></li>
+                                          <li><a href="https://localhost:9443/carbon/js_scraper/index.jsp?region=region5&amp;item=js_scraper_menu" class="menu-default" style="background-image: url(../js_scraper/images/scraper.gif);">Scraping Assistant</a></li>
+                                          <li><a href="https://localhost:9443/carbon/wsdl_validator/index.jsp?region=region5&amp;item=wsdl_validator_menu" class="menu-default" style="background-image: url(../wsdl_validator/images/wsdlValidate.gif);">WSDL Validator</a></li>
+                                       </ul>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td><img src="resources/images/1px.gif" width="225px" height="1px"></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </td>
+               <td id="middle-content">
+                  <table id="content-table" border="0" cellspacing="0">
+                     <tbody>
+                        <tr>
+                           <td id="page-header-links">
+                              <table class="page-header-links-table" cellspacing="0">
+                                 <tbody>
+                                    <tr>
+                                       <td class="breadcrumbs">
+                                          <table class="breadcrumb-table" cellspacing="0">
+                                             <tbody>
+                                                <tr>
+                                                   <td>
+                                                      <div id="breadcrumb-div">
+                                                         <table cellspacing="0">
+                                                            <tbody>
+                                                               <tr>
+                                                           			<td class="breadcrumb-link">
+                                                           				<a href="index.html">QA Home</a>
+                                                           			</td>
+                                                                  	<td class="breadcrumb-link">
+  																		<a href="product_home.html">&nbsp;&gt;&nbsp;Products</a>
+																  	</td>
+																  	<td class="breadcrumb-link">&nbsp;&gt;&nbsp;List</td>
+																  	<td class="breadcrumb-link">&nbsp;&gt;&nbsp;Feature dashboard</td>
+                                                               </tr>
+                                                            </tbody>
+                                                         </table>
+                                                      </div>
+                                                   </td>
+                                                </tr>
+                                             </tbody>
+                                          </table>
+                                       </td>
+                                       <td class="page-header-help"><a href="https://localhost:9443/carbon/webapp-list/docs/userguide.html" target="_blank">Help</a></td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td id="body">
+                              <img src="resources/images/1px.gif" width="735px" height="1px">
+                              <!--
+                                 ~ Copyright (c) 2005-2010, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
+                                 ~
+                                 ~ WSO2 Inc. licenses this file to you under the Apache License,
+                                 ~ Version 2.0 (the "License"); you may not use this file except
+                                 ~ in compliance with the License.
+                                 ~ You may obtain a copy of the License at
+                                 ~
+                                 ~    http://www.apache.org/licenses/LICENSE-2.0
+                                 ~
+                                 ~ Unless required by applicable law or agreed to in writing,
+                                 ~ software distributed under the License is distributed on an
+                                 ~ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+                                 ~ KIND, either express or implied.  See the License for the
+                                 ~ specific language governing permissions and limitations
+                                 ~ under the License.
+                              -->
+                              <script type="text/javascript">
+                              var msgId;
+
+                              msgId = 'MSG13891780124300.19163215448530113';
+
+                              </script>
+                              <script type="text/javascript">
+                              setCookie('current-breadcrumb', 'manage_menu,webapps_menu,webapps_list_menu#');
+                              document.onload=setBreadcrumDiv();
+                              function setBreadcrumDiv () {
+                                var breadcrumbDiv = document.getElementById('breadcrumb-div');
+                                breadcrumbDiv.innerHTML = '<table cellspacing="0"><tr><td class="breadcrumb-link"><a href="index.html">QA Home</a></td><td class="breadcrumb-link"><a href="product_home.html">&nbsp;&gt;&nbsp;Products</a></td><td class="breadcrumb-link">&nbsp;&gt;&nbsp;List</td><td class="breadcrumb-link">&nbsp;&gt;&nbsp;Feature dashboard</td>';
+                             }
+                             </script>
+                              <!--
+                                 ~ Copyright (c) 2005-2010, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
+                                 ~
+                                 ~ WSO2 Inc. licenses this file to you under the Apache License,
+                                 ~ Version 2.0 (the "License"); you may not use this file except
+                                 ~ in compliance with the License.
+                                 ~ You may obtain a copy of the License at
+                                 ~
+                                 ~    http://www.apache.org/licenses/LICENSE-2.0
+                                 ~
+                                 ~ Unless required by applicable law or agreed to in writing,
+                                 ~ software distributed under the License is distributed on an
+                                 ~ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+                                 ~ KIND, either express or implied.  See the License for the
+                                 ~ specific language governing permissions and limitations
+                                 ~ under the License.
+                              -->
+                              <script type="text/javascript" src="resources/global-params.js"></script>
+                              <script type="text/javascript">
+                              wso2.wsf.Util.initURLs();
+                              var frontendURL = wso2.wsf.Util.getServerURL() + "/";
+                              </script>
+                              <script type="text/javascript">
+                              var allWebappsSelected = false;
+
+                              function expireSessions() {
+                                var selected = isWebappSelected();
+                                if (!selected) {
+                                  CARBON.showInfoDialog('Select the applications for session expiry');
+                                  return;
+                               }
+                               if (allWebappsSelected) {
+                                  CARBON.showConfirmationDialog("Do you want to expire the sessions in all 4 started applications?",
+                                   function() {
+                                     location.href = 'expire_sessions.jsp?expireAll=true';
+                                  }
+                                  );
+                               } else {
+                                  CARBON.showConfirmationDialog("Do you want to expire the sessions in the selected applications?",
+                                   function() {
+                                     document.webappsForm.action = 'expire_sessions.jsp';
+                                     document.webappsForm.submit();
+                                  }
+                                  );
+                               }
+                            }
+
+                            function reloadWebapps() {
+                             var selected = isWebappSelected();
+                             if (!selected) {
+                               CARBON.showInfoDialog('Select applications to be reloaded');
+                               return;
+                            }
+                            if (allWebappsSelected) {
+                               CARBON.showConfirmationDialog("Do you want to reload all 4 applications?",
+                                function() {
+                                  location.href = 'reload_webapps.jsp?reloadAll=true';
+                               }
+                               );
+                            } else {
+                               CARBON.showConfirmationDialog("Do you want to reload the selected applications?",
+                                function() {
+                                  document.webappsForm.action = 'reload_webapps.jsp';
+                                  document.webappsForm.submit();
+                               }
+                               );
+                            }
+                         }
+
+                         function stopWebapps() {
+                          var selected = isWebappSelected();
+                          if (!selected) {
+                            CARBON.showInfoDialog('Select applications to be stopped');
+                            return;
+                         }
+                         if (allWebappsSelected) {
+                            CARBON.showConfirmationDialog("Do you want to stop all 4 applications?",
+                             function() {
+                               location.href = 'stop_webapps.jsp?reloadAll=true';
+                            }
+                            );
+                         } else {
+                            CARBON.showConfirmationDialog("Do you want to stop the selected applications?",
+                             function() {
+                               document.webappsForm.action = 'stop_webapps.jsp';
+                               document.webappsForm.submit();
+                            }
+                            );
+                         }
+                      }
+
+                      function startWebapps() {
+                       var selected = isWebappSelected();
+                       if (!selected) {
+                         CARBON.showInfoDialog('Select applications to be started');
+                         return;
+                      }
+                      if (allWebappsSelected) {
+                         CARBON.showConfirmationDialog("Do you want to start all 4 applications?",
+                          function() {
+                            location.href = 'start_webapps.jsp?reloadAll=true';
+                         }
+                         );
+                      } else {
+                         CARBON.showConfirmationDialog("Do you want to start the selected applications?",
+                          function() {
+                            document.webappsForm.action = 'start_webapps.jsp';
+                            document.webappsForm.submit();
+                         }
+                         );
+                      }
+                   }
+
+                   function isWebappSelected() {
+                    var selected = false;
+                                         if (document.webappsForm.webappFileName[0] != null) { // there is more than 1
+                                          for (var j = 0; j < document.webappsForm.webappFileName.length; j++) {
+                                            selected = document.webappsForm.webappFileName[j].checked;
+                                            if (selected) break;
+                                         }
+                                         } else if (document.webappsForm.webappFileName != null) { // only 1
+                                          selected = document.webappsForm.webappFileName.checked;
+                                       }
+                                       return selected;
+                                    }
+
+                                    function deleteWebapps() {
+                                     var selected = isWebappSelected();
+                                     if (!selected) {
+                                       CARBON.showInfoDialog('Please select the applications to be deleted.');
+                                       return;
+                                    }
+                                    if (allWebappsSelected) {
+                                       CARBON.showConfirmationDialog("Do you want to delete all 4 started applications?",
+                                        function() {
+                                          location.href = 'delete_webapps.jsp?deleteAllWebapps=true&webappState=all';
+                                       }
+                                       );
+                                    } else {
+                                       CARBON.showConfirmationDialog("Do you want to delete the selected applications?",
+                                        function() {
+                                          document.webappsForm.action = 'delete_webapps.jsp';
+                                          document.webappsForm.submit();
+                                       }
+                                       );
+                                    }
+                                 }
+                                 
+                                 function selectAllInTable1(isSelected) {
+                                  allWebappsSelected = false;
+                                  if (document.webappsForm1.webappFileName != null &&
+                                             document.webappsForm1.webappFileName[0] != null) { // there is more than 1
+                                    if (isSelected) {
+                                      for (var j = 0; j < document.webappsForm1.webappFileName.length; j++) {
+                                        document.webappsForm1.webappFileName[j].checked = true;
+                                     }
+                                  } else {
+                                   for (j = 0; j < document.webappsForm1.webappFileName.length; j++) {
+                                     document.webappsForm1.webappFileName[j].checked = false;
+                                  }
+                               }
+                                         } else if (document.webappsForm1.webappFileName != null) { // only 1
+                                          document.webappsForm1.webappFileName.checked = isSelected;
+                                       }
+                                       return false;
+                                    }
+
+                                    function selectAllInTable2(isSelected) {
+                                  allWebappsSelected = false;
+                                  if (document.webappsForm2.webappFileName != null &&
+                                             document.webappsForm2.webappFileName[0] != null) { // there is more than 1
+                                    if (isSelected) {
+                                      for (var j = 0; j < document.webappsForm2.webappFileName.length; j++) {
+                                        document.webappsForm2.webappFileName[j].checked = true;
+                                     }
+                                  } else {
+                                   for (j = 0; j < document.webappsForm2.webappFileName.length; j++) {
+                                     document.webappsForm2.webappFileName[j].checked = false;
+                                  }
+                               }
+                                         } else if (document.webappsForm2.webappFileName != null) { // only 1
+                                          document.webappsForm2.webappFileName.checked = isSelected;
+                                       }
+                                       return false;
+                                    }
+
+
+
+                                    function selectAllInAllPages() {
+                                     selectAllInTable1(true);
+                                     selectAllInTable2(true);
+                                     allWebappsSelected = true;
+                                     return false;
+                                  }
+
+                                  function resetVars() {
+                                     allWebappsSelected = false;
+
+                                     var isSelected = false;
+                                         if (document.webappsForm.webappFileName[0] != null) { // there is more than 1 sg
+                                          for (var j = 0; j < document.webappsForm.webappFileName.length; j++) {
+                                            if (document.webappsForm.webappFileName[j].checked) {
+                                              isSelected = true;
+                                           }
+                                        }
+                                         } else if (document.webappsForm.webappFileName != null) { // only 1 sg
+                                          if (document.webappsForm.webappFileName.checked) {
+                                            isSelected = true;
+                                         }
+                                      }
+                                      return false;
+                                   }
+
+                                   </script>
+                                   <script type="text/javascript">
+                                   function searchWebapps() {
+                                      document.searchForm.submit();
+                                   }
+                                   </script>
+                                   <div id="middle">
+                                    <h2>Feature dashboard</h2>
+                                    <div id="workArea">
+                                       <form name="Features">
+                                          <table class="styledLeft">
+                                             <tbody>
+                                                <tr>
+                                                   <td style="border:0; !important">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                   <td>
+                                                      <table style="border:0; !important">
+                                                         <tbody>
+                                                            <tr style="border:0; !important">
+                                                               <td style="border:0; !important">
+                                                                  <nobr>
+                                                                     <font size="4">Feature</font>
+                                                                  </nobr>
+                                                               </td>
+                                                            </tr>
+                                                         </tbody>
+                                                      </table>
+                                                   </td>
+                                                </tr>
+                                             </tbody>
+                                          </table>
+                                       </form>
+                                       <p>&nbsp;</p>
+                                       <table>
+                                          <tbody>
+                                             <tr></tr>
+                                          </tbody>
+                                       </table>
+                                       <table>
+                                          <tbody>
+                                             <tr>
+                                                <td><a href="#" onclick="selectAllInTable1(true);return false;" style="cursor:pointer">Select all in this page</a>&nbsp;<b>|</b>&nbsp;</td>
+                                                <td><a href="#" onclick="selectAllInTable1(false);return false;" style="cursor:pointer">Select none</a></td>
+                                                <td width="20%">&nbsp;</td>
+                                                <td><a href="#" id="delete1" onclick="deleteWebapps();return false;">Delete</a></td>
+                                                <td width="10%">&nbsp;</td>
+                                                <td><a href="#" id="edit" onclick="editWebapps();return false;">Edit</a></td>
+                                             </tr>
+                                          </tbody>
+                                       </table>
+                                       <p>&nbsp;</p>
+                                       <form action="delete_webapps.jsp" name="webappsForm1" method="post">
+                                          <input name="pageNumber" value="0" type="hidden">
+                                          <input name="webappState" value="all" type="hidden">
+                                          <input name="webappType" value="all" type="hidden">
+                                          <table class="styledLeft" id="webappsTable" width="100%">
+                                          	<col width="10">
+                                          	<col width="450">
+                                             <thead>
+                                                <tr>
+                                                   <th>&nbsp;</th>
+                                                   <th>
+                                                      <nobr>Feature Name</nobr>
+                                                   </th>
+                                                   <th>Name1</th>
+                                                </tr>
+                                             </thead>
+                                             <tbody>
+                                                <tr bgcolor="white">
+                                                   <td style="text-align:center; !important" width="10px">
+                                                      <input name="webappFileName" value="docs" onclick="resetVars()" class="chkBox" type="checkbox">
+                                                   </td>
+                                                   <td>
+                                                      <a href="https://localhost:9443/carbon/webapp-list/webapp_info.jsp?webappFileName=docs&amp;webappState=all&amp;hostName=127.0.0.1&amp;httpPort=9763&amp;webappType=jaggeryWebapp">
+                                                         Product
+                                                      </a>
+                                                   </td>
+                                                   <td> &nbsp;
+                                                      Product1
+                                                   </td>
+                                                </tr>
+                                                <tr bgcolor="#EEEFFB">
+                                                   <td style="text-align:center; !important" width="10px">
+                                                      <input name="webappFileName" value="example.war" onclick="resetVars()" class="chkBox" type="checkbox">
+                                                   </td>
+                                                   <td>
+                                                      <a href="https://localhost:9443/carbon/webapp-list/webapp_info.jsp?webappFileName=example.war&amp;webappState=all&amp;hostName=127.0.0.1&amp;httpPort=9763&amp;webappType=webapp">
+                                                         Description
+                                                      </a>
+                                                   </td>
+                                                   <td> &nbsp;
+                                                      Description1
+                                                   </td>
+                                                </tr>
+                                                <tr bgcolor="white">
+                                                   <td style="text-align:center; !important" width="10px">
+                                                      <input name="webappFileName" value="jaxrs_basic.war" onclick="resetVars()" class="chkBox" type="checkbox">
+                                                   </td>
+                                                   <td>
+                                                      <a href="https://localhost:9443/carbon/webapp-list/webapp_info.jsp?webappFileName=jaxrs_basic.war&amp;webappState=all&amp;hostName=127.0.0.1&amp;httpPort=9763&amp;webappType=jaxWebapp">
+                                                         Redmine URL
+                                                      </a>
+                                                   </td>
+                                                   <td> &nbsp;
+                                                      Redmine URL1
+                                                   </td>
+                                                </tr>
+                                                <tr bgcolor="#EEEFFB">
+                                                   <td style="text-align:center; !important" width="10px">
+                                                      <input name="webappFileName" value="qa_portal.war" onclick="resetVars()" class="chkBox" type="checkbox">
+                                                   </td>
+                                                   <td>
+                                                      <a href="https://localhost:9443/carbon/webapp-list/webapp_info.jsp?webappFileName=qa_portal.war&amp;webappState=all&amp;hostName=127.0.0.1&amp;httpPort=9763&amp;webappType=webapp">
+                                                         Sample Name
+                                                      </a>
+                                                   </td>
+                                                   <td> &nbsp;
+                                                      Sample Name1
+                                                   </td>
+                                                </tr>
+                                             </tbody>
+                                          </table>
+                                       </form>
+                                       <p>&nbsp;</p>
+                                       <table>
+                                          <tbody>
+                                             <tr>
+                                                <td><a href="#" onclick="selectAllInTable1(true);return false;" style="cursor:pointer">Select all in this page</a>&nbsp;<b>|</b>&nbsp;</td>
+                                                <td><a href="#" onclick="selectAllInTable1(false);return false;" style="cursor:pointer">Select none</a></td>
+                                                <td width="20%">&nbsp;</td>
+                                                <td><a href="#" id="delete2" onclick="deleteWebapps();return false;">Delete</a></td>
+                                                <td width="10%">&nbsp;</td>
+                                                <td><a href="#" id="edit" onclick="editWebapps();return false;">Edit</a></td>
+                                             </tr>
+                                          </tbody>
+                                       </table>
+                                       <table>
+                                          <tbody>
+                                             <tr></tr>
+                                          </tbody>
+                                       </table>
+                                       <table>
+           								<form name="Test_Plan">
+                                          <table class="styledLeft">
+                                             <tbody>
+                                                <tr>
+                                                   <td style="border:0; !important">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                   <td>
+                                                      <table style="border:0; !important">
+                                                         <tbody>
+                                                            <tr style="border:0; !important">
+                                                               <td style="border:0; !important">
+                                                                  <nobr>
+                                                                     <font size="4">Test Scenario</font>
+                                                                  </nobr>
+                                                               </td>
+                                                            </tr>
+                                                         </tbody>
+                                                      </table>
+                                                   </td>
+                                                </tr>
+                                             </tbody>
+                                          </table>
+                                       </form>
+                                       <p>&nbsp;</p>
+                                       <table>
+                                          <tbody>
+                                             <tr></tr>
+                                          </tbody>
+                                       </table>
+                                       <table>
+                                          <tbody>
+                                             <tr>
+                                                <td><a href="#" onclick="selectAllInTable2(true);return false;" style="cursor:pointer">Select all in this page</a>&nbsp;<b>|</b>&nbsp;</td>
+                                                <td><a href="#" onclick="selectAllInTable2(false);return false;" style="cursor:pointer">Select none</a></td>
+                                                <td width="20%">&nbsp;</td>
+                                                <td><a href="#" id="delete1" onclick="deleteWebapps();return false;">Delete</a></td>
+                                                <td width="10%">&nbsp;</td>
+                                                <td><a href="#" id="edit" onclick="editWebapps();return false;">Edit</a></td>
+                                             </tr>
+                                          </tbody>
+                                       </table>
+                                       <p>&nbsp;</p>
+
+                                       <form action="delete_webapps.jsp" name="webappsForm2" method="post">
+                                          <input name="pageNumber" value="0" type="hidden">
+                                          <input name="webappState" value="all" type="hidden">
+                                          <input name="webappType" value="all" type="hidden">
+                                          <table class="styledLeft" id="webappsTable" width="100%">
+                                          	<col width="10">
+                                          	<col width="450">
+                                             
+                                             <tbody>
+                                                <tr bgcolor="white">
+                                                   <td style="text-align:center; !important" width="10px">
+                                                      <input name="webappFileName" value="docs" onclick="resetVars()" class="chkBox" type="checkbox">
+                                                   </td>
+                                                   <td>
+                                                      <a href="https://localhost:9443/carbon/webapp-list/webapp_info.jsp?webappFileName=docs&amp;webappState=all&amp;hostName=127.0.0.1&amp;httpPort=9763&amp;webappType=jaggeryWebapp">
+                                                         Scenario1
+                                                      </a>
+                                                   </td>
+                                                </tr>
+                                                <tr bgcolor="#EEEFFB">
+                                                   <td style="text-align:center; !important" width="10px">
+                                                      <input name="webappFileName" value="example.war" onclick="resetVars()" class="chkBox" type="checkbox">
+                                                   </td>
+                                                   <td>
+                                                      <a href="https://localhost:9443/carbon/webapp-list/webapp_info.jsp?webappFileName=example.war&amp;webappState=all&amp;hostName=127.0.0.1&amp;httpPort=9763&amp;webappType=webapp">
+                                                         Scenario2
+                                                      </a>
+                                                   </td>
+                                                </tr>
+                                                <tr bgcolor="white">
+                                                   <td style="text-align:center; !important" width="10px">
+                                                      <input name="webappFileName" value="jaxrs_basic.war" onclick="resetVars()" class="chkBox" type="checkbox">
+                                                   </td>
+                                                   <td>
+                                                      <a href="https://localhost:9443/carbon/webapp-list/webapp_info.jsp?webappFileName=jaxrs_basic.war&amp;webappState=all&amp;hostName=127.0.0.1&amp;httpPort=9763&amp;webappType=jaxWebapp">
+                                                         Scenario3
+                                                      </a>
+                                                   </td>
+                                                </tr>
+                                             </tbody>
+                                          </table>
+                                       </form>
+                                       <p>&nbsp;</p>
+                                       <table>
+                                          <tbody>
+                                             <tr></tr>
+                                          </tbody>
+                                       </table>
+                                       <table>
+                                          <tbody>
+                                             <tr>
+                                                <td><a href="#" onclick="selectAllInTable2(true);return false;" style="cursor:pointer">Select all in this page</a>&nbsp;<b>|</b>&nbsp;</td>
+                                                <td><a href="#" onclick="selectAllInTable2(false);return false;" style="cursor:pointer">Select none</a></td>
+                                                <td width="20%">&nbsp;</td>
+                                                <td><a href="#" id="delete1" onclick="deleteWebapps();return false;">Delete</a></td>
+                                                <td width="10%">&nbsp;</td>
+                                                <td><a href="#" id="edit" onclick="editWebapps();return false;">Edit</a></td>
+                                             </tr>
+                                          </tbody>
+                                       </table>
+                                       <p>&nbsp;</p>
+
+
+                                    </div>
+                                 </div>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </td>
+               </tr>
+              	<tr>
+                  <td id="footer" colspan="3">
+                     <div id="footer-div">
+                        <div class="footer-content">
+                           <div class="copyright">
+                              © 2005 - 2014 WSO2 Inc. All Rights Reserved.
+                           </div>
+                        <!--div class="poweredby">
+                     </div-->
+                  </div>
+               </div>
+            </td>
+         </tr>
+      </tbody>
+   </table>
+   <script type="text/javascript">
+   if (Function('/*@cc_on return document.documentMode===10@*/')()){
+     document.documentElement.className+=' ie10';
+  }
+  </script>
+</body>
+</html>
