@@ -1,12 +1,9 @@
-<tr>
-     <td id="footer" colspan="3">
-          <div id="footer-div">
-               <div class="footer-content">
-                    <div class="copyright">
-                         © 2005 - 2013 WSO2 Inc. All Rights Reserved.
-                    </div>
-
+<td id="footer" colspan="3">
+     <div id="footer-div">
+          <div class="footer-content">
+               <div class="copyright">
+                    © 2005 - 2014 WSO2 Inc. All Rights Reserved.
                </div>
           </div>
-     </td>
-</tr>
+     </div>
+</td>
