@@ -133,8 +133,8 @@
                                     <li id="region1_products_menu" class="menu-header" onclick="mainMenuCollapse(this.childNodes[0])" style="cursor: pointer;"><img src="resources/up-arrow.gif" class="mMenuHeaders" id="region1_products_menu">Products</li>
                                     <li class="normal">
                                        <ul class="sub">
-                                          <li><a href="https://localhost:9443/carbon/resources/resource.jsp?region=region3&amp;item=resource_browser_menu&amp;path=/" class="menu-default" style="background-image: url(resources/images/list.gif);">List</a></li>
-                                          <li><a href="https://localhost:9443/carbon/search/advancedSearch.jsp?region=region3&amp;item=registry_search_menu" class="menu-default" style="background-image: url(resources/images/add.gif);">Add Project</a></li>
+                                          <li><a href="products_home.jag" class="menu-default" style="background-image: url(resources/images/list.gif);">List</a></li>
+                                          <li><a href="https://localhost:9443/carbon/search/advancedSearch.jsp?region=region3&amp;item=registry_search_menu" class="menu-default" style="background-image: url(resources/images/add.gif);">Add Product</a></li>
                                        </ul>
                                     </li>
                                  </ul>
@@ -520,7 +520,7 @@
                                                       <input name="webappFileName" value="docs" onclick="resetVars()" class="chkBox" type="checkbox">
                                                    </td>
                                                    <td>
-                                                      <a href="https://localhost:9443/carbon/webapp-list/webapp_info.jsp?webappFileName=docs&amp;webappState=all&amp;hostName=127.0.0.1&amp;httpPort=9763&amp;webappType=jaggeryWebapp">
+                                                      <a href="products_dashboard.jag">
                                                          Carbon
                                                       </a>
                                                    </td>
