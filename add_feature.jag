@@ -105,11 +105,7 @@
                               </li>
                               <li class="middle">|</li>
                               <li class="left">
-<<<<<<< HEAD
-                                 <a target="_blank" href="https://localhost:9443/carbon/docs/about.jag">About</a>
-=======
                                  <a target="_blank" href="/docs/about.jag">About</a>
->>>>>>> 9e59da7e162f056658fe68692f0ea93117ba94e8
                               </li>
                            </ul>
                         </div>
@@ -205,19 +201,8 @@
                                                          <table cellspacing="0">
                                                             <tbody>
                                                                <tr>
-<<<<<<< HEAD
-                                                           			<td class="breadcrumb-link">
-                                                           				<a href="index.jag">QA Home</a>
-                                                           			</td>
-                                                                  	<td class="breadcrumb-link">
-  																		<a href="product_home.jag">&nbsp;&gt;&nbsp;Products</a>
-																  	</td>
-																  	<td class="breadcrumb-link">&nbsp;&gt;&nbsp;List</td>
-																  	<td class="breadcrumb-link">&nbsp;&gt;&nbsp;Feature dashboard</td>
-=======
                                                                   <td class="breadcrumb-link"><a href="index.jag">QA Home</a></td>
                                                                   <td class="breadcrumb-link">&nbsp;&gt;&nbsp;Products</td>
->>>>>>> 9e59da7e162f056658fe68692f0ea93117ba94e8
                                                                </tr>
                                                             </tbody>
                                                          </table>
@@ -264,11 +249,7 @@
                               document.onload=setBreadcrumDiv();
                               function setBreadcrumDiv () {
                                 var breadcrumbDiv = document.getElementById('breadcrumb-div');
-<<<<<<< HEAD
-                                breadcrumbDiv.innerHTML = '<table cellspacing="0"><tr><td class="breadcrumb-link"><a href="index.jag">QA Home</a></td><td class="breadcrumb-link"><a href="product_home.jag">&nbsp;&gt;&nbsp;Products</a></td><td class="breadcrumb-link">&nbsp;&gt;&nbsp;List</td><td class="breadcrumb-link">&nbsp;&gt;&nbsp;Feature dashboard</td>';
-=======
                                 breadcrumbDiv.innerHTML = '<table cellspacing="0"><tr><td class="breadcrumb-link"><a href="index.jag">QA Home</a></td><td class="breadcrumb-link">&nbsp;>&nbsp;Products</td>';
->>>>>>> 9e59da7e162f056658fe68692f0ea93117ba94e8
                              }
                              </script>
                               <!--
@@ -288,6 +269,7 @@
                                  ~ specific language governing permissions and limitations
                                  ~ under the License.
                               -->
+
                               <script type="text/javascript" src="resources/global-params.js"></script>
                               <script type="text/javascript">
                               wso2.wsf.Util.initURLs();
@@ -419,54 +401,30 @@
                                     }
                                  }
                                  
-                                 function selectAllInTable1(isSelected) {
+                                 function selectAllInThisPage(isSelected) {
                                   allWebappsSelected = false;
-                                  if (document.webappsForm1.webappFileName != null &&
-                                             document.webappsForm1.webappFileName[0] != null) { // there is more than 1
+                                  if (document.webappsForm.webappFileName != null &&
+                                             document.webappsForm.webappFileName[0] != null) { // there is more than 1
                                     if (isSelected) {
-                                      for (var j = 0; j < document.webappsForm1.webappFileName.length; j++) {
-                                        document.webappsForm1.webappFileName[j].checked = true;
+                                      for (var j = 0; j < document.webappsForm.webappFileName.length; j++) {
+                                        document.webappsForm.webappFileName[j].checked = true;
                                      }
                                   } else {
-                                   for (j = 0; j < document.webappsForm1.webappFileName.length; j++) {
-                                     document.webappsForm1.webappFileName[j].checked = false;
+                                   for (j = 0; j < document.webappsForm.webappFileName.length; j++) {
+                                     document.webappsForm.webappFileName[j].checked = false;
                                   }
                                }
-                                         } else if (document.webappsForm1.webappFileName != null) { // only 1
-                                          document.webappsForm1.webappFileName.checked = isSelected;
+                                         } else if (document.webappsForm.webappFileName != null) { // only 1
+                                          document.webappsForm.webappFileName.checked = isSelected;
                                        }
                                        return false;
                                     }
-
-                                    function selectAllInTable2(isSelected) {
-                                  allWebappsSelected = false;
-                                  if (document.webappsForm2.webappFileName != null &&
-                                             document.webappsForm2.webappFileName[0] != null) { // there is more than 1
-                                    if (isSelected) {
-                                      for (var j = 0; j < document.webappsForm2.webappFileName.length; j++) {
-                                        document.webappsForm2.webappFileName[j].checked = true;
-                                     }
-                                  } else {
-                                   for (j = 0; j < document.webappsForm2.webappFileName.length; j++) {
-                                     document.webappsForm2.webappFileName[j].checked = false;
-                                  }
-                               }
-                                         } else if (document.webappsForm2.webappFileName != null) { // only 1
-                                          document.webappsForm2.webappFileName.checked = isSelected;
-                                       }
-                                       return false;
-                                    }
-
-
 
                                     function selectAllInAllPages() {
-                                     selectAllInTable1(true);
-                                     selectAllInTable2(true);
+                                     selectAllInThisPage(true);
                                      allWebappsSelected = true;
                                      return false;
                                   }
-
-
 
                                   function resetVars() {
                                      allWebappsSelected = false;
@@ -493,250 +451,71 @@
                                    }
                                    </script>
                                    <div id="middle">
-                                    <h2>Feature dashboard</h2>
+                                    <h2>Add Feature</h2>
                                     <div id="workArea">
-                                       <form name="Features">
-                                          <table class="styledLeft">
-                                             <tbody>
-                                                <tr>
-                                                   <td style="border:0; !important">&nbsp;</td>
-                                                </tr>
-                                                <tr>
-                                                   <td>
-                                                      <table style="border:0; !important">
-                                                         <tbody>
-                                                            <tr style="border:0; !important">
-                                                               <td style="border:0; !important">
-                                                                  <nobr>
-                                                                     <font size="4">Feature</font>
-                                                                  </nobr>
-                                                               </td>
-                                                            </tr>
-                                                         </tbody>
-                                                      </table>
-                                                   </td>
-                                                </tr>
-                                             </tbody>
-                                          </table>
-                                       </form>
-                                       <p>&nbsp;</p>
-                                       <table>
-                                          <tbody>
-                                             <tr></tr>
-                                          </tbody>
-                                       </table>
-                                       <table>
-                                          <tbody>
-                                             <tr>
-                                                <td><a href="#" onclick="selectAllInTable1(true);return false;" style="cursor:pointer">Select all in this page</a>&nbsp;<b>|</b>&nbsp;</td>
-                                                <td><a href="#" onclick="selectAllInTable1(false);return false;" style="cursor:pointer">Select none</a></td>
-                                                <td width="20%">&nbsp;</td>
-                                                <td><a href="#" id="delete1" onclick="deleteWebapps();return false;">Delete</a></td>
-                                                <td width="10%">&nbsp;</td>
-                                                <td><a href="#" id="edit" onclick="editWebapps();return false;">Edit</a></td>
-                                             </tr>
-                                          </tbody>
-                                       </table>
-                                       <p>&nbsp;</p>
-                                       <form action="delete_webapps.jsp" name="webappsForm1" method="post">
-                                          <input name="pageNumber" value="0" type="hidden">
-                                          <input name="webappState" value="all" type="hidden">
-                                          <input name="webappType" value="all" type="hidden">
-                                          <table class="styledLeft" id="webappsTable" width="100%">
-                                             <col width="10">
-                                             <col width="450">
-                                             <thead>
-                                                <tr>
-                                                   <th>&nbsp;</th>
-                                                   <th>
-                                                      <nobr>Feature Name</nobr>
-                                                   </th>
-                                                   <th>Name1</th>
-                                                </tr>
-                                             </thead>
-                                             <tbody>
-                                                <tr bgcolor="white">
-                                                   <td style="text-align:center; !important" width="10px">
-                                                      <input name="webappFileName" value="docs" onclick="resetVars()" class="chkBox" type="checkbox">
-                                                   </td>
-                                                   <td>
-                                                      <a href="https://localhost:9443/carbon/webapp-list/webapp_info.jsp?webappFileName=docs&amp;webappState=all&amp;hostName=127.0.0.1&amp;httpPort=9763&amp;webappType=jaggeryWebapp">
-                                                         Product
-                                                      </a>
-                                                   </td>
-                                                   <td> &nbsp;
-                                                      Product1
-                                                   </td>
-                                                </tr>
-                                                <tr bgcolor="#EEEFFB">
-                                                   <td style="text-align:center; !important" width="10px">
-                                                      <input name="webappFileName" value="example.war" onclick="resetVars()" class="chkBox" type="checkbox">
-                                                   </td>
-                                                   <td>
-                                                      <a href="https://localhost:9443/carbon/webapp-list/webapp_info.jsp?webappFileName=example.war&amp;webappState=all&amp;hostName=127.0.0.1&amp;httpPort=9763&amp;webappType=webapp">
-                                                         Description
-                                                      </a>
-                                                   </td>
-                                                   <td> &nbsp;
-                                                      Description1
-                                                   </td>
-                                                </tr>
-                                                <tr bgcolor="white">
-                                                   <td style="text-align:center; !important" width="10px">
-                                                      <input name="webappFileName" value="jaxrs_basic.war" onclick="resetVars()" class="chkBox" type="checkbox">
-                                                   </td>
-                                                   <td>
-                                                      <a href="https://localhost:9443/carbon/webapp-list/webapp_info.jsp?webappFileName=jaxrs_basic.war&amp;webappState=all&amp;hostName=127.0.0.1&amp;httpPort=9763&amp;webappType=jaxWebapp">
-                                                         Redmine URL
-                                                      </a>
-                                                   </td>
-                                                   <td> &nbsp;
-                                                      Redmine URL1
-                                                   </td>
-                                                </tr>
-                                                <tr bgcolor="#EEEFFB">
-                                                   <td style="text-align:center; !important" width="10px">
-                                                      <input name="webappFileName" value="qa_portal.war" onclick="resetVars()" class="chkBox" type="checkbox">
-                                                   </td>
-                                                   <td>
-                                                      <a href="https://localhost:9443/carbon/webapp-list/webapp_info.jsp?webappFileName=qa_portal.war&amp;webappState=all&amp;hostName=127.0.0.1&amp;httpPort=9763&amp;webappType=webapp">
-                                                         Sample Name
-                                                      </a>
-                                                   </td>
-                                                   <td> &nbsp;
-                                                      Sample Name1
-                                                   </td>
-                                                </tr>
-                                             </tbody>
-                                          </table>
-                                       </form>
-                                       <p>&nbsp;</p>
-                                       <table>
-                                          <tbody>
-                                             <tr>
-                                                <td><a href="#" onclick="selectAllInTable1(true);return false;" style="cursor:pointer">Select all in this page</a>&nbsp;<b>|</b>&nbsp;</td>
-                                                <td><a href="#" onclick="selectAllInTable1(false);return false;" style="cursor:pointer">Select none</a></td>
-                                                <td width="20%">&nbsp;</td>
-                                                <td><a href="#" id="delete2" onclick="deleteWebapps();return false;">Delete</a></td>
-                                                <td width="10%">&nbsp;</td>
-                                                <td><a href="#" id="edit" onclick="editWebapps();return false;">Edit</a></td>
-                                             </tr>
-                                          </tbody>
-                                       </table>
-                                       <table>
-                                          <tbody>
-                                             <tr></tr>
-                                          </tbody>
-                                       </table>
-                                       <table>
-                                 <form name="Test_Plan">
-                                          <table class="styledLeft">
-                                             <tbody>
-                                                <tr>
-                                                   <td style="border:0; !important">&nbsp;</td>
-                                                </tr>
-                                                <tr>
-                                                   <td>
-                                                      <table style="border:0; !important">
-                                                         <tbody>
-                                                            <tr style="border:0; !important">
-                                                               <td style="border:0; !important">
-                                                                  <nobr>
-                                                                     <font size="4">Test Scenario</font>
-                                                                  </nobr>
-                                                               </td>
-                                                            </tr>
-                                                         </tbody>
-                                                      </table>
-                                                   </td>
-                                                </tr>
-                                             </tbody>
-                                          </table>
-                                       </form>
-                                       <p>&nbsp;</p>
-                                       <table>
-                                          <tbody>
-                                             <tr></tr>
-                                          </tbody>
-                                       </table>
-                                       <table>
-                                          <tbody>
-                                             <tr>
-                                                <td><a href="#" onclick="selectAllInTable2(true);return false;" style="cursor:pointer">Select all in this page</a>&nbsp;<b>|</b>&nbsp;</td>
-                                                <td><a href="#" onclick="selectAllInTable2(false);return false;" style="cursor:pointer">Select none</a></td>
-                                                <td width="20%">&nbsp;</td>
-                                                <td><a href="#" id="delete1" onclick="deleteWebapps();return false;">Delete</a></td>
-                                                <td width="10%">&nbsp;</td>
-                                                <td><a href="#" id="edit" onclick="editWebapps();return false;">Edit</a></td>
-                                             </tr>
-                                          </tbody>
-                                       </table>
-                                       <p>&nbsp;</p>
-
-                                       <form action="delete_webapps.jsp" name="webappsForm2" method="post">
-                                          <input name="pageNumber" value="0" type="hidden">
-                                          <input name="webappState" value="all" type="hidden">
-                                          <input name="webappType" value="all" type="hidden">
-                                          <table class="styledLeft" id="webappsTable" width="100%">
-                                             <col width="10">
-                                             <col width="450">
-                                             
-                                             <tbody>
-                                                <tr bgcolor="white">
-                                                   <td style="text-align:center; !important" width="10px">
-                                                      <input name="webappFileName" value="docs" onclick="resetVars()" class="chkBox" type="checkbox">
-                                                   </td>
-                                                   <td>
-                                                      <a href="https://localhost:9443/carbon/webapp-list/webapp_info.jsp?webappFileName=docs&amp;webappState=all&amp;hostName=127.0.0.1&amp;httpPort=9763&amp;webappType=jaggeryWebapp">
-                                                         Scenario1
-                                                      </a>
-                                                   </td>
-                                                </tr>
-                                                <tr bgcolor="#EEEFFB">
-                                                   <td style="text-align:center; !important" width="10px">
-                                                      <input name="webappFileName" value="example.war" onclick="resetVars()" class="chkBox" type="checkbox">
-                                                   </td>
-                                                   <td>
-                                                      <a href="https://localhost:9443/carbon/webapp-list/webapp_info.jsp?webappFileName=example.war&amp;webappState=all&amp;hostName=127.0.0.1&amp;httpPort=9763&amp;webappType=webapp">
-                                                         Scenario2
-                                                      </a>
-                                                   </td>
-                                                </tr>
-                                                <tr bgcolor="white">
-                                                   <td style="text-align:center; !important" width="10px">
-                                                      <input name="webappFileName" value="jaxrs_basic.war" onclick="resetVars()" class="chkBox" type="checkbox">
-                                                   </td>
-                                                   <td>
-                                                      <a href="https://localhost:9443/carbon/webapp-list/webapp_info.jsp?webappFileName=jaxrs_basic.war&amp;webappState=all&amp;hostName=127.0.0.1&amp;httpPort=9763&amp;webappType=jaxWebapp">
-                                                         Scenario3
-                                                      </a>
-                                                   </td>
-                                                </tr>
-                                             </tbody>
-                                          </table>
-                                       </form>
-                                       <p>&nbsp;</p>
-                                       <table>
-                                          <tbody>
-                                             <tr></tr>
-                                          </tbody>
-                                       </table>
-                                       <table>
-                                          <tbody>
-                                             <tr>
-                                                <td><a href="#" onclick="selectAllInTable2(true);return false;" style="cursor:pointer">Select all in this page</a>&nbsp;<b>|</b>&nbsp;</td>
-                                                <td><a href="#" onclick="selectAllInTable2(false);return false;" style="cursor:pointer">Select none</a></td>
-                                                <td width="20%">&nbsp;</td>
-                                                <td><a href="#" id="delete1" onclick="deleteWebapps();return false;">Delete</a></td>
-                                                <td width="10%">&nbsp;</td>
-                                                <td><a href="#" id="edit" onclick="editWebapps();return false;">Edit</a></td>
-                                             </tr>
-                                          </tbody>
-                                       </table>
-                                       <p>&nbsp;</p>
 
 
-                                    </div>
+<table class="styledLeft noBorders" cellspacing="0" cellpadding="0" border="0" style="border-bottom:none">
+                                    <tbody>
+                                    <tr>
+	<td style="width:170px;">Feature Name<span class="required">*</span></td>
+    <td align="left">
+    	 <input type="text" id="featurename" name="featurename">
+    </td>
+</tr>
+
+<tr>
+<td style="width:170px;">Product<span class="required">*</span></td>
+	<td align="right">
+		 <select id="productselector" name="productselector">
+                    	<option value="carbon" selected="selected">Carbon</option>
+                    	<option value="esb" >ESB</option>
+                    	<option value="appserver" >Application Server</option>
+                    	<option value="addnew" >Add New</option>                    
+         </select>
+		<input type="hidden" id="product" name="product" value="">
+    </td>
+</tr>
+    <td style="width:170px;">Description</td>
+    <td align="left">
+        <input id="description" name="description" class="longInput" value="">
+    </td>
+</tr>
+<tr>
+	<td style="width:170px;">Redmine URI<span class="required">*</span></td>
+    <td align="left">
+    	 <input type="text" id="redmineuri" name="redmineuri">
+    </td>
+</tr>
+<tr>
+<td style="width:170px;">Sample<span class="required">*</span></td>
+	<td align="right">
+		 <select id="sample" name="sample">
+                    	<option value="sample1" selected="selected">Sample1</option>
+                    	<option value="sample2" >Sample2</option>
+                    	<option value="sample3" >Sample3</option>
+                    	<option value="sample4" >Sample4</option>                    
+         </select>
+		<input type="hidden" id="sample" name="sample" value="">
+    </td>
+</tr>
+
+	</tbody>
+	</table> 
+	<table class="styledLeft noBorders" cellspacing="0" cellpadding="0" border="0">  		
+   		<tr>
+   		<td class="buttonRow" >
+<input class="button" type="button" value="Create" onclick="var val = ValidateProperties(); if (val) {dsSave('Name cannot be empty','Name cannot contain any special characters other than hyphen (-) and underscore (_)','Driver Class Name cannot be empty','Database URL cannot be empty','Please Specify Custom Data Source Type ',document.dscreationform)}; return false;">
+
+<input class="button" type="reset" value="Cancel" onclick="document.location.href='index.jsp'">
+    </td> 
+    <td>
+    </td>
+    </tr> 
+    </table>
+
+    
+                        </div>
                                  </div>
                               </td>
                            </tr>
