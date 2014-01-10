@@ -12,10 +12,10 @@
 							<li class="normal">
 								<ul class="sub">
 									<li><a href="products_home.jag" class="menu-default"
-										style="background-image: url(resources/images/list.gif);">Products</a>
+										style="background-image: url(resources/images/list.gif);">List</a>
 									</li>
 									<li><a href="products_home.jag" class="menu-default"
-										style="background-image: url(resources/images/add.gif);">Products</a>
+										style="background-image: url(resources/images/add.gif);">Add</a>
 									</li>
 
 								</ul>
