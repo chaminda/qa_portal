@@ -1,0 +1,49 @@
+<%
+
+   	var url  = "http://localhost:9763/services/WSO2_QAP_PRODUCT_DataService/view/products";
+   	var optionalHeaders = {
+    "Accept": "application/json",
+        "Content-Type": "application/json"};
+	var data = get(url,"",optionalHeaders);
+
+
+	var obj = parse(data.data);
+
+	var list = obj.WSO2_QAP_PRODUCTCollection.WSO2_QAP_PRODUCT;
+
+
+	//print(list[0].WSO2_QAP_PRODUCT_NAME);
+    if(list.length==null && list.WSO2_QAP_PRODUCT_NAME!=null){
+
+        print('<tr bgcolor="white">');
+        print('<tr bgcolor="white">');
+        print(' <td style="text-align:center; !important" width="10px">');
+        print('    <input name="productId" value="'+list.WSO2_QAP_PRODUCT_ID+'" onclick="resetVars()" class="chkBox" type="checkbox">');
+        print(' </td>');
+
+        print(' <td>');
+        print('    <a href="products_dashboard.jag?product='+list.WSO2_QAP_PRODUCT_NAME+'">');
+        print(list.WSO2_QAP_PRODUCT_NAME );
+        print('</a>');
+        print('</td>');
+        print('</tr>');
+
+    }
+
+	for (var i=0;i<list.length;i++)
+	{ 
+        print('<tr bgcolor="white">');
+        print('<tr bgcolor="white">');
+        print(' <td style="text-align:center; !important" width="10px">');
+        print('    <input name="productId" value="'+list[i].WSO2_QAP_PRODUCT_ID+'" onclick="resetVars()" class="chkBox" type="checkbox">');
+        print(' </td>');
+
+        print(' <td>');
+        print('    <a href="products_dashboard.jag?product='+list[i].WSO2_QAP_PRODUCT_NAME+'">');
+        print(list[i].WSO2_QAP_PRODUCT_NAME );
+        print('</a>');
+        print('</td>');
+        print('</tr>');
+	}
+
+ %>

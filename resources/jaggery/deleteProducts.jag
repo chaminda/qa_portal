@@ -1,0 +1,20 @@
+<%
+var params = request.getAllParameters("UTF-8");
+var list = params.productId;
+var data = {'WSO2_QAP_PRODUCT_ID': 'd'}; 
+
+	for (var i=0;i<list.length;i++){
+		var url = "http://localhost:9763/services/WSO2_QAP_PRODUCT_DataService/delete/products/"+list[i];
+		del(url, data, "text");
+
+		
+	}
+
+
+
+response.sendRedirect("../../products_home.jag");
+
+%>
+
+
+
