@@ -3,12 +3,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <%
-var name = session.get("username");
-if(name===null){
-           response.sendRedirect("login.jag");
-         }
-         require("head.jag");
-         %>
+	var name = session.get("username");
+	if(name===null){
+    	response.sendRedirect("login.jag");
+    }
+    require("head.jag");
+%>
 
 
 </head>
@@ -35,17 +35,18 @@ if(name===null){
 	<table id="main-table" border="0" cellspacing="0">
 		<tbody>
 			<tr>
-				<td id="header" colspan="3"><%
-				require("header_div.jag");
+				<td id="header" colspan="3">
+				<%
+					require("header_div.jag");
 				%>
 				</td>
 			</tr>
 			<tr>
 				<% 
-				require("product_vertical_menu.jag");
+					require("product_vertical_menu.jag");
 				%>
 				<%
-				require("product_menu_panel.jag");
+					require("product_menu_panel.jag");
 				%>
 
 
@@ -142,12 +143,12 @@ if(name===null){
 															</td>
 															<td class="formRow"><input type="text" id="datepicker">
 															
-<!-- 															<script>
-// 																$( "#datepicker" ).datepicker({
-// 																      changeMonth: true,
-// 																      changeYear: true
-// 																    });
-  </script> -->
+														<script>
+ 															$( "#datepicker" ).datepicker({
+																changeMonth: true,
+																changeYear: true
+ 															});
+  														</script>
 															</td>
 														</tr>
 
