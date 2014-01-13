@@ -1,6 +1,6 @@
 <%
-
-   	var url  = "http://localhost:9763/services/WSO2_QAP_PRODUCT_DataService/view/products";
+    var SERVICE_ROOT = session.get("service_root");
+   	var url  = SERVICE_ROOT+"WSO2_QAP_PRODUCT_DataService/view/products";
    	var optionalHeaders = {
     "Accept": "application/json",
         "Content-Type": "application/json"};

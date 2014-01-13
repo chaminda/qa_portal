@@ -1,16 +1,23 @@
 <%
+var SERVICE_ROOT = session.get("service_root");
 var params = request.getAllParameters("UTF-8");
 var list = params.productId;
 var data = {'WSO2_QAP_PRODUCT_ID': 'd'}; 
 
-	for (var i=0;i<list.length;i++){
-		var url = "http://localhost:9763/services/WSO2_QAP_PRODUCT_DataService/delete/products/"+list[i];
-		del(url, data, "text");
+ if(typeof list === 'string'){
+ 	var url = SERVICE_ROOT+"WSO2_QAP_PRODUCT_DataService/delete/products/"+list;
+	del(url, data, "text");
 
-		
+ 	}
+ 	else{
+ 		print("else");
+		for (var i=0;i<list.length;i++){
+			var url = SERVICE_ROOT+"WSO2_QAP_PRODUCT_DataService/delete/products/"+list[i];
+			del(url, data, "text");
+
+			
+		}
 	}
-
-
 
 response.sendRedirect("../../products_home.jag");
 
