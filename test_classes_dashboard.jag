@@ -66,7 +66,7 @@
 	                                                                     <a href="product_home.jag">&nbsp;&gt;&nbsp;Products</a>
 	                                                                  </td>
 	                                                                  <td class="breadcrumb-link">&nbsp;&gt;&nbsp;List</td>
-	                                                                  <td class="breadcrumb-link">&nbsp;&gt;&nbsp;Test Class Dashboard</td>
+	                                                                  <td class="breadcrumb-link">&nbsp;&gt;&nbsp;Test Classes Dashboard</td>
 	                                                               </tr>
 	                                                            </tbody>
 	                                                         </table>
@@ -113,7 +113,7 @@
 	                              document.onload=setBreadcrumDiv();
 	                              function setBreadcrumDiv () {
 	                                var breadcrumbDiv = document.getElementById('breadcrumb-div');
-	                                breadcrumbDiv.innerHTML = '<table cellspacing="0"><tr><td class="breadcrumb-link"><a href="index.html">QA Home</a></td><td class="breadcrumb-link"><a href="product_home.html">&nbsp;&gt;&nbsp;Products</a></td><td class="breadcrumb-link">&nbsp;&gt;&nbsp;List</td><td class="breadcrumb-link">&nbsp;&gt;&nbsp;Test Class Dashboard</td>';
+	                                breadcrumbDiv.innerHTML = '<table cellspacing="0"><tr><td class="breadcrumb-link"><a href="index.html">QA Home</a></td><td class="breadcrumb-link"><a href="product_home.html">&nbsp;&gt;&nbsp;Products</a></td><td class="breadcrumb-link">&nbsp;&gt;&nbsp;List</td><td class="breadcrumb-link">&nbsp;&gt;&nbsp;Test Classes Dashboard</td>';
 	                             }
 	                            </script>
 	                              <!--
@@ -264,26 +264,7 @@
 	                                    }
 	                                 }
 	                                 
-	                                 function selectAllInTable1(isSelected) {
-	                                   allWebappsSelected = false;
-	                                   if (document.webappsForm1.webappFileName != null &&
-	                                             document.webappsForm1.webappFileName[0] != null) { // there is more than 1
-	                                    if (isSelected) {
-	                                     for (var j = 0; j < document.webappsForm1.webappFileName.length; j++) {
-	                                      document.webappsForm1.webappFileName[j].checked = true;
-	                                   }
-	                                } else {
-	                                  for (j = 0; j < document.webappsForm1.webappFileName.length; j++) {
-	                                   document.webappsForm1.webappFileName[j].checked = false;
-	                                }
-	                             }
-	                                         } else if (document.webappsForm1.webappFileName != null) { // only 1
-	                                          document.webappsForm1.webappFileName.checked = isSelected;
-	                                       }
-	                                       return false;
-	                                    }
-
-	                                    function selectAllInTable2(isSelected) {
+	                                 function selectAllInTable(isSelected) {
 	                                   allWebappsSelected = false;
 	                                   if (document.webappsForm1.webappFileName != null &&
 	                                             document.webappsForm1.webappFileName[0] != null) { // there is more than 1
@@ -303,8 +284,7 @@
 	                                    }
 
 	                                    function selectAllInAllPages() {
-	                                      selectAllInTable1(true);
-	                                      selectAllInTable2(true);
+	                                      selectAllInTable(true);
 	                                      allWebappsSelected = true;
 	                                      return false;
 	                                   }
@@ -334,7 +314,7 @@
 	                                  }
 	                                  </script>
 	                                  <div id="middle">
-	                                    <h2>Test Class (Test Class Name)</h2>
+	                                    <h2>Test Classes</h2>
 	                                    <div id="workArea">
 	                                       <form name="Features">
 	                                          <table class="styledLeft">
@@ -349,7 +329,7 @@
 	                                                            <tr style="border:0; !important">
 	                                                               <td style="border:0; !important">
 	                                                                  <nobr>
-	                                                                     <font size="4">Test Class Dashboard</font>
+	                                                                     <font size="4">Test Classes Dashboard</font>
 	                                                                  </nobr>
 	                                                               </td>
 	                                                            </tr>
@@ -369,8 +349,8 @@
 	                                       <table>
 	                                          <tbody>
 	                                             <tr>
-	                                                <td><a href="#" onclick="selectAllInTable1(true);return false;" style="cursor:pointer">Select all in this page</a>&nbsp;<b>|</b>&nbsp;</td>
-	                                                <td><a href="#" onclick="selectAllInTable1(false);return false;" style="cursor:pointer">Select none</a></td>
+	                                                <td><a href="#" onclick="selectAllInTable(true);return false;" style="cursor:pointer">Select all in this page</a>&nbsp;<b>|</b>&nbsp;</td>
+	                                                <td><a href="#" onclick="selectAllInTable(false);return false;" style="cursor:pointer">Select none</a></td>
 	                                                <td width="20%">&nbsp;</td>
 	                                                <td><a href="#" id="delete1" onclick="deleteWebapps();return false;">Delete</a></td>
 	                                                <td width="10%">&nbsp;</td>
@@ -385,7 +365,6 @@
 	                                          <input name="webappType" value="all" type="hidden">
 	                                          <table class="styledLeft" id="webappsTable" width="100%">
 	                                                  <col width="10">
-	                                                  <col width="100">
 	                                                  <col width="450">
 	                                             <thead>
 	                                                <tr>
@@ -393,112 +372,7 @@
 	                                                   <th>
 	                                                      <nobr>Test Class ID</nobr>
 	                                                   </th>
-	                                                   <th>(Some ID)</th>
-	                                                   
-	                                                </tr>
-	                                             </thead>
-	                                             <tbody>
-	                                                <tr bgcolor="white">
-	                                                   <td style="text-align:center; !important" width="10px">
-	                                                      <input name="webappFileName" value="docs" onclick="resetVars()" class="chkBox" type="checkbox">
-	                                                   </td>
-	                                                   <td>
-	                                                      <a href="https://localhost:9443/carbon/webapp-list/webapp_info.jsp?webappFileName=docs&amp;webappState=all&amp;hostName=127.0.0.1&amp;httpPort=9763&amp;webappType=jaggeryWebapp">
-	                                                         Test Class Location
-	                                                      </a>
-	                                                   </td>
-	                                                   <td> (Some URI)
-	                                                   </td>
-	                                                </tr>
-	                                             </tbody>
-	                                          </table>
-	                                       </form>
-	                                       <p>&nbsp;</p>
-	                                       <table>
-	                                          <tbody>
-	                                             <tr>
-	                                                <td><a href="#" onclick="selectAllInTable(true);return false;" style="cursor:pointer">Select all in this page</a>&nbsp;<b>|</b>&nbsp;</td>
-	                                                <td><a href="#" onclick="selectAllInTable(false);return false;" style="cursor:pointer">Select none</a></td>
-	                                                <td width="20%">&nbsp;</td>
-	                                                <td><a href="#" id="delete2" onclick="deleteWebapps();return false;">Delete</a></td>
-	                                                <td width="10%">&nbsp;</td>
-	                                                <td><a href="#" id="edit" onclick="editWebapps();return false;">Edit</a></td>
-	                                             </tr>
-	                                          </tbody>
-	                                       </table>
-	                                       <table>
-	                                          <tbody>
-	                                             <tr></tr>
-	                                          </tbody>
-	                                       </table>
-
-
-	                                       <form name="Features">
-	                                          <table class="styledLeft">
-	                                             <tbody>
-	                                                <tr>
-	                                                   <td style="border:0; !important">&nbsp;</td>
-	                                                </tr>
-	                                                <tr>
-	                                                   <td>
-	                                                      <table style="border:0; !important">
-	                                                         <tbody>
-	                                                            <tr style="border:0; !important">
-	                                                               <td style="border:0; !important">
-	                                                                  <nobr>
-	                                                                     <font size="4">Test Cases</font>
-	                                                                  </nobr>
-	                                                               </td>
-	                                                            </tr>
-	                                                         </tbody>
-	                                                      </table>
-	                                                   </td>
-	                                                </tr>
-	                                             </tbody>
-	                                          </table>
-	                                       </form>
-	                                       <p>&nbsp;</p>
-	                                       <table>
-	                                          <tbody>
-	                                             <tr></tr>
-	                                          </tbody>
-	                                       </table>
-	                                       <table>
-	                                          <tbody>
-	                                             <tr>
-	                                                <td><a href="#" onclick="selectAllInTable1(true);return false;" style="cursor:pointer">Select all in this page</a>&nbsp;<b>|</b>&nbsp;</td>
-	                                                <td><a href="#" onclick="selectAllInTable1(false);return false;" style="cursor:pointer">Select none</a></td>
-	                                                <td width="20%">&nbsp;</td>
-	                                                <td><a href="#" id="delete1" onclick="deleteWebapps();return false;">Delete</a></td>
-	                                                <td width="10%">&nbsp;</td>
-	                                                <td><a href="#" id="edit" onclick="editWebapps();return false;">Edit</a></td>
-	                                             </tr>
-	                                          </tbody>
-	                                       </table>
-	                                       <p>&nbsp;</p>
-	                                       <form action="delete_webapps.jsp" name="webappsForm1" method="post">
-	                                          <input name="pageNumber" value="0" type="hidden">
-	                                          <input name="webappState" value="all" type="hidden">
-	                                          <input name="webappType" value="all" type="hidden">
-	                                          <table class="styledLeft" id="webappsTable" width="100%">
-	                                                  <col width="10">
-	                                                  <col width="400">
-
-	                                                  <col width="150">
-
-	                                                  <col width="150">
-
-	                                             <thead>
-	                                                <tr>
-	                                                   <th>&nbsp;</th>
-	                                                   <th>
-	                                                      <nobr>Description</nobr>
-	                                                   </th>
-	                                                   <th>Status</th>
-	                                                   <th>Artifact Name</th>
-	                                                   <th>Automation Test ID</th>
-
-	                                                   
+	                                                   <th>Test Class Location</th>
 	                                                </tr>
 	                                             </thead>
 	                                             <tbody>
@@ -513,7 +387,39 @@
 	                                                   </td>
 	                                                   <td> &nbsp;
 	                                                   </td>
+	                                                </tr>
+	                                                <tr bgcolor="#EEEFFB">
+	                                                   <td style="text-align:center; !important" width="10px">
+	                                                      <input name="webappFileName" value="example.war" onclick="resetVars()" class="chkBox" type="checkbox">
+	                                                   </td>
+	                                                   <td>
+	                                                      <a href="https://localhost:9443/carbon/webapp-list/webapp_info.jsp?webappFileName=example.war&amp;webappState=all&amp;hostName=127.0.0.1&amp;httpPort=9763&amp;webappType=webapp">
+	                                                         &nbsp;
+	                                                      </a>
+	                                                   </td>
 	                                                   <td> &nbsp;
+	                                                   </td>
+	                                                </tr>
+	                                                <tr bgcolor="white">
+	                                                   <td style="text-align:center; !important" width="10px">
+	                                                      <input name="webappFileName" value="jaxrs_basic.war" onclick="resetVars()" class="chkBox" type="checkbox">
+	                                                   </td>
+	                                                   <td>
+	                                                      <a href="https://localhost:9443/carbon/webapp-list/webapp_info.jsp?webappFileName=jaxrs_basic.war&amp;webappState=all&amp;hostName=127.0.0.1&amp;httpPort=9763&amp;webappType=jaxWebapp">
+	                                                         &nbsp;
+	                                                      </a>
+	                                                   </td>
+	                                                   <td> &nbsp;
+	                                                   </td>
+	                                                </tr>
+	                                                <tr bgcolor="#EEEFFB">
+	                                                   <td style="text-align:center; !important" width="10px">
+	                                                      <input name="webappFileName" value="qa_portal.war" onclick="resetVars()" class="chkBox" type="checkbox">
+	                                                   </td>
+	                                                   <td>
+	                                                      <a href="https://localhost:9443/carbon/webapp-list/webapp_info.jsp?webappFileName=qa_portal.war&amp;webappState=all&amp;hostName=127.0.0.1&amp;httpPort=9763&amp;webappType=webapp">
+	                                                         &nbsp;
+	                                                      </a>
 	                                                   </td>
 	                                                   <td> &nbsp;
 	                                                   </td>
@@ -539,6 +445,7 @@
 	                                             <tr></tr>
 	                                          </tbody>
 	                                       </table>
+
 
 	              </td>  
 
