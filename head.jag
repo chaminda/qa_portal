@@ -1,4 +1,16 @@
 <html>
+<%
+var ROOT = session.get("root");
+ if(ROOT===null){
+   response.sendRedirect("index.jag");
+}
+
+var SERVICE_ROOT = session.get("service_root");
+ if(SERVICE_ROOT===null){
+   response.sendRedirect("index.jag");
+}
+
+%>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 <title>WSO2 QA Portal</title>

@@ -102,7 +102,7 @@
                                     <li class="normal">
                                        <ul class="sub">
                                           <li><a href="products_home.jag" class="menu-default" style="background-image: url(resources/images/list.gif);">List</a></li>
-                                          <li><a href="https://localhost:9443/carbon/search/advancedSearch.jsp?region=region3&amp;item=registry_search_menu" class="menu-default" style="background-image: url(resources/images/add.gif);">Add Product</a></li>
+                                          <li><a href="add_product.jag" class="menu-default" style="background-image: url(resources/images/add.gif);">Add Product</a></li>
                                        </ul>
                                     </li>
                                  </ul>
