@@ -1,22 +1,31 @@
 <%
 var SERVICE_ROOT = session.get("service_root");
+
 var product_name = request.getParameter("WSO2_QAP_PRODUCT_NAME");
-var param = {WSO2_QAP_PRODUCT_NAME: product_name};
+// var param = '{"_postadd_products":{"WSO2_QAP_PRODUCT_NAME" : "'+product_name+'"}}';
+var param = "WSO2_QAP_PRODUCT_NAME="+product_name;
 
 var optionalHeaders = {
-    "Accept": "application/json",
-        "Content-Type": "application/json"};
+        "Accept":"application/json"};
 
-var url = "http://localhost:9764/services/WSO2_QAP_PRODUCT_DataService/add/products";
+var url = SERVICE_ROOT+"WSO2_QAP_PRODUCT_DataService/add/products";
+
 if(product_name===null){
 
-	request.sendRedirect("add_product.jag")
+	response.sendRedirect("../../add_product.jag")
 }
 else{
-	post(url, param, optionalHeaders, "json" );
-	print("success");
+	post(url, param, optionalHeaders, "json", function (data, xhr) {
+       log("Response received");
+   } );
+	
+	response.sendRedirect("../../products_home.jag")
 }
 
 
 
 %>
+
+
+ //curl --data '{"_postadd_products":{"WSO2_QAP_PRODUCT_NAME" : "jjj123"}}' http://localhost:9764/services/WSO2_QAP_PRODUCT_DataService/add/products --header Content-Type:"application/json"
+//curl -X POST --data "WSO2_QAP_PRODUCT_NAME=Sherlok" -H "Accept: application/json" http://localhost:9764/services/WSO2_QAP_PRODUCT_DataService/add/products
