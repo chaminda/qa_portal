@@ -1,0 +1,22 @@
+<%
+var SERVICE_ROOT = session.get("service_root");
+var product_name = request.getParameter("WSO2_QAP_PRODUCT_NAME");
+var param = {WSO2_QAP_PRODUCT_NAME: product_name};
+
+var optionalHeaders = {
+    "Accept": "application/json",
+        "Content-Type": "application/json"};
+
+var url = "http://localhost:9764/services/WSO2_QAP_PRODUCT_DataService/add/products";
+if(product_name===null){
+
+	request.sendRedirect("add_product.jag")
+}
+else{
+	post(url, param, optionalHeaders, "json" );
+	print("success");
+}
+
+
+
+%>
