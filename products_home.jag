@@ -81,7 +81,7 @@
                   </div>
                </td>
             </tr>
-            <tr>
+            <tr id="middle-container-tr">
                <td class="vertical-menu-container" id="vertical-menu-container" style="">
                   <div class="showToHidden" id="menu-panel-button0"></div>
                   <div id="menu-panel-button1" class="menu-panel-buttons selected"><span>Main</span></div>

@@ -33,7 +33,7 @@
                      %>
                </td>
             </tr>
-            <tr>
+            <tr id="middle-container-tr">
                <% 
                   require("product_vertical_menu.jag"); 
                   %>
