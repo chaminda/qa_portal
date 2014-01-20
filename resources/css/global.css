@@ -4,36 +4,37 @@ body {
     margin: 0px;
     font-family: "Lucida Grande","Lucida Sans","Microsoft Sans Serif", "Lucida Sans Unicode","Verdana","Sans-serif","trebuchet ms" !important;
     color: #111;
-	font-size:12px;
-	font-size-adjust:none;
-	font-stretch:normal;
-	font-style:normal;
-	font-variant:normal;
-	font-weight:normal;
-	line-height:1.25em;
+    font-size:12px;
+    font-size-adjust:none;
+    font-stretch:normal;
+    font-style:normal;
+    font-variant:normal;
+    font-weight:normal;
+    line-height:1.25em;
+    height: 800px;
 }
 table {
-	border: 0px;
-	padding: 0px;
-	margin: 0px;
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
 }
 table thead tr th{
-	padding: 0px;
-	text-align: left;
-	vertical-align: top;
-	border: 0px;
+    padding: 0px;
+    text-align: left;
+    vertical-align: top;
+    border: 0px;
 }
 table tbody tr td {
-	padding: 0px;
-	text-align: left;
-	vertical-align: top;
-	border: 0px;
+    padding: 0px;
+    text-align: left;
+    vertical-align: top;
+    border: 0px;
 }
 table tr td {
-	padding: 0px;
-	text-align: left;
-	vertical-align: top;
-	border: 0px;
+    padding: 0px;
+    text-align: left;
+    vertical-align: top;
+    border: 0px;
 }
 ul {
     list-style: none;
@@ -64,12 +65,12 @@ a:hover {
 }
 
 a img {
-	border: 0px;
+    border: 0px;
 }
 
 a.link-disable {
-	cursor: text;
-	color: #999;
+    cursor: text;
+    color: #999;
 }
 
 /* Neutralize styling:
@@ -87,7 +88,7 @@ margin-top: 0px !important;
 margin-bottom: 0px !important;
 }
 h3.page-subtitle{
-	color: #8b8b8b;
+    color: #8b8b8b;
         font-size: 11px;
         letter-spacing: 0.05em;
         text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.6);
@@ -95,31 +96,36 @@ h3.page-subtitle{
 }
 /* ---------------- template styles ------------------------- */
 table#main-table {
-	min-width: 985px;
-	width: 100%;
+    min-width: 985px;
+    width: 100%;
 }
 table#main-table td {
-	padding: 0px;
+    padding: 0px;
 }
 table#main-table td#header {
-	background-image: url( ../images/header-region-bg.gif);
+    background-image: url( ../images/header-region-bg.gif);
     background-repeat: repeat-x;
     background-position: left top;
-	height: 100px;
+    height: 100px;
+}
+table#main-table tr#middle-container-tr {
+    
+    height: 800px;
 }
 
+
 table#main-table td#menu-panel {
-	background-color: #fff;
-	padding-bottom: 20px;
-	border-right: solid 1px #636466;
-	width: 225px;
-	font-size: 100%;
+    background-color: #fff;
+    padding-bottom: 20px;
+    border-right: solid 1px #636466;
+    width: 225px;
+    font-size: 100%;
 }
 divtd#menu{
-	margin-left:20px;
+    margin-left:20px;
 }
 td#menu table#menu-table {
-	width: 225px;
+    width: 225px;
 }
 
 table#menu-table td {
@@ -135,31 +141,31 @@ table#menu-table td#region3 {
 }
 
 table#main-table td#middle-content {
-	padding-left: 20px;
-	padding-right: 20px;
-	padding-top: 15px;
-	padding-bottom: 15px;
-	background-color: #F4F4F4;
-	/*width: 95%;*/
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: #F4F4F4;
+    /*width: 95%;*/
 }
 
 td#middle-content table#content-table {
-	width: 100%;
+    width: 100%;
 }
 
 table#content-table td#page-header-links {
-	height: 20px;
-	vertical-align: middle;
-	padding-bottom: 5px;
+    height: 20px;
+    vertical-align: middle;
+    padding-bottom: 5px;
 }
 
 table#content-table td#body {
 }
 
 table#main-table td#footer {
-	height: 25px;
-	background-color: #bfbfbf;
-}	
+    height: 25px;
+    background-color: #bfbfbf;
+}   
 
 /* ---------------- header styles ------------------ */
 div#header-div {
@@ -171,15 +177,15 @@ div#header-div {
 }
 
 #header-div div.left-logo {
-	background-image: url(../images/header-logo.gif );
+    background-image: url(../images/header-logo.gif );
     background-repeat: no-repeat;
     background-position: left top;
-	height: 32px;
-	/*width: 332px;*/
-	width: 332px;
-	margin-top: 23px;
-	margin-left: 20px;
-	float: left;
+    height: 32px;
+    /*width: 332px;*/
+    width: 332px;
+    margin-top: 23px;
+    margin-left: 20px;
+    float: left;
 }
 
 div#header-div div.left-logo a.header-home {
@@ -192,7 +198,7 @@ display: block;
 
 div#header-div div.right-logo {
 
-	/*background-image: url( ../images/mgt-logo.gif);
+    /*background-image: url( ../images/mgt-logo.gif);
     background-repeat: no-repeat;
     background-position: right top;*/
 color: rgb(0, 103, 177);
@@ -211,54 +217,54 @@ text-align: right;
 }
 
 div#header-div div.header-links {
-	clear: both;
-	float: left;
-	height: 25px;
-	width: 100%;
-	margin-top: 15px;
+    clear: both;
+    float: left;
+    height: 25px;
+    width: 100%;
+    margin-top: 15px;
 }
 
 div#header-div div.header-links div.right-links{
-	clear: both;
-	float: right;
-	height: 25px;
-	margin-right: 15px;
-	padding-top: 0;
+    clear: both;
+    float: right;
+    height: 25px;
+    margin-right: 15px;
+    padding-top: 0;
 }
 
 div.header-links ul {
-	list-style: none;
-	margin-left: 0px;
-	margin-top: 0px;
-	margin-bottom: 0px;
-	margin-right: 0px;
-	padding: 0px;
-	float: right;
+    list-style: none;
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+    padding: 0px;
+    float: right;
 }
 
 div.header-links ul li {
-	position: relative;
-	float: left;
-	padding-left: 5px;
-	padding-right: 5px;
-	padding-top: 0px;
-	padding-bottom: 0px;
-	margin: 0px;
+    position: relative;
+    float: left;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin: 0px;
 }
 
 /* ------------ page-header-links styles -------------- */
 
 table.page-header-links-table {
-	width: 100%;
+    width: 100%;
 }
 
 table#main-table table.page-header-links-table tr td.page-header-help {
-	text-align: right;
-	font-size: 120%;
+    text-align: right;
+    font-size: 120%;
 }
 
 td.page-header-help a {
-	background-image: url( ../images/help.gif);
+    background-image: url( ../images/help.gif);
     background-repeat: no-repeat;
     background-position: left top;
     padding-left: 20px;
@@ -268,7 +274,7 @@ td.page-header-help a {
     z-index: 10;
 }
 div.page-header-help a {
-	background-image: url( ../images/help.gif);
+    background-image: url( ../images/help.gif);
     background-repeat: no-repeat;
     background-position: left top;
     padding-left: 20px;
@@ -282,21 +288,21 @@ div.page-header-help a {
 }
 
 table#main-table table.page-header-links-table tr td.breadcrumbs table.breadcrumb-table tr td.breadcrumb-link {
-	padding-right: 0px;
-	font-size: 90%;
-	white-space:nowrap;
+    padding-right: 0px;
+    font-size: 90%;
+    white-space:nowrap;
 }
 
 table#main-table table.page-header-links-table tr td.breadcrumbs table.breadcrumb-table tr td.breadcrumb-link a{
-	padding-right: 0px;
-	font-size: 90%;
+    padding-right: 0px;
+    font-size: 90%;
 }
 
 table#main-table table.page-header-links-table tr td.breadcrumbs table.breadcrumb-table tr td.breadcrumb-current-page a{
-	padding-right: 0px;
-	font-size: 90%;
-	color: #999;
-	cursor: text;
+    padding-right: 0px;
+    font-size: 90%;
+    color: #999;
+    cursor: text;
 }
 
 /* ------------- menu styles ---------------------- */
@@ -317,7 +323,7 @@ div#menu ul.main li.normal {
 }
 
 div#menu ul.main li a.menu-home {
-	font-weight:bold;
+    font-weight:bold;
     height:22px;
     line-height:22px;
     padding-top:0px;
@@ -333,13 +339,13 @@ div#menu ul.main li a.menu-home {
 }
 
 div#menu ul.main li a.menu-home:hover {
-	color: #111;
-	background-image: none;
-	background-color: #CCCCCC;
+    color: #111;
+    background-image: none;
+    background-color: #CCCCCC;
 }
 
 div#menu ul.main li.menu-header {
-	background-image:url(../images/menu-header.gif);
+    background-image:url(../images/menu-header.gif);
     background-position: left bottom;
     background-repeat:repeat-x;
     font-weight:normal;
@@ -355,16 +361,16 @@ div#menu ul.main li.menu-header {
 }
 
 div#menu ul.main li.menu-header img {
-	float:right;
-	margin-right:-15px;
-	margin-top:4px;
-	cursor: pointer;
+    float:right;
+    margin-right:-15px;
+    margin-top:4px;
+    cursor: pointer;
 }
 
 div#menu ul.main li.menu-disabled-link img {
-	float:right;
-	margin-right:-15px;
-	cursor: pointer;
+    float:right;
+    margin-right:-15px;
+    cursor: pointer;
 }
 
 div#menu ul.main li a.menu-default {
@@ -382,7 +388,7 @@ div#menu ul.main li a.menu-default {
     cursor: pointer;
     border-top: solid 1px #fff;
     border-bottom: solid 1px #fff;
-	color: #2F7ABD;
+    color: #2F7ABD;
     font-weight:normal;
 }
 
@@ -401,24 +407,24 @@ div#menu ul.main li a.menu-default-selected {
     cursor: pointer;
     border-top: solid 1px #ccc;
     border-bottom: solid 1px #ccc;
-	color: #2F7ABD;
+    color: #2F7ABD;
     font-weight:normal;
 }
 
 div#menu ul.main li a.menu-default:hover {
-	background-color: #F2F2F2;
-	border-bottom: solid 1px #BFBFBF;
-	border-top: solid 1px #BFBFBF;
-	height: 16px;
-	color: #00447C;
+    background-color: #F2F2F2;
+    border-bottom: solid 1px #BFBFBF;
+    border-top: solid 1px #BFBFBF;
+    height: 16px;
+    color: #00447C;
 }
 
 div#menu ul.main li.menu-disabled-link {
-	background-image: url( ../images/default-menu-icon.gif );
+    background-image: url( ../images/default-menu-icon.gif );
     background-repeat: no-repeat;
     background-position: 16px 2px;
-	background-color: #F5F5F5;
-	color: #111111;
+    background-color: #F5F5F5;
+    color: #111111;
     height: 16px;
     display: block;
     /*width:187px;*/
@@ -434,8 +440,8 @@ div#menu ul.main li.menu-disabled-link {
 }
 
 div#menu ul.sub li a.menu-disabled-link:hover {
-	background-color: #F5F5F5;
-	color: #111111;
+    background-color: #F5F5F5;
+    color: #111111;
 }
 
 div#menu ul.sub {
@@ -452,15 +458,15 @@ div#menu ul.sub li a.menu-default {
     color: #2F7ABD;
 }
 
-	/* ----------- child no-01 (disabled) styles ------------------- */
-	
-	div#menu ul.sub li.menu-disabled-link {
-		background-position: 16px 2px;
-	    /*width:187px;*/
-	    padding-left: 38px;
-	    padding-right: 20px;
-	    color: #111;
-	}
+    /* ----------- child no-01 (disabled) styles ------------------- */
+    
+    div#menu ul.sub li.menu-disabled-link {
+        background-position: 16px 2px;
+        /*width:187px;*/
+        padding-left: 38px;
+        padding-right: 20px;
+        color: #111;
+    }
 
 /* -------------- child no-02 styles -------------- */
 
@@ -471,14 +477,14 @@ div#menu ul.sub li.normal ul.sub li a.menu-default {
     padding-right: 20px;
 }
 
-	/* ----------- child no-02 (disabled) styles ------------------- */
+    /* ----------- child no-02 (disabled) styles ------------------- */
 
-	div#menu ul.sub li.normal ul.sub li.menu-disabled-link {
-	    background-position: 32px 2px;
-	    /*width:171px;*/
-	    padding-left: 54px;
-	    padding-right: 20px;
-	}
+    div#menu ul.sub li.normal ul.sub li.menu-disabled-link {
+        background-position: 32px 2px;
+        /*width:171px;*/
+        padding-left: 54px;
+        padding-right: 20px;
+    }
 
 
 /* -------------- child no-03 styles -------------- */
@@ -490,15 +496,15 @@ div#menu ul.sub li.normal ul.sub li.normal ul.sub li a.menu-default {
     padding-right: 20px;
 }
 
-	/* ----------- child no-03 (disabled) styles ------------------- */
-	
-	div#menu ul.sub li.normal ul.sub li.normal ul.sub li.menu-disabled-link {
-	    background-position: 48px 2px;
-	    /*width:155px;*/
-	    padding-left: 70px;
-	    padding-right: 20px;
-	}
-	
+    /* ----------- child no-03 (disabled) styles ------------------- */
+    
+    div#menu ul.sub li.normal ul.sub li.normal ul.sub li.menu-disabled-link {
+        background-position: 48px 2px;
+        /*width:155px;*/
+        padding-left: 70px;
+        padding-right: 20px;
+    }
+    
 /* -------------- child no-04 styles -------------- */
 
 div#menu ul.sub li.normal ul.sub li.normal ul.sub li.normal ul.sub li a.menu-default {
@@ -508,15 +514,15 @@ div#menu ul.sub li.normal ul.sub li.normal ul.sub li.normal ul.sub li a.menu-def
     padding-right: 20px;
 }
 
-	/* ----------- child no-04 (disabled) styles ------------------- */
-	
-	div#menu ul.sub li.normal ul.sub li.normal ul.sub li.normal ul.sub li.menu-disabled-link {
-	    background-position: 64px 2px;
-	    /*width:139px;*/
-	    padding-left: 86px;
-	    padding-right: 20px;
-	}
-	
+    /* ----------- child no-04 (disabled) styles ------------------- */
+    
+    div#menu ul.sub li.normal ul.sub li.normal ul.sub li.normal ul.sub li.menu-disabled-link {
+        background-position: 64px 2px;
+        /*width:139px;*/
+        padding-left: 86px;
+        padding-right: 20px;
+    }
+    
 /* -------------- child no-05 styles -------------- */
 
 div#menu ul.sub li.normal ul.sub li.normal ul.sub li.normal ul.sub li.normal ul.sub li a.menu-default {
@@ -526,38 +532,38 @@ div#menu ul.sub li.normal ul.sub li.normal ul.sub li.normal ul.sub li.normal ul.
     padding-right: 20px;
 }
 
-	/* ----------- child no-05 (disabled) styles ------------------- */
-	
-	div#menu ul.sub li.normal ul.sub li.normal ul.sub li.normal ul.sub li.normal ul.sub li.menu-disabled-link {
-	    background-position: 80px 2px;
-	    /*width:123px;*/
-	    padding-left: 102px;
-	    padding-right: 20px;
-	}
+    /* ----------- child no-05 (disabled) styles ------------------- */
+    
+    div#menu ul.sub li.normal ul.sub li.normal ul.sub li.normal ul.sub li.normal ul.sub li.menu-disabled-link {
+        background-position: 80px 2px;
+        /*width:123px;*/
+        padding-left: 102px;
+        padding-right: 20px;
+    }
 
 /* ------------- footer styles -------------------- */
 
 div#footer-div {
-	height: 27px;
-	width: 100%;
+    height: 27px;
+    width: 100%;
 }
 
 div#footer-div div.footer-content {
-	height: 27px;
-	margin: auto;
-	padding: 0px;
+    height: 27px;
+    margin: auto;
+    padding: 0px;
 }
 
 div#footer-div div.footer-content div.copyright {
-	padding-top: 5px;
-	color: #fff;
-	width: 450px;
-	float: left;
-	margin-left: 20px;
+    padding-top: 5px;
+    color: #fff;
+    width: 450px;
+    float: left;
+    margin-left: 20px;
 }
 
 div#footer-div div.footer-content div.poweredby {
-	background-image: url( ../images/powered.gif);
+    background-image: url( ../images/powered.gif);
     background-repeat: no-repeat;
     background-position: left 3px;
     width: 127px;
@@ -589,25 +595,25 @@ div#middle h2 {
 }
 
 div#middle div#workArea h3 {
-	font-size: 140%;
+    font-size: 140%;
     font-weight: normal;
     margin-top: 5px;
     margin-bottom: 10px;
 }
 div#middle div#workArea h4 {
-	font-size: 130%;
+    font-size: 130%;
     font-weight: normal;
     margin-top: 5px;
     margin-bottom: 10px;
 }
 div#middle div#workArea h5 {
-	font-size: 120%;
+    font-size: 120%;
     font-weight: normal;
     margin-top: 5px;
     margin-bottom: 10px;
 }
 div#middle div#workArea h3.mediator {
-	font-size: 120%;
+    font-size: 120%;
     font-weight: bold;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -618,70 +624,70 @@ div#middle div#workArea h3.mediator {
 /* ---- login styles ----- */
 
 div#middle div#features {
-	padding-right: 30px;
+    padding-right: 30px;
 }
 div#features tr.feature {
 }
 div#features tr.feature td {
-	border-top: solid 1px #BCBEC0;
-	padding-top: 20px;
-	padding-bottom: 20px;
+    border-top: solid 1px #BCBEC0;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 div#features tr.feature-top {
 }
 div#features tr.feature-top td {
-	border-top: solid 0px #BCBEC0;
-	padding-top: 0px;
-	padding-bottom: 20px;
+    border-top: solid 0px #BCBEC0;
+    padding-top: 0px;
+    padding-bottom: 20px;
 }
 tr.feature td img {
-	float: left;
-	margin-right: 20px;
+    float: left;
+    margin-right: 20px;
 }
 
 tr.feature h3 {
-	font-weight: normal;
-	font-size: 120%;
-	color: #0067B1;
+    font-weight: normal;
+    font-size: 120%;
+    color: #0067B1;
 }
 
 div#middle div#loginbox {
-	background-color: #fff;
-	border: solid 1px #BCBEC0;
-	padding: 20px;
-	margin-top: 10px;
+    background-color: #fff;
+    border: solid 1px #BCBEC0;
+    padding: 20px;
+    margin-top: 10px;
 }
 
 div#loginbox {
-	text-align: center;
+    text-align: center;
 }
 
 div#loginbox h2 {
-	font-weight: normal;
-	font-size: 150%;
-	text-align: center;
-	color: #0067B1;
-	margin-bottom: 10px;
-	padding-bottom: 15px;
+    font-weight: normal;
+    font-size: 150%;
+    text-align: center;
+    color: #0067B1;
+    margin-bottom: 10px;
+    padding-bottom: 15px;
 }
 
 div#loginbox table {
-	margin: auto;
+    margin: auto;
 }
 
 div#loginbox table tr td {
-	padding: 3px;
+    padding: 3px;
 }
 
 div#loginbox a{
 }
 
 div#loginbox input.user {
-	width: 150px !important;
+    width: 150px !important;
 }
 
 div#loginbox input.password {
-	width: 150px !important;
+    width: 150px !important;
 }
 
 /* ------------- REFINED ------------------ */
@@ -717,7 +723,7 @@ div#workArea table.styledLeft tbody tr td.middle-header {
 }
 
 div#workArea table.styledLeft tbody tr td.sub-header {
-	background-image:url(../images/table-header.gif);
+    background-image:url(../images/table-header.gif);
     background-position: left bottom;
     background-repeat:repeat-x;
     border:1px solid #cccccc;
@@ -763,10 +769,10 @@ div#workArea table.styledLeft tbody tr td.buttonRow {
 }
 /* ------------Stand alone styles inside tables -------*/
 .noDataBox {
-	border:1px solid #CCCCCC;
-	color:#999999;
-	font-style:italic;
-	padding:5px;
+    border:1px solid #CCCCCC;
+    color:#999999;
+    font-style:italic;
+    padding:5px;
 }
 div.buttonRow {
     padding-top: 5px;
@@ -789,8 +795,8 @@ div#workArea table.styledInner {
 }
 
 div#workArea table.styledInner thead th {
-	background-image: none;
-	background-color: #E7E7E8;
+    background-image: none;
+    background-color: #E7E7E8;
     border:1px solid #cccccc;
     font-weight:normal;
     height:22px;
@@ -826,16 +832,16 @@ div#workArea table.noBorders{
 border: solid 1px #cccccc;
 }
 div#workArea table.normal {
-	border-collapse: separate;
-	padding: 3px;
+    border-collapse: separate;
+    padding: 3px;
 }
 div#workArea table.normal-nopadding {
-	border-collapse: separate;
-	padding: 0px;
-	width: 100%;
+    border-collapse: separate;
+    padding: 0px;
+    width: 100%;
 }
 div#workArea table.normal tbody tr td {
-	border: 0px;
+    border: 0px;
 }
 div#workArea table.normal-nopadding tbody tr td {
     border: solid 0px #cccccc !important;
@@ -864,7 +870,7 @@ div#workArea table.normal-nopadding tbody tr td.middle-header {
     padding-left:8px;
 }
 div#workArea table.normal-nopadding tbody tr td.sub-header {
-	background-image: none;
+    background-image: none;
     background-color: #ededed;
     border-top:1px solid #cccccc;
     border-bottom:1px solid #cccccc;
@@ -889,26 +895,26 @@ border: 0px !important;
 .tableEvenRow{background-color: #ededed;}
 
 /*.button, .button:visited {
-	background: #e7e7e7 url(../images/overlay.png) repeat-x;
-	display: inline-block; 
-	padding: 2px 5px 2px;
-	color: #000;
-	text-decoration: none;
-	-moz-border-radius: 6px;
-	-webkit-border-radius: 6px;
-	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.6);
-	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.6);
-	text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
-	border-bottom: 1px solid rgba(0,0,0,0.25);
-	position: relative;
-	cursor: pointer
+    background: #e7e7e7 url(../images/overlay.png) repeat-x;
+    display: inline-block; 
+    padding: 2px 5px 2px;
+    color: #000;
+    text-decoration: none;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.6);
+    text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+    position: relative;
+    cursor: pointer
 }
  
 .button:hover{ 
-	background-color: #d9d9d9; color: #000;
+    background-color: #d9d9d9; color: #000;
 }
 .button:active{
- 	top: 1px;
+    top: 1px;
 }*/
 
 a.icon-link {

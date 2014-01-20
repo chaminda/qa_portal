@@ -75,7 +75,7 @@
 																					<td class="breadcrumb-link">&nbsp;&gt;&nbsp;Test
 																						case</td>
 																					<td class="breadcrumb-link">&nbsp;&gt;&nbsp;
-																						Add Test case</td>
+																						Add Test class</td>
 																				</tr>
 																			</tbody>
 																		</table>
@@ -86,7 +86,6 @@
 														</tbody>
 													</table>
 												</td>
-
 												<td class="page-header-help"><a href="./docs/userguide.html"
 													target="_blank">Help</a></td>
 
@@ -100,7 +99,7 @@
 									height="1px">
 								
 								<div id="middle">
-										<h2>Add Test Case</h2>
+										<h2>Add Test Class</h2>
 
 										<div id="workArea">
 											<form method="post" name="jarUpload" action="#"
@@ -113,42 +112,23 @@
 													<!-- 													</thead> -->
 													<tbody>
 														<tr class="tableOddRow">
-															<td class="formRow">Status<font color="red">*</font>
+															<td class="formRow">Test class ID<font color="red">*</font>
 															</td>
-															<td><input type="text" id="status" name="status"
-																 onchange="">
+															<td><input type="text" id="testclassid" name="testclassid"
+																size="30" onchange="">
 															
 															</td>
 														</tr>
 														<tr class="tableEvenRow">
-															<td class="formRow">Description<font color="red">*</font>
+															<td class="formRow">Test class location<font color="red">*</font>
 															</td>
-															<!-- <td><input type="text" id="description" name="description"
-																 onchange="">
-															</td> -->
-															<td>
-																<textarea rows="4" cols="50" name="comment" form="jarUpload">
-																</textarea>
-															</td>	
+															
+															<td><input type="text" id="testclasslocation" name="testclasslocation"
+																size="60" onchange="">
+															</td>
+															
 														</tr>
-														<tr class="tableOddRow">
-															<td class="formRow">Artifact name</td>
-															<td class="formRow"><select name="artifact" id="artifact">
-																	<option>Artifact 1</option>
-																	<option>Artifact 2</option>
-																	<option>Artifact 3</option>
-																	<option>Artifact 4</option>
-															</select>
-															</td>
-														</tr>
-														<tr class="tableEvenRow">
-															<td class="formRow">Auto Test case<font color="red">*</font>
-															</td>
-															<td><input type="text" id="autotestcase" name="autotestcase"
-																 onchange="">
-															</td>
-														</tr>
-
+														
 													</tbody>
 												</table>
 												<table class="styledLeft">

@@ -33,7 +33,7 @@
                      %>
                </td>
             </tr>
-            <tr>
+            <tr id="middle-container-tr">
                <% 
                   require("product_vertical_menu.jag"); 
                   %>
@@ -108,11 +108,11 @@
                                                                 </table>';
                                  }
                               </script>
-                              <script type="text/javascript" src="resources/js/ui_validations.js"></script>
+                              <script type="text/javascript" src="resources/js/ui_validator.js"></script>
                               <div id="middle">
                                  <h2>Enter Product Name</h2>
                                  <div id="workArea">
-                                    <form action="resources/jaggery/addProduct.jag" method="post" onsubmit="return validateDatabaseSelection();">
+                                    <form name="add_product" action="resources/jaggery/addProduct.jag" method="post" onsubmit="return validateInput();return false;">
                                        <table class="styledLeft">
                                           <thead>
                                              <tr>
@@ -128,13 +128,13 @@
                                                             <td>Product Name<font color="red">*</font>
                                                             </td>
                                                             <td>
-                                                               <input size="35" name="dbName" id="dbName" value="" type="text">
+                                                               <input size="35" name="WSO2_QAP_PRODUCT_NAME" id="WSO2_QAP_PRODUCT_NAME" value="" type="text">
                                                             </td>
                                                          </tr>
                                                          <tr>
                                                             <td class="buttonRow">
-                                                               <input class="button" value="Save >" type="submit">
-                                                               <input class="button" value="Cancel" onclick="location.href = 'product_home.jag'" type="button">
+                                                               <input class="button" value="Save" type="submit">
+                                                               <input class="button" value="Cancel" onclick="location.href = 'products_home.jag'" type="button">
                                                             </td>
                                                          </tr>
                                                       </tbody>
