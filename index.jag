@@ -1,6 +1,5 @@
 <% 
-session.put("root","http://localhost:9763/qa_portal/");
-session.put("service_root","http://localhost:9763/services/");
+include("const.jag");
 var name = session.get("username");
  if(name===null){
    response.sendRedirect("login.jag");

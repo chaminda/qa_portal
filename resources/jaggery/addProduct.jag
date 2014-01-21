@@ -1,25 +1,27 @@
 <%
-var SERVICE_ROOT = session.get("service_root");
+include("base64_encode.jag");
+var SERVICE_SECURE_ROOT = session.get("service_secure_root");
 
 var product_name = request.getParameter("WSO2_QAP_PRODUCT_NAME");
 // var param = '{"_postadd_products":{"WSO2_QAP_PRODUCT_NAME" : "'+product_name+'"}}';
 var param = "WSO2_QAP_PRODUCT_NAME="+product_name;
 
 var optionalHeaders = {
-        "Accept":"application/json"};
+        "Accept":"application/json",
+            "Authorization": "Basic "+base64_encode("admin:admin") };
 
-var url = SERVICE_ROOT+"WSO2_QAP_PRODUCT_DataService/add/products";
+var url = SERVICE_SECURE_ROOT+"WSO2_QAP_PRODUCT_DataService/add/products";
 
 if(product_name===null){
 
-	response.sendRedirect("../../add_product.jag")
+	response.sendRedirect("../../add_product.jag");
 }
 else{
 	post(url, param, optionalHeaders, "json", function (data, xhr) {
        log("Response received");
    } );
 	
-	response.sendRedirect("../../products_home.jag")
+	response.sendRedirect("../../products_home.jag");
 }
 
 

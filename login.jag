@@ -1,5 +1,7 @@
 
- <% var name = session.get("username");
+ <%
+include("const.jag");
+var name = session.get("username");
  if(name===null){
 }else{
      response.sendRedirect("index.jag");

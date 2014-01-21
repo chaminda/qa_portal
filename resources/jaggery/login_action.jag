@@ -7,10 +7,10 @@ if(username==="sudheera" && password==="pass"){
 session.put("username",username);
 session.put("role", "admin");
 
-	response.sendRedirect("../../products_home.jag")
+	response.sendRedirect("../../products_home.jag");
 }
 else{
-
+    response.sendRedirect("../../login.jag");
 }
 
 %>
