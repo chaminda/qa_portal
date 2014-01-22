@@ -52,7 +52,7 @@
 
 
 				<td id="middle-content">
-					<table id="content-table" border="0" cellspacing="0">
+					<table id="content-table" border="0" cellspacing="0" >
 						<tbody>
 							<tr>
 								<td id="page-header-links">
