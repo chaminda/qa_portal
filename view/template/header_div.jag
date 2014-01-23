@@ -1,7 +1,7 @@
 <div id="header-div">
    <div class="right-logo">QA Portal</div>
    <div class="left-logo">
-      <a href="index.jag" class="header-home"><img src="resources/images/1px.gif" width="300px" height="32px"></a>
+      <a href="../index.jag" class="header-home"><img src="../resources/images/1px.gif" width="300px" height="32px"></a>
    </div>
    <div class="middle-ad">
    </div>

@@ -7,15 +7,15 @@
 						<ul class="main">
 							<li id="region1_products_menu" class="menu-header"
 								onclick="mainMenuCollapse(this.childNodes[0])"
-								style="cursor: pointer;"><img src="resources/up-arrow.gif"
+								style="cursor: pointer;"><img src="../resources/images/up-arrow.gif"
 								class="mMenuHeaders" id="region1_products_menu">Products</li>
 							<li class="normal">
 								<ul class="sub">
-									<li><a href="products_home.jag" class="menu-default"
-										style="background-image: url(resources/images/list.gif);">List</a>
+									<li><a href="../view/products_home.jag" class="menu-default"
+										style="background-image: url(../resources/images/list.gif);">List</a>
 									</li>
-									<li><a href="add_product.jag" class="menu-default"
-										style="background-image: url(resources/images/add.gif);">Add Product</a>
+									<li><a href="../view/add_product.jag" class="menu-default"
+										style="background-image: url(../resources/images/add.gif);">Add Product</a>
 									</li>
 
 								</ul>
@@ -31,7 +31,7 @@
 							<li id="region4_monitor_menu" class="menu-header"
 								onclick="mainMenuCollapse(this.childNodes[0])"
 								style="cursor: pointer; display: none;"><img
-								src="resources/up-arrow.gif" class="mMenuHeaders"
+								src="../resources/images/up-arrow.gif" class="mMenuHeaders"
 								id="region4_monitor_menu">Monitor</li>
 							<li style="display: none;" class="normal">
 								<ul class="sub">
@@ -78,7 +78,7 @@
 							<li id="region5_tools_menu" class="menu-header"
 								onclick="mainMenuCollapse(this.childNodes[0])"
 								style="cursor: pointer; display: none;"><img
-								src="resources/up-arrow.gif" class="mMenuHeaders"
+								src="../resources/images/up-arrow.gif" class="mMenuHeaders"
 								id="region5_tools_menu">Tools</li>
 							<li style="display: none;" class="normal">
 								<ul class="sub">
@@ -123,7 +123,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td><img src="resources/images/1px.gif" width="225px" height="1px">
+				<td><img src="../resources/images/1px.gif" width="225px" height="1px">
 				</td>
 			</tr>
 		</tbody>

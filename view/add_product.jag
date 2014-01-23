@@ -6,7 +6,7 @@
          if(name===null){
            response.sendRedirect("login.jag");
          }
-         require("head.jag");
+         require("template/head.jag");
          %>
    </head>
    <body>
@@ -17,28 +17,28 @@
          </div>
       </noscript>
       <div id="dcontainer"></div>
-      <script type="text/javascript" src="resources/js/dialog.js"></script>
+      <script type="text/javascript" src="../resources/js/dialog.js"></script>
       <!-- JS imports for collapsible menu -->
-      <script src="resources/js/yahoo-dom-event.js" type="text/javascript"></script>
-      <script src="resources/js/animation-min.js" type="text/javascript"></script>
-      <script src="resources/js/template.js" type="text/javascript"></script>
-      <script src="resources/js/yahoo-min.js" type="text/javascript"></script>
-      <script src="resources/js/selector-min.js" type="text/javascript"></script>
+      <script src="../resources/js/yahoo-dom-event.js" type="text/javascript"></script>
+      <script src="../resources/js/animation-min.js" type="text/javascript"></script>
+      <script src="../resources/js/template.js" type="text/javascript"></script>
+      <script src="../resources/js/yahoo-min.js" type="text/javascript"></script>
+      <script src="../resources/js/selector-min.js" type="text/javascript"></script>
       <table id="main-table" border="0" cellspacing="0">
          <tbody>
             <tr>
                <td id="header" colspan="3">
                   <%
-                     require("header_div.jag");
+                     require("template/header_div.jag");
                      %>
                </td>
             </tr>
             <tr id="middle-container-tr">
                <% 
-                  require("product_vertical_menu.jag"); 
+                  require("template/product_vertical_menu.jag");
                   %>
                <%
-                  require("product_menu_panel.jag");
+                  require("template/product_menu_panel.jag");
                   %>
                
                <td id="middle-content">
@@ -77,7 +77,7 @@
                         </tr>
                         <tr>
                            <td id="body">
-                              <img src="../admin/images/1px.gif" width="735px" height="1px">
+                              <img src="../resources/images/1px.gif" width="735px" height="1px">
                               <!--
                                  ~ Copyright (c) 2005-2010, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
                                  ~
@@ -108,11 +108,11 @@
                                                                 </table>';
                                  }
                               </script>
-                              <script type="text/javascript" src="resources/js/ui_validator.js"></script>
+                              <script type="text/javascript" src="../resources/js/ui_validator.js"></script>
                               <div id="middle">
                                  <h2>Enter Product Name</h2>
                                  <div id="workArea">
-                                    <form name="add_product" action="resources/jaggery/addProduct.jag" method="post" onsubmit="return validateInput();return false;">
+                                    <form name="add_product" action="../controller/addProduct.jag" method="post" onsubmit="return validateInput();return false;">
                                        <table class="styledLeft">
                                           <thead>
                                              <tr>

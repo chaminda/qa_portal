@@ -1,0 +1,5 @@
+<%
+session.put("root","http://localhost:9763/qa_portal/");
+session.put("service_root","http://localhost:9763/services/");
+session.put("service_secure_root", "https://localhost:9443/services/");
+%>
