@@ -11,10 +11,10 @@
 								class="mMenuHeaders" id="region1_products_menu">Products</li>
 							<li class="normal">
 								<ul class="sub">
-									<li><a href="../products_home.jag" class="menu-default"
+									<li><a href="../view/products_home.jag" class="menu-default"
 										style="background-image: url(../resources/images/list.gif);">List</a>
 									</li>
-									<li><a href="../add_product.jag" class="menu-default"
+									<li><a href="../view/add_product.jag" class="menu-default"
 										style="background-image: url(../resources/images/add.gif);">Add Product</a>
 									</li>
 
