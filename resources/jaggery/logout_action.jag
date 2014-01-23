@@ -1,4 +1,0 @@
-<%
-session.put("username", null);
-response.sendRedirect("../../login.jag");
-%>
