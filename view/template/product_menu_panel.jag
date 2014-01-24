@@ -20,6 +20,23 @@
 
 								</ul>
 							</li>
+
+							<li id="region1_products_menu" class="menu-header"
+								onclick="mainMenuCollapse(this.childNodes[0])"
+								style="cursor: pointer;"><img src="resources/up-arrow.gif"
+								class="mMenuHeaders" id="region1_products_menu">Test Plan</li>
+
+								<li class="normal">
+								<ul class="sub">
+									<li><a href="products_home.jag" class="menu-default"
+										style="background-image: url(resources/images/list.gif);">List</a>
+									</li>
+									<li><a href="add_testplan.jag" class="menu-default"
+										style="background-image: url(resources/images/add.gif);">Add Test Plan</a>
+									</li>
+
+								</ul>
+							</li>
 						</ul>
 					</div>
 				</td>
