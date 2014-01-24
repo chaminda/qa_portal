@@ -7,7 +7,7 @@
 	if(name===null){
     	response.sendRedirect("login.jag");
     }
-    require("head.jag");
+    require("template/head.jag");
 %>
 
 
@@ -38,16 +38,16 @@
 			<tr>
 				<td id="header" colspan="3">
 				<%
-					require("header_div.jag");
+					require("template/header_div.jag");
 				%>
 				</td>
 			</tr>
 			<tr>
 				<% 
-					require("product_vertical_menu.jag");
+					require("template/product_vertical_menu.jag");
 				%>
 				<%
-					require("product_menu_panel.jag");
+					require("template/product_menu_panel.jag");
 				%>
 
 
@@ -103,8 +103,8 @@
 										<h2>Add Test Case</h2>
 
 										<div id="workArea">
-											<form name="add" method="post"  action="#"
-												enctype="multipart/form-data" target="_self">
+											<form name="add_testcase" method="post"  action="../controller/addTestcase.jag"
+												>
 												<table class="styledLeft" id="archiveTbl">
 													<!-- 													<thead> -->
 													<!-- 														<tr class="tableEvenRow"> -->
@@ -115,7 +115,7 @@
 														<tr class="tableEvenRow">
 															<td class="formRow">Test Case name<font color="red">*</font>
 															</td>
-															<td><input type="text" id="testcasename" name="testcasename"
+															<td><input type="text" id="WSO2_QAP_TEST_CASE_NAME" name="WSO2_QAP_TEST_CASE_NAME"
 																 onchange="">
 															
 															</td>
@@ -123,7 +123,7 @@
 														<tr class="tableOddRow">
 															<td class="formRow">Status<font color="red">*</font>
 															</td>
-															<td><input type="text" id="status" name="status"
+															<td><input type="text" id="WSO2_QAP_TEST_CASE_STATUS" name="WSO2_QAP_TEST_CASE_STATUS"
 																 onchange="">
 															
 															</td>
@@ -135,13 +135,13 @@
 																 onchange="">
 															</td> -->
 															<td>
-																<textarea rows="4" cols="50" name="comment" form="jarUpload">
+																<textarea rows="4" cols="50" name="WSO2_QAP_TEST_CASE_DESCRIPTION"  id="WSO2_QAP_TEST_CASE_DESCRIPTION">
 																</textarea>
 															</td>	
 														</tr>
 														<tr class="tableOddRow">
 															<td class="formRow">Artifact name</td>
-															<td class="formRow"><select name="artifact" id="artifact">
+															<td class="formRow"><select name="WSO2_QAP_TEST_CASE_ARTIFACT" id="WSO2_QAP_TEST_CASE_ARTIFACT">
 																	<option>Artifact 1</option>
 																	<option>Artifact 2</option>
 																	<option>Artifact 3</option>
@@ -152,7 +152,7 @@
 														<tr class="tableEvenRow">
 															<td class="formRow">Auto Test case<font color="red">*</font>
 															</td>
-															<td><input type="text" id="autotestcase" name="autotestcase"
+															<td><input type="text" id="WSO2_QAP_TEST_CASE_AUTOMATIONTESTCASE" name="WSO2_QAP_TEST_CASE_AUTOMATIONTESTCASE"
 																 onchange="">
 															</td>
 														</tr>
