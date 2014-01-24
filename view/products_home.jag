@@ -12,21 +12,14 @@
 </head>
 
  <body>
-   <noscript>
-      <div class="something-wrong">
-         <div class="title">JavaScript is disabled on your browser</div>
-         <div class="content">Please enable JavaScript or upgrade to a JavaScript-capable browser to use WSO2 Products.</div>
-      </div>
-   </noscript>
-
-        <!-- datatables imports start -->
+         <!-- datatables imports start  -->
 
         <style type="text/css" title="currentStyle">
 			@import "../resources/datatables/css/page.css";
 			@import "../resources/datatables/css/table.css";
 		</style>
 
-		<script type="text/javascript" language="javascript" src="../resources/datatables/js/jquery.js"></script>
+		<script type="text/javascript" language="javascript" src="../resources/datatables/js/table_jquery.js"></script>
 		<script type="text/javascript" language="javascript" src="../resources/datatables/js/jquery.dataTables.js"></script>
 		<script type="text/javascript" charset="utf-8">
 			$(document).ready(function() {
@@ -38,7 +31,12 @@
 
 		<!-- datatables imports end -->
 
-
+   <noscript>
+      <div class="something-wrong">
+         <div class="title">JavaScript is disabled on your browser</div>
+         <div class="content">Please enable JavaScript or upgrade to a JavaScript-capable browser to use WSO2 Products.</div>
+      </div>
+   </noscript>
 
       <div id="dcontainer"></div>
       <script type="text/javascript" src="../resources/js/dialog.js"></script>
