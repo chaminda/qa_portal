@@ -7,7 +7,7 @@
 	if(name===null){
     	response.sendRedirect("login.jag");
     }
-    require("template/head.jag");
+    require("head.jag");
 %>
 
 
@@ -38,16 +38,16 @@
 			<tr>
 				<td id="header" colspan="3">
 				<%
-					require("template/header_div.jag");
+					require("header_div.jag");
 				%>
 				</td>
 			</tr>
 			<tr>
 				<% 
-					require("template/product_vertical_menu.jag");
+					require("product_vertical_menu.jag");
 				%>
 				<%
-					require("template/product_menu_panel.jag");
+					require("product_menu_panel.jag");
 				%>
 
 
@@ -72,10 +72,9 @@
 																						href="../admin/index.jsp">Home</a></td>
 																					<td class="breadcrumb-link">&nbsp;&gt;&nbsp;Products</td>
 																					<td class="breadcrumb-link">&nbsp;&gt;&nbsp;List</td>
-																					<td class="breadcrumb-link">&nbsp;&gt;&nbsp;Test
-																						case</td>
+																					<td class="breadcrumb-link">&nbsp;&gt;&nbsp;Artifact</td>
 																					<td class="breadcrumb-link">&nbsp;&gt;&nbsp;
-																						Add Test case</td>
+																						Add Artifact</td>
 																				</tr>
 																			</tbody>
 																		</table>
@@ -100,11 +99,11 @@
 									height="1px">
 								
 								<div id="middle">
-										<h2>Add Test Case</h2>
+										<h2>Add Artifact</h2>
 
 										<div id="workArea">
-											<form name="add_testcase" method="post"  action="../controller/addTestcase.jag"
-												>
+											<form method="post" name="jarUpload" action="#"
+												enctype="multipart/form-data" target="_self">
 												<table class="styledLeft" id="archiveTbl">
 													<!-- 													<thead> -->
 													<!-- 														<tr class="tableEvenRow"> -->
@@ -112,48 +111,23 @@
 													<!-- 														</tr> -->
 													<!-- 													</thead> -->
 													<tbody>
-														<tr class="tableEvenRow">
-															<td class="formRow">Test Case name<font color="red">*</font>
-															</td>
-															<td><input type="text" id="WSO2_QAP_TEST_CASE_NAME" name="WSO2_QAP_TEST_CASE_NAME"
-																 onchange="">
-															
-															</td>
-														</tr>
 														<tr class="tableOddRow">
-															<td class="formRow">Status<font color="red">*</font>
+															<td class="formRow">Artifact Name<font color="red">*</font>
 															</td>
-															<td><input type="text" id="WSO2_QAP_TEST_CASE_STATUS" name="WSO2_QAP_TEST_CASE_STATUS"
-																 onchange="">
+															<td><input type="text" id="artifactName" name="artifactName"
+																size="50" onchange="">
 															
 															</td>
 														</tr>
 														<tr class="tableEvenRow">
 															<td class="formRow">Description<font color="red">*</font>
 															</td>
-															<!-- <td><input type="text" id="description" name="description"
-																 onchange="">
-															</td> -->
-															<td>
-																<textarea rows="4" cols="50" name="WSO2_QAP_TEST_CASE_DESCRIPTION"  id="WSO2_QAP_TEST_CASE_DESCRIPTION">
-																</textarea>
-															</td>	
+															<td><textarea rows="4"></textarea>
+															</td>
 														</tr>
 														<tr class="tableOddRow">
-															<td class="formRow">Artifact name</td>
-															<td class="formRow"><select name="WSO2_QAP_TEST_CASE_ARTIFACT" id="WSO2_QAP_TEST_CASE_ARTIFACT">
-																	<option>Artifact 1</option>
-																	<option>Artifact 2</option>
-																	<option>Artifact 3</option>
-																	<option>Artifact 4</option>
-															</select>
-															</td>
-														</tr>
-														<tr class="tableEvenRow">
-															<td class="formRow">Auto Test case<font color="red">*</font>
-															</td>
-															<td><input type="text" id="WSO2_QAP_TEST_CASE_AUTOMATIONTESTCASE" name="WSO2_QAP_TEST_CASE_AUTOMATIONTESTCASE"
-																 onchange="">
+															<td class="formRow">Location</td>
+															<td class="formRow"><input type="text" id="url" name="url" size="50"/>
 															</td>
 														</tr>
 
