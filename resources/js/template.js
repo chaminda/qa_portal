@@ -143,9 +143,9 @@ function setMainMenus() {
 
         }
         if (nextLiState == "none") {
-            els[i].src = "../../resources/images/down-arrow.gif";
+            els[i].src = "../resources/images/down-arrow.gif";
         } else {
-            els[i].src = "../../resources/images/up-arrow.gif";
+            els[i].src = "../resources/images/up-arrow.gif";
         }
     }
 }
