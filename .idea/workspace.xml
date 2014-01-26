@@ -79,25 +79,43 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.jag" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="login.jag" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/view/login.jag">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="383" column="14" selection-start="19165" selection-end="19165" vertical-scroll-proportion="-20.5" vertical-offset="5253" max-vertical-offset="5865">
+            <state line="195" column="27" selection-start="6595" selection-end="6595" vertical-scroll-proportion="0.71794873" vertical-offset="2505" max-vertical-offset="5955">
               <folding>
                 <element signature="n#style#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#6;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1390754171883" expanded="true" signature="3435:3578" placeholder="..." />
-                <marker date="1390754171883" expanded="true" signature="3488:3552" placeholder="{...}" />
+                <marker date="1390755300039" expanded="true" signature="3435:3578" placeholder="..." />
+                <marker date="1390755300039" expanded="true" signature="3488:3552" placeholder="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="add_product.jag" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="footer.jag" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/template/footer.jag">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="255" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="210">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="add_product.jag" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/add_product.jag">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="130" column="21" selection-start="5921" selection-end="5921" vertical-scroll-proportion="0.4117647" vertical-offset="1698" max-vertical-offset="2310">
+            <state line="130" column="21" selection-start="5921" selection-end="5921" vertical-scroll-proportion="-10.5" vertical-offset="1698" max-vertical-offset="2310">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="template.jag" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/template.jag">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="36" column="39" selection-start="1591" selection-end="1610" vertical-scroll-proportion="-11.041667" vertical-offset="275" max-vertical-offset="1035">
               <folding />
             </state>
           </provider>
@@ -134,9 +152,9 @@
         <option value="$PROJECT_DIR$/view/products_home.jag" />
         <option value="$PROJECT_DIR$/view/template/head.jag" />
         <option value="$PROJECT_DIR$/view/test.jag" />
-        <option value="$PROJECT_DIR$/view/login.jag" />
         <option value="$PROJECT_DIR$/view/add_product.jag" />
         <option value="$PROJECT_DIR$/view/template.jag" />
+        <option value="$PROJECT_DIR$/view/login.jag" />
       </list>
     </option>
   </component>
@@ -528,12 +546,12 @@
       <workItem from="1390449374429" duration="10402000" />
       <workItem from="1390551866563" duration="7176000" />
       <workItem from="1390579647654" duration="2300000" />
-      <workItem from="1390743855028" duration="7126000" />
+      <workItem from="1390743855028" duration="8134000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33276000" />
+    <option name="totallyTimeSpent" value="34284000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-4" width="1303" height="773" extended-state="6" />
@@ -846,13 +864,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/template/footer.jag">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="210">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/products_home.jag">
       <provider selected="true" editor-type-id="text-editor">
         <state line="508" column="30" selection-start="31844" selection-end="31848" vertical-scroll-proportion="-3.8235295" vertical-offset="7425" max-vertical-offset="8010">
@@ -863,30 +874,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/login.jag">
+    <entry file="file://$PROJECT_DIR$/view/add_product.jag">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="383" column="14" selection-start="19165" selection-end="19165" vertical-scroll-proportion="-20.5" vertical-offset="5253" max-vertical-offset="5865">
-          <folding>
-            <element signature="n#style#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#6;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1390754171883" expanded="true" signature="3435:3578" placeholder="..." />
-            <marker date="1390754171883" expanded="true" signature="3488:3552" placeholder="{...}" />
-          </folding>
+        <state line="130" column="21" selection-start="5921" selection-end="5921" vertical-scroll-proportion="-10.5" vertical-offset="1698" max-vertical-offset="2310">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/template/footer.jag">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="255" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="210">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/view/template.jag">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="9" selection-start="194" selection-end="194" vertical-scroll-proportion="0.096" vertical-offset="0" max-vertical-offset="1035">
+        <state line="36" column="39" selection-start="1591" selection-end="1610" vertical-scroll-proportion="-11.041667" vertical-offset="275" max-vertical-offset="1035">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/add_product.jag">
+    <entry file="file://$PROJECT_DIR$/view/login.jag">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="130" column="21" selection-start="5921" selection-end="5921" vertical-scroll-proportion="0.4117647" vertical-offset="1698" max-vertical-offset="2310">
-          <folding />
+        <state line="195" column="27" selection-start="6595" selection-end="6595" vertical-scroll-proportion="0.71794873" vertical-offset="2505" max-vertical-offset="5955">
+          <folding>
+            <element signature="n#style#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#6;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1390755300039" expanded="true" signature="3435:3578" placeholder="..." />
+            <marker date="1390755300039" expanded="true" signature="3488:3552" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
