@@ -4,10 +4,7 @@
 <head>
    <%
    var name = session.get("username");
-   if(name===null){
-     response.sendRedirect("login.jag");
-  }
-  require("template/head.jag");
+   require("template/head.jag");
   %>
 </head>
 
@@ -60,7 +57,7 @@
                   <div id="header-div">
                      <div class="right-logo">QA Portal</div>
                      <div class="left-logo">
-                        <a href="index.jag" class="header-home"><img src="../resources/images/1px.gif" width="300px" height="32px"></a>
+                        <a href="../index.jag" class="header-home"><img src="../resources/images/1px.gif" width="300px" height="32px"></a>
                      </div>
                      <div class="middle-ad">
                      </div>
@@ -183,7 +180,7 @@
                                                          <table cellspacing="0">
                                                             <tbody>
                                                                <tr>
-                                                                  <td class="breadcrumb-link"><a href="index.jag">QA Home</a></td>
+                                                                  <td class="breadcrumb-link"><a href="../index.jag">QA Home</a></td>
                                                                   <td class="breadcrumb-link">&nbsp;&gt;&nbsp;Products</td>
                                                                </tr>
                                                             </tbody>
@@ -231,7 +228,7 @@
                               document.onload=setBreadcrumDiv();
                               function setBreadcrumDiv () {
                                 var breadcrumbDiv = document.getElementById('breadcrumb-div');
-                                breadcrumbDiv.innerHTML = '<table cellspacing="0"><tr><td class="breadcrumb-link"><a href="index.jag">QA Home</a></td><td class="breadcrumb-link">&nbsp;>&nbsp;Products</td>';
+                                breadcrumbDiv.innerHTML = '<table cellspacing="0"><tr><td class="breadcrumb-link"><a href="../index.jag">QA Home</a></td><td class="breadcrumb-link">&nbsp;>&nbsp;Products</td>';
                              }
                              </script>
                               <!--

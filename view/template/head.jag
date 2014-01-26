@@ -1,13 +1,11 @@
 <html>
 <%
-var ROOT = session.get("root");
- if(ROOT===null){
-   response.sendRedirect("../index.jag");
-}
-
+var name = session.get("username");
 var SERVICE_ROOT = session.get("service_root");
- if(SERVICE_ROOT===null){
-   response.sendRedirect("../index.jag");
+var ROOT = session.get("root");
+
+if(name===null || ROOT===null || SERVICE_ROOT===null){
+    response.sendRedirect("../index.jag");
 }
 
 %>
@@ -26,7 +24,7 @@ var SERVICE_ROOT = session.get("service_root");
     <link rel="icon" href="../resources/images/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="../resources/images/favicon.ico" type="image/x-icon">
 
-    <script type="text/javascript" src="../resources/js/jquery-1.js"></script>
+   <script type="text/javascript" src="../resources/js/jquery-1.js"></script>
     <script type="text/javascript" src="../resources/js/jquery.js"></script>
     <script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
     <script type="text/javascript" src="../resources/js/jquery_004.js"></script>

@@ -18,7 +18,7 @@
             </li>
             <li class="middle">|</li>
             <li class="right">
-               <a href="https://localhost:9443/carbon/admin/logout_action.jsp">Sign-out</a>
+               <a href="../controller/logout_action.jag">Sign-out</a>
             </li>
             <li class="middle">|</li>
             <li class="middle">
