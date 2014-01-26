@@ -19,7 +19,7 @@
 			@import "../resources/datatables/css/table.css";
 		</style>
 
-		<script type="text/javascript" language="javascript" src="../resources/datatables/js/table_jquery.js"></script>
+		<!--<script type="text/javascript" language="javascript" src="../resources/datatables/js/table_jquery.js"></script> -->
 		<script type="text/javascript" language="javascript" src="../resources/datatables/js/jquery.dataTables.js"></script>
 		<script type="text/javascript" charset="utf-8">
 			$(document).ready(function() {

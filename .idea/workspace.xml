@@ -88,10 +88,10 @@
       <file leaf-file-name="products_home.jag" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/view/products_home.jag">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="59" selection-start="486" selection-end="486" vertical-scroll-proportion="0.23076923" vertical-offset="120" max-vertical-offset="8055">
+            <state line="21" column="127" selection-start="672" selection-end="672" vertical-scroll-proportion="0.3627451" vertical-offset="93" max-vertical-offset="8055">
               <folding>
-                <marker date="1390580798789" expanded="true" signature="2061:2204" placeholder="..." />
-                <marker date="1390580798789" expanded="true" signature="2114:2178" placeholder="{...}" />
+                <marker date="1390747752903" expanded="true" signature="2069:2212" placeholder="..." />
+                <marker date="1390747752903" expanded="true" signature="2122:2186" placeholder="{...}" />
               </folding>
             </state>
           </provider>
@@ -100,7 +100,7 @@
       <file leaf-file-name="dialog.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/js/dialog.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="166" column="32" selection-start="5418" selection-end="5419" vertical-scroll-proportion="4.148148" vertical-offset="2602" max-vertical-offset="5625">
+            <state line="166" column="32" selection-start="5418" selection-end="5419" vertical-scroll-proportion="0.0" vertical-offset="2602" max-vertical-offset="5625">
               <folding>
                 <marker date="1389254091376" expanded="false" signature="9526:9538" placeholder="..." />
                 <marker date="1389254091376" expanded="false" signature="11597:11691" placeholder="..." />
@@ -110,21 +110,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jquery.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/datatables/js/jquery.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1013" column="60" selection-start="54522" selection-end="54525" vertical-scroll-proportion="-7.5185184" vertical-offset="14992" max-vertical-offset="35625">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="product_home_onLoad.jag" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controller/product_home_onLoad.jag">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="18" selection-start="1455" selection-end="1455" vertical-scroll-proportion="-27.5" vertical-offset="0" max-vertical-offset="930">
+            <state line="44" column="18" selection-start="1455" selection-end="1455" vertical-scroll-proportion="0.0" vertical-offset="660" max-vertical-offset="930">
               <folding>
                 <marker date="1390579677437" expanded="true" signature="626:655" placeholder="..." />
                 <marker date="1390579677437" expanded="true" signature="1224:1253" placeholder="..." />
@@ -555,12 +544,13 @@
       <workItem from="1390312695393" duration="6214000" />
       <workItem from="1390449374429" duration="10402000" />
       <workItem from="1390551866563" duration="7176000" />
-      <workItem from="1390579647654" duration="1152000" />
+      <workItem from="1390579647654" duration="2300000" />
+      <workItem from="1390743855028" duration="1001000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25002000" />
+    <option name="totallyTimeSpent" value="27151000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-4" width="1303" height="773" extended-state="6" />
@@ -631,10 +621,55 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/view/products_home.jag">
       <provider selected="true" editor-type-id="text-editor">
+        <state line="467" column="140" selection-start="29193" selection-end="29292" vertical-scroll-proportion="0.0" vertical-offset="6810" max-vertical-offset="8055">
+          <folding>
+            <marker date="1390747752903" expanded="true" signature="2069:2212" placeholder="..." />
+            <marker date="1390747752903" expanded="true" signature="2122:2186" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/dialog.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="166" column="32" selection-start="5418" selection-end="5419" vertical-scroll-proportion="0.0" vertical-offset="2602" max-vertical-offset="5625">
+          <folding>
+            <marker date="1389254091376" expanded="false" signature="9526:9538" placeholder="..." />
+            <marker date="1389254091376" expanded="false" signature="11597:11691" placeholder="..." />
+            <marker date="1389254091376" expanded="false" signature="11854:11950" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/product_home_onLoad.jag">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="18" selection-start="1455" selection-end="1455" vertical-scroll-proportion="0.0" vertical-offset="660" max-vertical-offset="930">
+          <folding>
+            <marker date="1390579677437" expanded="true" signature="626:655" placeholder="..." />
+            <marker date="1390579677437" expanded="true" signature="1224:1253" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.jag">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="2" selection-start="186" selection-end="186" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="210">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/login_action.jag">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="47" selection-start="326" selection-end="326" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="330">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/products_home.jag">
+      <provider selected="true" editor-type-id="text-editor">
         <state line="442" column="53" selection-start="27175" selection-end="27175" vertical-scroll-proportion="0.0" vertical-offset="6540" max-vertical-offset="8085">
           <folding>
-            <marker date="1390580798789" expanded="true" signature="2061:2204" placeholder="..." />
-            <marker date="1390580798789" expanded="true" signature="2114:2178" placeholder="{...}" />
+            <marker date="1390747752903" expanded="true" signature="2069:2212" placeholder="..." />
+            <marker date="1390747752903" expanded="true" signature="2122:2186" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -667,8 +702,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="477" column="55" selection-start="30764" selection-end="30764" vertical-scroll-proportion="0.0" vertical-offset="6840" max-vertical-offset="8145">
           <folding>
-            <marker date="1390580798789" expanded="true" signature="2061:2204" placeholder="..." />
-            <marker date="1390580798789" expanded="true" signature="2114:2178" placeholder="{...}" />
+            <marker date="1390747752903" expanded="true" signature="2069:2212" placeholder="..." />
+            <marker date="1390747752903" expanded="true" signature="2122:2186" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -685,9 +720,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controller/addProduct.jag">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="34" selection-start="734" selection-end="734" vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="570">
-          <folding />
-        </state>
+        <state line="23" column="34" selection-start="734" selection-end="734" vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="570" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../../../samples/dataServiceSamples/clients/src/org/wso2/carbon/dataservices/samples/SecureSample.java">
@@ -761,16 +794,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/const.jag">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="71" selection-start="193" selection-end="193" vertical-scroll-proportion="0.07462686" vertical-offset="0" max-vertical-offset="603">
-          <folding />
-        </state>
+        <state line="3" column="71" selection-start="193" selection-end="193" vertical-scroll-proportion="0.07462686" vertical-offset="0" max-vertical-offset="603" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controller/addProduct.jag">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="34" selection-start="734" selection-end="734" vertical-scroll-proportion="0.5637255" vertical-offset="0" max-vertical-offset="612">
-          <folding />
-        </state>
+        <state line="23" column="34" selection-start="734" selection-end="734" vertical-scroll-proportion="0.5637255" vertical-offset="0" max-vertical-offset="612" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controller/deleteProducts.jag">
@@ -785,11 +814,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/js/yahoo-min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="1158" selection-start="1310" selection-end="1312" vertical-scroll-proportion="0.14778325" vertical-offset="0" max-vertical-offset="609">
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
+        <state line="6" column="1158" selection-start="1310" selection-end="1312" vertical-scroll-proportion="0.14778325" vertical-offset="0" max-vertical-offset="609" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/js/animation-min.js">
@@ -804,11 +829,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/js/template.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="147" column="26" selection-start="5174" selection-end="5174" vertical-scroll-proportion="0.3825944" vertical-offset="1972" max-vertical-offset="7020">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
+        <state line="147" column="26" selection-start="5174" selection-end="5174" vertical-scroll-proportion="0.3825944" vertical-offset="1972" max-vertical-offset="7020" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/view/template/product_menu_panel.jag">
@@ -818,7 +839,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controller/product_home_onLoad.jag">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="18" selection-start="1455" selection-end="1455" vertical-scroll-proportion="-27.5" vertical-offset="0" max-vertical-offset="930">
+        <state line="44" column="18" selection-start="1455" selection-end="1455" vertical-scroll-proportion="0.0" vertical-offset="660" max-vertical-offset="930">
           <folding>
             <marker date="1390579677437" expanded="true" signature="626:655" placeholder="..." />
             <marker date="1390579677437" expanded="true" signature="1224:1253" placeholder="..." />
@@ -826,18 +847,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/datatables/js/jquery.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1013" column="60" selection-start="54522" selection-end="54525" vertical-scroll-proportion="-7.5185184" vertical-offset="14992" max-vertical-offset="35625">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/js/dialog.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="166" column="32" selection-start="5418" selection-end="5419" vertical-scroll-proportion="4.148148" vertical-offset="2602" max-vertical-offset="5625">
+        <state line="166" column="32" selection-start="5418" selection-end="5419" vertical-scroll-proportion="0.0" vertical-offset="2602" max-vertical-offset="5625">
           <folding>
             <marker date="1389254091376" expanded="false" signature="9526:9538" placeholder="..." />
             <marker date="1389254091376" expanded="false" signature="11597:11691" placeholder="..." />
@@ -848,10 +860,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/view/products_home.jag">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="59" selection-start="486" selection-end="486" vertical-scroll-proportion="0.23076923" vertical-offset="120" max-vertical-offset="8055">
+        <state line="21" column="127" selection-start="672" selection-end="672" vertical-scroll-proportion="0.3627451" vertical-offset="93" max-vertical-offset="8055">
           <folding>
-            <marker date="1390580798789" expanded="true" signature="2061:2204" placeholder="..." />
-            <marker date="1390580798789" expanded="true" signature="2114:2178" placeholder="{...}" />
+            <marker date="1390747752903" expanded="true" signature="2069:2212" placeholder="..." />
+            <marker date="1390747752903" expanded="true" signature="2122:2186" placeholder="{...}" />
           </folding>
         </state>
       </provider>
