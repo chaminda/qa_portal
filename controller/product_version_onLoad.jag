@@ -1,7 +1,10 @@
 <%
     include("base64_encode.jag");
     var SERVICE_SECURE_ROOT = session.get("service_secure_root");
-    var url  = SERVICE_SECURE_ROOT+"WSO2_QAP_PRODUCT_DataService/view/products";
+
+    var product_id = json_data.WSO2_QAP_PRODUCT_ID;
+
+    var url  = SERVICE_SECURE_ROOT+"WSO2_QAP_PRODUCT_VERSION_DataService/get/version_by_id/"+product_id;
 
    	var optionalHeaders = {
     "Accept": "application/json",
@@ -12,7 +15,9 @@
 
 
 	var obj = parse(data.data);
-	var list = obj.WSO2_QAP_PRODUCTCollection.WSO2_QAP_PRODUCT;
+    //print(obj);
+
+	var list = obj.WSO2_QAP_PRODUCT_VERSIONCollection.WSO2_QAP_PRODUCT_VERSION;
 
 
 	//print(list[0].WSO2_QAP_PRODUCT_NAME);
@@ -21,11 +26,11 @@
 
         print('<tr valign="middle">');
         print(' <td style="text-align:center; !important" width="10px">');
-        print('    <input name="productId" value="'+list.WSO2_QAP_PRODUCT_ID+'" onclick="resetVars()" class="chkBox" type="checkbox">');
+        print('    <input name="versioinId" value="'+list.WSO2_QAP_PRODUCT_VERSION_ID+'" onclick="resetVars()" class="chkBox" type="checkbox">');
         print(' </td>');
 
         print(' <td>');
-        //print('<a href="product_version.jag?product='+list.WSO2_QAP_PRODUCT_NAME+'&product_id='+list.WSO2_QAP_PRODUCT_ID'">');
+        print('    <a href="products_dashboard.jag?product='+list.WSO2_QAP_PRODUCT_NAME+'">');
         print("&emsp;&emsp;&emsp;");
         print(list.WSO2_QAP_PRODUCT_NAME );
         print('</a>');
@@ -39,14 +44,13 @@
 
         print('<tr vertical-align:middle>');
         print('<td style="text-align:center; !important" width="10px">');
-        print('    <input name="productId" value="'+list[i].WSO2_QAP_PRODUCT_ID+'" onclick="resetVars()" class="chkBox" type="checkbox">');
+        print('    <input name="versionId" value="'+list[i].WSO2_QAP_PRODUCT_VERSION_ID+'" onclick="resetVars()" class="chkBox" type="checkbox">');
         print('</td>');
 
         print('<td>');
-        var link = "product_versions.jag?data="+encodeURIComponent(stringify(list[i]));
-        print('<a href="'+link+'">');
+        print('    <a href="link here please">');
         print("&emsp;&emsp;&emsp;");
-        print(list[i].WSO2_QAP_PRODUCT_NAME );
+        print(json_data.WSO2_QAP_PRODUCT_NAME+"&emsp;&emsp;V"+list[i].WSO2_QAP_PRODUCT_VERSION );
         print('</a>');
         print('</td>');
         print('</tr>');

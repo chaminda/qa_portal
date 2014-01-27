@@ -67,56 +67,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="product_versions.jag" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/product_versions.jag">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="109" column="68" selection-start="5253" selection-end="5282" vertical-scroll-proportion="-13.75" vertical-offset="1305" max-vertical-offset="3165">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="product_version_onLoad.jag" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/controller/product_version_onLoad.jag">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="52" column="60" selection-start="1737" selection-end="1737" vertical-scroll-proportion="0.85294116" vertical-offset="258" max-vertical-offset="1005">
+              <folding>
+                <marker date="1390841800606" expanded="true" signature="739:768" placeholder="..." />
+                <marker date="1390841800606" expanded="false" signature="1346:1375" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="products_home.jag" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/products_home.jag">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="508" column="30" selection-start="31844" selection-end="31848" vertical-scroll-proportion="-3.8235295" vertical-offset="7425" max-vertical-offset="8010">
+            <state line="200" column="82" selection-start="13214" selection-end="13214" vertical-scroll-proportion="-16.875" vertical-offset="2595" max-vertical-offset="4530">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="product_home_onLoad.jag" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controller/product_home_onLoad.jag">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="50" column="23" selection-start="1750" selection-end="1750" vertical-scroll-proportion="-17.375" vertical-offset="333" max-vertical-offset="945">
               <folding>
-                <marker date="1390751673979" expanded="true" signature="2005:2148" placeholder="..." />
-                <marker date="1390751673979" expanded="true" signature="2058:2122" placeholder="{...}" />
+                <marker date="1390841044086" expanded="true" signature="626:655" placeholder="..." />
+                <marker date="1390841044086" expanded="false" signature="1258:1287" placeholder="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.jag" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/view/login.jag">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="195" column="27" selection-start="6595" selection-end="6595" vertical-scroll-proportion="0.71794873" vertical-offset="2505" max-vertical-offset="5955">
-              <folding>
-                <element signature="n#style#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#6;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1390755300039" expanded="true" signature="3435:3578" placeholder="..." />
-                <marker date="1390755300039" expanded="true" signature="3488:3552" placeholder="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="footer.jag" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/template/footer.jag">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="255" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="210">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="add_product.jag" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/add_product.jag">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="130" column="21" selection-start="5921" selection-end="5921" vertical-scroll-proportion="-10.5" vertical-offset="1698" max-vertical-offset="2310">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="template.jag" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/template.jag">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="39" selection-start="1591" selection-end="1610" vertical-scroll-proportion="-11.041667" vertical-offset="275" max-vertical-offset="1035">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -142,24 +130,28 @@
         <option value="$PROJECT_DIR$/controller/login_action.jag" />
         <option value="$PROJECT_DIR$/controller/deleteProducts.jag" />
         <option value="$PROJECT_DIR$/controller/addProduct.jag" />
-        <option value="$PROJECT_DIR$/const.jag" />
         <option value="$PROJECT_DIR$/view/template/product_menu_panel.jag" />
         <option value="$PROJECT_DIR$/resources/js/template.js" />
-        <option value="$PROJECT_DIR$/controller/product_home_onLoad.jag" />
         <option value="$PROJECT_DIR$/resources/datatables/js/jquery.js" />
         <option value="$PROJECT_DIR$/view/template/header_div.jag" />
         <option value="$PROJECT_DIR$/controller/logout_action.jag" />
-        <option value="$PROJECT_DIR$/view/products_home.jag" />
         <option value="$PROJECT_DIR$/view/template/head.jag" />
         <option value="$PROJECT_DIR$/view/test.jag" />
         <option value="$PROJECT_DIR$/view/add_product.jag" />
         <option value="$PROJECT_DIR$/view/template.jag" />
         <option value="$PROJECT_DIR$/view/login.jag" />
+        <option value="$PROJECT_DIR$/view/products_home.jag" />
+        <option value="$PROJECT_DIR$/resources/js/page-logic.js" />
+        <option value="$PROJECT_DIR$/view/produt_versions.jag" />
+        <option value="$PROJECT_DIR$/const.jag" />
+        <option value="$PROJECT_DIR$/controller/product_home_onLoad.jag" />
+        <option value="$PROJECT_DIR$/view/product_versions.jag" />
+        <option value="$PROJECT_DIR$/controller/product_version_onLoad.jag" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="64" />
+    <option name="x" value="1430" />
     <option name="y" value="-4" />
     <option name="width" value="1303" />
     <option name="height" value="773" />
@@ -235,24 +227,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="template" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="qa_portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="qa_portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -295,6 +269,9 @@
     <property name="LayoutCode.rearrangeEntriesJavaScript" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/controller" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/view" />
       <recent name="$PROJECT_DIR$/view/template" />
@@ -546,15 +523,17 @@
       <workItem from="1390449374429" duration="10402000" />
       <workItem from="1390551866563" duration="7176000" />
       <workItem from="1390579647654" duration="2300000" />
-      <workItem from="1390743855028" duration="8134000" />
+      <workItem from="1390743855028" duration="8733000" />
+      <workItem from="1390796933283" duration="7571000" />
+      <workItem from="1390830170017" duration="6896000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34284000" />
+    <option name="totallyTimeSpent" value="49350000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="64" y="-4" width="1303" height="773" extended-state="6" />
+    <frame x="1430" y="-4" width="1303" height="773" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -606,72 +585,86 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.jag">
+    <entry file="file://$PROJECT_DIR$/const.jag">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="2" selection-start="186" selection-end="186" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="210">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/login_action.jag">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="47" selection-start="326" selection-end="326" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="330">
+        <state line="4" column="2" selection-start="158" selection-end="193" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="180">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/view/products_home.jag">
       <provider selected="true" editor-type-id="text-editor">
+        <state line="508" column="30" selection-start="31844" selection-end="31848" vertical-scroll-proportion="0.0" vertical-offset="7425" max-vertical-offset="8010">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/login.jag">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="195" column="27" selection-start="6595" selection-end="6595" vertical-scroll-proportion="0.0" vertical-offset="2505" max-vertical-offset="5955" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/template/footer.jag">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="255" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/add_product.jag">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="130" column="21" selection-start="5921" selection-end="5921" vertical-scroll-proportion="0.0" vertical-offset="1698" max-vertical-offset="2310" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/template.jag">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="39" selection-start="1591" selection-end="1610" vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="1035" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.jag">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="2" selection-start="186" selection-end="186" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="210" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/login_action.jag">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="47" selection-start="326" selection-end="326" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="330" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/products_home.jag">
+      <provider selected="true" editor-type-id="text-editor">
         <state line="467" column="140" selection-start="29193" selection-end="29292" vertical-scroll-proportion="0.0" vertical-offset="6810" max-vertical-offset="8055">
-          <folding>
-            <marker date="1390751673979" expanded="true" signature="2005:2148" placeholder="..." />
-            <marker date="1390751673979" expanded="true" signature="2058:2122" placeholder="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/js/dialog.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="166" column="32" selection-start="5418" selection-end="5419" vertical-scroll-proportion="0.0" vertical-offset="2602" max-vertical-offset="5625">
-          <folding>
-            <marker date="1389254091376" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1389254091376" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1389254091376" expanded="false" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
+        <state line="166" column="32" selection-start="5418" selection-end="5419" vertical-scroll-proportion="0.0" vertical-offset="2602" max-vertical-offset="5625" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controller/product_home_onLoad.jag">
       <provider selected="true" editor-type-id="text-editor">
         <state line="44" column="18" selection-start="1455" selection-end="1455" vertical-scroll-proportion="0.0" vertical-offset="660" max-vertical-offset="930">
           <folding>
-            <marker date="1390579677437" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1390579677437" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1390841044086" expanded="true" signature="626:655" placeholder="..." />
+            <marker date="1390841044086" expanded="false" signature="1258:1287" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.jag">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="2" selection-start="186" selection-end="186" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="210">
-          <folding />
-        </state>
+        <state line="8" column="2" selection-start="186" selection-end="186" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="210" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controller/login_action.jag">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="47" selection-start="326" selection-end="326" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="330">
-          <folding />
-        </state>
+        <state line="12" column="47" selection-start="326" selection-end="326" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="330" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/view/products_home.jag">
       <provider selected="true" editor-type-id="text-editor">
         <state line="442" column="53" selection-start="27175" selection-end="27175" vertical-scroll-proportion="0.0" vertical-offset="6540" max-vertical-offset="8085">
-          <folding>
-            <marker date="1390751673979" expanded="true" signature="2005:2148" placeholder="..." />
-            <marker date="1390751673979" expanded="true" signature="2058:2122" placeholder="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -679,33 +672,26 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="39" column="40" selection-start="1217" selection-end="1217" vertical-scroll-proportion="0.0" vertical-offset="243" max-vertical-offset="930">
           <folding>
-            <marker date="1390579677437" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1390579677437" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1390841044086" expanded="true" signature="626:655" placeholder="..." />
+            <marker date="1390841044086" expanded="false" signature="1258:1287" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.jag">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="2" selection-start="186" selection-end="186" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="210">
-          <folding />
-        </state>
+        <state line="8" column="2" selection-start="186" selection-end="186" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="210" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controller/login_action.jag">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="47" selection-start="326" selection-end="326" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="330">
-          <folding />
-        </state>
+        <state line="12" column="47" selection-start="326" selection-end="326" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="330" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/view/products_home.jag">
       <provider selected="true" editor-type-id="text-editor">
         <state line="477" column="55" selection-start="30764" selection-end="30764" vertical-scroll-proportion="0.0" vertical-offset="6840" max-vertical-offset="8145">
-          <folding>
-            <marker date="1390751673979" expanded="true" signature="2005:2148" placeholder="..." />
-            <marker date="1390751673979" expanded="true" signature="2058:2122" placeholder="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -756,13 +742,6 @@
         <state line="8" column="5" selection-start="660" selection-end="660" vertical-scroll-proportion="0.19900498" vertical-offset="0" max-vertical-offset="603" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/const.jag">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="71" selection-start="193" selection-end="193" vertical-scroll-proportion="0.07462686" vertical-offset="0" max-vertical-offset="603">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controller/addProduct.jag">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="34" selection-start="734" selection-end="734" vertical-scroll-proportion="0.5637255" vertical-offset="0" max-vertical-offset="612">
@@ -782,11 +761,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/js/yahoo-min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="1158" selection-start="1310" selection-end="1312" vertical-scroll-proportion="0.14778325" vertical-offset="0" max-vertical-offset="609">
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
+        <state line="6" column="1158" selection-start="1310" selection-end="1312" vertical-scroll-proportion="0.14778325" vertical-offset="0" max-vertical-offset="609" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/js/animation-min.js">
@@ -810,100 +785,101 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/js/dialog.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="166" column="32" selection-start="5418" selection-end="5419" vertical-scroll-proportion="-0.18241042" vertical-offset="2602" max-vertical-offset="5625">
-          <folding>
-            <marker date="1389254091376" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1389254091376" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1389254091376" expanded="false" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
+        <state line="166" column="32" selection-start="5418" selection-end="5419" vertical-scroll-proportion="-0.18241042" vertical-offset="2602" max-vertical-offset="5625" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.jag">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="2" selection-start="186" selection-end="186" vertical-scroll-proportion="0.192" vertical-offset="0" max-vertical-offset="625">
-          <folding />
-        </state>
+        <state line="8" column="2" selection-start="186" selection-end="186" vertical-scroll-proportion="0.192" vertical-offset="0" max-vertical-offset="625" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controller/login_action.jag">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="217" selection-end="217" vertical-scroll-proportion="0.192" vertical-offset="0" max-vertical-offset="625">
-          <folding />
-        </state>
+        <state line="8" column="0" selection-start="217" selection-end="217" vertical-scroll-proportion="0.192" vertical-offset="0" max-vertical-offset="625" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/view/template/header_div.jag">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="55" selection-start="714" selection-end="714" vertical-scroll-proportion="0.50167227" vertical-offset="0" max-vertical-offset="598">
-          <folding />
-        </state>
+        <state line="20" column="55" selection-start="714" selection-end="714" vertical-scroll-proportion="0.50167227" vertical-offset="0" max-vertical-offset="598" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controller/logout_action.jag">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="35" selection-start="69" selection-end="69" vertical-scroll-proportion="0.048" vertical-offset="0" max-vertical-offset="625">
+        <state line="2" column="35" selection-start="69" selection-end="69" vertical-scroll-proportion="0.048" vertical-offset="0" max-vertical-offset="625" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/template/head.jag">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="29" selection-start="329" selection-end="329" vertical-scroll-proportion="-6.0416665" vertical-offset="50" max-vertical-offset="675" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/login.jag">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="195" column="27" selection-start="6595" selection-end="6595" vertical-scroll-proportion="0.6862745" vertical-offset="2505" max-vertical-offset="5955" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/template/footer.jag">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="255" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="210" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/add_product.jag">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="130" column="21" selection-start="5921" selection-end="5921" vertical-scroll-proportion="0.4117647" vertical-offset="1698" max-vertical-offset="2310" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/template.jag">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="20" selection-start="1531" selection-end="1531" vertical-scroll-proportion="0.136" vertical-offset="410" max-vertical-offset="1035" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/customControls.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2295" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/page-logic.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2670" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/const.jag">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="49" selection-start="108" selection-end="108" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="180">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controller/product_home_onLoad.jag">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="18" selection-start="1455" selection-end="1455" vertical-scroll-proportion="1.056" vertical-offset="0" max-vertical-offset="930">
+        <state line="50" column="23" selection-start="1750" selection-end="1750" vertical-scroll-proportion="-17.375" vertical-offset="333" max-vertical-offset="945">
           <folding>
-            <marker date="1390579677437" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1390579677437" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1390841044086" expanded="true" signature="626:655" placeholder="..." />
+            <marker date="1390841044086" expanded="false" signature="1258:1287" placeholder="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/template/head.jag">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="29" selection-start="329" selection-end="329" vertical-scroll-proportion="-6.0416665" vertical-offset="50" max-vertical-offset="675">
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/view/products_home.jag">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="508" column="30" selection-start="31844" selection-end="31848" vertical-scroll-proportion="-3.8235295" vertical-offset="7425" max-vertical-offset="8010">
+        <state line="200" column="82" selection-start="13214" selection-end="13214" vertical-scroll-proportion="-16.875" vertical-offset="2595" max-vertical-offset="4530">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/product_versions.jag">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="109" column="68" selection-start="5253" selection-end="5282" vertical-scroll-proportion="-13.75" vertical-offset="1305" max-vertical-offset="3165">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/product_version_onLoad.jag">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="60" selection-start="1737" selection-end="1737" vertical-scroll-proportion="0.85294116" vertical-offset="258" max-vertical-offset="1005">
           <folding>
-            <marker date="1390751673979" expanded="true" signature="2005:2148" placeholder="..." />
-            <marker date="1390751673979" expanded="true" signature="2058:2122" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/add_product.jag">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="130" column="21" selection-start="5921" selection-end="5921" vertical-scroll-proportion="-10.5" vertical-offset="1698" max-vertical-offset="2310">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/template/footer.jag">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="255" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="210">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/template.jag">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="39" selection-start="1591" selection-end="1610" vertical-scroll-proportion="-11.041667" vertical-offset="275" max-vertical-offset="1035">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/login.jag">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="195" column="27" selection-start="6595" selection-end="6595" vertical-scroll-proportion="0.71794873" vertical-offset="2505" max-vertical-offset="5955">
-          <folding>
-            <element signature="n#style#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#6;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1390755300039" expanded="true" signature="3435:3578" placeholder="..." />
-            <marker date="1390755300039" expanded="true" signature="3488:3552" placeholder="{...}" />
+            <marker date="1390841800606" expanded="true" signature="739:768" placeholder="..." />
+            <marker date="1390841800606" expanded="false" signature="1346:1375" placeholder="..." />
           </folding>
         </state>
       </provider>
