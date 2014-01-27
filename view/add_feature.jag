@@ -39,7 +39,14 @@ if(name===null){
 	
 	<script type="text/javascript">
 		function loadVersions(){
-			alert("changed");
+			$.ajax({
+				  url: "../controller/getVersionDropdown.jag",
+				  context: document.body
+				}).done(function(data) {
+					alert(data);
+					//document.getElementById("productselector").innerHTML = data;
+				}).fail(function() {
+				  });
 		}
 	</script>
 	
