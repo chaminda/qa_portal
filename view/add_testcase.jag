@@ -142,10 +142,7 @@
 														<tr class="tableOddRow">
 															<td class="formRow">Artifact name</td>
 															<td class="formRow"><select name="WSO2_QAP_TEST_CASE_ARTIFACT" id="WSO2_QAP_TEST_CASE_ARTIFACT">
-																	<option>Artifact 1</option>
-																	<option>Artifact 2</option>
-																	<option>Artifact 3</option>
-																	<option>Artifact 4</option>
+																	
 															</select>
 															<input type="button" value="Create new Auto Test case" onclick="window.open('add_product.jag')" target="_blank">
 															</td>
