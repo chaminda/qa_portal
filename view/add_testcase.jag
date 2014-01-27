@@ -32,7 +32,31 @@
 	
 <!-- 	<script type="text/javascript" src="resources/js/jquery-ui.js"></script> -->
 <!-- 	<link rel="stylesheet" href="resources/css/jquery-ui.css"> -->
-	
+	<script type="text/javascript">
+	$.ajax({
+		  url: "../controller/getArtifactDropdown.jag",
+		  context: document.body
+		}).done(function(data) {
+			alert(data);
+			document.getElementById("WSO2_QAP_TEST_CASE_ARTIFACT").innerHTML = data;
+		}).fail(function() {
+			alert("fail");
+		  });
+	</script>
+
+	<script type="text/javascript">
+	$.ajax({
+		  url: "../controller/getAutotestclassDropdown.jag",
+		  context: document.body
+		}).done(function(data) {
+			
+			document.getElementById("WSO2_QAP_TEST_CASE_AUTOMATIONTESTCASE").innerHTML = data;
+		}).fail(function() {
+			
+		  });
+	</script>
+
+
 	<table id="main-table" border="0" cellspacing="0">
 		<tbody>
 			<tr>
@@ -142,9 +166,9 @@
 														<tr class="tableOddRow">
 															<td class="formRow">Artifact name</td>
 															<td class="formRow"><select name="WSO2_QAP_TEST_CASE_ARTIFACT" id="WSO2_QAP_TEST_CASE_ARTIFACT">
-																	
+																
 															</select>
-															<input type="button" value="Create new Auto Test case" onclick="window.open('add_product.jag')" target="_blank">
+															<input type="button" value="Create new Artifact" onclick="window.open('add_product.jag')" target="_blank">
 															</td>
 															
 														</tr>
@@ -152,8 +176,7 @@
 															<td class="formRow">Auto Test case<font color="red">*</font>
 															</td>
 															<td><select  id="WSO2_QAP_TEST_CASE_AUTOMATIONTESTCASE" name="WSO2_QAP_TEST_CASE_AUTOMATIONTESTCASE">
-																<option>AutoTestcase 1</option>
-																<option>AutoTestCase 2</option>
+																
 															</select>
 															
 															<input type="button" value="Create new Auto Test case" onclick="window.open('add_product.jag')" target="_blank">

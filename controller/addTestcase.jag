@@ -14,14 +14,12 @@ var optionalHeaders = {
         "Accept":"application/json",
             "Authorization": "Basic "+base64_encode("admin:admin") };
 
-var url = SERVICE_SECURE_ROOT+"WSO2_QAP_TEST_CASE_DataService/add/testcase";
-//var param1="WSO2_QAP_ARTIFACT_NAME="+artifact;
-var url1=SERVICE_SECURE_ROOT+"WSO2_QAP_ARTIFACT_DataService/view/artifacts";
+//var url = SERVICE_SECURE_ROOT+"WSO2_QAP_TEST_CASE_DataService/add/testcase";
 
-print(artifact);
-var res=get(url1,"",optionalHeaders);
+
 // post(url, param, optionalHeaders, "json", function (data, xhr) {
 //        log("Response received");
-var obj = parse(res.data);
- print(obj);
+
+print(artifact);
+
 %>
