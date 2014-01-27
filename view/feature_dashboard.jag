@@ -4,9 +4,9 @@
       <%
          var name = session.get("username");
          if(name===null){
-           response.sendRedirect("login.jag");
+           response.sendRedirect("template/login.jag");
          }
-         require("head.jag");
+         require("template/head.jag");
          %>
    </head>
    <body>
@@ -29,17 +29,17 @@
             <tr>
                <td id="header" colspan="3">
                   <%
-                   require("header_div.jag");
+                   require("template/header_div.jag");
                   %>
                </td>
             </tr>
             <tr>
                <% 
-                  require("product_vertical_menu.jag"); 
+                  require("template/product_vertical_menu.jag"); 
                %>
                
                <%
-                  require("product_menu_panel.jag");
+                  require("template/product_menu_panel.jag");
                %>
 
               <td id="middle-content">

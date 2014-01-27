@@ -23,7 +23,7 @@
 
 							<li id="region1_products_menu" class="menu-header"
 								onclick="mainMenuCollapse(this.childNodes[0])"
-								style="cursor: pointer;"><img src="resources/up-arrow.gif"
+								style="cursor: pointer;"><img src="../resources/images/up-arrow.gif"
 								class="mMenuHeaders" id="region1_products_menu">Test Plan</li>
 
 								<li class="normal">

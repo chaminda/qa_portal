@@ -8,15 +8,18 @@ var description=request.getParameter("WSO2_QAP_TEST_CASE_DESCRIPTION");
 var artifact=request.getParameter("WSO2_QAP_TEST_CASE_ARTIFACT");
 var autotestcase=request.getParameter("WSO2_QAP_TEST_CASE_AUTOMATIONTESTCASE");
 
-var param="WSO2_QAP_TEST_CASE_NAME="+TestCaseName+",WSO2_QAP_TEST_CASE_STATUS="+status+",WSO2_QAP_TEST_CASE_DESCRIPTION="+description+",WSO2_QAP_TEST_CASE_ARTIFACT="+artifact+",WSO2_QAP_TEST_CASE_AUTOMATIONTESTCASE="+autotestcase;
+// var param="WSO2_QAP_TEST_CASE_NAME="+TestCaseName+",WSO2_QAP_TEST_CASE_STATUS="+status+",WSO2_QAP_TEST_CASE_DESCRIPTION="+description+",WSO2_QAP_TEST_CASE_ARTIFACT="+artifact+",WSO2_QAP_TEST_CASE_AUTOMATIONTESTCASE="+autotestcase;
 
 var optionalHeaders = {
         "Accept":"application/json",
             "Authorization": "Basic "+base64_encode("admin:admin") };
 
-var url = SERVICE_SECURE_ROOT+"WSO2_QAP_TEST_CASE_DataService/add/testcase";
+//var url = SERVICE_SECURE_ROOT+"WSO2_QAP_TEST_CASE_DataService/add/testcase";
 
-post(url, param, optionalHeaders, "json", function (data, xhr) {
-       log("Response received");
- print(param);
+
+// post(url, param, optionalHeaders, "json", function (data, xhr) {
+//        log("Response received");
+
+print(artifact);
+
 %>
