@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
    <head>
       <%
-         include("../const.jag");
+         require("../const.jag");
          var name = session.get("username");
          if(name===null){
            response.sendRedirect("login.jag");
          }
-         require("template/head.jag");
+           require("template/head.jag");
          %>
    </head>
    <body>
@@ -30,16 +30,16 @@
             <tr>
                <td id="header" colspan="3">
                   <%
-                   require("template/header_div.jag");
+                    include("template/header_div.jag");
                   %>
                </td>
             </tr>
             <tr id="middle-container-tr">
-               <% 
-                  require("template/product_vertical_menu.jag");
+               <%
+                include("template/product_vertical_menu.jag");
                %>
                <%
-                  require("template/product_menu_panel.jag");
+                include("template/product_menu_panel.jag");
                %>
 
 
@@ -54,15 +54,10 @@
             </tr>
             <tr>
                <% 
-                  require("template/footer.jag")
+                  include("template/footer.jag")
                   %>
             </tr>
          </tbody>
       </table>
-      <script type="text/javascript">
-         if (Function('/*@cc_on return document.documentMode===10@*/')()){
-          document.documentElement.className+=' ie10';
-         }
-      </script>
    </body>
 </html>

@@ -4,26 +4,37 @@
 <head>
    <%
    var name = session.get("username");
-   if(name===null){
-     response.sendRedirect("login.jag");
-  }
-  require("template/head.jag");
+   require("template/head.jag");
   %>
 </head>
 
  <body>
+         <!-- datatables imports start  -->
+
+        <style type="text/css" title="currentStyle">
+			@import "../resources/datatables/css/page.css";
+			@import "../resources/datatables/css/table.css";
+		</style>
+
+		<!--<script type="text/javascript" language="javascript" src="../resources/datatables/js/table_jquery.js"></script> -->
+		<script type="text/javascript" language="javascript" src="../resources/datatables/js/jquery.dataTables.js"></script>
+		<script type="text/javascript" charset="utf-8">
+			$(document).ready(function() {
+				$('#productsTable').dataTable( {
+					"sPaginationType": "full_numbers"
+				} );
+			} );
+		</script>
+
+		<!-- datatables imports end -->
+
    <noscript>
       <div class="something-wrong">
          <div class="title">JavaScript is disabled on your browser</div>
          <div class="content">Please enable JavaScript or upgrade to a JavaScript-capable browser to use WSO2 Products.</div>
       </div>
    </noscript>
-      <!--[if lte IE 6]>
-      <div class="something-wrong">
-         <div class="title">Did you know that your Internet Explorer is out of date?</div>
-         <div class="content">To get the best possible experience using our website we recommend that you upgrade to a newer version.</div>
-      </div>
-      <![endif]-->
+
       <div id="dcontainer"></div>
       <script type="text/javascript" src="../resources/js/dialog.js"></script>
       <!-- JS imports for collapsible menu -->
@@ -46,7 +57,7 @@
                   <div id="header-div">
                      <div class="right-logo">QA Portal</div>
                      <div class="left-logo">
-                        <a href="index.jag" class="header-home"><img src="../resources/images/1px.gif" width="300px" height="32px"></a>
+                        <a href="../index.jag" class="header-home"><img src="../resources/images/1px.gif" width="300px" height="32px"></a>
                      </div>
                      <div class="middle-ad">
                      </div>
@@ -169,7 +180,7 @@
                                                          <table cellspacing="0">
                                                             <tbody>
                                                                <tr>
-                                                                  <td class="breadcrumb-link"><a href="index.jag">QA Home</a></td>
+                                                                  <td class="breadcrumb-link"><a href="../index.jag">QA Home</a></td>
                                                                   <td class="breadcrumb-link">&nbsp;&gt;&nbsp;Products</td>
                                                                </tr>
                                                             </tbody>
@@ -217,7 +228,7 @@
                               document.onload=setBreadcrumDiv();
                               function setBreadcrumDiv () {
                                 var breadcrumbDiv = document.getElementById('breadcrumb-div');
-                                breadcrumbDiv.innerHTML = '<table cellspacing="0"><tr><td class="breadcrumb-link"><a href="index.jag">QA Home</a></td><td class="breadcrumb-link">&nbsp;>&nbsp;Products</td>';
+                                breadcrumbDiv.innerHTML = '<table cellspacing="0"><tr><td class="breadcrumb-link"><a href="../index.jag">QA Home</a></td><td class="breadcrumb-link">&nbsp;>&nbsp;Products</td>';
                              }
                              </script>
                               <!--
@@ -425,26 +436,6 @@
                                                 <tr>
                                                    <td style="border:0; !important">&nbsp;</td>
                                                 </tr>
-                                                <tr>
-                                                   <td>
-                                                      <table style="border:0; !important">
-                                                         <tbody>
-                                                            <tr style="border:0; !important">
-                                                               <td style="border:0; !important">
-                                                                  <nobr>
-                                                                     Product name
-                                                                     <input name="webappSearchString" type="text">&nbsp;
-                                                                  </nobr>
-                                                               </td>
-                                                               <td style="border:0; !important">
-                                                                  <a class="icon-link" href="#" style="background-image: url(../resources/images/search.gif);" onclick="searchWebapps(); return false;" alt="Search">
-                                                                  </a>
-                                                               </td>
-                                                            </tr>
-                                                         </tbody>
-                                                      </table>
-                                                   </td>
-                                                </tr>
                                              </tbody>
                                           </table>
                                        </form>
@@ -471,7 +462,7 @@
                                           <input name="pageNumber" value="0" type="hidden">
                                           <input name="webappState" value="all" type="hidden">
                                           <input name="webappType" value="all" type="hidden">
-                                          <table class="styledLeft" id="webappsTable" width="100%">
+                                          <table class="display" id="productsTable" cellpadding="0" cellspacing="0" border="0" width="100%">
                                              <thead>
                                                 <tr>
                                                    <th>&nbsp;</th>
@@ -482,7 +473,7 @@
                                              </thead>
                                              <tbody>
                                                 <%
-                                                   require("../controller/product_home_onLoad.jag");
+                                                   include("../controller/product_home_onLoad.jag");
                                                 %>
                                                
                                              </tbody>
