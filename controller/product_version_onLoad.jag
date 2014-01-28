@@ -24,15 +24,15 @@
     if(list.length==null && list.WSO2_QAP_PRODUCT_NAME!=null){
 
 
-        print('<tr valign="middle">');
+        print('<tr>');
         print(' <td style="text-align:center; !important" width="10px">');
-        print('    <input name="versioinId" value="'+list.WSO2_QAP_PRODUCT_VERSION_ID+'" onclick="resetVars()" class="chkBox" type="checkbox">');
+        print('    <input name="versionId" value="'+list.WSO2_QAP_PRODUCT_VERSION_ID+'" onclick="resetVars()" class="chkBox" type="checkbox">');
         print(' </td>');
 
         print(' <td>');
-        print('    <a href="products_dashboard.jag?product='+list.WSO2_QAP_PRODUCT_NAME+'">');
+        print('    <a href="link here">');
         print("&emsp;&emsp;&emsp;");
-        print(list.WSO2_QAP_PRODUCT_NAME );
+        print(json_data.WSO2_QAP_PRODUCT_NAME+"&emsp;&emsp;V"+list.WSO2_QAP_PRODUCT_VERSION);
         print('</a>');
         print('</td>');
         print('</tr>');
@@ -42,7 +42,7 @@
 	for (var i=0;i<list.length;i++)
 	{
 
-        print('<tr vertical-align:middle>');
+        print('<tr>');
         print('<td style="text-align:center; !important" width="10px">');
         print('    <input name="versionId" value="'+list[i].WSO2_QAP_PRODUCT_VERSION_ID+'" onclick="resetVars()" class="chkBox" type="checkbox">');
         print('</td>');
