@@ -1,28 +1,35 @@
 <%
+//var params = request.getAllParameters("UTF-8");
+//print(params);
+
 include("base64_encode.jag");
 var SERVICE_SECURE_ROOT= session.get("service_secure_root");
 
 var params = request.getAllParameters("UTF-8");
-var list = params.productId;
-var param = "WSO2_QAP_PRODUCT_VERSION_ID=";
+var list = params.versionId;
+
 
 var optionalHeaders = {
     "Accept": "application/json",
     "Authorization": "Basic "+base64_encode("admin:admin") };
-/*
- if(typeof list === 'string'){
- 	var url = SERVICE_SECURE_ROOT+"WSO2_QAP_PRODUCT_DataService/delete/products/"+list;
 
+//print(params);
+
+ if(typeof list === 'string'){
+ 	var url = SERVICE_SECURE_ROOT+"WSO2_QAP_PRODUCT_VERSION_DataService/delete/product_version";
+
+     var param = "WSO2_QAP_PRODUCT_VERSION_ID="+list;
      del(url, param, optionalHeaders, "json", function (data, xhr) {
          log("Response received");
-     } );
+    } );
 
  	}
  	else{
- 		print("else");
+ 		//print(list);
 		for (var i=0;i<list.length;i++){
-			var url = SERVICE_SECURE_ROOT+"WSO2_QAP_PRODUCT_DataService/delete/products/"+list[i];
+			var url = SERVICE_SECURE_ROOT+"WSO2_QAP_PRODUCT_VERSION_DataService/delete/product_version";
 
+            var param = "WSO2_QAP_PRODUCT_VERSION_ID="list[i];
             del(url, param, optionalHeaders, "json", function (data, xhr) {
                 log("Response received");
             } );
@@ -31,8 +38,8 @@ var optionalHeaders = {
 		}
 	}
 
-response.sendRedirect("../view/products_home.jag");
-*/
+response.sendRedirect("../view/product_versions.jag?data="+params.redirect_url);
+
 %>
 
 
