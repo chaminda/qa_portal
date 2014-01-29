@@ -21,7 +21,7 @@
 
 
 	//print(list[0].WSO2_QAP_PRODUCT_NAME);
-    if(list.length==null && list.WSO2_QAP_PRODUCT_NAME!=null){
+    if(!(list instanceof Array)){
 
 
         print('<tr>');
