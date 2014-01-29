@@ -29,10 +29,10 @@
 								<li class="normal">
 								<ul class="sub">
 									<li><a href="products_home.jag" class="menu-default"
-										style="background-image: url(resources/images/list.gif);">List</a>
+										style="background-image: url(../resources/images/list.gif);">List</a>
 									</li>
 									<li><a href="add_testplan.jag" class="menu-default"
-										style="background-image: url(resources/images/add.gif);">Add Test Plan</a>
+										style="background-image: url(../resources/images/add.gif);">Add Test Plan</a>
 									</li>
 
 								</ul>

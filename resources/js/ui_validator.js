@@ -42,15 +42,19 @@ function validateSQLDialectForm(){
 	return true;
 }
 
-function validateInput(){
-    var  WSO2_QAP_PRODUCT_NAME= document.forms["add_product"]["WSO2_QAP_PRODUCT_NAME"].value;
+function validateInput(form_name, var_name){
+
+    var  WSO2_QAP_PRODUCT_NAME= document.forms[form_name][var_name].value;
+
      if(WSO2_QAP_PRODUCT_NAME===null || WSO2_QAP_PRODUCT_NAME===""){
-        CARBON.showWarningDialog("Product Name is mandatory");
+        //CARBON.showWarningDialog("Product Name is mandatory");
+         alert("Product Name is mandatory");
         return false;
     }
    
     return true;
 }
+
 
 function validateTableSelection(obj){
 	var tableSet=obj.split(":");

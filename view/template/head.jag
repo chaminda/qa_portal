@@ -24,6 +24,10 @@ if(name===null || ROOT===null || SERVICE_ROOT===null){
     <link rel="icon" href="../resources/images/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="../resources/images/favicon.ico" type="image/x-icon">
 
+
+
+
+
    <script type="text/javascript" src="../resources/js/jquery-1.js"></script>
     <script type="text/javascript" src="../resources/js/jquery.js"></script>
     <script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
@@ -35,6 +39,8 @@ if(name===null || ROOT===null || SERVICE_ROOT===null){
     <script type="text/javascript" src="../resources/js/main.js"></script>
     <script type="text/javascript" src="../resources/js/WSRequest.js"></script>
     <script type="text/javascript" src="../resources/js/cookies.js"></script>
+    <script type="text/javascript" src="../resources/js/dialog.js"></script>
 
     <script type="text/javascript" src="../resources/js/customControls.js"></script>
+
 </html>

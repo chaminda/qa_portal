@@ -80,7 +80,7 @@
                                     var link_redir = "../controller/addProductVersion.jag?data="+encodeURIComponent(req_data);
                                  %>
 
-                                    <form name="add_product_version" action=<%print(""+link_redir);%> method="post" onsubmit="return validateInput();return false;">
+                                    <form name="add_product_version" action=<%print(""+link_redir);%> method="post" onsubmit="return validateInput('add_product_version','WSO2_QAP_PRODUCT_VERSION');return false;">
                                        <table class="styledLeft">
                                           <thead>
                                              <tr>

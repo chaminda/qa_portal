@@ -101,7 +101,7 @@ function isWebappSelected() {
     return selected;
 }
 
-function deleteProducts() {
+function deleteProducts(path) {
     var selected = isWebappSelected();
     if (!selected) {
         CARBON.showInfoDialog('Please select the applications to be deleted.');
@@ -123,7 +123,7 @@ function deleteProducts() {
     }
 }
 
-function selectAllInThisPage(isSelected) {
+function selectAllInThisPage(isSelected,form_name, var_id) {
     allWebappsSelected = false;
     if (document.productsForm.productId != null &&
         document.productsForm.productId[0] != null) { // there is more than 1
