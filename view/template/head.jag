@@ -4,7 +4,7 @@ var name = session.get("username");
 var SERVICE_ROOT = session.get("service_root");
 var ROOT = session.get("root");
 
-if(name===null || ROOT===null || SERVICE_ROOT===null){
+if(name==null || ROOT==null || SERVICE_ROOT==null){
     response.sendRedirect("../index.jag");
 }
 

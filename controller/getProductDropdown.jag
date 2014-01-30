@@ -13,9 +13,15 @@ include("base64_encode.jag");
 
 	var objProducts = parse(dataProducts.data);
 	var listProducts = objProducts.WSO2_QAP_PRODUCTCollection.WSO2_QAP_PRODUCT;	    
-	
+
+if(listProducts instanceof  Array){
+
+
 		for (var i=0;i<listProducts.length;i++)
 		{ 
 			print('<option value='+listProducts[i].WSO2_QAP_PRODUCT_ID+'>'+listProducts[i].WSO2_QAP_PRODUCT_NAME+'</option>');
 		}
+    }else{
+        print('<option value='+listProducts.WSO2_QAP_PRODUCT_ID+'>'+listProducts.WSO2_QAP_PRODUCT_NAME+'</option>');
+    }
 %>

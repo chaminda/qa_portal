@@ -11,14 +11,14 @@
 
     var obj = parse(data.data);
 	var list = obj.WSO2_QAP_PRODUCTCollection.WSO2_QAP_PRODUCT;
-
 	if(list.length==null && list.WSO2_QAP_PRODUCT_NAME!=null){
-		print('<option>'+list.WSO2_QAP_PRODUCT_NAME+'</option>');
+		print('<option value="'+list.WSO2_QAP_PRODUCT_ID+'" id="0">'+list.WSO2_QAP_PRODUCT_NAME+'</option>');
     }
 
 	for (var i=0;i<list.length;i++)
-	{ 
-		print('<option>'+list[i].WSO2_QAP_PRODUCT_NAME+'</option>');
+	{
+		print('<option value="'+list[i].WSO2_QAP_PRODUCT_ID+'" id="'+i+'">'+list[i].WSO2_QAP_PRODUCT_NAME+'</option>');
+
 	}
 
 	
