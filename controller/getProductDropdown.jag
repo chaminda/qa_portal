@@ -12,10 +12,7 @@ include("base64_encode.jag");
 
 
 	var objProducts = parse(dataProducts.data);
-	var listProducts = objProducts.WSO2_QAP_PRODUCTCollection.WSO2_QAP_PRODUCT;
-	
-	//print(list[0].WSO2_QAP_PRODUCT_NAME);
-	    
+	var listProducts = objProducts.WSO2_QAP_PRODUCTCollection.WSO2_QAP_PRODUCT;	    
 	
 		for (var i=0;i<listProducts.length;i++)
 		{ 

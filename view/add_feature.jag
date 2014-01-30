@@ -32,20 +32,23 @@ if(name===null){
 		  url: "../controller/getProductDropdown.jag",
 		  context: document.body
 		}).done(function(data) {
-			document.getElementById("productselector").innerHTML = data;
+			document.getElementById("WSO2_QAP_PRODUCT_ID").innerHTML = data;
 		}).fail(function() {
+			document.getElementById("WSO2_QAP_PRODUCT_ID").innerHTML = "<option>No product found</option>";
 		  });
 	</script>
 	
 	<script type="text/javascript">
 		function loadVersions(){
+			var WSO2_QAP_PRODUCT_ID = document.getElementById("WSO2_QAP_PRODUCT_ID").value;
 			$.ajax({
 				  url: "../controller/getVersionDropdown.jag",
-				  context: document.body
+				  context: document.body,
+				  data: {"WSO2_QAP_PRODUCT_ID": WSO2_QAP_PRODUCT_ID}
 				}).done(function(data) {
-					alert(data);
-					//document.getElementById("productselector").innerHTML = data;
+					document.getElementById("WSO2_QAP_PRODUCT_VERSION_ID").innerHTML = data;
 				}).fail(function() {
+					document.getElementById("WSO2_QAP_PRODUCT_VERSION_ID").innerHTML = "<option>No version found</option>";
 				  });
 		}
 	</script>
@@ -356,8 +359,8 @@ if(name===null){
 																<td class="formRow">Product<span class="required">*</span>
 																</td>
 																<td class="formRow">
-																<select id="productselector"
-																	name="productselector" onchange="loadVersions();">
+																<select id="WSO2_QAP_PRODUCT_ID"
+																	name="WSO2_QAP_PRODUCT_ID" onclick="loadVersions();">
 																</select>
 																</td>
 															</tr>
@@ -365,8 +368,8 @@ if(name===null){
 																<td class="formRow">Version<span class="required">*</span>
 																</td>
 																<td class="formRow">
-																<select id="versionselector"
-																	name="versionselector">
+																<select id="WSO2_QAP_PRODUCT_VERSION_ID"
+																	name="WSO2_QAP_PRODUCT_VERSION_ID">
 																</select>
 																</td>
 															</tr>
