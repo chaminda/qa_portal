@@ -2,7 +2,7 @@
 
     include("base64_encode.jag");
     var SERVICE_SECURE_ROOT = session.get("service_secure_root");
-    var WSO2_QAP_FEATURE_ID = request.getParameter("data");
+    var WSO2_QAP_FEATURE_ID = parse(request.getParameter("data"));
 
     var url  = SERVICE_SECURE_ROOT+"WSO2_QAP_FEATURE_DataService/view/sample_by_feature_id/"+WSO2_QAP_FEATURE_ID;
    	var optionalHeaders = {
