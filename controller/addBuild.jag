@@ -4,7 +4,6 @@ var SERVICE_SECURE_ROOT = session.get("service_secure_root");
 
 var WSO2_QAP_BUILD_NAME = request.getParameter("WSO2_QAP_BUILD_NAME");
 var WSO2_QAP_PRODUCT_VERSION_ID = request.getParameter("WSO2_QAP_PRODUCT_VERSION_ID");
-var WSO2_QAP_TEST_PLAN_ID = request.getParameter("WSO2_QAP_TEST_PLAN_ID");
 var WSO2_QAP_RELEASE_DATE = request.getParameter("WSO2_QAP_RELEASE_DATE");
 // var param = '{"_postadd_products":{"WSO2_QAP_PRODUCT_NAME" : "'+product_name+'"}}';
 var param = '{"_postadd_builds":{"WSO2_QAP_BUILD_NAME" : "'+WSO2_QAP_BUILD_NAME+'","WSO2_QAP_TEST_PLAN_ID" : "'+WSO2_QAP_TEST_PLAN_ID+'","WSO2_QAP_PRODUCT_VERSION_ID" : "'+WSO2_QAP_PRODUCT_VERSION_ID+'","WSO2_QAP_RELEASE_DATE" : "'+WSO2_QAP_RELEASE_DATE+'"}}';
