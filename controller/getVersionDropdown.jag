@@ -18,7 +18,7 @@
 		
 			var list = obj.WSO2_QAP_PRODUCT_VERSIONCollection.WSO2_QAP_PRODUCT_VERSION;
 
-		if(list instanceof Array){
+		if(!(list instanceof Array)){
 		        print('<option value='+list.WSO2_QAP_PRODUCT_VERSION_ID+'>'+list.WSO2_QAP_PRODUCT_VERSION+'</option>');	
 		    }
 		else{

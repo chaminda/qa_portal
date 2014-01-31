@@ -40,23 +40,6 @@
 		}
 
       </script>
-
-      <script type="text/javascript">
-		function loadTestPlans(){
-			var WSO2_QAP_PRODUCT_VERSION_ID = document.getElementById("WSO2_QAP_PRODUCT_VERSION_ID").value;
-			$.ajax({
-				  url: "../controller/getTestPlanDropdown.jag",
-				  context: document.body,
-				  data: {"WSO2_QAP_PRODUCT_VERSION_ID": WSO2_QAP_PRODUCT_VERSION_ID}
-				}).done(function(data) {
-					document.getElementById("WSO2_QAP_TEST_PLAN_ID").innerHTML = data;
-				}).fail(function() {
-					document.getElementById("WSO2_QAP_TEST_PLAN_ID").innerHTML = "<option>No Test Plans found</option>";
-				  });
-		}
-
-      </script>
-
       <table id="main-table" border="0" cellspacing="0">
          <tbody>
             <tr>
@@ -158,14 +141,6 @@
 															</td>
 														</tr>
 														<tr class="tableEvenRow">
-															<td class="formRow">Test Plan</td>
-															<td class="formRow">
-															<select name="WSO2_QAP_TEST_PLAN_ID" id="WSO2_QAP_TEST_PLAN_ID">
-
-															</select>
-															</td>
-														</tr>
-														<tr class="tableOddRow">
 															<td class="formRow">Release Date<font color="red">*</font>
 															</td>
 															<td class="formRow"><input type="text" id="WSO2_QAP_RELEASE_DATE" name="WSO2_QAP_RELEASE_DATE" />
