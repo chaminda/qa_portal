@@ -1,0 +1,7 @@
+<%
+include("base64_encode.jag");
+var SERVICE_SECURE_ROOT = session.get("service_secure_root");
+
+
+
+%>

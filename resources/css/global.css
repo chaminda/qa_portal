@@ -979,7 +979,7 @@ a.delete-icon-link-nofloat {
     padding-bottom: 0px;
     display: block;
 }
-a#delete1, a#delete2,#edit {
+a#delete1, a#delete2,#edit{
     background-image: url( ../images/delete.gif );    
     background-repeat: no-repeat;
     background-position: left top;
@@ -994,6 +994,25 @@ a#delete1, a#delete2,#edit {
     white-space: nowrap;
 }
 
+a#add2 {
+    background-image: url( ../images/add.gif );    
+    background-repeat: no-repeat;
+    background-position: left top;
+    padding-left: 20px;
+    line-height: 17px;
+    height: 17px;
+    float: left;
+    position: relative;
+    margin-left: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    white-space: nowrap;
+}
+
+#add {
+    background-image: url( ../images/add.gif ); 
+    
+    }
 #edit {
     background-image: url( ../images/edit.gif ); 
     
