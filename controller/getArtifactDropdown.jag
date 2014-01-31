@@ -8,10 +8,10 @@ include("base64_encode.jag");
             "Authorization": "Basic "+base64_encode("admin:admin") };
 
     var dataArtifacts=get(url,"",optionalHeaders);
-    
+
     var objArtifacts=parse(dataArtifacts.data);
 
-    var listArtifacts=objArtifacts.WSO2_QAP_AUTO_TEST_CLASSCollection.WSO2_QAP_AUTO_TEST_CLASS;
+    var listArtifacts=objArtifacts.WSO2_QAP_ARTIFACTCollection.WSO2_QAP_ARTIFACT;
 
     for(var i=0;i<listArtifacts.length;i++)
     {
