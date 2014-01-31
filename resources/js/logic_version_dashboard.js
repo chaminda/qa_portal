@@ -1,5 +1,6 @@
 var allBuildsSelected = false;
 var allFeaturesSelected = false;
+var allTestPlansSelected = false;
 
 function isVersionBuildSelected() {
     var selected = false;
@@ -23,6 +24,19 @@ function isVersionFeatureSelected() {
         }
     } else if (document.featuresForm.featureID != null) { // only 1
         selected = document.featuresForm.featureID.checked;
+    }
+    return selected;
+}
+
+function isVersionTestPlanSelected() {
+    var selected = false;
+    if (document.testPlanForm.testplanID[0] != null) { // there is more than 1
+        for (var j = 0; j < document.testPlanForm.testplanID.length; j++) {
+            selected = document.testPlanForm.testplanID[j].checked;
+            if (selected) break;
+        }
+    } else if (document.testPlanForm.testplanID != null) { // only 1
+        selected = document.testPlanForm.testplanID.checked;
     }
     return selected;
 }
@@ -65,6 +79,25 @@ function selectAllInFeatureTable(isSelected) {
     return false;
 }
 
+function selectAllInTestPlanTable(isSelected) {
+    allTestPlansSelected = true;
+    if (document.testPlanForm.testplanID != null &&
+        document.testPlanForm.testplanID[0] != null) { // there is more than 1
+        if (isSelected) {
+            for (var j = 0; j < document.testPlanForm.testplanID.length; j++) {
+                document.testPlanForm.testplanID[j].checked = true;
+            }
+        } else {
+            for (j = 0; j < document.testPlanForm.testplanID.length; j++) {
+                document.testPlanForm.testplanID[j].checked = false;
+            }
+        }
+    } else if (document.testPlanForm.testplanID != null) { // only 1
+        document.testPlanForm.testplanID.checked = isSelected;
+    }
+    return false;
+}
+
 function deleteVersionBuilds() {
     var selected = isVersionBuildSelected();
     if (!selected) {
@@ -89,7 +122,7 @@ function deleteVersionBuilds() {
     }
 }
 
-function deleteVersionBuilds() {
+function deleteVersionFeatures() {
     var selected = isVersionFeatureSelected();
     if (!selected) {
         CARBON.showInfoDialog('Please select the version feature to be deleted.');
@@ -113,7 +146,29 @@ function deleteVersionBuilds() {
     }
 }
 
-
+function deleteVersionTestPlans() {
+    var selected = isVersionTestPlanSelected();
+    if (!selected) {
+        CARBON.showInfoDialog('Please select the version test plans to be deleted.');
+        return;
+    }
+    if (allFeaturesSelected) {
+        CARBON.showConfirmationDialog("Do you want to delete all test plans test plans?",
+            function () {
+//                location.href = '../controller/deleteProductVersions.jag?deleteAllWebapps=true&webappState=all';
+                document.featuresForm.action = '../controller/deleteVersionFeatures.jag';
+                document.featuresForm.submit();
+            }
+        );
+    } else {
+        CARBON.showConfirmationDialog("Do you want to delete the selected version test plans?",
+            function () {
+                document.featuresForm.action = '../controller/deleteVersionFeatures.jag';
+                document.featuresForm.submit();
+            }
+        );
+    }
+}
 
 
 function resetVars() {

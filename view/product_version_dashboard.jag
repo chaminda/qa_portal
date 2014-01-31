@@ -206,18 +206,14 @@
                                        include("../controller/version_builds_page_name_onload.jag");
                                     %>
                                     <div id="workArea">
-                                       <div id="buttonAreaGrid_left" class="buttonAreaGrid_left">
-
-                                       </div>
                                     <%
                                     var link_redir = "location.href = 'add_build.jag'";
                                     %>
-                                    <div class="buttonAreaGrid_right" id="buttonAreaGrid_right">
+                                    <div id="buttonAreaGrid_left" class="buttonAreaGrid_left">
                                     <lable>
-                                        <input type="button" value="Add Build" onclick="<% print(link_redir); %>"></label>
+                                        <input type="button" value="Add Build" onclick="<% print(link_redir); %>" align="left"></label>
                                         <th>&nbsp;</th>
-                                    </div>
-
+                                        
                                        <table>
                                           <tbody>
                                              <tr>
@@ -270,14 +266,20 @@
                                        </table>
                                        <p>&nbsp;</p>
                                     </div>
+                                    <%
+                                    var link_redir = "location.href = 'add_feature.jag'";
+                                    %>
                                     <div>
+                                    <lable>
+                                        <input type="button" value="Add Feature" onclick="<% print(link_redir); %>"></label>
+                                        <p>&nbsp;</p>
                                     <table>
                                           <tbody>
                                              <tr>
                                                 <td><a href="#" onclick="selectAllInFeatureTable(true);return false;" style="cursor:pointer">Select all in this page</a>&nbsp;<b>|</b>&nbsp;</td>
                                                 <td><a href="#" onclick="selectAllInFeatureTable(false);return false;" style="cursor:pointer">Select none</a></td>
                                                 <td width="20%">&nbsp;</td>
-                                                <td><a href="#" id="delete1" onclick="deleteVersionBuilds();return false;">Delete</a></td>
+                                                <td><a href="#" id="delete1" onclick="deleteVersionFeatures();return false;">Delete</a></td>
                                                 <td width="10%">&nbsp;</td>
                                                 <td><a href="#" id="edit" onclick="editWebapps();return false;">Edit</a></td>
                                              </tr>
@@ -307,7 +309,57 @@
                                                 <td><a href="#" onclick="selectAllInFeatureTable(true);return false;" style="cursor:pointer">Select all in this page</a>&nbsp;<b>|</b>&nbsp;</td>
                                                 <td><a href="#" onclick="selectAllInFeatureTable(false);return false;" style="cursor:pointer">Select none</a></td>
                                                 <td width="20%">&nbsp;</td>
-                                                <td><a href="#" id="delete1" onclick="deleteVersionBuilds();return false;">Delete</a></td>
+                                                <td><a href="#" id="delete1" onclick="deleteVersionFeatures();return false;">Delete</a></td>
+                                                <td width="10%">&nbsp;</td>
+                                                <td><a href="#" id="edit" onclick="editWebapps();return false;">Edit</a></td>
+                                             </tr>
+                                          </tbody>
+                                       </table>
+                                    </div>
+
+
+                                    <div>
+                                    <p>&nbsp;</p>
+                                    <lable>
+                                        <input type="button" value="Add Test Plan" onclick="<% print(link_redir); %>"></label>
+                                        <p>&nbsp;</p>
+                                    <table>
+                                          <tbody>
+                                             <tr>
+                                                <td><a href="#" onclick="selectAllInTestPlanTable(true);return false;" style="cursor:pointer">Select all in this page</a>&nbsp;<b>|</b>&nbsp;</td>
+                                                <td><a href="#" onclick="selectAllInTestPlanTable(false);return false;" style="cursor:pointer">Select none</a></td>
+                                                <td width="20%">&nbsp;</td>
+                                                <td><a href="#" id="delete1" onclick="deleteVersionTestPlans();return false;">Delete</a></td>
+                                                <td width="10%">&nbsp;</td>
+                                                <td><a href="#" id="edit" onclick="editWebapps();return false;">Edit</a></td>
+                                             </tr>
+                                          </tbody>
+                                       </table>
+                                    <form name="testPlanForm">
+                                          <table class="display" id="testPlanTable" cellpadding="0" cellspacing="0" border="0" width="100%">
+                                             <thead>
+                                                <tr>
+                                                   <th>&nbsp;</th>
+                                                   <th>
+                                                      <nobr>Test Plans</nobr>
+                                                   </th>
+                                                </tr>
+                                             </thead>
+                                             <tbody>
+                                                <%
+                                                   include("../controller/version_testplan_onload.jag");
+                                                %>
+                                             </tbody>
+                                          </table>
+                                       </form>
+                                       <p>&nbsp;</p>
+                                       <table>
+                                          <tbody>
+                                             <tr>
+                                                <td><a href="#" onclick="selectAllInTestPlanTable(true);return false;" style="cursor:pointer">Select all in this page</a>&nbsp;<b>|</b>&nbsp;</td>
+                                                <td><a href="#" onclick="selectAllInTestPlanTable(false);return false;" style="cursor:pointer">Select none</a></td>
+                                                <td width="20%">&nbsp;</td>
+                                                <td><a href="#" id="delete1" onclick="deleteVersionTestPlans();return false;">Delete</a></td>
                                                 <td width="10%">&nbsp;</td>
                                                 <td><a href="#" id="edit" onclick="editWebapps();return false;">Edit</a></td>
                                              </tr>
