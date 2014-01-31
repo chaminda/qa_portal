@@ -12,6 +12,7 @@
    var obj3 = parse(data3.data);
    var list3 = obj3.WSO2_QAP_PRODUCT_VERSIONCollection.WSO2_QAP_PRODUCT_VERSION;
 
+   print('<input type="hidden" name="WSO2_QAP_PRODUCT_VERSION_ID" value="'+WSO2_QAP_PRODUCT_VERSION_ID+'">');
 
    print('<tr bgcolor="#EEEFFB">');
    print('<td>');
@@ -32,11 +33,11 @@
         print(' </td>');
 
         print(' <td>');
-        // var link = "build_dashboard.jag?data="+encodeURIComponent(stringify(list2.WSO2_QAP_BUILD_ID));
-        // print('<a href="'+link+'">');
+        var link = "feature_dashboard.jag?data="+encodeURIComponent(stringify(list3.WSO2_QAP_FEATURE_ID));
+        print('<a href="'+link+'">');
         print("&emsp;&emsp;&emsp;");
         print(list3.WSO2_QAP_DESCRIPTION );
-        // print('</a>');
+        print('</a>');
         print('</td>');
         print(' <td>');
         print(list3.WSO2_QAP_REDMINE_URL);
@@ -57,9 +58,11 @@
         print('    <input name="featureID" value="'+list3[i].WSO2_QAP_FEATURE_ID+'" onclick="resetVars()" class="chkBox" type="checkbox">');
         print(' </td>');
         print(' <td>');
+        var link = "feature_dashboard.jag?data="+encodeURIComponent(stringify(list3[i].WSO2_QAP_FEATURE_ID));
+        print('<a href="'+link+'">');
         print("&emsp;&emsp;&emsp;");
         print(list3[i].WSO2_QAP_DESCRIPTION );
-        
+        print('</a>');
         print('</td>');
         var link = list3[i].WSO2_QAP_REDMINE_URL;
         print(' <td>');

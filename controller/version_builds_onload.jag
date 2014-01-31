@@ -12,6 +12,8 @@
    var obj2 = parse(data2.data);
    var list2 = obj2.WSO2_QAP_PRODUCT_VERSIONCollection.WSO2_QAP_PRODUCT_VERSION;
 
+   print('<input type="hidden" name="WSO2_QAP_PRODUCT_VERSION_ID" value="'+WSO2_QAP_PRODUCT_VERSION_ID+'">');
+
    print('<tr bgcolor="#EEEFFB">');
    print('<td>');
    print('</td>');
