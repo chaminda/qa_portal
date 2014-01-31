@@ -37,7 +37,7 @@
 		  url: "../controller/getArtifactDropdown.jag",
 		  context: document.body
 		}).done(function(data) {
-			alert(data);
+
 			document.getElementById("WSO2_QAP_TEST_CASE_ARTIFACT").innerHTML = data;
 		}).fail(function() {
 			alert("fail");
@@ -52,7 +52,7 @@
 			
 			document.getElementById("WSO2_QAP_TEST_CASE_AUTOMATIONTESTCASE").innerHTML = data;
 		}).fail(function() {
-			
+			alert("fail 2");
 		  });
 	</script>
 
@@ -145,7 +145,7 @@
 															</td>
 														</tr>
 														<tr class="tableOddRow">
-															<td class="formRow">Status<font color="red">*</font>
+															<td class="formRow">Automation Status<font color="red">*</font>
 															</td>
 															<td><input type="text" id="WSO2_QAP_TEST_CASE_STATUS" name="WSO2_QAP_TEST_CASE_STATUS"
 																 onchange="">
@@ -164,7 +164,7 @@
 															</td>	
 														</tr>
 														<tr class="tableOddRow">
-															<td class="formRow">Artifact name</td>
+															<td class="formRow">Artifact name<font color="red">*</font></td>
 															<td class="formRow"><select name="WSO2_QAP_TEST_CASE_ARTIFACT" id="WSO2_QAP_TEST_CASE_ARTIFACT">
 																
 															</select>
