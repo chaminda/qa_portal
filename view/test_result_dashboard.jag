@@ -349,7 +349,7 @@ if(name===null){
                                   }
                                   </script>
 										<div id="middle">
-											<h2>Feature dashboard</h2>
+											<h2>Test Result dashboard</h2>
 											<div id="workArea">
 												<form name="Features">
 													<table class="styledLeft">
