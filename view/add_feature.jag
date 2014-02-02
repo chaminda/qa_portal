@@ -37,6 +37,17 @@ if(name===null){
 			document.getElementById("WSO2_QAP_PRODUCT_ID").innerHTML = "<option>No product found</option>";
 		  });
 	</script>
+
+	<script type="text/javascript">
+	$.ajax({
+		  url: "../controller/getSamplesDropdown.jag",
+		  context: document.body
+		}).done(function(data) {
+			document.getElementById("WSO2_QAP_SAMPLE_ID").innerHTML = data;
+		}).fail(function() {
+			document.getElementById("WSO2_QAP_SAMPLE_ID").innerHTML = "<option>No sample found</option>";
+		  });
+	</script>
 	
 	<script type="text/javascript">
 		function loadVersions(){
@@ -348,14 +359,6 @@ if(name===null){
 														<!-- 													</thead> -->
 														<tbody>
 															<tr class="tableOddRow">
-																<td class="formRow">Feature Name<span class="required">*</span>
-																</td>
-																<td align="left"><input type="text" id="featurename"
-																	name="featurename">
-																
-																</td>
-															</tr>
-															<tr class="tableEvenRow">
 																<td class="formRow">Product<span class="required">*</span>
 																</td>
 																<td class="formRow">
@@ -364,7 +367,7 @@ if(name===null){
 																</select>
 																</td>
 															</tr>
-															<tr class="tableOddRow">
+															<tr class="tableEvenRow">
 																<td class="formRow">Version<span class="required">*</span>
 																</td>
 																<td class="formRow">
@@ -373,32 +376,26 @@ if(name===null){
 																</select>
 																</td>
 															</tr>
+															<tr class="tableOddRow">
+																<td class="formRow">Description<span class="required">*</span></td>
+																<td class="formRow"><input id="WSO2_QAP_DESCRIPTION"
+																	name="WSO2_QAP_DESCRIPTION" class="longInput" value="">
+																
+																</td>
+															</tr>
 															<tr class="tableEvenRow">
-																<td class="formRow">Description</td>
-																<td class="formRow"><input id="description"
-																	name="description" class="longInput" value="">
+																<td class="formRow">Redmine URI<span class="required">*</span>
+																</td>
+																<td class="formRow"><input type="text" id="WSO2_QAP_REDMINE_URL"
+																	name="WSO2_QAP_REDMINE_URL">
 																
 																</td>
 															</tr>
 															<tr class="tableOddRow">
-																<td class="formRow">Redmine URI<span class="required">*</span>
-																</td>
-																<td class="formRow"><input type="text" id="redmineuri"
-																	name="redmineuri">
-																
-																</td>
-															</tr>
-															<tr class="tableEvenRow">
 																<td class="formRow">Sample<span class="required">*</span>
 																</td>
-																<td class="formRow"><select id="sample" name="sample">
-																		<option value="sample1" selected="selected">Sample1</option>
-																		<option value="sample2">Sample2</option>
-																		<option value="sample3">Sample3</option>
-																		<option value="sample4">Sample4</option>
-																</select> <input type="hidden" id="sample" name="sample"
-																	value="">
-																
+																<td class="formRow"><select id="WSO2_QAP_SAMPLE_ID" name="WSO2_QAP_SAMPLE_ID">
+																</select>
 																</td>
 															</tr>
 
