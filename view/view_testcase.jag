@@ -191,11 +191,12 @@ if(json_data.list.WSO2_QAP_TEST_CASE_ID===null || json_data.list.WSO2_QAP_TEST_C
 <td><a href="#" onclick="selectAllInThisPage(true);return false;" style="cursor:pointer">Select all in this page</a>&nbsp;<b>|</b>&nbsp;</td>
 <td><a href="#" onclick="selectAllInThisPage(false);return false;" style="cursor:pointer">Select none</a></td>
 <td width="10%">&nbsp;</td>
-<td><a href="#" id="delete2" onclick="deleteProducts();return false;">Delete</a></td>
+<td><a href="#" id="delete1" onclick="deleteProducts();return false;">Delete</a></td>
 <td width="10%">&nbsp;</td>
 <td><a href="#" id="edit" onclick="editWebapps();return false;">Edit</a></td>
 <td width="10%">&nbsp;</td>
-<td><a href="#" id="add2" onclick="" >Add</a> </td>
+
+<td><a href="#" id="add2" onclick="" >Add new</a> </td>
 </tr>
 </tbody>
 </table>
@@ -244,16 +245,16 @@ include("../controller/testscenario_onload.jag");
 <td width="10%">&nbsp;</td>
 <td><a href="#" id="edit" onclick="editWebapps();return false;">Edit</a></td>
 <td width="10%">&nbsp;</td>
-<td><a href="#" id="add2" onclick="" >Add</a> </td>
+<td><a href="#" id="add2" onclick="" >Add new</a> </td>
 </tr>
 </tbody>
 </table>
 
-<table>
-<tbody>
-<tr></tr>
-</tbody>
-</table>
+<!--<table>-->
+<!--<tbody>-->
+<!--<tr></tr>-->
+<!--</tbody>-->
+<!--</table>-->
 </div>
 </div>
 </td>
