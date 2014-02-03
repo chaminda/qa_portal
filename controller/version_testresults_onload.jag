@@ -16,6 +16,7 @@
     var list = obj.WSO2_QAP_TEST_RESULTCollection.WSO2_QAP_TEST_RESULT;
 
     // print(list);
+    print('<input type="hidden" name="WSO2_QAP_BUILD_ID" value="'+WSO2_QAP_BUILD_ID+'">');
 
    print('<tr bgcolor="#EEEFFB">');
    print('<td>');
@@ -62,7 +63,7 @@
 
     }
     else{
-        
+
         for (var i=0;i<list.length;i++)
         {
           if(i%2==1){
@@ -72,7 +73,7 @@
             print('<tr>');
           }
         print(' <td style="text-align:center; !important" width="10px">');
-        print('    <input name="buildId" value="'+list[i].WSO2_QAP_TEST_RESULT_ID+'" onclick="resetVars()" class="chkBox" type="checkbox">');
+        print('    <input name="testResultId" value="'+list[i].WSO2_QAP_TEST_RESULT_ID+'" onclick="resetVars()" class="chkBox" type="checkbox">');
         print(' </td>');
 
         print(' <td>');
