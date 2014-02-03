@@ -1,8 +1,8 @@
 <%
     include("base64_encode.jag");
     var SERVICE_SECURE_ROOT = session.get("service_secure_root");
-    var WSO2_QAP_FEATURE_ID = parse(request.getParameter("data"));
-    var urlResultDetails  = SERVICE_SECURE_ROOT+"WSO2_QAP_TEST_RESULT_DataService/view/testresult_by_id/"+WSO2_QAP_FEATURE_ID;
+    var WSO2_QAP_TEST_RESULT_ID = parse(request.getParameter("data"));
+    var urlResultDetails  = SERVICE_SECURE_ROOT+"WSO2_QAP_TEST_RESULT_DataService/view/testresult_by_id/"+WSO2_QAP_TEST_RESULT_ID;
 
    	var optionalHeaders = {
     "Accept": "application/json",

@@ -513,7 +513,7 @@ if(name===null){
                                                 <tr>
                                                    <th>&nbsp;</th>
                                                    <th>
-                                                      <nobr>Name</nobr>
+                                                      <nobr>URL</nobr>
                                                    </th>
                                                    <th>
                                                       <nobr>Description</nobr>
@@ -522,7 +522,7 @@ if(name===null){
                                              </thead>
                                              <tbody>
                                                 <%
-                                                    include("../controller/featureDashboardSamples.jag");
+                                                    include("../controller/testResultJira.jag");
                                                 %>
                                                
                                              </tbody>

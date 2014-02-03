@@ -9,7 +9,6 @@ var artifact=request.getParameter("WSO2_QAP_TEST_CASE_ARTIFACT");
 var autotestcase=request.getParameter("WSO2_QAP_TEST_CASE_AUTOMATIONTESTCASE");
 
 
-
 var param='{"_postadd_addtestcase":{"WSO2_QAP_TEST_CASE_NAME" : "'+TestCaseName+'","WSO2_QAP_AUTOMATION_STATUS" : "'+status+'","WSO2_QAP_DESCRIPTION" : "'+description+'","WSO2_QAP_QA_ARTIFACT_ID" : "'+artifact+'","WSO2_QAP_AUTOMATION_TEST_CASE_ID" : "'+autotestcase+'"}}';
 var optionalHeaders = {
         "Accept":"application/json",
@@ -38,10 +37,6 @@ else{
     response.sendRedirect("../view/testcase_home.jag");
     print("added");
 }
-
-
-
-
 
 %>
 
