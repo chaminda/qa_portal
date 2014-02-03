@@ -201,7 +201,7 @@ if(json_data.WSO2_QAP_SAMPLE_ID===null || json_data.WSO2_QAP_SAMPLE_NAME===null)
       </thead>
       <tbody>
 <%
-//include("../controller/features_onload.jag");
+include("../controller/features_onload.jag");
 %>
 
 </tbody>
@@ -224,11 +224,7 @@ if(json_data.WSO2_QAP_SAMPLE_ID===null || json_data.WSO2_QAP_SAMPLE_NAME===null)
 </tbody>
 </table>
 
-<!--<table>-->
-<!--<tbody>-->
-<!--<tr></tr>-->
-<!--</tbody>-->
-<!--</table>-->
+
 </div>
 </div>
 </td>
