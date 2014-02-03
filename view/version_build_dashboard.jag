@@ -208,7 +208,7 @@
                                     </div>
                                     <div id="workArea">
 
-                                                                        <%
+                                    <%
                                     var link_redir = "location.href = 'add_build.jag'";
                                     %>
                                     <div id="buttonAreaGrid_left" class="buttonAreaGrid_left">

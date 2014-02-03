@@ -197,6 +197,7 @@
                                                <tr></tr>
                                             </tbody>
                                          </table>
+
                                          <table>
                                           <form name="test_results">
                                             <table class="styledLeft">
@@ -212,6 +213,7 @@
                                                                  <td style="border:0; !important">
                                                                     <nobr>
                                                                        <font size="4">Test Results</font>
+
                                                                     </nobr>
                                                                  </td>
                                                               </tr>
@@ -221,6 +223,21 @@
                                                   </tr>
                                                </tbody>
                                             </table>
+                                            <p>&nbsp;</p>
+                                            <%
+                                    		var link_redir = "location.href = 'add_test_result.jag'";
+                                    	%>
+                                    	<table>
+                                    		<tbody>
+                                    			<tr>
+                                    				<td>
+                                    					<lable>
+                                        					<input type="button" value="Add Test Result" onclick="<% print(link_redir); %>" align="left">
+                                        				</label>
+                                    				</td>
+                                    			</tr>
+                                    		</tbody>
+                                    	</table>
                                          </form>
                                          <p>&nbsp;</p>
                                          <table>
@@ -228,8 +245,6 @@
                                                <tr></tr>
                                             </tbody>
                                          </table>
-                                       
-                                         <p>&nbsp;</p>
 
                                          <form action="delete_webapps.jsp" name="webappsForm2" method="post">
                                             <input name="pageNumber" value="0" type="hidden">
