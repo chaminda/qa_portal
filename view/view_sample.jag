@@ -24,7 +24,7 @@ require("template/head.jag");
 <script type="text/javascript" language="javascript" src="../resources/datatables/js/jquery.dataTables.js"></script>
 <script type="text/javascript" charset="utf-8">
    $(document).ready(function() {
-       $('#testscenarioTable').dataTable( {
+       $('#featuresTable').dataTable( {
            "sPaginationType": "full_numbers"
        } );
    } );
@@ -95,9 +95,9 @@ include("template/product_menu_panel.jag");
                   var breadcrumbDiv = document.getElementById('breadcrumb-div');
                   breadcrumbDiv.innerHTML = '<table cellspacing="0"><tr>' +
                    '<td class="breadcrumb-link"><a href="../index.jag">QA Home</a>' +
-                   '<td class="breadcrumb-link"><a href="../products_home.jag">&nbsp;>&nbsp;Test case</a>' +
-                   '<td class="breadcrumb-link"><a href="#">&nbsp;>&nbsp;test case</a>' +
-                   '</td><td class="breadcrumb-link">&nbsp;>&nbsp;List</td>';
+                   '<td class="breadcrumb-link"><a href="../view/sample_home.jag">&nbsp;>&nbsp;Samples home</a>' +
+                   '<td class="breadcrumb-link"><a href="#">&nbsp;>&nbsp;sample</a></td>';
+
               }
             </script>
 
@@ -108,11 +108,11 @@ include("template/product_menu_panel.jag");
                   <%
 var req_data = request.getParameter("data");
 json_data = parse(decodeURIComponent(req_data));
-if(json_data.list.WSO2_QAP_TEST_CASE_ID===null || json_data.list.WSO2_QAP_TEST_CASE_NAME===null){
+if(json_data.WSO2_QAP_SAMPLE_ID===null || json_data.WSO2_QAP_SAMPLE_NAME===null){
     print("Sorry this page isn't available");
 }else{
     print("<h2>");
-    print(json_data.list.WSO2_QAP_TEST_CASE_NAME+" test case");
+    print(json_data.WSO2_QAP_SAMPLE_NAME);
     print("</h2>");
 }
 %>
@@ -120,7 +120,7 @@ if(json_data.list.WSO2_QAP_TEST_CASE_ID===null || json_data.list.WSO2_QAP_TEST_C
 
 <div id="workArea">
 
-   <form  name="productsForm" method="post">
+   <form  name="featureForm" method="post">
       <input name="pageNumber" value="0" type="hidden">
       <input name="webappState" value="all" type="hidden">
       <input name="webappType" value="all" type="hidden">
@@ -129,7 +129,7 @@ if(json_data.list.WSO2_QAP_TEST_CASE_ID===null || json_data.list.WSO2_QAP_TEST_C
 
          <thead>
           <tr class="tableEvenRow">
-            <th colspan="2" align="left"><strong><%= json_data.list.WSO2_QAP_TEST_CASE_NAME%></strong></th>
+            <th colspan="2" align="left"><strong><%= json_data.WSO2_QAP_SAMPLE_NAME%></strong></th>
 
           </tr>
           </thead>
@@ -140,36 +140,19 @@ if(json_data.list.WSO2_QAP_TEST_CASE_ID===null || json_data.list.WSO2_QAP_TEST_C
                 <strong>Description</strong>
            </td>
             <td>
-            <%= json_data.list.WSO2_QAP_DESCRIPTION%>
+            <%= json_data.WSO2_QAP_DESCRIPTION %>
             </td>
            </tr>
 
             <tr class="tableEvenRow">
            <td>
-                <strong>Automation Status</strong>
+                <strong>Sample URL</strong>
            </td>
             <td>
-            <%= json_data.list.WSO2_QAP_AUTOMATION_STATUS%>
+            <%= json_data.WSO2_QAP_SAMPLE_URL%>
             </td>
            </tr>
 
-            <tr class="tableOddRow">
-           <td>
-                <strong>Artifact name</strong>
-           </td>
-            <td>
-                <%= json_data.artifactName%>
-            </td>
-           </tr>
-
-             <tr class="tableEvenRow">
-           <td>
-                <strong>Auto test class name</strong>
-           </td>
-            <td>
-                <%= json_data.autotestclassName%>
-            </td>
-           </tr>
 
            </tbody>
 
@@ -178,7 +161,7 @@ if(json_data.list.WSO2_QAP_TEST_CASE_ID===null || json_data.list.WSO2_QAP_TEST_C
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
-<h2>Test Scenarios</h2>
+<h2>Features</h2>
 <table>
 <tbody>
 <tr>
@@ -202,15 +185,15 @@ if(json_data.list.WSO2_QAP_TEST_CASE_ID===null || json_data.list.WSO2_QAP_TEST_C
    <input name="pageNumber" value="0" type="hidden">
    <input name="webappState" value="all" type="hidden">
    <input name="webappType" value="all" type="hidden">
-   <table class="display" id="testscenarioTable" cellpadding="0" cellspacing="0" border="0" width="100%">
+   <table class="display" id="featuresTable" cellpadding="0" cellspacing="0" border="0" width="100%">
       <thead>
          <tr>
             <th>&nbsp;</th>
             <th>
-               <nobr>Test Scenario name</nobr>
+               <nobr>Feature Description</nobr>
             </th>
             <th>
-            <nobr>Description</nobr>
+            <nobr>Redmine URL</nobr>
             </th>
 
 
@@ -218,7 +201,7 @@ if(json_data.list.WSO2_QAP_TEST_CASE_ID===null || json_data.list.WSO2_QAP_TEST_C
       </thead>
       <tbody>
 <%
-include("../controller/testscenario_onload.jag");
+//include("../controller/features_onload.jag");
 %>
 
 </tbody>

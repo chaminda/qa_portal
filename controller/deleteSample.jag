@@ -1,10 +1,9 @@
 <%
-
 include("base64_encode.jag");
 var SERVICE_SECURE_ROOT= session.get("service_secure_root");
 var params = request.getAllParameters("UTF-8");
 
-var list = params.WSO2_QAP_TEST_CASE_ID;
+var list = params.WSO2_QAP_SAMPLE_ID;
 var param = "";
 
 var optionalHeaders = {
@@ -13,7 +12,7 @@ var optionalHeaders = {
 
 if(!(list instanceof Array)){
 
-    var url = SERVICE_SECURE_ROOT+"WSO2_QAP_TEST_CASE_DataService/delete/testcase/"+list;
+    var url = SERVICE_SECURE_ROOT+"WSO2_QAP_SAMPLE_DataService/delete/samples/"+list;
 
     del(url, param, optionalHeaders, "json", function (data, xhr) {
         log("Response received");
@@ -23,7 +22,7 @@ if(!(list instanceof Array)){
 else{
 
     for (var i=0;i<list.length;i++){
-        var url = SERVICE_SECURE_ROOT+"WSO2_QAP_TEST_CASE_DataService/delete/testcase/"+list[i];
+        var url = SERVICE_SECURE_ROOT+"WSO2_QAP_SAMPLE_DataService/delete/samples/"+list[i];
 
         del(url, param, optionalHeaders, "json", function (data, xhr) {
             log("Response received");
@@ -34,7 +33,6 @@ else{
 
 }
 
-response.sendRedirect("../view/testcase_home.jag");
-
+response.sendRedirect("../view/sample_home.jag");
 
 %>

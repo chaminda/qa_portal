@@ -168,7 +168,7 @@
 															<td class="formRow"><select name="WSO2_QAP_TEST_CASE_ARTIFACT" id="WSO2_QAP_TEST_CASE_ARTIFACT">
 																
 															</select>
-															<input type="button" value="Create new Artifact" onclick="window.open('add_product.jag')" target="_blank">
+															<input type="button" value="Create new Artifact" onclick="window.open('add_artifact.jag')" target="_blank">
 															</td>
 															
 														</tr>

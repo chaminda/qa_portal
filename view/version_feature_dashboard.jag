@@ -205,58 +205,41 @@
                                     <%
                                        include("../controller/version_builds_page_name_onload.jag");
                                     %>
+                                    </div>
                                     <div id="workArea">
 
-                                    
                                     <%
-                                       var link_redir = "location.href = 'add_testplan.jag'";
-                                       var link_redir2 = "location.href = 'version_feature_dashboard.jag?data="+WSO2_QAP_PRODUCT_VERSION_ID+"'";
-                                       var link_redir3 = "location.href = 'version_build_dashboard.jag?data="+WSO2_QAP_PRODUCT_VERSION_ID+"'";
+                                    var link_redir = "location.href = 'add_feature.jag";
                                     %>
                                     <div>
-                                       <table>
-                                          <tbody>
-                                             <tr>
-                                                <td>
-                                                   <input type="button" value="Add Test Plan" onclick="<% print(link_redir); %>"></label>
-                                                   <p>&nbsp;</p>
-                                                </td>
-                                                <td>
-                                                   <input type="button" value="View Features" onclick="<% print(link_redir2); %>"></label>
-                                                   <p>&nbsp;</p>
-                                                </td>
-                                                <td>
-                                                   <input type="button" value="View Builds" onclick="<% print(link_redir3); %>"></label>
-                                                   <p>&nbsp;</p>
-                                                </td>
-                                             </tr>
-                                          </tbody>
-                                       </table>
+                                    <lable>
+                                        <input type="button" value="Add Feature" onclick="<% print(link_redir); %>"></label>
+                                        <p>&nbsp;</p>
                                     <table>
                                           <tbody>
                                              <tr>
-                                                <td><a href="#" onclick="selectAllInTestPlanTable(true);return false;" style="cursor:pointer">Select all in this page</a>&nbsp;<b>|</b>&nbsp;</td>
-                                                <td><a href="#" onclick="selectAllInTestPlanTable(false);return false;" style="cursor:pointer">Select none</a></td>
+                                                <td><a href="#" onclick="selectAllInFeatureTable(true);return false;" style="cursor:pointer">Select all in this page</a>&nbsp;<b>|</b>&nbsp;</td>
+                                                <td><a href="#" onclick="selectAllInFeatureTable(false);return false;" style="cursor:pointer">Select none</a></td>
                                                 <td width="20%">&nbsp;</td>
-                                                <td><a href="#" id="delete1" onclick="deleteVersionTestPlans();return false;">Delete</a></td>
+                                                <td><a href="#" id="delete1" onclick="deleteVersionFeatures();return false;">Delete</a></td>
                                                 <td width="10%">&nbsp;</td>
                                                 <td><a href="#" id="edit" onclick="editWebapps();return false;">Edit</a></td>
                                              </tr>
                                           </tbody>
                                        </table>
-                                    <form name="testPlanForm">
-                                          <table class="display" id="testPlanTable" cellpadding="0" cellspacing="0" border="0" width="100%">
+                                    <form name="featuresForm" method="post">
+                                          <table class="display" id="featuresTable" cellpadding="0" cellspacing="0" border="0" width="100%">
                                              <thead>
                                                 <tr>
                                                    <th>&nbsp;</th>
                                                    <th>
-                                                      <nobr>Test Plans</nobr>
+                                                      <nobr>Features</nobr>
                                                    </th>
                                                 </tr>
                                              </thead>
                                              <tbody>
                                                 <%
-                                                   include("../controller/version_testplan_onload.jag");
+                                                   include("../controller/version_feature_onload.jag");
                                                 %>
                                              </tbody>
                                           </table>
@@ -265,16 +248,17 @@
                                        <table>
                                           <tbody>
                                              <tr>
-                                                <td><a href="#" onclick="selectAllInTestPlanTable(true);return false;" style="cursor:pointer">Select all in this page</a>&nbsp;<b>|</b>&nbsp;</td>
-                                                <td><a href="#" onclick="selectAllInTestPlanTable(false);return false;" style="cursor:pointer">Select none</a></td>
+                                                <td><a href="#" onclick="selectAllInFeatureTable(true);return false;" style="cursor:pointer">Select all in this page</a>&nbsp;<b>|</b>&nbsp;</td>
+                                                <td><a href="#" onclick="selectAllInFeatureTable(false);return false;" style="cursor:pointer">Select none</a></td>
                                                 <td width="20%">&nbsp;</td>
-                                                <td><a href="#" id="delete1" onclick="deleteVersionTestPlans();return false;">Delete</a></td>
+                                                <td><a href="#" id="delete1" onclick="deleteVersionFeatures();return false;">Delete</a></td>
                                                 <td width="10%">&nbsp;</td>
                                                 <td><a href="#" id="edit" onclick="editWebapps();return false;">Edit</a></td>
                                              </tr>
                                           </tbody>
                                        </table>
                                     </div>
+                                    
                                  </div>
                               </td>
                            </tr>

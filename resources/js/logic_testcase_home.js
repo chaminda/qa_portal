@@ -17,11 +17,11 @@ function isTestcaseSelected() {
 function deleteTestcase() {
     var selected = isTestcaseSelected();
     if (!selected) {
-        CARBON.showInfoDialog('Please select the applications to be deleted.');
+        CARBON.showInfoDialog('Please select the testcase to be deleted.');
         return;
     }
     if (allSelected) {
-        CARBON.showConfirmationDialog("Do you want to delete all products?",
+        CARBON.showConfirmationDialog("Do you want to delete all testcases?",
             function () {
                 //location.href = '../controller/deleteTestcase.jag?deleteAllWebapps=true&webappState=all';
                 document.testcasesForm.action = '../controller/deleteTestcase.jag';
@@ -29,7 +29,7 @@ function deleteTestcase() {
             }
         );
     } else {
-        CARBON.showConfirmationDialog("Do you want to delete the selected products?",
+        CARBON.showConfirmationDialog("Do you want to delete the selected testcase?  are you sure there is no test result entry for this test cases ?",
             function () {
                 document.testcasesForm.action = '../controller/deleteTestcase.jag';
                 document.testcasesForm.submit();
