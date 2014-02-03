@@ -27,7 +27,7 @@ else{
         log("Response received");
 
     } );
-    response.sendRedirect("../view/samples_home.jag");
+    response.sendRedirect("../view/sample_home.jag");
     print("added");
 }
 

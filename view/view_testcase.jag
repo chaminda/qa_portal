@@ -20,14 +20,6 @@ require("template/head.jag");
 </style>
 
 <!--<script type="text/javascript" language="javascript" src="../resources/datatables/js/table_jquery.js"></script> -->
-<script type="text/javascript" language="javascript" src="../resources/datatables/js/jquery.dataTables.js"></script>
-<script type="text/javascript" charset="utf-8">
-   $(document).ready(function() {
-       $('#testresultTable').dataTable( {
-           "sPaginationType": "full_numbers"
-       } );
-   } );
-</script>
 
 <script type="text/javascript" language="javascript" src="../resources/datatables/js/jquery.dataTables.js"></script>
 <script type="text/javascript" charset="utf-8">
@@ -185,6 +177,8 @@ if(json_data.list.WSO2_QAP_TEST_CASE_ID===null || json_data.list.WSO2_QAP_TEST_C
 </form>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
+<h2>Test Scenarios</h2>
 <table>
 <tbody>
 <tr>
@@ -201,9 +195,6 @@ if(json_data.list.WSO2_QAP_TEST_CASE_ID===null || json_data.list.WSO2_QAP_TEST_C
 </tbody>
 </table>
 
-
-
-<h2>Test Scenarios</h2>
 <p>&nbsp;</p>
 
 

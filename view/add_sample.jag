@@ -102,7 +102,7 @@ require("template/product_menu_panel.jag");
                         <h2>Add Sample</h2>
 
                         <div id="workArea">
-                            <form name="add_testcase" method="post"  action="../controller/addSample.jag"
+                            <form name="add_sample" method="post"  action="../controller/addSample.jag"
                                 >
                                 <table class="styledLeft" id="archiveTbl">
                                     <!-- 													<thead> -->
