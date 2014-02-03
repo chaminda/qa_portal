@@ -15,7 +15,18 @@ var data = get(url,param,optionalHeaders);
 var obj = parse(data.data);
 var list = obj.WSO2_QAP_TEST_RESULTCollection.WSO2_QAP_TEST_RESULT;
 
-if(!(list instanceof Array)){
+if(list==null){
+    print('<tr>');
+    print('<td>No Test Results for this test case</td>');
+    print('<td></td>');
+    print('<td></td>');
+    print('<td></td>');
+    print('</tr>');
+}
+
+
+
+else if(!(list instanceof Array)){
 
     print('<tr valign="middle">');
     print(' <td style="text-align:center; !important" width="10px">');

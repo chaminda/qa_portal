@@ -28,40 +28,7 @@ if(name===null){
 	<script src="resources/js/selector-min.js" type="text/javascript"></script>
 	
 	<script type="text/javascript">
-	$.ajax({
-		  url: "../controller/getProductDropdown.jag",
-		  context: document.body
-		}).done(function(data) {
-			document.getElementById("WSO2_QAP_PRODUCT_ID").innerHTML = data;
-		}).fail(function() {
-			document.getElementById("WSO2_QAP_PRODUCT_ID").innerHTML = "<option>No product found</option>";
-		  });
-	</script>
 
-	<script type="text/javascript">
-	$.ajax({
-		  url: "../controller/getSamplesDropdown.jag",
-		  context: document.body
-		}).done(function(data) {
-			document.getElementById("WSO2_QAP_SAMPLE_ID").innerHTML = data;
-		}).fail(function() {
-			document.getElementById("WSO2_QAP_SAMPLE_ID").innerHTML = "<option>No sample found</option>";
-		  });
-	</script>
-	
-	<script type="text/javascript">
-		function loadVersions(){
-			var WSO2_QAP_PRODUCT_ID = document.getElementById("WSO2_QAP_PRODUCT_ID").value;
-			$.ajax({
-				  url: "../controller/getVersionDropdown.jag",
-				  context: document.body,
-				  data: {"WSO2_QAP_PRODUCT_ID": WSO2_QAP_PRODUCT_ID}
-				}).done(function(data) {
-					document.getElementById("WSO2_QAP_PRODUCT_VERSION_ID").innerHTML = data;
-				}).fail(function() {
-					document.getElementById("WSO2_QAP_PRODUCT_VERSION_ID").innerHTML = "<option>No version found</option>";
-				  });
-		}
 	</script>
 	
 	<table id="main-table" border="0" cellspacing="0">
@@ -345,60 +312,52 @@ if(name===null){
                                      }
                                      </script>
 										<div id="middle">
-											<h2>Add Feature</h2>
+											<h2>Add Test Result</h2>
 											<div id="workArea">
 
 												<form name="add_product"
 													action="../controller/addFeature.jag" method="post"
 													onsubmit="return validateInput();return false;">
 													<table class="styledLeft" id="archiveTbl">
-														<!-- 													<thead> -->
-														<!-- 														<tr class="tableEvenRow"> -->
-														<!-- 															<th colspan="2">Step 1 of 3: Upload a new archive</th> -->
-														<!-- 														</tr> -->
-														<!-- 													</thead> -->
 														<tbody>
 															<tr class="tableOddRow">
-																<td class="formRow">Product<span class="required">*</span>
+																<td class="formRow">Test Case Name<span class="required">*</span>
 																</td>
 																<td class="formRow">
-																<select id="WSO2_QAP_PRODUCT_ID"
-																	name="WSO2_QAP_PRODUCT_ID" onclick="loadVersions();">
-																</select>
+																<input id="WSO2_QAP_TEST_CASE_ID"
+																	name="WSO2_QAP_TEST_CASE_ID" value="1">
 																</td>
 															</tr>
 															<tr class="tableEvenRow">
-																<td class="formRow">Version<span class="required">*</span>
+																<td class="formRow">Status<span class="required">*</span>
 																</td>
 																<td class="formRow">
-																<select id="WSO2_QAP_PRODUCT_VERSION_ID"
-																	name="WSO2_QAP_PRODUCT_VERSION_ID">
+																<select id="WSO2_QAP_TEST_STATUS" name="WSO2_QAP_TEST_STATUS">
+                                    <option value="IN PROGRESS">IN PROGRESS</option>
+                                    <option value="PASSED">PASSED</option>
+                                    <option value="FAILED">FAILED</option>
 																</select>
 																</td>
 															</tr>
 															<tr class="tableOddRow">
-																<td class="formRow">Description<span class="required">*</span></td>
-																<td class="formRow"><input id="WSO2_QAP_DESCRIPTION"
-																	name="WSO2_QAP_DESCRIPTION" class="longInput" value="">
-																
+																<td class="formRow">Automation Test Result<span class="required">*</span></td>
+																<td class="formRow"><select id="WSO2_QAP_AUTOMATION_TEST_RESULT"
+																	name="WSO2_QAP_AUTOMATION_TEST_RESULT">
+                                    <option value="NO TESTS">NO TESTS</option>
+                                    <option value="PASSED">PASSED</option>
+                                    <option value="FAILED">FAILED</option>
+                                    <option value="YET TO RUN">YET TO RUN</option>
+                                  </select>																
 																</td>
 															</tr>
 															<tr class="tableEvenRow">
-																<td class="formRow">Redmine URI<span class="required">*</span>
+																<td class="formRow">Tested By<span class="required">*</span>
 																</td>
-																<td class="formRow"><input type="text" id="WSO2_QAP_REDMINE_URL"
-																	name="WSO2_QAP_REDMINE_URL">
+																<td class="formRow"><input type="text" id="WSO2_QAP_TESTED_BY"
+																	name="WSO2_QAP_TESTED_BY">
 																
 																</td>
 															</tr>
-															<tr class="tableOddRow">
-																<td class="formRow">Sample<span class="required">*</span>
-																</td>
-																<td class="formRow"><select id="WSO2_QAP_SAMPLE_ID" name="WSO2_QAP_SAMPLE_ID">
-																</select>
-																</td>
-															</tr>
-
 														</tbody>
 													</table>
 													<table class="styledLeft">

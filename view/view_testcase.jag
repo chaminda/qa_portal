@@ -29,6 +29,15 @@ require("template/head.jag");
    } );
 </script>
 
+<script type="text/javascript" language="javascript" src="../resources/datatables/js/jquery.dataTables.js"></script>
+<script type="text/javascript" charset="utf-8">
+   $(document).ready(function() {
+       $('#testscenarioTable').dataTable( {
+           "sPaginationType": "full_numbers"
+       } );
+   } );
+</script>
+
 <!-- datatables imports end -->
 
 <div id="dcontainer"></div>
@@ -175,53 +184,71 @@ if(json_data.list.WSO2_QAP_TEST_CASE_ID===null || json_data.list.WSO2_QAP_TEST_C
 </table>
 </form>
 <p>&nbsp;</p>
-
-<h2>Test Results</h2>
 <p>&nbsp;</p>
-<form action="../controller/deleteTestresult.jag" name="testresultForm" method="post">
+<table>
+<tbody>
+<tr>
+<td><a href="#" onclick="selectAllInThisPage(true);return false;" style="cursor:pointer">Select all in this page</a>&nbsp;<b>|</b>&nbsp;</td>
+<td><a href="#" onclick="selectAllInThisPage(false);return false;" style="cursor:pointer">Select none</a></td>
+<td width="10%">&nbsp;</td>
+<td><a href="#" id="delete2" onclick="deleteProducts();return false;">Delete</a></td>
+<td width="10%">&nbsp;</td>
+<td><a href="#" id="edit" onclick="editWebapps();return false;">Edit</a></td>
+<td width="10%">&nbsp;</td>
+<td><a href="#" id="add2" onclick="" >Add</a> </td>
+</tr>
+</tbody>
+</table>
+
+
+
+<h2>Test Scenarios</h2>
+<p>&nbsp;</p>
+
+
+<form action="../controller/deleteTestresult.jag" name="testscenarioForm" method="post">
    <input name="pageNumber" value="0" type="hidden">
    <input name="webappState" value="all" type="hidden">
    <input name="webappType" value="all" type="hidden">
-   <table class="display" id="testresultTable" cellpadding="0" cellspacing="0" border="0" width="100%">
+   <table class="display" id="testscenarioTable" cellpadding="0" cellspacing="0" border="0" width="100%">
       <thead>
          <tr>
             <th>&nbsp;</th>
             <th>
-               <nobr>Test Result ID</nobr>
+               <nobr>Test Scenario name</nobr>
             </th>
             <th>
-            <nobr>Test Status</nobr>
+            <nobr>Description</nobr>
             </th>
-            <th>
-            <nobr>Tested by</nobr>
-            </th>
+
 
          </tr>
       </thead>
       <tbody>
-         <%
-include("../controller/testresults_onload.jag");
+<%
+include("../controller/testscenario_onload.jag");
 %>
 
 </tbody>
 </table>
 </form>
 
-
-
-
+<p>&nbsp;</p>
 <table>
 <tbody>
 <tr>
 <td><a href="#" onclick="selectAllInThisPage(true);return false;" style="cursor:pointer">Select all in this page</a>&nbsp;<b>|</b>&nbsp;</td>
 <td><a href="#" onclick="selectAllInThisPage(false);return false;" style="cursor:pointer">Select none</a></td>
-<td width="20%">&nbsp;</td>
+<td width="10%">&nbsp;</td>
 <td><a href="#" id="delete2" onclick="deleteProducts();return false;">Delete</a></td>
 <td width="10%">&nbsp;</td>
 <td><a href="#" id="edit" onclick="editWebapps();return false;">Edit</a></td>
+<td width="10%">&nbsp;</td>
+<td><a href="#" id="add2" onclick="" >Add</a> </td>
 </tr>
 </tbody>
 </table>
+
 <table>
 <tbody>
 <tr></tr>
