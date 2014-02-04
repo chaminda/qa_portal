@@ -17,6 +17,7 @@ if(name==null || ROOT==null || SERVICE_ROOT==null){
 
 <link href="../resources/css/main.css" rel="stylesheet" type="text/css" media="all">
 <link href="../resources/css/jqueryui-themeroller.css" rel="stylesheet" type="text/css" media="all">
+<!-- <link href="../resources/css/jquery-ui-1.10.4.custom.css" rel="stylesheet" type="text/css" media="all"> -->
 <link href="../resources/css/dialog.css" rel="stylesheet" type="text/css" media="all">
 <link rel="stylesheet" href="../resources/css/carbonFormStyles.css">
 
@@ -24,13 +25,10 @@ if(name==null || ROOT==null || SERVICE_ROOT==null){
     <link rel="icon" href="../resources/images/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="../resources/images/favicon.ico" type="image/x-icon">
 
-
-
-
-
    <script type="text/javascript" src="../resources/js/jquery-1.js"></script>
     <script type="text/javascript" src="../resources/js/jquery.js"></script>
     <script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+    <!--script type="text/javascript" src="../resources/js/jquery-ui-1.10.4.custom.js"></script-->
     <script type="text/javascript" src="../resources/js/jquery_004.js"></script>
     <script type="text/javascript" src="../resources/js/jquery_005.js"></script>
     <script type="text/javascript" src="../resources/js/jquery_002.js"></script>

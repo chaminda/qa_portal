@@ -13,6 +13,7 @@
     var objResultDetails = parse(dataResultDetails.data);
     var listResultDetails = objResultDetails.WSO2_QAP_TEST_RESULTCollection.WSO2_QAP_TEST_RESULT;
 
+
     if(listResultDetails == null){
     print('<td style="text-align:center; !important" width="10px">');
             print('<td>');
