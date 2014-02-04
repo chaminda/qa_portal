@@ -45,13 +45,21 @@ function validateSQLDialectForm(){
 function validateInput(form_name, var_name){
 
     var  WSO2_QAP_PRODUCT_NAME= document.forms[form_name][var_name].value;
+    var WSO2_QAP_ARTIFACT_NAME= document.forms[form_name][var_name].value;
 
-     if(WSO2_QAP_PRODUCT_NAME===null || WSO2_QAP_PRODUCT_NAME===""){
+    if(form_name=="add_product"){
+        if(WSO2_QAP_PRODUCT_NAME===null || WSO2_QAP_PRODUCT_NAME===""){
         //CARBON.showWarningDialog("Product Name is mandatory");
          alert("Product Name is mandatory");
         return false;
+        }
     }
-   
+    else if(form_name=="add_artifact"){
+        if(WSO2_QAP_ARTIFACT_NAME===null || WSO2_QAP_ARTIFACT_NAME===""){
+        alert("Artifact Name is mandatory");
+        return false;
+        }
+    } 
     return true;
 }
 
