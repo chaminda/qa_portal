@@ -1,7 +1,11 @@
 <%
 	include("base64_encode.jag");
    var SERVICE_SECURE_ROOT = session.get("service_secure_root");
-   WSO2_QAP_TEST_SUIT_ID="1";
+
+   var req_data = request.getParameter("data");
+   json_data = parse(decodeURIComponent(req_data));
+
+   WSO2_QAP_TEST_SUIT_ID=json_data;
    
    var url = SERVICE_SECURE_ROOT+"WSO2_QAP_TEST_SUIT_DataService/get/testsuit_join_testplan_by_testsuit_id/"+WSO2_QAP_TEST_SUIT_ID;
 
@@ -22,4 +26,4 @@
    }
    
 
-   %>
+%>
