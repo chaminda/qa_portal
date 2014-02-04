@@ -209,7 +209,8 @@
                                     <div id="workArea">
 
                                     <%
-                                    var link_redir = "location.href = 'add_build.jag'";
+                                    var req_data_link = request.getParameter("data");
+                                    var link_redir = "location.href = 'add_build.jag?data="+req_data_link+"'";
                                     %>
                                     <div id="buttonAreaGrid_left" class="buttonAreaGrid_left">
                                     <lable>
