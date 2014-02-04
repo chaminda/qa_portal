@@ -24,7 +24,7 @@ else{
        log("Response received");
    } );
 	
-	response.sendRedirect("../view/artifact_home.jag");
+	response.sendRedirect("../view/artifacts_home.jag");
 }
 
 %>
