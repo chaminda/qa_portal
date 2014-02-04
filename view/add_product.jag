@@ -83,7 +83,7 @@
                                  <h2>Enter Product Name</h2>
                                  <div id="workArea">
                                  <!--  -->
-                                    <form name="add_product" action="../controller/addProduct.jag" method="post" onsubmit="return validateInput('add_product','WSO2_QAP_PRODUCT_NAME');return false;">
+                                    <form name="add_product" action="../controller/addProduct.jag" method="post" onsubmit="return validateTextInput();return false;">
                                        <table class="styledLeft">
                                           <thead>
                                              <tr>
@@ -99,7 +99,7 @@
                                                             <td>Product Name<font color="red">*</font>
                                                             </td>
                                                             <td>
-                                                               <input size="35" name="WSO2_QAP_PRODUCT_NAME" id="WSO2_QAP_PRODUCT_NAME" value="" type="text">
+                                                               <input size="35" name="WSO2_QAP_PRODUCT_NAME" class="text-not-empty" id="WSO2_QAP_PRODUCT_NAME" value="" type="text">
                                                             </td>
                                                          </tr>
                                                          <tr>
