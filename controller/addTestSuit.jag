@@ -16,8 +16,6 @@ var optionalHeaders = {
 var url = SERVICE_SECURE_ROOT+"WSO2_QAP_TEST_SUIT_DataService/add/test_suit";
 // var url = "https://192.168.3.24:9443/services/WSO2_QAP_PRODUCT_BUILD_DataService/add/builds";
 
-var url2  = SERVICE_SECURE_ROOT+"WSO2_QAP_PRODUCT_BUILD_DataService/view/builds";
-
 var optionalHeaders2 = {
   "Accept": "application/json",
           "Authorization": "Basic "+base64_encode("admin:admin") };

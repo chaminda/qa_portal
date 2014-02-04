@@ -203,19 +203,19 @@
 
                                    <div id="middle">
                                     <%
-                                       include("../controller/version_builds_page_name_onload.jag");
+
+                                        include("../controller/test_suit_page_name_onload.jag");
                                     %>
-                                    </div>
                                     <div id="workArea">
 
                                     <%
-                                    var link_redir = "location.href = 'add_build.jag'";
+                                    var link_redir = "" //"location.href = 'add_build.jag'";
                                     %>
                                     <div id="buttonAreaGrid_left" class="buttonAreaGrid_left">
-                                    <!-- <lable>
-                                        <input type="button" value="Add Build" onclick="<% print(link_redir); %>" align="left"></label>
-                                        <th>&nbsp;</th> -->
-                                        
+                                     <lable>
+                                        <input type="button" value="Add Test Plan" onclick="<% print(link_redir); %>" align="left"></label>
+                                        <th>&nbsp;</th>
+                                    
                                        <table>
                                           <tbody>
                                              <tr>
@@ -242,7 +242,7 @@
                                              </thead>
                                              <tbody>
                                                 <%
-                                                   include("../controller/version_builds_onload.jag");
+                                                   include("../controller/testsuit_testplans_onload.jag");
                                                 %>
                                              </tbody>
                                           </table>
