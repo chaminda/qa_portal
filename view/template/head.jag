@@ -13,7 +13,6 @@ if(name==null || ROOT==null || SERVICE_ROOT==null){
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 <title>WSO2 QA Portal</title>
-
 <link href="../resources/css/global.css" rel="stylesheet" type="text/css" media="all">
 
 <link href="../resources/css/main.css" rel="stylesheet" type="text/css" media="all">
