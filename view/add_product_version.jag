@@ -7,6 +7,21 @@
          %>
    </head>
    <body>
+   <noscript>
+         <div class="something-wrong">
+            <div class="title">JavaScript is disabled on your browser</div>
+            <div class="content">Please enable JavaScript or upgrade to a JavaScript-capable browser to use WSO2 Products.</div>
+         </div>
+      </noscript>
+      <div id="dcontainer"></div>
+      <script type="text/javascript" src="../resources/js/dialog.js"></script>
+      <!-- JS imports for collapsible menu -->
+      <script src="../resources/js/yahoo-dom-event.js" type="text/javascript"></script>
+      <script src="../resources/js/animation-min.js" type="text/javascript"></script>
+      <script src="../resources/js/template.js" type="text/javascript"></script>
+      <script src="../resources/js/yahoo-min.js" type="text/javascript"></script>
+      <script src="../resources/js/selector-min.js" type="text/javascript"></script>
+
       <table id="main-table" border="0" cellspacing="0">
          <tbody>
             <tr>
@@ -80,7 +95,7 @@
                                     var link_redir = "../controller/addProductVersion.jag?data="+encodeURIComponent(req_data);
                                  %>
 
-                                    <form name="add_product_version" action=<%print(""+link_redir);%> method="post" onsubmit="return validateInput('add_product_version','WSO2_QAP_PRODUCT_VERSION');return false;">
+                                    <form name="add_product_version" action=<%print(""+link_redir);%> method="post" onsubmit="return validateTextInput();return false;">
                                        <table class="styledLeft">
                                           <thead>
                                              <tr>
@@ -96,7 +111,7 @@
                                                             <td>Enter Product Version<font color="red">*</font>
                                                             </td>
                                                             <td>
-                                                               <input size="35" name="WSO2_QAP_PRODUCT_VERSION" id="WSO2_QAP_PRODUCT_VERSION" value="" type="text">
+                                                               <input size="35" name="WSO2_QAP_PRODUCT_VERSION" id="WSO2_QAP_PRODUCT_VERSION" class="text-not-empty" value="" type="text">
                                                             </td>
                                                          </tr>
                                                          <tr>
