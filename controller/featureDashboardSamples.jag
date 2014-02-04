@@ -13,6 +13,8 @@
 	var data = get(url,"",optionalHeaders);
 	var obj = parse(data.data);
 	var list = obj.WSO2_QAP_FEATURECollection.WSO2_QAP_FEATURE;
+
+
     if(list == null){
         print('<tr>');
         print('<td>');
@@ -26,10 +28,9 @@
 
     else if(!(list instanceof Array)){
 
-
         print('<tr>');
         print('<td style="text-align:center; !important" width="10px">');
-        print('<input name="sampleId" value="'+list.WSO2_QAP_SAMPLE_ID+'" onclick="resetVars()" class="chkBox" type="checkbox">');
+        print('<input name="sampleId" value="'+list.WSO2_QAP_SAMPLE_ID+'" onclick="resetSampleVars()" class="chkBox" type="checkbox">');
         print('</td>');
         print('<td>');
         print(list.WSO2_QAP_SAMPLE_NAME);
@@ -47,7 +48,7 @@ else{
         
         print('<tr>');
         print('<td style="text-align:center; !important" width="10px">')
-        print('<input name="sampleId" value="'+list[i].WSO2_QAP_SAMPLE_ID+'" onclick="resetVars()" class="chkBox" type="checkbox">');
+        print('<input name="sampleId" value="'+list[i].WSO2_QAP_SAMPLE_ID+'" onclick="resetSampleVars()" class="chkBox" type="checkbox">');
         print('</td>')
         print('<td>')
         print(list[i].WSO2_QAP_SAMPLE_NAME);

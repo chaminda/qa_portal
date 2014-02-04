@@ -102,7 +102,9 @@ if(name===null){
 							</tr>
 							<tr>
 								<td id="body"><img src="resources/images/1px.gif" width="735px"
-									height="1px"> <!--
+									height="1px">
+<script src="../resources/js/logic_feature_dashboard.js" type="text/javascript"></script>
+                   <!--
                                  ~ Copyright (c) 2005-2010, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
                                  ~
                                  ~ WSO2 Inc. licenses this file to you under the Apache License,
@@ -146,208 +148,7 @@ if(name===null){
                                  ~ KIND, either express or implied.  See the License for the
                                  ~ specific language governing permissions and limitations
                                  ~ under the License.
-                              --> <script type="text/javascript"
-											src="resources/global-params.js"></script> <script
-											type="text/javascript">
-                              wso2.wsf.Util.initURLs();
-                              var frontendURL = wso2.wsf.Util.getServerURL() + "/";
-                              </script> <script type="text/javascript">
-                              var allWebappsSelected = false;
-
-                              function expireSessions() {
-                               var selected = isWebappSelected();
-                               if (!selected) {
-                                CARBON.showInfoDialog('Select the applications for session expiry');
-                                return;
-                             }
-                             if (allWebappsSelected) {
-                                CARBON.showConfirmationDialog("Do you want to expire the sessions in all 4 started applications?",
-                                  function() {
-                                   location.href = 'expire_sessions.jsp?expireAll=true';
-                                }
-                                );
-                             } else {
-                                CARBON.showConfirmationDialog("Do you want to expire the sessions in the selected applications?",
-                                  function() {
-                                   document.webappsForm.action = 'expire_sessions.jsp';
-                                   document.webappsForm.submit();
-                                }
-                                );
-                             }
-                          }
-
-                          function reloadWebapps() {
-                            var selected = isWebappSelected();
-                            if (!selected) {
-                             CARBON.showInfoDialog('Select applications to be reloaded');
-                             return;
-                          }
-                          if (allWebappsSelected) {
-                             CARBON.showConfirmationDialog("Do you want to reload all 4 applications?",
-                               function() {
-                                location.href = 'reload_webapps.jsp?reloadAll=true';
-                             }
-                             );
-                          } else {
-                             CARBON.showConfirmationDialog("Do you want to reload the selected applications?",
-                               function() {
-                                document.webappsForm.action = 'reload_webapps.jsp';
-                                document.webappsForm.submit();
-                             }
-                             );
-                          }
-                       }
-
-                       function stopWebapps() {
-                         var selected = isWebappSelected();
-                         if (!selected) {
-                          CARBON.showInfoDialog('Select applications to be stopped');
-                          return;
-                       }
-                       if (allWebappsSelected) {
-                          CARBON.showConfirmationDialog("Do you want to stop all 4 applications?",
-                            function() {
-                             location.href = 'stop_webapps.jsp?reloadAll=true';
-                          }
-                          );
-                       } else {
-                          CARBON.showConfirmationDialog("Do you want to stop the selected applications?",
-                            function() {
-                             document.webappsForm.action = 'stop_webapps.jsp';
-                             document.webappsForm.submit();
-                          }
-                          );
-                       }
-                    }
-
-                    function startWebapps() {
-                      var selected = isWebappSelected();
-                      if (!selected) {
-                       CARBON.showInfoDialog('Select applications to be started');
-                       return;
-                    }
-                    if (allWebappsSelected) {
-                       CARBON.showConfirmationDialog("Do you want to start all 4 applications?",
-                         function() {
-                          location.href = 'start_webapps.jsp?reloadAll=true';
-                       }
-                       );
-                    } else {
-                       CARBON.showConfirmationDialog("Do you want to start the selected applications?",
-                         function() {
-                          document.webappsForm.action = 'start_webapps.jsp';
-                          document.webappsForm.submit();
-                       }
-                       );
-                    }
-                 }
-
-                 function isWebappSelected() {
-                   var selected = false;
-                                         if (document.webappsForm.webappFileName[0] != null) { // there is more than 1
-                                          for (var j = 0; j < document.webappsForm.webappFileName.length; j++) {
-                                           selected = document.webappsForm.webappFileName[j].checked;
-                                           if (selected) break;
-                                        }
-                                         } else if (document.webappsForm.webappFileName != null) { // only 1
-                                          selected = document.webappsForm.webappFileName.checked;
-                                       }
-                                       return selected;
-                                    }
-
-                                    function deleteWebapps() {
-                                      var selected = isWebappSelected();
-                                      if (!selected) {
-                                       CARBON.showInfoDialog('Please select the applications to be deleted.');
-                                       return;
-                                    }
-                                    if (allWebappsSelected) {
-                                       CARBON.showConfirmationDialog("Do you want to delete all 4 started applications?",
-                                         function() {
-                                          location.href = 'delete_webapps.jsp?deleteAllWebapps=true&webappState=all';
-                                       }
-                                       );
-                                    } else {
-                                       CARBON.showConfirmationDialog("Do you want to delete the selected applications?",
-                                         function() {
-                                          document.webappsForm.action = 'delete_webapps.jsp';
-                                          document.webappsForm.submit();
-                                       }
-                                       );
-                                    }
-                                 }
-                                 
-                                 function selectAllInTable1(isSelected) {
-                                   allWebappsSelected = false;
-                                   if (document.webappsForm1.webappFileName != null &&
-                                             document.webappsForm1.webappFileName[0] != null) { // there is more than 1
-                                    if (isSelected) {
-                                     for (var j = 0; j < document.webappsForm1.webappFileName.length; j++) {
-                                      document.webappsForm1.webappFileName[j].checked = true;
-                                   }
-                                } else {
-                                  for (j = 0; j < document.webappsForm1.webappFileName.length; j++) {
-                                   document.webappsForm1.webappFileName[j].checked = false;
-                                }
-                             }
-                                         } else if (document.webappsForm1.webappFileName != null) { // only 1
-                                          document.webappsForm1.webappFileName.checked = isSelected;
-                                       }
-                                       return false;
-                                    }
-
-                                    function selectAllInTable2(isSelected) {
-                                      allWebappsSelected = false;
-                                      if (document.webappsForm2.webappFileName != null &&
-                                             document.webappsForm2.webappFileName[0] != null) { // there is more than 1
-                                       if (isSelected) {
-                                        for (var j = 0; j < document.webappsForm2.webappFileName.length; j++) {
-                                         document.webappsForm2.webappFileName[j].checked = true;
-                                      }
-                                   } else {
-                                     for (j = 0; j < document.webappsForm2.webappFileName.length; j++) {
-                                      document.webappsForm2.webappFileName[j].checked = false;
-                                   }
-                                }
-                                         } else if (document.webappsForm2.webappFileName != null) { // only 1
-                                          document.webappsForm2.webappFileName.checked = isSelected;
-                                       }
-                                       return false;
-                                    }
-
-
-
-                                    function selectAllInAllPages() {
-                                      selectAllInTable1(true);
-                                      selectAllInTable2(true);
-                                      allWebappsSelected = true;
-                                      return false;
-                                   }
-
-                                   function resetVars() {
-                                      allWebappsSelected = false;
-
-                                      var isSelected = false;
-                                         if (document.webappsForm.webappFileName[0] != null) { // there is more than 1 sg
-                                          for (var j = 0; j < document.webappsForm.webappFileName.length; j++) {
-                                           if (document.webappsForm.webappFileName[j].checked) {
-                                            isSelected = true;
-                                         }
-                                      }
-                                         } else if (document.webappsForm.webappFileName != null) { // only 1 sg
-                                          if (document.webappsForm.webappFileName.checked) {
-                                           isSelected = true;
-                                        }
-                                     }
-                                     return false;
-                                  }
-
-                                  </script> <script
-											type="text/javascript">
-                                  function searchWebapps() {
-                                     document.searchForm.submit();
-                                  }
-                                  </script>
+                              --> 
 										<div id="middle">
 											<h2>Feature dashboard</h2>
 											<div id="workArea">
@@ -379,24 +180,7 @@ if(name===null){
 														<tr></tr>
 													</tbody>
 												</table>
-												<table>
-													<tbody>
-														<tr>
-															<td><a href="#"
-																onclick="selectAllInTable1(true);return false;"
-																style="cursor: pointer">Select all in this page</a>&nbsp;<b>|</b>&nbsp;</td>
-															<td><a href="#"
-																onclick="selectAllInTable1(false);return false;"
-																style="cursor: pointer">Select none</a></td>
-															<td width="20%">&nbsp;</td>
-															<td><a href="#" id="delete1"
-																onclick="deleteWebapps();return false;">Delete</a></td>
-															<td width="10%">&nbsp;</td>
-															<td><a href="#" id="edit"
-																onclick="editWebapps();return false;">Edit</a></td>
-														</tr>
-													</tbody>
-												</table>
+												
 												<p>&nbsp;</p>
 												<table>
 													<tbody>
@@ -423,24 +207,7 @@ if(name===null){
 														<tr></tr>
 													</tbody>
 												</table>
-												<table>
-													<tbody>
-														<tr>
-															<td><a href="#"
-																onclick="selectAllInTable1(true);return false;"
-																style="cursor: pointer">Select all in this page</a>&nbsp;<b>|</b>&nbsp;</td>
-															<td><a href="#"
-																onclick="selectAllInTable1(false);return false;"
-																style="cursor: pointer">Select none</a></td>
-															<td width="20%">&nbsp;</td>
-															<td><a href="#" id="delete2"
-																onclick="deleteWebapps();return false;">Delete</a></td>
-															<td width="10%">&nbsp;</td>
-															<td><a href="#" id="edit"
-																onclick="editWebapps();return false;">Edit</a></td>
-														</tr>
-													</tbody>
-												</table>
+												
 												<p>&nbsp;</p>
 												<table>
 													<tbody>
@@ -479,14 +246,14 @@ if(name===null){
 														<tbody>
 															<tr>
 																<td><a href="#"
-																	onclick="selectAllInTable2(true);return false;"
+																	onclick="selectAllInSampleTable(true);return false;"
 																	style="cursor: pointer">Select all in this page</a>&nbsp;<b>|</b>&nbsp;</td>
 																<td><a href="#"
-																	onclick="selectAllInTable2(false);return false;"
+																	onclick="selectAllInSampleTable(false);return false;"
 																	style="cursor: pointer">Select none</a></td>
 																<td width="20%">&nbsp;</td>
 																<td><a href="#" id="delete1"
-																	onclick="deleteWebapps();return false;">Delete</a></td>
+																	onclick="deleteSamples();return false;">Delete</a></td>
 																<td width="10%">&nbsp;</td>
 																<td><a href="#" id="edit"
 																	onclick="editWebapps();return false;">Edit</a></td>
@@ -499,12 +266,10 @@ if(name===null){
 															<tr></tr>
 														</tbody>
 													</table>
-													<form action="delete_webapps.jsp" name="webappsForm2"
-														method="post">
 														<input name="pageNumber" value="0" type="hidden"> <input
 															name="webappState" value="all" type="hidden"> <input
 																name="webappType" value="all" type="hidden">
-																	<form action="../controller/deleteProducts.jag" name="productsForm" method="post">
+																	<form name="SampleForm" method="post">
                                           <input name="pageNumber" value="0" type="hidden">
                                           <input name="webappState" value="all" type="hidden">
                                           <input name="webappType" value="all" type="hidden">
@@ -523,12 +288,17 @@ if(name===null){
                                              <tbody>
                                                 <%
                                                    include("../controller/featureDashboardSamples.jag");
+                                                   
+                                            
+                                          
                                                 %>
                                                
                                              </tbody>
                                           </table>
-                                       </form>
-													
+<%
+print('<input type="hidden" name="WSO2_QAP_FEATURE_ID" value=\"'+WSO2_QAP_FEATURE_ID +'\">');
+%>
+                                          
 													</form>
 													<p>&nbsp;</p>
 													<table>
