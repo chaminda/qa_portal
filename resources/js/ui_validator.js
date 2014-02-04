@@ -1806,7 +1806,7 @@ function validateTextInput(){
         var item = inputs[i];
         if(item.value===null || item.value===""){
             CARBON.showWarningDialog(item.name+"  is mandatory");
-            alert(item.name+"  is mandatory");
+            //alert(item.name+"  is mandatory");
             return false;
         }
     }
