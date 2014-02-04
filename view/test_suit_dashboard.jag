@@ -203,20 +203,19 @@
 
                                    <div id="middle">
                                     <%
-                                       include("../controller/version_builds_page_name_onload.jag");
+
+                                        include("../controller/test_suit_page_name_onload.jag");
                                     %>
-                                    </div>
                                     <div id="workArea">
 
                                     <%
-                                    var req_data_link = request.getParameter("data");
-                                    var link_redir = "location.href = 'add_build.jag?data="+req_data_link+"'";
+                                    var link_redir = "" //"location.href = 'add_build.jag'";
                                     %>
                                     <div id="buttonAreaGrid_left" class="buttonAreaGrid_left">
-                                    <lable>
-                                        <input type="button" value="Add Build" onclick="<% print(link_redir); %>" align="left"></label>
+                                     <lable>
+                                        <input type="button" value="Add Test Plan" onclick="<% print(link_redir); %>" align="left"></label>
                                         <th>&nbsp;</th>
-                                        
+                                    
                                        <table>
                                           <tbody>
                                              <tr>
@@ -237,13 +236,13 @@
                                                 <tr>
                                                    <th>&nbsp;</th>
                                                    <th>
-                                                      <nobr>Builds</nobr>
+                                                      <nobr>Test Plans</nobr>
                                                    </th>
                                                 </tr>
                                              </thead>
                                              <tbody>
                                                 <%
-                                                   include("../controller/version_builds_onload.jag");
+                                                   include("../controller/testsuit_testplans_onload.jag");
                                                 %>
                                              </tbody>
                                           </table>
@@ -267,6 +266,25 @@
                                              <tr></tr>
                                           </tbody>
                                        </table>
+                                       <p>&nbsp;</p>
+                                       <p>&nbsp;</p>
+                                       <form name="buildsForm" action="../controller/deleteVersionBuilds.jag" method="post">
+                                          <table class="display" id="buildsTable" name="buildsTable" cellpadding="0" cellspacing="0" border="0" width="100%">
+                                             <thead>
+                                                <tr>
+                                                   <th>&nbsp;</th>
+                                                   <th>
+                                                      <nobr>Test Scenarios</nobr>
+                                                   </th>
+                                                </tr>
+                                             </thead>
+                                             <tbody>
+                                                <%
+                                                   include("../controller/testsuit_testscenario_onload.jag");
+                                                %>
+                                             </tbody>
+                                          </table>
+                                       </form>
                                        <p>&nbsp;</p>
                                     </div>
                                     

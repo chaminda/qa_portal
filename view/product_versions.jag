@@ -128,7 +128,7 @@
                                     %>
                                     <div class="buttonAreaGrid_right" id="buttonAreaGrid_right">
 
-                                        <input type="button" value="Add Version to this Product" onclick="<% print(link_redir); %>"></label>
+                                        <input type="button" class="button" value="Add Version to this Product" onclick="<% print(link_redir); %>"></label>
                                     </div>
 
                                     <p>&nbsp;</p><p>&nbsp;</p>
