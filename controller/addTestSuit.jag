@@ -1,0 +1,43 @@
+<%
+include("base64_encode.jag");
+var SERVICE_SECURE_ROOT = session.get("service_secure_root");
+
+var WSO2_QAP_FEATURE_ID=1;
+
+var WSO2_QAP_TEST_SUIT_NAME = request.getParameter("WSO2_QAP_TEST_SUIT_NAME");
+var param = '{"_postadd_test_suit":{"WSO2_QAP_TEST_SUIT_NAME" : "'+WSO2_QAP_TEST_SUIT_NAME+'","WSO2_QAP_FEATURE_ID" : "'+WSO2_QAP_FEATURE_ID+'"}}';
+// var param = "{WSO2_QAP_BUILD_NAME: "+WSO2_QAP_BUILD_NAME+","+"WSO2_QAP_TEST_PLAN_ID: "+WSO2_QAP_TEST_PLAN_ID+","+"WSO2_QAP_PRODUCT_VERSION_ID: "+WSO2_QAP_PRODUCT_VERSION_ID+","+"WSO2_QAP_RELEASE_DATE: "+WSO2_QAP_RELEASE_DATE+"}";
+
+var optionalHeaders = {
+        "Accept":"application/json",
+            "Content-Type" : "application/json",
+                "Authorization": "Basic "+base64_encode("admin:admin") };
+
+var url = SERVICE_SECURE_ROOT+"WSO2_QAP_TEST_SUIT_DataService/add/test_suit";
+// var url = "https://192.168.3.24:9443/services/WSO2_QAP_PRODUCT_BUILD_DataService/add/builds";
+
+var url2  = SERVICE_SECURE_ROOT+"WSO2_QAP_PRODUCT_BUILD_DataService/view/builds";
+
+var optionalHeaders2 = {
+  "Accept": "application/json",
+          "Authorization": "Basic "+base64_encode("admin:admin") };
+
+
+
+
+
+
+if(WSO2_QAP_TEST_SUIT_NAME===null){
+
+	response.sendRedirect("../view/addTestSuit.jag");
+}
+else{
+	post(url, param, optionalHeaders, "json", function (data, xhr) {
+       log("Response received");
+   } );
+	
+	response.sendRedirect("../view/feature_dashboard.jag?data="+encodeURIComponent(stringify(WSO2_QAP_FEATURE_ID)));
+}
+// print(param);
+
+%>
