@@ -1,3 +1,9 @@
+input[readonly]
+{
+    border: none;
+    background: none;
+}
+
 body {
     background-color: white;
     padding: 0px;
