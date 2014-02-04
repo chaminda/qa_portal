@@ -40,6 +40,28 @@
 		}
 
       </script>
+
+      <input type="hidden" name="versionID" id="versionID" value="<% print(request.getParameter("data")); %>">
+      <script type="text/javascript">
+
+			var WSO2_QAP_PRODUCT_VERSION_ID = document.getElementById("versionID").value;
+
+			if("null" !== WSO2_QAP_PRODUCT_VERSION_ID){
+
+			$.ajax({
+				  url: "../controller/get_version_details.jag",
+				  context: document.body,
+				  data: {"WSO2_QAP_PRODUCT_VERSION_ID": WSO2_QAP_PRODUCT_VERSION_ID}
+				}).done(function(data) {
+				    var info = JSON.parse(data);
+					document.getElementById("productName").innerHTML = "<input type='hidden' name='WSO2_QAP_PRODUCT_ID' value='"+info.WSO2_QAP_PRODUCT_ID+"' >"+ info.WSO2_QAP_PRODUCT_NAME+"</input>";
+					document.getElementById("prodcutVersion").innerHTML = "<input type='hidden' name='WSO2_QAP_PRODUCT_VERSION_ID' value='"+ WSO2_QAP_PRODUCT_VERSION_ID +"' >"+ info.WSO2_QAP_PRODUCT_VERSION+"</input>";
+				});
+            }
+
+
+      </script>
+
       <table id="main-table" border="0" cellspacing="0">
          <tbody>
             <tr>
@@ -108,7 +130,6 @@
 								<script type="text/javascript" src="../resources/js/ui_validator.js"></script>
 								<div id="middle">
 										<h2>Add Build</h2>
-
 										<div id="workArea">
 											<form method="post" name="add_build" action="../controller/addBuild.jag" onsubmit="return validateAddBuildInputs();return false;">
 												<table class="styledLeft" id="build_data">
@@ -117,14 +138,14 @@
 															<td class="formRow">Build Name<font color="red">*</font>
 															</td>
 															<td><input type="text" id="WSO2_QAP_BUILD_NAME" name="WSO2_QAP_BUILD_NAME"
-																size="50" onchange="">
+																size="50">
 															
 															</td>
 														</tr>
                                                             <tr class="tableEvenRow">
 															<td class="formRow">Product<font color="red">*</font>
 															</td>
-															<td>
+															<td id="productName">
 															<select id="WSO2_QAP_PRODUCT_ID" name="WSO2_QAP_PRODUCT_ID" onclick="loadVersions()">
 																	<%
 																		include("../controller/addBuild_onLoad_productNames.jag");
@@ -134,7 +155,7 @@
 														</tr>
 														<tr class="tableOddRow">
 															<td class="formRow">Version<font color="red">*</font></td>
-															<td class="formRow">
+															<td class="formRow" id="prodcutVersion">
 															<select name="WSO2_QAP_PRODUCT_VERSION_ID" id="WSO2_QAP_PRODUCT_VERSION_ID">
 
 															</select>
