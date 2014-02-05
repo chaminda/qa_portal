@@ -110,7 +110,26 @@ include("template/product_menu_panel.jag");
 
                   <%
 var req_data = request.getParameter("data");
-json_data = parse(decodeURIComponent(req_data));
+id = parse(decodeURIComponent(req_data));
+
+include("../controller/base64_encode.jag");
+var SERVICE_SECURE_ROOT = session.get("service_secure_root");
+var url  = SERVICE_SECURE_ROOT+"WSO2_QAP_SAMPLE_DataService/view/samples_with_id/"+id;
+
+
+var optionalHeaders = {
+    "Accept": "application/json",
+    "Authorization": "Basic "+base64_encode("admin:admin") };
+
+var param="";
+
+var data = get(url,"",optionalHeaders);
+
+
+var obj = parse(data.data);
+
+var json_data=obj.WSO2_QAP_SAMPLECollection.WSO2_QAP_SAMPLE;
+
 if(json_data.WSO2_QAP_SAMPLE_ID===null || json_data.WSO2_QAP_SAMPLE_NAME===null){
     print("Sorry this page isn't available");
 }else{
@@ -118,6 +137,7 @@ if(json_data.WSO2_QAP_SAMPLE_ID===null || json_data.WSO2_QAP_SAMPLE_NAME===null)
     print(json_data.WSO2_QAP_SAMPLE_NAME);
     print("</h2>");
 }
+
 %>
 
 
@@ -175,8 +195,10 @@ if(json_data.WSO2_QAP_SAMPLE_ID===null || json_data.WSO2_QAP_SAMPLE_NAME===null)
 <td width="10%">&nbsp;</td>
 <td><a href="#" id="edit" onclick="editWebapps();return false;">Edit</a></td>
 <td width="10%">&nbsp;</td>
-
-<td><a href="#" id="add2" onclick="addFeature('<%= json_data.WSO2_QAP_SAMPLE_ID%>')" >Add new</a> </td>
+<%
+var link ="'addfeatures_to_sample.jag?data="+encodeURIComponent(stringify(json_data.WSO2_QAP_SAMPLE_ID))+"'";
+%>
+<td><a href=<%=link%> id="add2"  >Add new</a> </td>
 </tr>
 </tbody>
 </table>
@@ -222,7 +244,8 @@ include("../controller/features_onload.jag");
 <td width="10%">&nbsp;</td>
 <td><a href="#" id="edit" onclick="editWebapps();return false;">Edit</a></td>
 <td width="10%">&nbsp;</td>
-<td><a href="#" id="add2" onclick="addFeature('<%= json_data.WSO2_QAP_SAMPLE_ID%>')" >Add new</a> </td>
+
+<td><a href=<%=link%> id="add2"  >Add new</a> </td>
 </tr>
 </tbody>
 </table>
