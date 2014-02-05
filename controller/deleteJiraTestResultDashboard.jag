@@ -34,6 +34,6 @@ else{
 
 }
 //print(WSO2_QAP_FEATURE_ID);
-response.sendRedirect("../view/test_result_dashboard.jag?data="+encodeURIComponent(WSO2_QAP_TEST_RESULT_ID));
+response.sendRedirect("../view/test_result_dashboard.jag?data="+encodeURIComponent(stringify(WSO2_QAP_TEST_RESULT_ID)));
 
 %>
