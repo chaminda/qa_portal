@@ -27,7 +27,7 @@ if(name===null){
 	<script src="resources/js/yahoo-min.js" type="text/javascript"></script>
 	<script src="resources/js/selector-min.js" type="text/javascript"></script>
 	
-	<script type="text/javascript">
+	<!--<script type="text/javascript">
 	$.ajax({
 		  url: "../controller/getProductDropdown.jag",
 		  context: document.body
@@ -62,7 +62,7 @@ if(name===null){
 					document.getElementById("WSO2_QAP_PRODUCT_VERSION_ID").innerHTML = "<option>No version found</option>";
 				  });
 		}
-	</script>
+	</script>-->
 	
 	<table id="main-table" border="0" cellspacing="0">
 		<tbody>
@@ -359,27 +359,9 @@ if(name===null){
 														<!-- 													</thead> -->
 														<tbody>
 															<tr class="tableOddRow">
-																<td class="formRow">Product<span class="required">*</span>
-																</td>
-																<td class="formRow">
-																<select id="WSO2_QAP_PRODUCT_ID"
-																	name="WSO2_QAP_PRODUCT_ID" onclick="loadVersions();">
-																</select>
-																</td>
-															</tr>
-															<tr class="tableEvenRow">
-																<td class="formRow">Version<span class="required">*</span>
-																</td>
-																<td class="formRow">
-																<select id="WSO2_QAP_PRODUCT_VERSION_ID"
-																	name="WSO2_QAP_PRODUCT_VERSION_ID">
-																</select>
-																</td>
-															</tr>
-															<tr class="tableOddRow">
 																<td class="formRow">Description<span class="required">*</span></td>
 																<td class="formRow"><input id="WSO2_QAP_DESCRIPTION"
-																	name="WSO2_QAP_DESCRIPTION" class="longInput" value="">
+																	name="WSO2_QAP_DESCRIPTION" class="longInput">
 																
 																</td>
 															</tr>
@@ -391,14 +373,6 @@ if(name===null){
 																
 																</td>
 															</tr>
-															<tr class="tableOddRow">
-																<td class="formRow">Sample<span class="required">*</span>
-																</td>
-																<td class="formRow"><select id="WSO2_QAP_SAMPLE_ID" name="WSO2_QAP_SAMPLE_ID">
-																</select>
-																</td>
-															</tr>
-
 														</tbody>
 													</table>
 													<table class="styledLeft">
