@@ -42,7 +42,8 @@
         print(' <td style="text-align:center; !important" width="10px">');
         print('    <input name="testResultId" value="'+list.WSO2_QAP_TEST_RESULT_ID+'" onclick="resetVars()" class="chkBox" type="checkbox">');
         print(' </td>');
-
+        var link = "test_result_dashboard.jag?data="+encodeURIComponent(stringify(list.WSO2_QAP_TEST_RESULT_ID));
+        print('<a href="'+link+'">');
         print(' <td>');
         // var link = "build_dashboard.jag?data="+encodeURIComponent(stringify(list2.WSO2_QAP_BUILD_ID));
         // print('<a href="'+link+'">');
@@ -59,6 +60,7 @@
         print(' <td>');
         print(list.WSO2_QAP_TESTED_BY );
         print('</td>');
+        print('</a>')
         print('</tr>');
 
     }
@@ -75,13 +77,16 @@
         print(' <td style="text-align:center; !important" width="10px">');
         print('    <input name="testResultId" value="'+list[i].WSO2_QAP_TEST_RESULT_ID+'" onclick="resetVars()" class="chkBox" type="checkbox">');
         print(' </td>');
-
+        var link = "test_result_dashboard.jag?data="+encodeURIComponent(stringify(list[i].WSO2_QAP_TEST_RESULT_ID));
+        
+        
         print(' <td>');
         // var link = "build_dashboard.jag?data="+encodeURIComponent(stringify(list2.WSO2_QAP_BUILD_ID));
         // print('<a href="'+link+'">');
+        print('<a href="'+link+'">');
         print("&emsp;&emsp;&emsp;");
         print(list[i].WSO2_QAP_TEST_CASE_NAME );
-        // print('</a>');
+        print('</a>');
         print('</td>');
         print(' <td>');
         print(list[i].WSO2_QAP_TEST_STATUS );
