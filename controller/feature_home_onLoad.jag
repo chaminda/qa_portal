@@ -14,24 +14,40 @@
 
 
 	//print(list[0].WSO2_QAP_PRODUCT_NAME);
-    if(list.length==null && list.WSO2_QAP_FEATURE_ID!=null){
+if(list==null){
+print('<tr vertical-align:middle>');
+        print('<td style="text-align:center; !important" width="10px">');
+        print('</td>');
+        print('<td>');
+        print('</td>');
+        print('<td>');
+        print('</td>');
+        print('</tr>');
+ }else if(!(list instanceof Array)){
 
 
-        print('<tr valign="middle">');
-        print(' <td style="text-align:center; !important" width="10px">');
-        print('    <input name="productId" value="'+list.WSO2_QAP_FEATURE_ID+'" onclick="resetVars()" class="chkBox" type="checkbox">');
-        print(' </td>');
+        print('<tr vertical-align:middle>');
+        print('<td style="text-align:center; !important" width="10px">');
+        print('    <input name="WSO2_QAP_FEATURE_ID" value="'+list.WSO2_QAP_FEATURE_ID+'" onclick="resetVars()" class="chkBox" type="checkbox">');
+        print('</td>');
 
-        print(' <td>');
-        //print('<a href="product_version.jag?product='+list.WSO2_QAP_PRODUCT_NAME+'&product_id='+list.WSO2_QAP_PRODUCT_ID'">');
-        print("&emsp;&emsp;&emsp;");
+        print('<td>');
+        var link = "feature_dashboard.jag?data="+encodeURIComponent(list.WSO2_QAP_FEATURE_ID);
+        print('<a href="'+link+'">');
+        print("&emsp;");
         print(list.WSO2_QAP_DESCRIPTION );
+        print('</a>');
+        print('</td>');
+        print('<td>');
+        print('<a href="'+list.WSO2_QAP_REDMINE_URL+'" target=_blank>');
+        print("&emsp;");
+        print(list.WSO2_QAP_REDMINE_URL );
         print('</a>');
         print('</td>');
         print('</tr>');
 
     }
-
+else{
 	for (var i=0;i<list.length;i++)
 	{
 
@@ -57,6 +73,6 @@
 
 	}
 
-
+}
 
  %>
