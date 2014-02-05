@@ -27,7 +27,7 @@ if(list1==null){
 
 else if(!(list1 instanceof Array)){
 
-    var url2=SERVICE_SECURE_ROOT+"WSO2_QAP_TEST_SCENARIO_DataService/view/testscenario_withh_id";
+    var url2=SERVICE_SECURE_ROOT+"WSO2_QAP_TEST_SCENARIO_DataService/view/testscenario_with_id";
     var param2="WSO2_QAP_TEST_SCENARIO_ID="+list1.WSO2_QAP_TEST_SCENARIO_ID;
 
     var data2=get(url2,param2,optionalHeaders);
@@ -56,16 +56,18 @@ else if(!(list1 instanceof Array)){
 
 
 }
+else{
 
 for (var i=0;i<list1.length;i++)
 {
-    var url2=SERVICE_SECURE_ROOT+"WSO2_QAP_TEST_SCENARIO_DataService/view/testscenario_withh_id";
+    var url2=SERVICE_SECURE_ROOT+"WSO2_QAP_TEST_SCENARIO_DataService/view/testscenario_with_id";
     var param2="WSO2_QAP_TEST_SCENARIO_ID="+list1[i].WSO2_QAP_TEST_SCENARIO_ID;
 
     var data2=get(url2,param2,optionalHeaders);
     var obj2 = parse(data2.data);
 
     var list2=obj2.WSO2_QAP_TEST_SCENARIOCollection.WSO2_QAP_TEST_SCENARIO;
+
 
     print('<tr valign="middle">');
     print(' <td style="text-align:center; !important" width="10px">');
@@ -85,5 +87,6 @@ for (var i=0;i<list1.length;i++)
     print(list2.WSO2_QAP_DESCRIPTION );
     print('</a>');
     print('</td>');
+}
 }
 %>
