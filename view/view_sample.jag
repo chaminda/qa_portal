@@ -86,7 +86,7 @@ include("template/product_menu_panel.jag");
       <tr>
          <td id="body">
             <img src="../resources/images/1px.gif" width="735px" height="1px">
-            <script src="../resources/js/page-logic.js" type="text/javascript"></script>
+            <script src="../resources/js/logic_sampleFeature.js" type="text/javascript"></script>
 
             <script type="text/javascript">
             setCookie('current-breadcrumb', 'manage_menu,webapps_menu,webapps_list_menu#');
@@ -104,6 +104,9 @@ include("template/product_menu_panel.jag");
 
 
                  <div id="middle">
+<h2> Sample dashboard</h2>
+
+<p>&nbsp;</p>
 
                   <%
 var req_data = request.getParameter("data");
@@ -168,12 +171,12 @@ if(json_data.WSO2_QAP_SAMPLE_ID===null || json_data.WSO2_QAP_SAMPLE_NAME===null)
 <td><a href="#" onclick="selectAllInThisPage(true);return false;" style="cursor:pointer">Select all in this page</a>&nbsp;<b>|</b>&nbsp;</td>
 <td><a href="#" onclick="selectAllInThisPage(false);return false;" style="cursor:pointer">Select none</a></td>
 <td width="10%">&nbsp;</td>
-<td><a href="#" id="delete1" onclick="deleteProducts();return false;">Delete</a></td>
+<td><a href="#" id="delete1" onclick="deleteFeature();return false;">Delete</a></td>
 <td width="10%">&nbsp;</td>
 <td><a href="#" id="edit" onclick="editWebapps();return false;">Edit</a></td>
 <td width="10%">&nbsp;</td>
 
-<td><a href="#" id="add2" onclick="" >Add new</a> </td>
+<td><a href="#" id="add2" onclick="addFeature('<%= json_data.WSO2_QAP_SAMPLE_ID%>')" >Add new</a> </td>
 </tr>
 </tbody>
 </table>
@@ -181,7 +184,7 @@ if(json_data.WSO2_QAP_SAMPLE_ID===null || json_data.WSO2_QAP_SAMPLE_NAME===null)
 <p>&nbsp;</p>
 
 
-<form action="../controller/deleteTestresult.jag" name="testscenarioForm" method="post">
+<form action="../controller/deleteTestresult.jag" name="featuresForm" method="post">
    <input name="pageNumber" value="0" type="hidden">
    <input name="webappState" value="all" type="hidden">
    <input name="webappType" value="all" type="hidden">
@@ -215,11 +218,11 @@ include("../controller/features_onload.jag");
 <td><a href="#" onclick="selectAllInThisPage(true);return false;" style="cursor:pointer">Select all in this page</a>&nbsp;<b>|</b>&nbsp;</td>
 <td><a href="#" onclick="selectAllInThisPage(false);return false;" style="cursor:pointer">Select none</a></td>
 <td width="10%">&nbsp;</td>
-<td><a href="#" id="delete2" onclick="deleteProducts();return false;">Delete</a></td>
+<td><a href="#" id="delete2" onclick="deleteFeature();return false;">Delete</a></td>
 <td width="10%">&nbsp;</td>
 <td><a href="#" id="edit" onclick="editWebapps();return false;">Edit</a></td>
 <td width="10%">&nbsp;</td>
-<td><a href="#" id="add2" onclick="" >Add new</a> </td>
+<td><a href="#" id="add2" onclick="addFeature('<%= json_data.WSO2_QAP_SAMPLE_ID%>')" >Add new</a> </td>
 </tr>
 </tbody>
 </table>
