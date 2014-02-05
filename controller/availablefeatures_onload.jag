@@ -1,23 +1,31 @@
 <%
+
 include("base64_encode.jag");
 var SERVICE_SECURE_ROOT = session.get("service_secure_root");
 
-var url  = SERVICE_SECURE_ROOT+"WSO2_QAP_SAMPLE_FEATURE_MAPPING_DataService/view/features_with_sampleid";
+var url  = SERVICE_SECURE_ROOT+"WSO2_QAP_SAMPLE_FEATURE_MAPPING_DataService/view/features_without_sampleid/"+req_data;
+
+
 
 var optionalHeaders = {
     "Accept": "application/json",
     "Authorization": "Basic "+base64_encode("admin:admin") };
 
-var param="WSO2_QAP_SAMPLE_ID="+ json_data.WSO2_QAP_SAMPLE_ID;
+var param ="";
 
 var data = get(url,param,optionalHeaders);
+
 var obj = parse(data.data);
+
 
 var list1=obj.WSO2_QAP_SAMPLE_FEATURE_MAPPINGCollection.WSO2_QAP_SAMPLE_FEATURE_MAPPING;
 
+
+
+
 if(list1==null){
     print('<tr>');
-    print('<td>No features for this sample</td>');
+    print('<td>No available features for this sample</td>');
     print('<td></td>');
     print('<td></td>');
     print('<td></td>');
@@ -26,13 +34,15 @@ if(list1==null){
 
 else if(!(list1 instanceof Array)){
 
-    var url2=SERVICE_SECURE_ROOT+"WSO2_QAP_FEATURE_DataService/view/feature_by_id/";
-    var param2="WSO2_QAP_FEATURE_ID="+list1.WSO2_QAP_FEATURE_ID;
-
+   var url2=SERVICE_SECURE_ROOT+"WSO2_QAP_FEATURE_DataService/view/feature_by_id/"+list1.WSO2_QAP_FEATURE_ID;
+    var param2=""
     var data2=get(url2,param2,optionalHeaders);
+
     var obj2 = parse(data2.data);
 
     var list2=obj2.WSO2_QAP_FEATURECollection.WSO2_QAP_FEATURE;
+
+
 
     print('<tr valign="middle">');
     print(' <td style="text-align:center; !important" width="10px">');
@@ -57,13 +67,13 @@ else if(!(list1 instanceof Array)){
 else{
 for (var i=0;i<list1.length;i++){
 
-    var url2=SERVICE_SECURE_ROOT+"WSO2_QAP_FEATURE_DataService/view/feature_by_id/"+list1[i].WSO2_QAP_FEATURE_ID;
+ var url2=SERVICE_SECURE_ROOT+"WSO2_QAP_FEATURE_DataService/view/feature_by_id/"+list1.WSO2_QAP_FEATURE_ID;
+ var param2=""
+ var data2=get(url2,param2,optionalHeaders);
 
-    var param2="";
-    var data2=get(url2,param2,optionalHeaders);
-    var obj2 = parse(data2.data);
+ var obj2 = parse(data2.data);
 
-    var list2=obj2.WSO2_QAP_FEATURECollection.WSO2_QAP_FEATURE;
+ var list2=obj2.WSO2_QAP_FEATURECollection.WSO2_QAP_FEATURE;
 
     print('<tr valign="middle">');
     print(' <td style="text-align:center; !important" width="10px">');
@@ -85,6 +95,8 @@ for (var i=0;i<list1.length;i++){
     print('</td>');
 
 }
+
 }
+
 
 %>
