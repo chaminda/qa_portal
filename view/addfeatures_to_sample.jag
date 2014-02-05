@@ -104,79 +104,36 @@ include("template/product_menu_panel.jag");
 
 
                  <div id="middle">
-<h2> Sample dashboard</h2>
-
-<p>&nbsp;</p>
 
                   <%
 var req_data = request.getParameter("data");
-json_data = parse(decodeURIComponent(req_data));
-if(json_data.WSO2_QAP_SAMPLE_ID===null || json_data.WSO2_QAP_SAMPLE_NAME===null){
-    print("Sorry this page isn't available");
-}else{
+//json_data = parse(decodeURIComponent(req_data));
+//if(json_data.WSO2_QAP_SAMPLE_ID===null || json_data.WSO2_QAP_SAMPLE_NAME===null){
+   // print("Sorry this page isn't available");
+//}else{
     print("<h2>");
-    print(json_data.WSO2_QAP_SAMPLE_NAME);
+    //print("Available features for "+json_data.WSO2_QAP_SAMPLE_NAME);
+print("Available features for "+req_data);
     print("</h2>");
-}
-%>
+//}
+                    %>
 
 
 <div id="workArea">
 
-   <form  name="featureForm" method="post">
-      <input name="pageNumber" value="0" type="hidden">
-      <input name="webappState" value="all" type="hidden">
-      <input name="webappType" value="all" type="hidden">
-      <table class="styledLeft" id="webappTable" style="margin-left: 0px;"
-                           width="100 ">
-
-         <thead>
-          <tr class="tableEvenRow">
-            <th colspan="2" align="left"><strong><%= json_data.WSO2_QAP_SAMPLE_NAME%></strong></th>
-
-          </tr>
-          </thead>
-
-           <tbody>
-           <tr class="tableOddRow">
-           <td>
-                <strong>Description</strong>
-           </td>
-            <td>
-            <%= json_data.WSO2_QAP_DESCRIPTION %>
-            </td>
-           </tr>
-
-            <tr class="tableEvenRow">
-           <td>
-                <strong>Sample URL</strong>
-           </td>
-            <td>
-            <%= json_data.WSO2_QAP_SAMPLE_URL%>
-            </td>
-           </tr>
 
 
-           </tbody>
 
-</table>
-</form>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-
-<h2>Features</h2>
 <table>
 <tbody>
 <tr>
 <td><a href="#" onclick="selectAllInThisPage(true);return false;" style="cursor:pointer">Select all in this page</a>&nbsp;<b>|</b>&nbsp;</td>
 <td><a href="#" onclick="selectAllInThisPage(false);return false;" style="cursor:pointer">Select none</a></td>
 <td width="10%">&nbsp;</td>
-<td><a href="#" id="delete1" onclick="deleteFeature();return false;">Delete</a></td>
-<td width="10%">&nbsp;</td>
-<td><a href="#" id="edit" onclick="editWebapps();return false;">Edit</a></td>
-<td width="10%">&nbsp;</td>
+<td><a href="#" id="add2" onclick="deleteFeature();return false;">Add features</a></td>
 
-<td><a href="#" id="add2" onclick="addFeature('<%= json_data.WSO2_QAP_SAMPLE_ID%>')" >Add new</a> </td>
+
+
 </tr>
 </tbody>
 </table>
@@ -204,7 +161,7 @@ if(json_data.WSO2_QAP_SAMPLE_ID===null || json_data.WSO2_QAP_SAMPLE_NAME===null)
       </thead>
       <tbody>
 <%
-include("../controller/features_onload.jag");
+include("../controller/availablefeatures_onload.jag");
 %>
 
 </tbody>
@@ -218,11 +175,9 @@ include("../controller/features_onload.jag");
 <td><a href="#" onclick="selectAllInThisPage(true);return false;" style="cursor:pointer">Select all in this page</a>&nbsp;<b>|</b>&nbsp;</td>
 <td><a href="#" onclick="selectAllInThisPage(false);return false;" style="cursor:pointer">Select none</a></td>
 <td width="10%">&nbsp;</td>
-<td><a href="#" id="delete2" onclick="deleteFeature();return false;">Delete</a></td>
-<td width="10%">&nbsp;</td>
-<td><a href="#" id="edit" onclick="editWebapps();return false;">Edit</a></td>
-<td width="10%">&nbsp;</td>
-<td><a href="#" id="add2" onclick="addFeature('<%= json_data.WSO2_QAP_SAMPLE_ID%>')" >Add new</a> </td>
+<td><a href="#" id="add2" onclick="deleteFeature();return false;">Add features</a></td>
+
+
 </tr>
 </tbody>
 </table>

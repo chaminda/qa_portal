@@ -49,7 +49,7 @@
     var link = "product_versions.jag?data="+encodeURIComponent(stringify(list));
     print('<a href="'+link+'">');
     print(list.WSO2_QAP_PRODUCT_NAME);
-    print('</a>')
+    print('</a>');
     print('</td>');
     print('</tr>');
     print('<tr bgcolor="#EEEFFB">');
@@ -63,7 +63,7 @@
     var link2="product_version_dashboard.jag?data="+encodeURIComponent(stringify(list.WSO2_QAP_PRODUCT_VERSION_ID));
     print('<a href="'+link2+'">');
     print(list.WSO2_QAP_PRODUCT_VERSION);
-    print('</a>')
+    print('</a>');
     print('</td>');
     print('</tr>');
     print('<tr bgcolor="white">');

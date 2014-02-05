@@ -2,11 +2,8 @@
 include("base64_encode.jag");
 var SERVICE_SECURE_ROOT = session.get("service_secure_root");
 
-var WSO2_QAP_PRODUCT_ID = request.getParameter("WSO2_QAP_PRODUCT_ID");
-var WSO2_QAP_PRODUCT_VERSION_ID = request.getParameter("WSO2_QAP_PRODUCT_VERSION_ID");
 var WSO2_QAP_DESCRIPTION = request.getParameter("WSO2_QAP_DESCRIPTION");
 var WSO2_QAP_REDMINE_URL = request.getParameter("WSO2_QAP_REDMINE_URL");
-var WSO2_QAP_SAMPLE_ID = request.getParameter("WSO2_QAP_SAMPLE_ID");
 
 //add feature
  var param = '{"_postadd_feature":{"WSO2_QAP_DESCRIPTION" : "'+WSO2_QAP_DESCRIPTION+'","WSO2_QAP_REDMINE_URL" : "'+WSO2_QAP_REDMINE_URL+'"}}';
@@ -18,11 +15,7 @@ var optionalHeaders = {
 
  var url = SERVICE_SECURE_ROOT+"WSO2_QAP_FEATURE_DataService/add/feature";
 
-//add product feature mapping
-var param = '{"_postadd_productfeature":{"WSO2_QAP_PRODUCT_VERSION_ID" : "'+WSO2_QAP_PRODUCT_VERSION_ID+'","WSO2_QAP_REDMINE_URL" : "'+WSO2_QAP_REDMINE_URL+'"}}';
-
-
-if(WSO2_QAP_PRODUCT_ID===null || WSO2_QAP_PRODUCT_VERSION_ID===null || WSO2_QAP_DESCRIPTION===null ||WSO2_QAP_REDMINE_URL ===null){
+if(WSO2_QAP_DESCRIPTION===null ||WSO2_QAP_REDMINE_URL ===null){
 
 	response.sendRedirect("../view/add_feature.jag");
 }
@@ -30,11 +23,7 @@ else{
 	post(url, param, optionalHeaders, "json", function (data, xhr) {
        log("Response received");
    } );
-	// var data = get(url2,"",optionalHeaders2);
- //  var obj = parse(data.data);
- //  // print(obj);
- //  var list = obj.WSO2_QAP_FEATURECollection.WSO2_QAP_FEATURE;
- //  print(list);
+
 	 response.sendRedirect("../view/feature_home.jag");
 }
 // print(param);

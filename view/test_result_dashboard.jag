@@ -204,10 +204,10 @@ if(name===null){
                                                 <tr>
                                                    <th>&nbsp;</th>
                                                    <th>
-                                                      <nobr>URL</nobr>
+                                                      <nobr>Description</nobr>
                                                    </th>
                                                    <th>
-                                                      <nobr>Description</nobr>
+                                                      <nobr>URL</nobr>
                                                    </th>
                                                 </tr>
                                              </thead>

@@ -35,6 +35,6 @@ var optionalHeaders = {
         }
     }
 
-// response.sendRedirect("../view/test_suit_dashboard.jag?data="+params.WSO2_QAP_TEST_SUIT_ID);
+response.sendRedirect("../view/test_suit_dashboard.jag?data="+params1.WSO2_QAP_TEST_SUIT_ID);
 
 %>
