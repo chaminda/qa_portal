@@ -57,11 +57,11 @@ if(name===null){
 			</tr>
 			<tr>
 				<% 
-				require("template/product_vertical_menu.jag");
+				include("template/product_vertical_menu.jag");
 				%>
 
 				<%
-				require("template/product_menu_panel.jag");
+				include("template/product_menu_panel.jag");
 				%>
 
 				<td id="middle-content">
@@ -81,8 +81,7 @@ if(name===null){
 																		<table cellspacing="0">
 																			<tbody>
 																				<tr>
-																					<td class="breadcrumb-link"><a href="index.jag">QA
-																							Home</a>
+																					<td class="breadcrumb-link"><a href="index.jag">QA Home</a>
 																					</td>
 																					<td class="breadcrumb-link"><a
 																						href="product_home.jag">&nbsp;&gt;&nbsp;Products</a>
@@ -137,7 +136,7 @@ if(name===null){
                               document.onload=setBreadcrumDiv();
                               function setBreadcrumDiv () {
                                var breadcrumbDiv = document.getElementById('breadcrumb-div');
-                               breadcrumbDiv.innerHTML = '<table cellspacing="0"><tr><td class="breadcrumb-link"><a href="index.jag">QA Home</a></td><td class="breadcrumb-link"><a href="product_home.jag">&nbsp;&gt;&nbsp;Products</a></td><td class="breadcrumb-link">&nbsp;&gt;&nbsp;List</td><td class="breadcrumb-link">&nbsp;&gt;&nbsp;Feature dashboard</td>';
+                               breadcrumbDiv.innerHTML = '<table cellspacing="0"><tr><td class="breadcrumb-link"><a href="index.jag">QA Home</a></td><td class="breadcrumb-link"><a href="product_home.jag">&nbsp;&gt;&nbsp;Products</a></td><td class="breadcrumb-link">&nbsp;&gt;&nbsp;List</td><td class="breadcrumb-link">&nbsp;&gt;&nbsp;Test Scenario Dashboard</td>';
                             }
                             </script> <!--
                                  ~ Copyright (c) 2005-2010, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
@@ -169,7 +168,7 @@ if(name===null){
 																<table class="styledLeft" id="webappsTable" width="100%">
 																	<tbody>
 																		<%
-                                      require("../controller/TestScenarioDashboardonLoad.jag");
+                                      include("../controller/TestScenarioDashboardonLoad.jag");
                                     %>
 																	</tbody>
 																</table>

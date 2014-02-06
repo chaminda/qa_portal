@@ -238,7 +238,7 @@
                                              </thead>
                                              <tbody>
                                                 <%
-                                                
+                                                print ("aAAAAAAAA");
                                                    include("../controller/testscenario_home_onload.jag");
                                                    
                                                 %>

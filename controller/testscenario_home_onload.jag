@@ -41,11 +41,11 @@
 
         print('<tr vertical-align:middle>');
         print('<td style="text-align:center; !important" width="10px">');
-        print('    <input name="productId" value="'+list[i].WSO2_QAP_TEST_SCENARIO_ID+'" onclick="resetVars()" class="chkBox" type="checkbox">');
+        print('    <input name="scenarioId" value="'+list[i].WSO2_QAP_TEST_SCENARIO_ID+'" onclick="resetVars()" class="chkBox" type="checkbox">');
         print('</td>');
 
         print('<td>');
-        var link = "product_versions.jag?data="+encodeURIComponent(stringify(list[i]));
+        var link ="test_scenario_dashboard.jag?data="+encodeURIComponent(stringify(list[i].WSO2_QAP_TEST_SCENARIO_ID));
         print('<a href="'+link+'">');
         print("&emsp;&emsp;&emsp;");
         print(list[i].WSO2_QAP_TEST_SCENARIO_NAME );
