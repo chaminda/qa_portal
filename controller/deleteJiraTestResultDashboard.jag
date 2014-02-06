@@ -2,18 +2,18 @@
 include("base64_encode.jag");
 var SERVICE_SECURE_ROOT= session.get("service_secure_root");
 var params = request.getAllParameters("UTF-8");
-var WSO2_QAP_FEATURE_ID = params.WSO2_QAP_FEATURE_ID;
+var WSO2_QAP_TEST_RESULT_ID = params.WSO2_QAP_TEST_RESULT_ID;
 
-var list = params.sampleId;
+var list = params.jiraId;
 var param = "";
-
+//print(list);
 var optionalHeaders = {
     "Accept": "application/json",
     "Authorization": "Basic "+base64_encode("admin:admin") };
 
 if(!(list instanceof Array)){
 
-    var url = SERVICE_SECURE_ROOT+"WSO2_QAP_SAMPLE_DataService/delete/samples/"+list;
+    var url = SERVICE_SECURE_ROOT+"WSO2_QAP_JIRA_DataService/delete/jira/"+list;
 
     del(url, param, optionalHeaders, "json", function (data, xhr) {
         log("Response received");
@@ -23,7 +23,7 @@ if(!(list instanceof Array)){
 else{
 
     for (var i=0;i<list.length;i++){
-        var url = SERVICE_SECURE_ROOT+"WSO2_QAP_SAMPLE_DataService/delete/samples/"+list[i];
+        var url = SERVICE_SECURE_ROOT+"WSO2_QAP_JIRA_DataService/delete/jira/"+list[i];
 
         del(url, param, optionalHeaders, "json", function (data, xhr) {
             log("Response received");
@@ -34,6 +34,6 @@ else{
 
 }
 //print(WSO2_QAP_FEATURE_ID);
-response.sendRedirect("../view/feature_dashboard.jag?data="+encodeURIComponent(stringify(WSO2_QAP_FEATURE_ID)));
+response.sendRedirect("../view/test_result_dashboard.jag?data="+encodeURIComponent(stringify(WSO2_QAP_TEST_RESULT_ID)));
 
 %>

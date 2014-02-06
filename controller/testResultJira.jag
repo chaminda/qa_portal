@@ -25,20 +25,19 @@
     else if(!(listResultDetails instanceof Array)){
                                       print('<tr>');
             print('<td style="text-align:center; !important" width="10px">');
-            print('    <input name="productId" value="'+listResultDetails.WSO2_QAP_JIRA_ID+'" onclick="resetVars()" class="chkBox" type="checkbox">');
-            print('</td>');
-
-            print('<td>');
-            print('<a target=\"_blank\" href="'+listResultDetails.WSO2_QAP_URL+'">');
-            print("&emsp;&emsp;&emsp;");
-            print(listResultDetails.WSO2_QAP_URL );
-            print('</a>');
+            print('    <input name="jiraId" value="'+listResultDetails.WSO2_QAP_JIRA_ID+'" onclick="resetVars()" class="chkBox" type="checkbox">');
             print('</td>');
             print('<td>');
             var link = "jira_dashboard.jag?data="+encodeURIComponent(stringify(listResultDetails.WSO2_QAP_JIRA_ID));
             print('<a href="'+link+'">');
             print("&emsp;&emsp;&emsp;");
             print(listResultDetails.WSO2_QAP_DESCRIPTION );
+            print('</a>');
+            print('</td>');
+            print('<td>');
+            print('<a target=\"_blank\" href="'+listResultDetails.WSO2_QAP_URL+'">');
+            print("&emsp;&emsp;&emsp;");
+            print(listResultDetails.WSO2_QAP_URL );
             print('</a>');
             print('</td>');
             print('</tr>');  
@@ -48,20 +47,19 @@
                     {
                         print('<tr>');
             print('<td style="text-align:center; !important" width="10px">');
-            print('    <input name="productId" value="'+listResultDetails[i].WSO2_QAP_JIRA_ID+'" onclick="resetVars()" class="chkBox" type="checkbox">');
+            print('    <input name="jiraId" value="'+listResultDetails[i].WSO2_QAP_JIRA_ID+'" onclick="resetVars()" class="chkBox" type="checkbox">');
             print('</td>');
-
-            print('<td>');
-            print('<a target=\"_blank\" href="'+listResultDetails[i].WSO2_QAP_URL+'">');
-            print("&emsp;&emsp;&emsp;");
-            print(listResultDetails[i].WSO2_QAP_URL );
-            print('</a>');
-            print('</td>');
-            print('<td>');
+print('<td>');
             var link = "jira_dashboard.jag?data="+encodeURIComponent(stringify(listResultDetails[i].WSO2_QAP_JIRA_ID));
             print('<a href="'+link+'">');
             print("&emsp;&emsp;&emsp;");
             print(listResultDetails[i].WSO2_QAP_DESCRIPTION );
+            print('</a>');
+            print('</td>');
+            print('<td>');
+            print('<a target=\"_blank\" href="'+listResultDetails[i].WSO2_QAP_URL+'">');
+            print("&emsp;&emsp;&emsp;");
+            print(listResultDetails[i].WSO2_QAP_URL );
             print('</a>');
             print('</td>');
             print('</tr>');

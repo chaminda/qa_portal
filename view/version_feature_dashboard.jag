@@ -209,7 +209,7 @@
                                     <div id="workArea">
 
                                     <%
-                                    var link_redir = "location.href = 'add_feature.jag";
+                                    var link_redir = "location.href = 'add_feature_to_version.jag?data="+WSO2_QAP_PRODUCT_VERSION_ID+"'";
                                     %>
                                     <div>
                                     <lable>

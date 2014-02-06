@@ -12,31 +12,31 @@
    print('<td>');
    print('<strong> Test Plan Status <strong/>');
    print('</td>');
+   print('<input type="hidden" name="WSO2_QAP_TEST_SUIT_ID" value="'+WSO2_QAP_TEST_SUIT_ID+'">');
 
 
    if(list.length==null && list.WSO2_QAP_PLANNING_STATUS!=null){
-
+    
         print('<tr>');
         print(' <td style="text-align:center; !important" width="10px">');
-        print('    <input name="testPlanId" value="'+list.WSO2_QAP_TEST_PLAN_ID+'" onclick="resetVars()" class="chkBox" type="checkbox">');
+        print('    <input name="testPlanId" value="'+list.WSO2_QAP_TEST_PLAN_ID+'" onclick="resetVarsTestPlan()" class="chkBox" type="checkbox">');
         print(' </td>');
 
         print(' <td>');
         // var link = "build_dashboard.jag?data="+encodeURIComponent(stringify(list2.WSO2_QAP_BUILD_ID));
         // print('<a href="'+link+'">');
         print("&emsp;&emsp;&emsp;");
-        print(list.WSO2_QAP_PRODUCT_NAME+" "+WSO2_QAP_PRODUCT_VERSION );
+        print(list.WSO2_QAP_PRODUCT_NAME+" "+list.WSO2_QAP_PRODUCT_VERSION);
 
         // print('</a>');
         print('</td>');
         print(' <td>');
-        print(list2.WSO2_QAP_PLANNING_STATUS );
+        print(list.WSO2_QAP_PLANNING_STATUS );
         print('</td>');
         print('</tr>');
 
     }
     else{
-        
         for (var i=0;i<list.length;i++)
         {
 
@@ -47,7 +47,7 @@
             print('<tr>');
           }
         print(' <td style="text-align:center; !important" width="10px">');
-        print('    <input name="testPlanId" value="'+list[i].WSO2_QAP_TEST_PLAN_ID+'" onclick="resetVars()" class="chkBox" type="checkbox">');
+        print('    <input name="testPlanId" value="'+list[i].WSO2_QAP_TEST_PLAN_ID+'" onclick="resetVarsTestPlan()" class="chkBox" type="checkbox">');
         print(' </td>');
 
         print(' <td>');

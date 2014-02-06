@@ -3,6 +3,7 @@
 include("base64_encode.jag");
 var SERVICE_SECURE_ROOT = session.get("service_secure_root");
 
+
 var url  = SERVICE_SECURE_ROOT+"WSO2_QAP_SAMPLE_DataService/view/samples";
 
 var optionalHeaders = {
@@ -14,6 +15,7 @@ var obj = parse(data.data);
 
 var list = obj.WSO2_QAP_SAMPLECollection.WSO2_QAP_SAMPLE;
 
+
 if(!(list instanceof Array)){
 
     print('<tr valign="middle">');
@@ -22,7 +24,7 @@ if(!(list instanceof Array)){
     print(' </td>');
 
     print(' <td>');
-    var link = "view_sample.jag?data="+encodeURIComponent(stringify(list));
+    var link = "view_sample.jag?data="+encodeURIComponent(stringify(list.WSO2_QAP_SAMPLE_ID));
     print('<a href="'+link+'">');
     print("&emsp;&emsp;&emsp;");
     print(list.WSO2_QAP_SAMPLE_NAME );
@@ -53,7 +55,7 @@ for (var i=0;i<list.length;i++)
     print(' </td>');
 
     print(' <td>');
-    var link = "view_sample.jag?data="+encodeURIComponent(stringify(list[i]));
+    var link = "view_sample.jag?data="+encodeURIComponent(stringify(list[i].WSO2_QAP_SAMPLE_ID));
     print('<a href="'+link+'">');
     print("&emsp;&emsp;&emsp;");
     print(list[i].WSO2_QAP_SAMPLE_NAME );
@@ -73,6 +75,7 @@ for (var i=0;i<list.length;i++)
     print('</a>');
     print('</td>')
     print('</tr>');
+
 }
 
 %>

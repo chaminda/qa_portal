@@ -15,9 +15,9 @@ if(!(list instanceof Array)){
 
     var url = SERVICE_SECURE_ROOT+"WSO2_QAP_TEST_SUIT_DataService/delete/testsuit/"+list;
 
-    del(url, param, optionalHeaders, "json", function (data, xhr) {
-        log("Response received");
-    } );
+        del(url, param, optionalHeaders, "json", function (data, xhr) {
+            log("Response received");
+        } );
 
 }
 else{
@@ -34,6 +34,6 @@ else{
 
 }
 //print(WSO2_QAP_FEATURE_ID);
-response.sendRedirect("../view/feature_dashboard.jag?data="+encodeURIComponent(WSO2_QAP_FEATURE_ID));
+response.sendRedirect("../view/feature_dashboard.jag?data="+encodeURIComponent(stringify(WSO2_QAP_FEATURE_ID)));
 
 %>
