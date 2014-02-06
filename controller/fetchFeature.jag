@@ -1,0 +1,68 @@
+<%
+include("base64_encode.jag");
+//var SERVICE_SECURE_ROOT = session.get("service_secure_root");
+var REDMINE_BASE_URL = 'https://redmine.wso2.com/';
+var url = REDMINE_BASE_URL + 'issues.json?status_id=*&offset=0&limit=100';
+var param = "";
+
+var username = request.getParameter("username");
+var password = request.getParameter("password");
+	
+
+
+var optionalHeaders = {
+        "Accept":"application/json",
+    	"Authorization": "Basic "+base64_encode(username+":"+password) };
+//              // "Authorization": "Basic "+base64_encode("admin:admin")
+
+var data = get(url,"",optionalHeaders);
+var obj = JSON.parse(data.data);
+var list = obj.issues;
+// print(obj);
+// print('<hr/>');
+// print(obj.issues[0].project.name);
+// print('<br/>');
+// print(obj.issues[0].fixed_version.name);
+// print('<br/>');
+// print(obj.issues[0].subject);
+// print('<br/>');
+// print(obj.issues[0].description);
+// print('<br/>');
+// print(obj.issues[0].id);
+// print('<hr/>');
+
+print('<hr/>');
+
+	for(var i=0; i<list.length; i++){
+		// if(list[i].project.name==43){
+		// 	continue;
+		// }
+		print(i);
+		print('<br/>');
+		print('project name = ');
+		if(list[i].project != null){
+			print(list[i].project.name);
+		}
+		else{
+			print(list[i].project);
+		}
+		print('<br/>');
+		print('fixed version = ');
+		if(list[i].fixed_version != null){
+			print(list[i].fixed_version.name);
+		}
+		else{
+			print(list[i].fixed_version);
+		}
+		
+		print('<br/>');
+		print('subject = ' + list[i].subject);
+		print('<br/>');
+		print('description = ' + list[i].description);
+		print('<br/>');
+		print('id = ' + list[i].id);
+		print('<hr/>');
+	}
+
+
+%>
