@@ -207,16 +207,6 @@
                                         include("../controller/test_suit_page_name_onload.jag");
                                     %>
                                     <div id="workArea">
-
-                                    <%
-                                    var link_redir = "" //"location.href = 'add_build.jag'";
-                                    %>
-                                    <div id="buttonAreaGrid_left" class="buttonAreaGrid_left">
-                                     <lable>
-                                        <input type="button" value="Add Test Plan" onclick="<% print(link_redir); %>" align="left">
-                                       </label>
-                                        <th>&nbsp;</th>
-                                        </div>
                                     
                                        <table>
                                           <tbody>
