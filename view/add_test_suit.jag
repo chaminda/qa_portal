@@ -107,7 +107,7 @@
 									height="1px">
 								<script type="text/javascript" src="../resources/js/ui_validator.js"></script>
 								<div id="middle">
-										<h2>Add Build</h2>
+										<h2>Add Test Suit</h2>
 
 										<div id="workArea">
 											<form method="post" name="add_test_suit" action="../controller/addTestSuit.jag">

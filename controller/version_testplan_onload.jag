@@ -23,6 +23,8 @@
    print('<strong> Status <strong/>');
    print('</td>');
 
+   var passjsondata='{"verid_proname_planid":{"WSO2_QAP_TEST_PLAN_ID" : "'+list4.WSO2_QAP_TEST_PLAN_ID+'","WSO2_QAP_PRODUCT_NAME" : "'+list1.WSO2_QAP_PRODUCT_NAME+'","WSO2_QAP_PRODUCT_VERSION" : "'+list1.WSO2_QAP_PRODUCT_VERSION+'"}}';
+
 
    if(list4.length==null && list4.WSO2_QAP_PLANNING_STATUS!=null){
 
@@ -32,11 +34,11 @@
         print(' </td>');
 
         print(' <td>');
-        // var link = "build_dashboard.jag?data="+encodeURIComponent(stringify(list2.WSO2_QAP_BUILD_ID));
-        // print('<a href="'+link+'">');
+        var link = "test_plan_dashboard.jag?data="+encodeURIComponent(stringify(passjsondata));
+        print('<a href="'+link+'">');
         print("&emsp;&emsp;&emsp;");
-        print(list4.WSO2_QAP_TEST_PLAN_ID );
-        // print('</a>');
+        print(list1.WSO2_QAP_PRODUCT_NAME+" "+list1.WSO2_QAP_PRODUCT_VERSION);
+        print('</a>');
         print('</td>');
         print(' <td>');
         print(list4.WSO2_QAP_PLANNING_STATUS);
@@ -57,11 +59,12 @@
         print('    <input name="testplanID" value="'+list4[i].WSO2_QAP_TEST_PLAN_ID+'" onclick="resetVars()" class="chkBox" type="checkbox">');
         print(' </td>');
         print(' <td>');
-        // var link = list[i].WSO2_QAP_REDMINE_URL;
+        
         print("&emsp;&emsp;&emsp;");
-        // print('<a href="'+link+'">');
+        var link = "test_plan_dashboard.jag?data="+encodeURIComponent(stringify(passjsondata));
+        print('<a href="'+link+'">');
         print(list4[i].WSO2_QAP_TEST_PLAN_ID );
-        // print('</a>');
+        print('</a>');
         print('</td>');
         print(' <td>');
         print(list4[i].WSO2_QAP_PLANNING_STATUS);
