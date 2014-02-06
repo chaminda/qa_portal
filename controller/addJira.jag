@@ -1,0 +1,28 @@
+<%
+include("base64_encode.jag");
+var SERVICE_SECURE_ROOT = session.get("service_secure_root");
+
+var jira_url = request.getParameter("WSO2_QAP_URL");
+var jira_description = request.getParameter("WSO2_QAP_DESCRIPTION");
+var param = '{"_postadd_jira":{"WSO2_QAP_URL" : "'+jira_url+'","WSO2_QAP_DESCRIPTION" : "'+jira_description+'"}}';
+
+var optionalHeaders = {
+        "Accept":"application/json",
+        	"Content-Type" : "application/json",
+            	"Authorization": "Basic "+base64_encode("admin:admin") };
+
+var url = SERVICE_SECURE_ROOT+"WSO2_QAP_JIRA_DataService/add/jira";
+
+if(jira_url===null){
+
+	response.sendRedirect("../view/add_jira.jag");
+}
+else{
+	post(url, param, optionalHeaders, "json", function (data, xhr) {
+       log("Response received");
+   } );
+	
+	response.sendRedirect("../view/jira_home.jag");
+}
+
+%>
