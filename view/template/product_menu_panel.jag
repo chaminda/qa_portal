@@ -79,11 +79,14 @@
 
 								<li class="normal">
 								<ul class="sub">
-									<li><a href="testscenario_home.jag" class="menu-default"
+									<li><a href="feature_home.jag" class="menu-default"
 										style="background-image: url(../resources/images/list.gif);">List</a>
 									</li>
-									<li><a href="add_testscenario.jag" class="menu-default"
-										style="background-image: url(../resources/images/add.gif);">Add Test Scenario</a>
+									<li><a href="add_feature.jag" class="menu-default"
+										style="background-image: url(../resources/images/add.gif);">Add Features</a>
+									</li>
+									<li><a href="add_feature.jag" class="menu-default"
+										style="background-image: url(../resources/images/add.gif);">Fetch Features</a>
 									</li>
 
 								</ul>

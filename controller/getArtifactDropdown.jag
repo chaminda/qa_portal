@@ -12,7 +12,7 @@ include("base64_encode.jag");
     var objArtifacts=parse(dataArtifacts.data);
 
     var listArtifacts=objArtifacts.WSO2_QAP_ARTIFACTCollection.WSO2_QAP_ARTIFACT;
-print('<option value='+0+'>'+"No Artiacts defined"+'</option>');
+
     for(var i=0;i<listArtifacts.length;i++)
     {
     	print('<option value='+listArtifacts[i].WSO2_QAP_ARTIFACT_ID+'>'+listArtifacts[i].WSO2_QAP_ARTIFACT_NAME+'</option>');

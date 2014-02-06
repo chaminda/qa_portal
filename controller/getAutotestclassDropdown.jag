@@ -13,7 +13,7 @@ include("base64_encode.jag");
 
     var listAutotest=objAutotest.WSO2_QAP_AUTO_TEST_CLASSCollection.WSO2_QAP_AUTO_TEST_CLASS;
 
-print('<option value='+0+'>'+"No Auto test class defined yet"+'</option>');
+
     for(var i=0;i<listAutotest.length;i++)
     {
     	print('<option value='+listAutotest[i].WSO2_QAP_AUTO_TEST_CLASS_ID+'>'+listAutotest[i].WSO2_QAP_AUTO_TEST_CLASS_NAME+'</option>');
