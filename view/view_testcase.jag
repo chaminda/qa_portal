@@ -122,7 +122,7 @@ if(json_data.list.WSO2_QAP_TEST_CASE_ID===null || json_data.list.WSO2_QAP_TEST_C
 
 <div id="workArea">
 
-   <form  name="productsForm" method="post">
+   <form   >
       <input name="pageNumber" value="0" type="hidden">
       <input name="webappState" value="all" type="hidden">
       <input name="webappType" value="all" type="hidden">
@@ -179,28 +179,85 @@ if(json_data.list.WSO2_QAP_TEST_CASE_ID===null || json_data.list.WSO2_QAP_TEST_C
 </form>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+<h2>Artifact name : <%= json_data.artifactName%></h2>
+
+<form>
+    <input name="pageNumber" value="0" type="hidden">
+      <input name="webappState" value="all" type="hidden">
+      <input name="webappType" value="all" type="hidden">
+      <table class="styledLeft" id="webappTable" style="margin-left: 0px;"
+                           width="100 ">
+
+    <tbody>
+        <tr class="tableOddRow">
+           <td>
+                <strong>Description</strong>
+           </td>
+            <td>
+            <%= json_data.artifactDescription%>
+            </td>
+         </tr>
+
+         <tr class="tableEvenRow">
+           <td>
+                <strong>SVN Location</strong>
+           </td>
+            <td>
+            <%= json_data.artifactLocation%>
+            </td>
+           </tr>
+
+    </tbody>
+
+
+</table>
+</form>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h2>Auto test class</h2>
+<form >
+    <input name="pageNumber" value="0" type="hidden">
+      <input name="webappState" value="all" type="hidden">
+      <input name="webappType" value="all" type="hidden">
+      <table class="styledLeft" id="webappTable" style="margin-left: 0px;"
+                           width="100 ">
+
+         <tbody>
+                 <tr class="tableOddRow">
+           <td>
+                <strong>Auto test class name</strong>
+           </td>
+            <td>
+            <%= json_data.autotestclassName%>
+            </td>
+         </tr>
+
+         <tr class="tableEvenRow">
+           <td>
+                <strong>Location</strong>
+           </td>
+            <td>
+            <a href="'<%= json_data.autotestclassLocation%>'" ><%= json_data.autotestclassLocation%></a>
+            </td>
+           </tr>
+         </tbody>
+</table>
+
+</form>
+
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 
 <h2>Test Scenarios</h2>
-<table>
-<tbody>
-<tr>
-<td><a href="#" onclick="selectAllInThisPage(true);return false;" style="cursor:pointer">Select all in this page</a>&nbsp;<b>|</b>&nbsp;</td>
-<td><a href="#" onclick="selectAllInThisPage(false);return false;" style="cursor:pointer">Select none</a></td>
-<td width="10%">&nbsp;</td>
-<td><a href="#" id="delete1" onclick="deleteProducts();return false;">Delete</a></td>
-<td width="10%">&nbsp;</td>
-<td><a href="#" id="edit" onclick="editWebapps();return false;">Edit</a></td>
-<td width="10%">&nbsp;</td>
 
-<td><a href="#" id="add2" onclick="" >Add new</a> </td>
-</tr>
-</tbody>
-</table>
 
 <p>&nbsp;</p>
 
 
-<form action="../controller/deleteTestresult.jag" name="testscenarioForm" method="post">
+<form  name="testscenarioForm" method="post">
    <input name="pageNumber" value="0" type="hidden">
    <input name="webappState" value="all" type="hidden">
    <input name="webappType" value="all" type="hidden">
@@ -229,20 +286,6 @@ include("../controller/testscenario_onload.jag");
 
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-<table>
-<tbody>
-<tr>
-<td><a href="#" onclick="selectAllInThisPage(true);return false;" style="cursor:pointer">Select all in this page</a>&nbsp;<b>|</b>&nbsp;</td>
-<td><a href="#" onclick="selectAllInThisPage(false);return false;" style="cursor:pointer">Select none</a></td>
-<td width="10%">&nbsp;</td>
-<td><a href="#" id="delete2" onclick="deleteProducts();return false;">Delete</a></td>
-<td width="10%">&nbsp;</td>
-<td><a href="#" id="edit" onclick="editWebapps();return false;">Edit</a></td>
-<td width="10%">&nbsp;</td>
-<td><a href="#" id="add2" onclick="" >Add new</a> </td>
-</tr>
-</tbody>
-</table>
 
 <!--<table>-->
 <!--<tbody>-->

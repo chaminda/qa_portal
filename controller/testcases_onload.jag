@@ -34,7 +34,11 @@ if(!(list instanceof Array)){
       object =new Object;
       object.list=list;
       object.artifactName=des1.WSO2_QAP_ARTIFACT_NAME;
+      object.artifactDescription=des1.WSO2_QAP_DESCRIPTION;
+      object.artifactLocation=des1.WSO2_QAP_LOCATION;
       object.autotestclassName=des2.WSO2_QAP_AUTO_TEST_CLASS_NAME;
+      object.autotestclassLocation=des2.WSO2_QAP_AUTO_TEST_CLASS_LOCATION;
+
 
     print('<tr valign="middle">');
     print(' <td style="text-align:center; !important" width="10px">');
@@ -70,7 +74,6 @@ if(!(list instanceof Array)){
     print('</td>');
 
     print(' <td>');
-
     print("&emsp;&emsp;&emsp;");
     print(des2.WSO2_QAP_AUTO_TEST_CLASS_NAME);
     print('</a>');
@@ -99,7 +102,11 @@ for (var i=0;i<list.length;i++)
     object =new Object;
     object.list=list[i];
     object.artifactName=des1.WSO2_QAP_ARTIFACT_NAME;
+    object.artifactDescription=des1.WSO2_QAP_DESCRIPTION;
+    object.artifactLocation=des1.WSO2_QAP_LOCATION;
     object.autotestclassName=des2.WSO2_QAP_AUTO_TEST_CLASS_NAME;
+    object.autotestclassLocation=des2.WSO2_QAP_AUTO_TEST_CLASS_LOCATION;
+
 
     print('<tr valign="middle">');
     print(' <td style="text-align:center; !important" width="10px">');
@@ -128,7 +135,8 @@ for (var i=0;i<list.length;i++)
     print('</td>')
 
     print(' <td>');
-
+    var link = "artifact_dashboard.jag?data="+encodeURIComponent(stringify(list[i].WSO2_QAP_QA_ARTIFACT_ID));
+    print('<a href="'+link+'">');
     print("&emsp;&emsp;&emsp;");
     print(des1.WSO2_QAP_ARTIFACT_NAME );
     print('</a>');

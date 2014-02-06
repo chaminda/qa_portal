@@ -185,23 +185,7 @@ if(json_data.WSO2_QAP_SAMPLE_ID===null || json_data.WSO2_QAP_SAMPLE_NAME===null)
 <p>&nbsp;</p>
 
 <h2>Features</h2>
-<table>
-<tbody>
-<tr>
-<td><a href="#" onclick="selectAllInThisPage(true);return false;" style="cursor:pointer">Select all in this page</a>&nbsp;<b>|</b>&nbsp;</td>
-<td><a href="#" onclick="selectAllInThisPage(false);return false;" style="cursor:pointer">Select none</a></td>
-<td width="10%">&nbsp;</td>
-<td><a href="#" id="delete1" onclick="deleteFeature();return false;">Delete</a></td>
-<td width="10%">&nbsp;</td>
-<td><a href="#" id="edit" onclick="editWebapps();return false;">Edit</a></td>
-<td width="10%">&nbsp;</td>
-<%
-var link ="'addfeatures_to_sample.jag?data="+encodeURIComponent(stringify(json_data.WSO2_QAP_SAMPLE_ID))+"'";
-%>
-<td><a href=<%=link%> id="add2"  >Add new</a> </td>
-</tr>
-</tbody>
-</table>
+
 
 <p>&nbsp;</p>
 
@@ -233,22 +217,8 @@ include("../controller/features_onload.jag");
 </table>
 </form>
 
-<p>&nbsp;</p>
-<table>
-<tbody>
-<tr>
-<td><a href="#" onclick="selectAllInThisPage(true);return false;" style="cursor:pointer">Select all in this page</a>&nbsp;<b>|</b>&nbsp;</td>
-<td><a href="#" onclick="selectAllInThisPage(false);return false;" style="cursor:pointer">Select none</a></td>
-<td width="10%">&nbsp;</td>
-<td><a href="#" id="delete2" onclick="deleteFeature();return false;">Delete</a></td>
-<td width="10%">&nbsp;</td>
-<td><a href="#" id="edit" onclick="editWebapps();return false;">Edit</a></td>
-<td width="10%">&nbsp;</td>
 
-<td><a href=<%=link%> id="add2"  >Add new</a> </td>
-</tr>
-</tbody>
-</table>
+
 
 
 </div>
