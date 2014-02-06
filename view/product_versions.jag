@@ -24,7 +24,8 @@
 		<script type="text/javascript" charset="utf-8">
 			$(document).ready(function() {
 				$('#productsTable').dataTable( {
-					"sPaginationType": "full_numbers"
+					"sPaginationType": "full_numbers",
+					"aaSorting": [[ 1, "asc" ]]
 				} );
 			} );
 		</script>
