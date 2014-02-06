@@ -4,8 +4,7 @@
    // print('<input type="hidden" name="WSO2_QAP_PRODUCT_VERSION_ID" value="'+WSO2_QAP_PRODUCT_VERSION_ID+'">');
 
    print('<tr bgcolor="#EEEFFB">');
-   print('<td>');
-   print('</td>');
+
    print('<td>');
    print('<strong> Product Version <strong/>');
    print('</td>');
@@ -18,9 +17,6 @@
    if(list.length==null && list.WSO2_QAP_PLANNING_STATUS!=null){
     
         print('<tr>');
-        print(' <td style="text-align:center; !important" width="10px">');
-        print('    <input name="testPlanId" value="'+list.WSO2_QAP_TEST_PLAN_ID+'" onclick="resetVarsTestPlan()" class="chkBox" type="checkbox">');
-        print(' </td>');
 
         print(' <td>');
         // var link = "build_dashboard.jag?data="+encodeURIComponent(stringify(list2.WSO2_QAP_BUILD_ID));
@@ -46,9 +42,6 @@
           else{
             print('<tr>');
           }
-        print(' <td style="text-align:center; !important" width="10px">');
-        print('    <input name="testPlanId" value="'+list[i].WSO2_QAP_TEST_PLAN_ID+'" onclick="resetVarsTestPlan()" class="chkBox" type="checkbox">');
-        print(' </td>');
 
         print(' <td>');
         // var link = "build_dashboard.jag?data="+encodeURIComponent(stringify(list[i].WSO2_QAP_BUILD_ID));
@@ -65,5 +58,4 @@
         }
    }
 
-   // print(list2);
 %>   

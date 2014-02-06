@@ -208,25 +208,12 @@
                                     %>
                                     <div id="workArea">
                                     
-                                       <table>
-                                          <tbody>
-                                             <tr>
-                                                <td><a href="#" onclick="selectAllInTestPlanTable(true);return false;" style="cursor:pointer">Select all in this page</a>&nbsp;<b>|</b>&nbsp;</td>
-                                                <td><a href="#" onclick="selectAllInTestPlanTable(false);return false;" style="cursor:pointer">Select none</a></td>
-                                                <td width="20%">&nbsp;</td>
-                                                <td><a href="#" id="delete1" onclick="deleteBuildTestPlans();return false;">Delete</a></td>
-                                                <td width="10%">&nbsp;</td>
-                                                <td><a href="#" id="edit" onclick="editWebapps();return false;">Edit</a></td>
-                                             </tr>
-                                          </tbody>
-                                       </table>
-
                                        <p>&nbsp;</p>
                                        <form name="testPlanForm" method="post">
                                           <table class="display" id="testPlansTable" name="testPlansTable" cellpadding="0" cellspacing="0" border="0" width="100%">
                                              <thead>
                                                 <tr>
-                                                   <th>&nbsp;</th>
+                                                   <p>&nbsp;</p>
                                                    <th>
                                                       <nobr>Test Plans</nobr>
                                                    </th>
@@ -240,18 +227,7 @@
                                           </table>
                                        </form>
                                        <p>&nbsp;</p>
-                                       <table>
-                                          <tbody>
-                                             <tr>
-                                                <td><a href="#" onclick="selectAllInTestPlanTable(true);return false;" style="cursor:pointer">Select all in this page</a>&nbsp;<b>|</b>&nbsp;</td>
-                                                <td><a href="#" onclick="selectAllInTestPlanTable(false);return false;" style="cursor:pointer">Select none</a></td>
-                                                <td width="20%">&nbsp;</td>
-                                                <td><a href="#" id="delete1" onclick="deleteBuildTestPlans();return false;">Delete</a></td>
-                                                <td width="10%">&nbsp;</td>
-                                                <td><a href="#" id="edit" onclick="editWebapps();return false;">Edit</a></td>
-                                             </tr>
-                                          </tbody>
-                                       </table>
+                                       
                                        <p>&nbsp;</p>
                                        <table>
                                           <tbody>
@@ -284,7 +260,7 @@
                                           <table class="display" id="testScenariosTable" name="testScenariosTable" cellpadding="0" cellspacing="0" border="0" width="100%">
                                              <thead>
                                                 <tr>
-                                                   <th>&nbsp;</th>
+                                                   <p>&nbsp;</p>
                                                    <th>
                                                       <nobr>Test Scenarios</nobr>
                                                    </th>

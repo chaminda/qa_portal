@@ -36,8 +36,10 @@
   
         print('<tr>');
         print(' <td>');
-        // print("&emsp;&emsp;&emsp;");
+        var link = "build_dashboard.jag?data="+encodeURIComponent(stringify(list.WSO2_QAP_BUILD_ID));
+        print('<a href="'+link+'">');
         print(list.WSO2_QAP_BUILD_NAME);
+        print("</a>");
         print('</td>');
         print(' <td>');
         print(list.WSO2_QAP_TEST_CASE_NAME);
@@ -65,7 +67,10 @@
             print('<tr>');
           }
         print(' <td>');
+        var link = "build_dashboard.jag?data="+encodeURIComponent(stringify(list.WSO2_QAP_BUILD_ID));
+        print('<a href="'+link+'">');
         print(list[i].WSO2_QAP_BUILD_NAME);
+        print("</a>");
         print('</td>');
         print(' <td>');
         print(list[i].WSO2_QAP_TEST_CASE_NAME);
