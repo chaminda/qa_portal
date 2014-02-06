@@ -24,7 +24,9 @@
             );
         print(' </td>');
         print(' <td>');
+        print('<nobr>');
         print(list.WSO2_QAP_ARTIFACT_NAME );
+        print('</nobr>');
         print('</td>');
         print('<td>');
         print("&nbsp;");
@@ -41,10 +43,16 @@
 
         print('<tr>');
         print('<td style="text-align:center; !important" width="10px">');
-        print('    <input name="productId" value="'+list[i].WSO2_QAP_PRODUCT_ID+'" onclick="resetVars()" class="chkBox" type="checkbox">');
+         print('    <input name="artifactId" value="'+list[i].WSO2_QAP_ARTIFACT_ID+'" onclick="resetVars()" class="chkBox" type="checkbox">'
+            );
         print('</td>');
         print(' <td>');
+        print('<nobr>');
+        var link = "artifact_dashboard.jag?data="+encodeURIComponent(stringify(list[i]));
+        print('<a href="'+link+'">');
         print(list[i].WSO2_QAP_ARTIFACT_NAME );
+        print('</a>');
+        print('</nobr>');
         print('</td>');
         print('<td>');
         print(list[i].WSO2_QAP_DESCRIPTION);

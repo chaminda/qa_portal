@@ -136,7 +136,7 @@ if(name===null){
 															<tr>
 																<td class="buttonRow"><input class="button" value="Save" type="submit"> 
                                 <input class="button" value="Cancel"
-																		onclick="location.href = 'artifact_home.jag'"
+																		onclick="location.href = 'artifacts_home.jag'"
 																		type="button">
 																</td>
 															</tr>

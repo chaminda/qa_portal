@@ -13,13 +13,14 @@ if(name===null){
 
 <body>
 
-  <!-- datatables imports start  -->
+   <!-- datatables imports start  -->
 
-    <style type="text/css" title="currentStyle">
+        <style type="text/css" title="currentStyle">
       @import "../resources/datatables/css/page.css";
       @import "../resources/datatables/css/table.css";
     </style>
 
+    <!--<script type="text/javascript" language="javascript" src="../resources/datatables/js/table_jquery.js"></script> -->
     <script type="text/javascript" language="javascript" src="../resources/datatables/js/jquery.dataTables.js"></script>
     <script type="text/javascript" charset="utf-8">
       $(document).ready(function() {
@@ -154,23 +155,26 @@ if(name===null){
                                             </tbody>
                                          </table>
                                          <table>
-                                            <tbody>
-                                               <tr>
-                                                <td><a href="#" onclick="selectAllInThisPage(true);return false;" style="cursor:pointer">Select all in this page</a>&nbsp;<b>|</b>&nbsp;</td>
-                                                <td><a href="#" onclick="selectAllInThisPage(false);return false;" style="cursor:pointer">Select none</a></td>
-                                                <td width="20%">&nbsp;</td>
-                                                <td><a href="#" id="delete1" onclick="deleteArtifacts();return false;">Delete</a></td>
-                                                <td width="10%">&nbsp;</td>
-                                                <td><a href="#" id="edit" onclick="editWebapps();return false;">Edit</a></td>
-                                             </tr>
-                                            </tbody>
-                                         </table>
+                                          <tbody>
+                                            <tr>
+                                              <td><nobr><a href="#" onclick="selectAllInThisPage(true);return false;" style="cursor:pointer">Select all in this page</a>&nbsp;<b>|</b>&nbsp;</nobr></td>
+                                              <td><nobr><a href="#" onclick="selectAllInThisPage(false);return false;" style="cursor:pointer">Select none</a></td>
+                                              <td width="10%">&nbsp;</nobr></td>
+                                              <td><a href="#" id="delete2" onclick="deleteArtifacts();return false;">Delete</a></td>
+                                              <td width="10%">&nbsp;</td>
+                                              <td><a href="#" id="edit" onclick="editWebapps();return false;">Edit</a></td>
+                                              <td width="10%">&nbsp;</td>
+                                                <td><a href="#" id="add2" onclick="location.href = 'add_artifact.jag'" >Add new</a> </td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                         
                                          <p>&nbsp;</p>
                                          <form action="../controller/deleteArtifacts.jag" name="artifactsForm" method="post">
                                             <input name="pageNumber" value="0" type="hidden">
                                             <input name="webappState" value="all" type="hidden">
                                             <input name="webappType" value="all" type="hidden">
-                                            <table class="styledLeft" id="webappsTable" width="100%">
+                                            <table class="styledLeft" id="artifactsTable" width="100%">
                                                     <col width="10">
                                                     <col width="100">
                                                     <col width="450">
@@ -193,26 +197,23 @@ if(name===null){
                                          </form>
                                          <p>&nbsp;</p>
                                          <table>
-                                            <tbody>
-                                               <tr>
-                                                <td><a href="#" onclick="selectAllInThisPage(true);return false;" style="cursor:pointer">Select all in this page</a>&nbsp;<b>|</b>&nbsp;</td>
-                                                <td><a href="#" onclick="selectAllInThisPage(false);return false;" style="cursor:pointer">Select none</a></td>
-                                                <td width="20%">&nbsp;</td>
-                                                <td><a href="#" id="delete1" onclick="deleteArtifacts();return false;">Delete</a></td>
-                                                <td width="10%">&nbsp;</td>
-                                                <td><a href="#" id="edit" onclick="editWebapps();return false;">Edit</a></td>
-                                             </tr>
-                                            </tbody>
-                                         </table>
-                                         <table>
-                                            <tbody>
-                                               <tr></tr>
-                                            </tbody>
-                                         </table>
-        </td>
-
-      </tr>
-      <tr>
+                                          <tbody>
+                                            <tr>
+                                              <td><nobr><a href="#" onclick="selectAllInThisPage(true);return false;" style="cursor:pointer">Select all in this page</a>&nbsp;<b>|</b>&nbsp;</nobr></td>
+                                              <td><nobr><a href="#" onclick="selectAllInThisPage(false);return false;" style="cursor:pointer">Select none</a></td>
+                                              <td width="10%">&nbsp;</nobr></td>
+                                              <td><a href="#" id="delete2" onclick="deleteArtifacts();return false;">Delete</a></td>
+                                              <td width="10%">&nbsp;</td>
+                                              <td><a href="#" id="edit" onclick="editWebapps();return false;">Edit</a></td>
+                                              <td width="10%">&nbsp;</td>
+                                              <td><a href="#" id="add2" onclick="location.href = 'add_artifact.jag'" >Add new</a> </td>
+                                            </tr>
+                                          </tbody>
+                                          </table>
+                                         
+              </td>
+            </tr>
+          <tr>
         <% 
         require("template/footer.jag")
         %>
