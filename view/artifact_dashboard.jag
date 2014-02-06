@@ -12,25 +12,25 @@ require("template/head.jag");
 </head>
 <body>
 
-<!-- datatables imports start  -->
+ <!-- datatables imports start  -->
 
-<style type="text/css" title="currentStyle">
-   @import "../resources/datatables/css/page.css";
-   @import "../resources/datatables/css/table.css";
-</style>
+        <style type="text/css" title="currentStyle">
+      @import "../resources/datatables/css/page.css";
+      @import "../resources/datatables/css/table.css";
+    </style>
 
-<!--<script type="text/javascript" language="javascript" src="../resources/datatables/js/table_jquery.js"></script> -->
+    <!--<script type="text/javascript" language="javascript" src="../resources/datatables/js/table_jquery.js"></script> -->
+    <script type="text/javascript" language="javascript" src="../resources/datatables/js/jquery.dataTables.js"></script>
+    <script type="text/javascript" charset="utf-8">
+      $(document).ready(function() {
+        $('#artifactsTable').dataTable( {
+          "sPaginationType": "full_numbers"
+        } );
+      } );
+    </script>
 
-<script type="text/javascript" language="javascript" src="../resources/datatables/js/jquery.dataTables.js"></script>
-<script type="text/javascript" charset="utf-8">
-   $(document).ready(function() {
-       $('#featuresTable').dataTable( {
-           "sPaginationType": "full_numbers"
-       } );
-   } );
-</script>
+    <!-- datatables imports end -->
 
-<!-- datatables imports end -->
 
 <div id="dcontainer"></div>
 <script type="text/javascript" src="../resources/js/dialog.js"></script>
@@ -95,7 +95,7 @@ include("template/product_menu_panel.jag");
                   var breadcrumbDiv = document.getElementById('breadcrumb-div');
                   breadcrumbDiv.innerHTML = '<table cellspacing="0"><tr>' +
                    '<td class="breadcrumb-link"><a href="../index.jag">QA Home</a>' +
-                   '<td class="breadcrumb-link"><a href="../view/sample_home.jag">&nbsp;>&nbsp;List</a>' +
+                   '<td class="breadcrumb-link"><a href="../view/artifacts_home.jag">&nbsp;>&nbsp;List</a>' +
                    '<td class="breadcrumb-link"><a href="#">&nbsp;>&nbsp;Test artifact</a></td>';
 
               }
@@ -124,7 +124,7 @@ include("template/product_menu_panel.jag");
       <input name="pageNumber" value="0" type="hidden">
       <input name="webappState" value="all" type="hidden">
       <input name="webappType" value="all" type="hidden">
-      <table class="styledLeft" id="webappTable" style="margin-left: 0px;"
+      <table class="styledLeft" id="artifactsTable" style="margin-left: 0px;"
                            width="100 ">
 
          <thead>
@@ -156,8 +156,8 @@ include("template/product_menu_panel.jag");
 
            </tbody>
 
-</table>
-</form>
+        </table>
+  </form>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <table>
@@ -177,15 +177,11 @@ include("template/product_menu_panel.jag");
 <p>&nbsp;</p>
 
 
-<form action="../controller/deleteTestresult.jag" name="testscenarioForm" method="post">
-   <input name="pageNumber" value="0" type="hidden">
-   <input name="webappState" value="all" type="hidden">
-   <input name="webappType" value="all" type="hidden">
-    <form action="../controller/deleteArtifacts.jag" name="artifactsForm" method="post">
+                    <form action="../controller/deleteArtifacts.jag" name="artifactsForm" method="post">
                                             <input name="pageNumber" value="0" type="hidden">
                                             <input name="webappState" value="all" type="hidden">
                                             <input name="webappType" value="all" type="hidden">
-                                            <table class="styledLeft" id="webappsTable" width="100%">
+                                            <table class="styledLeft" id="artifactsTable" width="100%">
                                                     <col width="10">
                                                     <col width="100">
                                                     <col width="450">

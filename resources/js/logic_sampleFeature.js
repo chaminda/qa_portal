@@ -81,10 +81,3 @@ function resetVars() {
     return false;
 }
 
-function addFeature(sampleid){
-
-
-//window.location.href="addfeatures_to_sample.jag?data="+encodeURIComponent(stringify(sampleid));
-    window.location.href="addfeatures_to_sample.jag?data="+sampleid;
-}
-
