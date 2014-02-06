@@ -1804,7 +1804,7 @@ function validateTextInput(){
     var inputs = document.getElementsByClassName('text-not-empty');
     for (var i = 0; i < inputs.length; ++i) {
         var item = inputs[i];
-        if(item.value===null || item.value===""){
+        if(item.value===null || item.value.trim()===""){
             CARBON.showWarningDialog(item.name+"  is mandatory");
             //alert(item.name+"  is mandatory");
             return false;
