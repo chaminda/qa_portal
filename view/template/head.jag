@@ -10,7 +10,7 @@ if(name==null || ROOT==null || SERVICE_ROOT==null){
 }
 
 %>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="expires" content="0"; charset=UTF-8">
 
 <title>WSO2 QA Portal</title>
 <link href="../resources/css/global.css" rel="stylesheet" type="text/css" media="all">
