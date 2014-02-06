@@ -38,22 +38,6 @@
 								</ul>
 							</li>
 
-							<li id="region1_testcase_menu" class="menu-header"
-								onclick="mainMenuCollapse(this.childNodes[0])"
-								style="cursor: pointer;"><img src="../resources/images/up-arrow.gif"
-								class="mMenuHeaders" id="region1_testcase_menu">Test Case</li>
-
-								<li class="normal">
-								<ul class="sub">
-									<li><a href="testcase_home.jag" class="menu-default"
-										style="background-image: url(../resources/images/list.gif);">List</a>
-									</li>
-									<li><a href="add_testcase.jag" class="menu-default"
-										style="background-image: url(../resources/images/add.gif);">Add Test Case</a>
-									</li>
-
-								</ul>
-							</li>
 
 							<li id="region1_testscenario_menu" class="menu-header"
 								onclick="mainMenuCollapse(this.childNodes[0])"
@@ -71,6 +55,25 @@
 
 								</ul>
 							</li>
+
+							<li id="region1_testcase_menu" class="menu-header"
+								onclick="mainMenuCollapse(this.childNodes[0])"
+								style="cursor: pointer;"><img src="../resources/images/up-arrow.gif"
+								class="mMenuHeaders" id="region1_testcase_menu">Test Case</li>
+
+								<li class="normal">
+								<ul class="sub">
+									<li><a href="testcase_home.jag" class="menu-default"
+										style="background-image: url(../resources/images/list.gif);">List</a>
+									</li>
+									<li><a href="add_testcase.jag" class="menu-default"
+										style="background-image: url(../resources/images/add.gif);">Add Test Case</a>
+									</li>
+
+								</ul>
+							</li>
+
+
 
 							<li id="region1_features_menu" class="menu-header"
 								onclick="mainMenuCollapse(this.childNodes[0])"

@@ -147,10 +147,12 @@
 														<tr class="tableOddRow">
 															<td class="formRow">Automation Status<font color="red">*</font>
 															</td>
-															<td><input type="text" id="WSO2_QAP_TEST_CASE_STATUS" name="WSO2_QAP_TEST_CASE_STATUS"
-																 onchange="">
-															
-															</td>
+
+															<td><select  id="WSO2_QAP_TEST_CASE_STATUS" name="WSO2_QAP_TEST_CASE_STATUS">
+															    <option value="Yes">Yes</option>
+															    <option value="No">No</option>
+
+															</select>
 														</tr>
 														<tr class="tableEvenRow">
 															<td class="formRow">Description<font color="red">*</font>
