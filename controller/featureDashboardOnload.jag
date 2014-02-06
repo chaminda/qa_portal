@@ -13,6 +13,7 @@
 	var objFeatureDetails = parse(dataFeatureDetails.data);
 	var listFeatureDetails = objFeatureDetails.WSO2_QAP_FEATURECollection.WSO2_QAP_FEATURE;
 
+
 print('<input type="hidden" name="WSO2_QAP_FEATURE_ID" value="'+WSO2_QAP_FEATURE_ID+'">');
 print("<tr class=\"tableOddRow\"><td>Description</td>");
 print("<td>"+listFeatureDetails.WSO2_QAP_DESCRIPTION+"</td></tr>");

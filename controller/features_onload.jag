@@ -26,8 +26,8 @@ if(list1==null){
 
 else if(!(list1 instanceof Array)){
 
-    var url2=SERVICE_SECURE_ROOT+"WSO2_QAP_FEATURE_DataService/view/feature_by_id/";
-    var param2="WSO2_QAP_FEATURE_ID="+list1.WSO2_QAP_FEATURE_ID;
+    var url2=SERVICE_SECURE_ROOT+"WSO2_QAP_FEATURE_DataService/view/feature_by_id/"+list1.WSO2_QAP_FEATURE_ID;
+    var param2="";
 
     var data2=get(url2,param2,optionalHeaders);
     var obj2 = parse(data2.data);

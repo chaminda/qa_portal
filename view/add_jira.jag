@@ -15,7 +15,7 @@ if(name===null){
 		<div class="something-wrong">
 			<div class="title">JavaScript is disabled on your browser</div>
 			<div class="content">Please enable JavaScript or upgrade to a
-				JavaScript-capable browser to use WSO2 Products.</div>
+				JavaScript-capable browser to use Jira.</div>
 		</div>
 	</noscript>
 	<div id="dcontainer"></div>
@@ -64,11 +64,9 @@ if(name===null){
                                                                     <td class="breadcrumb-link">
                                                                        <a href="index.jag">QA Home</a>
                                                                     </td>
-                                                                    <td class="breadcrumb-link">
-                                                                       <a href="product_home.jag">&nbsp;&gt;&nbsp;Products</a>
-                                                                    </td>
-                                                                    <td class="breadcrumb-link">&nbsp;&gt;&nbsp;List</td>
-                                                                    <td class="breadcrumb-link">&nbsp;&gt;&nbsp;Test Artifact</td>
+                                                                    <td class="breadcrumb-link">&nbsp;&gt;&nbsp;Test Results</td>
+                                                                    <td class="breadcrumb-link">&nbsp;&gt;&nbsp;Jira</td>
+                                                                    <td class="breadcrumb-link">&nbsp;&gt;&nbsp;Add</td>
                                                                  </tr>
                                                               </tbody>
                                                            </table>
@@ -93,26 +91,26 @@ if(name===null){
                                 document.onload=setBreadcrumDiv();
                                 function setBreadcrumDiv () {
                                   var breadcrumbDiv = document.getElementById('breadcrumb-div');
-                                  breadcrumbDiv.innerHTML = '<table cellspacing="0"><tr><td class="breadcrumb-link"><a href="index.jag">QA Home</a></td><td class="breadcrumb-link"><a href="product_home.jag">&nbsp;>&nbsp;Products</a></td><td class="breadcrumb-link">&nbsp;>&nbsp;List</td><td class="breadcrumb-link">&nbsp;>&nbsp;Test Artifact</td>';
+                                  breadcrumbDiv.innerHTML = '<table cellspacing="0"><tr><td class="breadcrumb-link"><a href="index.jag">QA Home</a></td><td class="breadcrumb-link">&nbsp;>&nbsp;Test Results</td><td class="breadcrumb-link">&nbsp;>&nbsp;Jira</td><td class="breadcrumb-link">&nbsp;>&nbsp;Add</td>';
                                }
                     </script> 
 
                     <script type="text/javascript" src="../resources/js/ui_validator.js"></script>
                                 
                    	<div id="middle">
-										<h2>Add Artifact</h2>
+										<h2>Add Jira</h2>
 											<div id="workArea">
 
-												<form name="add_artifact"
-													action="../controller/addArtifact.jag" method="post"
-													onsubmit="return validateInput('add_artifact','WSO2_QAP_ARTIFACT_NAME');return false;">
+												<form name="add_jira"
+													action="../controller/addJira.jag" method="post"
+													onsubmit="return validateInput('add_jira','WSO2_QAP_URL');return false;">
 													 <table class="styledLeft" id="archiveTbl">
 														  <tbody>
 															<tr class="tableOddRow">
-																<td class="formRow">Artifact Name<span class="required">*</span>
+																<td class="formRow">Jira URL<span class="required">*</span>
 																</td>
-																<td align="left"><input type="text" id="artifactname"
-																	name="WSO2_QAP_ARTIFACT_NAME">
+																<td align="left"><input type="text" id="jiraurl"
+																	name="WSO2_QAP_URL">
 																
 																</td>
 															</tr>
@@ -122,12 +120,6 @@ if(name===null){
 																	name="WSO2_QAP_DESCRIPTION" class="longInput" value="">
 																</td>
 															</tr>
-															<tr class="tableOddRow">
-																<td class="formRow">Location URI</td>
-																<td class="formRow"><input type="text" id="locationuri"
-																	name="WSO2_QAP_LOCATION">
-																</td>
-															 </tr>
 														  </tbody>
 													   </table>
 
@@ -135,8 +127,8 @@ if(name===null){
 														<tbody>
 															<tr>
 																<td class="buttonRow"><input class="button" value="Save" type="submit"> 
-                                <input class="button" value="Cancel"
-																		onclick="location.href = 'artifacts_home.jag'"
+                                								<input class="button" value="Cancel"
+																		onclick="location.href = 'jira_home.jag'"
 																		type="button">
 																</td>
 															</tr>
