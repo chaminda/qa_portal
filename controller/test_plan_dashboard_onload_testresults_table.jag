@@ -1,0 +1,88 @@
+<%
+   include("base64_encode.jag");
+   var SERVICE_SECURE_ROOT = session.get("service_secure_root");
+   // print('<input type="hidden" name="WSO2_QAP_PRODUCT_VERSION_ID" value="'+WSO2_QAP_PRODUCT_VERSION_ID+'">');
+
+   print('<tr bgcolor="#EEEFFB">');
+   print('<td>');
+   print('<strong> Build Name <strong/>');
+   print('</td>');
+   print('<td>');
+   print('<strong> Test Case Name <strong/>');
+   print('</td>');
+   print('<td>');
+   print('<strong> Test Status <strong/>');
+   print('</td>');
+   print('<td>');
+   print('<strong> Automation Results <strong/>');
+   print('</td>');
+   print('<td>');
+   print('<strong> Tested By <strong/>');
+   print('</td>');
+   print('</tr>');
+   print('<input type="hidden" name="WSO2_QAP_TEST_PLAN_ID" value="'+jd2.WSO2_QAP_TEST_PLAN_ID+'">');
+
+   var url = SERVICE_SECURE_ROOT+"WSO2_QAP_TEST_PLAN_DataService/view/map_build_with_results/"+jd2.WSO2_QAP_TEST_PLAN_ID;
+
+   var optionalHeaders = {
+    "Accept": "application/json",
+            "Authorization": "Basic "+base64_encode("admin:admin") };
+
+   var data = get(url,"",optionalHeaders);
+   var obj = parse(data.data);
+   var list = obj.WSO2_QAP_BUILD_RESULTCollection.WSO2_QAP_BUILD_RESULT;
+
+   if(list.length==null && list.WSO2_QAP_BUILD_NAME!=null){
+  
+        print('<tr>');
+        print(' <td>');
+        // print("&emsp;&emsp;&emsp;");
+        print(list.WSO2_QAP_BUILD_NAME);
+        print('</td>');
+        print(' <td>');
+        print(list.WSO2_QAP_TEST_CASE_NAME);
+        print('</td>');
+        print(' <td>');
+        print(list.WSO2_QAP_TEST_STATUS);
+        print('</td>');
+        print(' <td>');
+        print(list.WSO2_QAP_AUTOMATION_TEST_RESULT);
+        print('</td>');
+        print(' <td>');
+        print(list.WSO2_QAP_TESTED_BY);
+        print('</td>');
+        print('</tr>');
+
+    }
+    else{
+        for (var i=0;i<list.length;i++)
+        {
+
+          if(i%2==1){
+            print('<tr bgcolor="#EEEFFB">');
+          }
+          else{
+            print('<tr>');
+          }
+        print(' <td>');
+        print(list[i].WSO2_QAP_BUILD_NAME);
+        print('</td>');
+        print(' <td>');
+        print(list[i].WSO2_QAP_TEST_CASE_NAME);
+        print('</td>');
+        print(' <td>');
+        print(list[i].WSO2_QAP_TEST_STATUS);
+        print('</td>');
+        print(' <td>');
+        print(list[i].WSO2_QAP_AUTOMATION_TEST_RESULT);
+        print('</td>');
+        print(' <td>');
+        print(list[i].WSO2_QAP_TESTED_BY);
+        print('</td>');
+        print('</tr>');
+
+        }
+   }
+
+   // print(list2);
+%>   
