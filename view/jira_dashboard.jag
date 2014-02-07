@@ -12,25 +12,25 @@ require("template/head.jag");
 </head>
 <body>
 
- <!-- datatables imports start  -->
+<!-- datatables imports start  -->
 
-        <style type="text/css" title="currentStyle">
-      @import "../resources/datatables/css/page.css";
-      @import "../resources/datatables/css/table.css";
-    </style>
+<style type="text/css" title="currentStyle">
+   @import "../resources/datatables/css/page.css";
+   @import "../resources/datatables/css/table.css";
+</style>
 
-    <!--<script type="text/javascript" language="javascript" src="../resources/datatables/js/table_jquery.js"></script> -->
-    <script type="text/javascript" language="javascript" src="../resources/datatables/js/jquery.dataTables.js"></script>
-    <script type="text/javascript" charset="utf-8">
-      $(document).ready(function() {
-        $('#artifactsTable').dataTable( {
-          "sPaginationType": "full_numbers"
-        } );
-      } );
-    </script>
+<!--<script type="text/javascript" language="javascript" src="../resources/datatables/js/table_jquery.js"></script> -->
 
-    <!-- datatables imports end -->
+<script type="text/javascript" language="javascript" src="../resources/datatables/js/jquery.dataTables.js"></script>
+<script type="text/javascript" charset="utf-8">
+   $(document).ready(function() {
+       $('#jiraTable').dataTable( {
+           "sPaginationType": "full_numbers"
+       } );
+   } );
+</script>
 
+<!-- datatables imports end -->
 
 <div id="dcontainer"></div>
 <script type="text/javascript" src="../resources/js/dialog.js"></script>
@@ -95,8 +95,8 @@ include("template/product_menu_panel.jag");
                   var breadcrumbDiv = document.getElementById('breadcrumb-div');
                   breadcrumbDiv.innerHTML = '<table cellspacing="0"><tr>' +
                    '<td class="breadcrumb-link"><a href="../index.jag">QA Home</a>' +
-                   '<td class="breadcrumb-link"><a href="../view/artifacts_home.jag">&nbsp;>&nbsp;List</a>' +
-                   '<td class="breadcrumb-link"><a href="#">&nbsp;>&nbsp;Test artifact</a></td>';
+                   '<td class="breadcrumb-link"><a href="../view/jira_home.jag">&nbsp;>&nbsp;List</a>' +
+                   '<td class="breadcrumb-link"><a href="#">&nbsp;>&nbsp;Jira Dashboard</a></td>';
 
               }
             </script>
@@ -106,14 +106,13 @@ include("template/product_menu_panel.jag");
                  <div id="middle">
 
                 <%
-                
                 var req_data = request.getParameter("data");
                 json_data = parse(decodeURIComponent(req_data));
-                if(json_data.WSO2_QAP_ARTIFACT_ID===null || json_data.WSO2_QAP_ARTIFACT_NAME===null){
+                if(json_data.WSO2_QAP_JIRA_ID===null || json_data.WSO2_QAP_URL===null){
                 print("Sorry this page isn't available");
                 }else{
                 print("<h2>");
-                print(json_data.WSO2_QAP_ARTIFACT_NAME);
+                print(json_data.WSO2_QAP_URL);
                 print("</h2>");
                 }
                 %>
@@ -125,12 +124,12 @@ include("template/product_menu_panel.jag");
       <input name="pageNumber" value="0" type="hidden">
       <input name="webappState" value="all" type="hidden">
       <input name="webappType" value="all" type="hidden">
-      <table class="styledLeft" id="artifactsTable" style="margin-left: 0px;"
+      <table class="styledLeft" id="webappTable" style="margin-left: 0px;"
                            width="100 ">
 
          <thead>
           <tr class="tableEvenRow">
-            <th colspan="2" align="left"><strong><%= json_data.WSO2_QAP_ARTIFACT_NAME%></strong></th>
+            <th colspan="2" align="left"><strong><%= json_data.WSO2_QAP_URL%></strong></th>
 
           </tr>
           </thead>
@@ -145,20 +144,10 @@ include("template/product_menu_panel.jag");
             </td>
            </tr>
 
-            <tr class="tableEvenRow">
-           <td>
-                <strong>Location URL</strong>
-           </td>
-            <td>
-            <%= json_data.WSO2_QAP_LOCATION%>
-            </td>
-           </tr>
-
-
            </tbody>
 
-        </table>
-  </form>
+</table>
+</form>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <table>
@@ -172,48 +161,8 @@ include("template/product_menu_panel.jag");
 
 <p>&nbsp;</p>
 
-<h2>Test Cases</h2>
-
 
 <p>&nbsp;</p>
-
-
-                    <form action="../controller/deleteArtifacts.jag" name="artifactsForm" method="post">
-                                            <input name="pageNumber" value="0" type="hidden">
-                                            <input name="webappState" value="all" type="hidden">
-                                            <input name="webappType" value="all" type="hidden">
-                                            <table class="styledLeft" id="artifactsTable" width="100%">
-                                                    <col width="10">
-                                                    <col width="100">
-                                                    <col width="450">
-                                               <thead>
-                                                  <tr>
-                                                     <th>&nbsp;</th>
-                                                     <th>
-                                                        <nobr>Name</nobr>
-                                                     </th>
-                                                     <th>Description</th>
-                                                     <th>Test Case Automation Status</th>
-                                                  </tr>
-                                               </thead>
-                                               <tbody>
-                                                 <%
-                                                   include("../controller/artifact_dashboard_onLoad.jag");
-                                                %>
-                                               </tbody>
-                                            </table>
-                                         </form>
-
-<p>&nbsp;</p>
-<table>
-<tbody>
-<tr>
-<td><a href="#" id="edit" onclick="editWebapps();return false;">Edit</a></td>
-<td width="10%">&nbsp;</td>
-</tr>
-</tbody>
-</table>
-
 
 </div>
 </div>
