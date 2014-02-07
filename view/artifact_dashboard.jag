@@ -106,6 +106,7 @@ include("template/product_menu_panel.jag");
                  <div id="middle">
 
                 <%
+                
                 var req_data = request.getParameter("data");
                 json_data = parse(decodeURIComponent(req_data));
                 if(json_data.WSO2_QAP_ARTIFACT_ID===null || json_data.WSO2_QAP_ARTIFACT_NAME===null){
