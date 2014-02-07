@@ -3,7 +3,7 @@
 include("base64_encode.jag");
 var SERVICE_SECURE_ROOT = session.get("service_secure_root");
 
-var url  = SERVICE_SECURE_ROOT+"WSO2_QAP_SAMPLE_FEATURE_MAPPING_DataService/view/features_without_sampleid/"+json_data;
+var url  = SERVICE_SECURE_ROOT+"WSO2_QAP_SAMPLE_FEATURE_MAPPING_DataService/view/samples_without_featureid//"+json_data;
 
 
 

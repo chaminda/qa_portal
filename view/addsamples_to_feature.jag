@@ -95,8 +95,8 @@ include("template/product_menu_panel.jag");
                   var breadcrumbDiv = document.getElementById('breadcrumb-div');
                   breadcrumbDiv.innerHTML = '<table cellspacing="0"><tr>' +
                    '<td class="breadcrumb-link"><a href="../index.jag">QA Home</a>' +
-                   '<td class="breadcrumb-link"><a href="../view/sample_home.jag">&nbsp;>&nbsp;Samples home</a>' +
-                   '<td class="breadcrumb-link"><a href="#">&nbsp;>&nbsp;sample</a></td>';
+                   '<td class="breadcrumb-link"><a href="../view/sample_home.jag">&nbsp;>&nbsp;Features</a>' +
+                   '<td class="breadcrumb-link"><a href="#">&nbsp;>&nbsp;feature</a></td>';
 
               }
             </script>
@@ -114,7 +114,7 @@ json_data = parse(decodeURIComponent(req_data));
 //}else{
     print("<h2>");
     //print("Available features for "+json_data.WSO2_QAP_SAMPLE_NAME);
-print("Available features for "+json_data);
+print("Available Samples for "+json_data);
     print("</h2>");
 //}
                     %>
@@ -131,7 +131,7 @@ print("Available features for "+json_data);
 <td><a href="#" onclick="selectAllInThisPage(true);return false;" style="cursor:pointer">Select all in this page</a>&nbsp;<b>|</b>&nbsp;</td>
 <td><a href="#" onclick="selectAllInThisPage(false);return false;" style="cursor:pointer">Select none</a></td>
 <td width="10%">&nbsp;</td>
-<td><a href="#" id="add2" onclick="addFeature();return false;">Add features</a></td>
+<td><a href="#" id="add2" onclick="addSamples();return false;">Add samples</a></td>
 
 
 
@@ -142,19 +142,19 @@ print("Available features for "+json_data);
 <p>&nbsp;</p>
 
 
-<form action="../controller/deleteTestresult.jag" name="availablefeaturesForm" method="post">
+<form action="../controller/deleteTestresult.jag" name="availablesamplesForm" method="post">
    <input name="pageNumber" value="0" type="hidden">
    <input name="webappState" value="all" type="hidden">
    <input name="webappType" value="all" type="hidden">
-   <table class="display" id="availablefeaturesTable" cellpadding="0" cellspacing="0" border="0" width="100%">
+   <table class="display" id="availablesamplesTable" cellpadding="0" cellspacing="0" border="0" width="100%">
       <thead>
          <tr>
             <th>&nbsp;</th>
             <th>
-               <nobr>Feature Description</nobr>
+               <nobr>Name</nobr>
             </th>
             <th>
-            <nobr>Redmine URL</nobr>
+            <nobr>Description</nobr>
             </th>
 
 
@@ -162,7 +162,7 @@ print("Available features for "+json_data);
       </thead>
       <tbody>
 <%
-include("../controller/availablefeatures_onload.jag");
+include("../controller/availablesamples_onload.jag");
 %>
 
 </tbody>
@@ -176,7 +176,7 @@ include("../controller/availablefeatures_onload.jag");
 <td><a href="#" onclick="selectAllInThisPage(true);return false;" style="cursor:pointer">Select all in this page</a>&nbsp;<b>|</b>&nbsp;</td>
 <td><a href="#" onclick="selectAllInThisPage(false);return false;" style="cursor:pointer">Select none</a></td>
 <td width="10%">&nbsp;</td>
-<td><a href="#" id="add2" onclick="addFeature();return false;">Add features</a></td>
+<td><a href="#" id="add2" onclick="addSamples();return false;">Add samples</a></td>
 
 
 </tr>

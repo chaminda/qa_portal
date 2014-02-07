@@ -138,7 +138,7 @@ if(json_data.list.WSO2_QAP_TEST_CASE_ID===null || json_data.list.WSO2_QAP_TEST_C
 
            <tbody>
            <tr class="tableOddRow">
-           <td>
+           <td width="300">
                 <strong>Description</strong>
            </td>
             <td>
@@ -147,7 +147,7 @@ if(json_data.list.WSO2_QAP_TEST_CASE_ID===null || json_data.list.WSO2_QAP_TEST_C
            </tr>
 
             <tr class="tableEvenRow">
-           <td>
+           <td width="300">
                 <strong>Automation Status</strong>
            </td>
             <td>
@@ -156,7 +156,7 @@ if(json_data.list.WSO2_QAP_TEST_CASE_ID===null || json_data.list.WSO2_QAP_TEST_C
            </tr>
 
             <tr class="tableOddRow">
-           <td>
+           <td width="300">
                 <strong>Artifact name</strong>
            </td>
             <td>
@@ -165,7 +165,7 @@ if(json_data.list.WSO2_QAP_TEST_CASE_ID===null || json_data.list.WSO2_QAP_TEST_C
            </tr>
 
              <tr class="tableEvenRow">
-           <td>
+           <td width="300">
                 <strong>Auto test class name</strong>
            </td>
             <td>
@@ -190,7 +190,7 @@ if(json_data.list.WSO2_QAP_TEST_CASE_ID===null || json_data.list.WSO2_QAP_TEST_C
 
     <tbody>
         <tr class="tableOddRow">
-           <td>
+           <td width="300">
                 <strong>Description</strong>
            </td>
             <td>
@@ -199,11 +199,11 @@ if(json_data.list.WSO2_QAP_TEST_CASE_ID===null || json_data.list.WSO2_QAP_TEST_C
          </tr>
 
          <tr class="tableEvenRow">
-           <td>
+           <td width="300">
                 <strong>SVN Location</strong>
            </td>
             <td>
-            <%= json_data.artifactLocation%>
+            <a href="'<%= json_data.artifactLocation%>'"  ><%= json_data.artifactLocation%></a>
             </td>
            </tr>
 
@@ -225,7 +225,7 @@ if(json_data.list.WSO2_QAP_TEST_CASE_ID===null || json_data.list.WSO2_QAP_TEST_C
 
          <tbody>
                  <tr class="tableOddRow">
-           <td>
+           <td width="300">
                 <strong>Auto test class name</strong>
            </td>
             <td>
@@ -234,7 +234,7 @@ if(json_data.list.WSO2_QAP_TEST_CASE_ID===null || json_data.list.WSO2_QAP_TEST_C
          </tr>
 
          <tr class="tableEvenRow">
-           <td>
+           <td width="300">
                 <strong>Location</strong>
            </td>
             <td>
