@@ -154,9 +154,9 @@ if(name===null){
                                          <table>
                                           <tbody>
                                             <tr>
-                                              <td><a href="#" onclick="selectAllInThisPage(true);return false;" style="cursor:pointer">Select all in this page</a>&nbsp;<b>|</b>&nbsp;</td>
-                                              <td><a href="#" onclick="selectAllInThisPage(false);return false;" style="cursor:pointer">Select none</a></td>
-                                              <td width="10%">&nbsp;</td>
+                                              <td><nobr><a href="#" onclick="selectAllInThisPage(true);return false;" style="cursor:pointer">Select all in this page</a>&nbsp;<b>|</b>&nbsp;</nobr></td>
+                                              <td><nobr><a href="#" onclick="selectAllInThisPage(false);return false;" style="cursor:pointer">Select none</a></td>
+                                              <td width="10%">&nbsp;</nobr></td>
                                               <td><a href="#" id="delete2" onclick="deleteJira();return false;">Delete</a></td>
                                               <td width="10%">&nbsp;</td>
                                               <td><a href="#" id="edit" onclick="editWebapps();return false;">Edit</a></td>
@@ -171,7 +171,7 @@ if(name===null){
                                             <input name="pageNumber" value="0" type="hidden">
                                             <input name="webappState" value="all" type="hidden">
                                             <input name="webappType" value="all" type="hidden">
-                                            <table class="styledLeft" id="webappsTable" width="100%">
+                                            <table class="styledLeft" id="jiraTable" width="100%">
                                                     <col width="10">
                                                     <col width="100">
                                                     <col width="450">
@@ -195,9 +195,9 @@ if(name===null){
                                          <table>
                                           <tbody>
                                             <tr>
-                                              <td><a href="#" onclick="selectAllInThisPage(true);return false;" style="cursor:pointer">Select all in this page</a>&nbsp;<b>|</b>&nbsp;</td>
-                                              <td><a href="#" onclick="selectAllInThisPage(false);return false;" style="cursor:pointer">Select none</a></td>
-                                              <td width="10%">&nbsp;</td>
+                                              <td><nobr><a href="#" onclick="selectAllInThisPage(true);return false;" style="cursor:pointer">Select all in this page</a>&nbsp;<b>|</b>&nbsp;</nobr></td>
+                                              <td><nobr><a href="#" onclick="selectAllInThisPage(false);return false;" style="cursor:pointer">Select none</a></td>
+                                              <td width="10%">&nbsp;</nobr></td>
                                               <td><a href="#" id="delete2" onclick="deleteJira();return false;">Delete</a></td>
                                               <td width="10%">&nbsp;</td>
                                               <td><a href="#" id="edit" onclick="editWebapps();return false;">Edit</a></td>
