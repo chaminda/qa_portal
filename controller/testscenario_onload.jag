@@ -41,8 +41,8 @@ else if(!(list1 instanceof Array)){
     print(' </td>');
 
     print(' <td>');
-    var link = "view_testcase.jag?data="+encodeURIComponent(stringify(object));
-    //print('<a href="'+link+'">');
+    var link = "test_scenario_dashboard.jag?data="+encodeURIComponent(stringify(list2.WSO2_QAP_TEST_SCENARIO_ID));
+    print('<a href="'+link+'">');
     print("&emsp;&emsp;&emsp;");
     print(list2.WSO2_QAP_TEST_SCENARIO_NAME );
     print('</a>');
@@ -75,8 +75,8 @@ for (var i=0;i<list1.length;i++)
     print(' </td>');
 
     print(' <td>');
-    //var link = "view_testcase.jag?data="+encodeURIComponent(stringify(object));
-    //print('<a href="'+link+'">');
+    var link = "test_scenario_dashboard.jag?data="+encodeURIComponent(stringify(list2.WSO2_QAP_TEST_SCENARIO_ID));
+    print('<a href="'+link+'">');
     print("&emsp;&emsp;&emsp;");
     print(list2.WSO2_QAP_TEST_SCENARIO_NAME );
     print('</a>');
