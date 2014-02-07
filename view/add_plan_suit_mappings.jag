@@ -203,7 +203,12 @@
 
                                    <div id="middle">
                                     <%
-                                        var WSO2_QAP_TEST_PLAN_ID = request.getParameter("data");
+                                        var encoded_data = request.getParameter("data");
+                                        var decoded_data = JSON.parse(decodeURIComponent(encoded_data));
+                                        var decoded_data2 = parse(decoded_data);
+                                        var WSO2_QAP_TEST_PLAN_ID = decoded_data2.WSO2_QAP_TEST_PLAN_ID;
+                                        var WSO2_QAP_PRODUCT_NAME = decoded_data2.WSO2_QAP_PRODUCT_NAME;
+                                        var WSO2_QAP_PRODUCT_VERSION = decoded_data2.WSO2_QAP_PRODUCT_VERSION;
                                     %>
                                     <div id="workArea">
 
@@ -234,7 +239,7 @@
                                              </tr>
                                           </tbody>
                                        </table>
-                                    <form name="testSuitPlanMappingForm">
+                                    <form name="testSuitPlanMappingForm" action="../controller/add_suits_to_plan_suit_mapping.jag" method="post">
                                           <table class="display" id="testSuitPlanMappingTable" cellpadding="0" cellspacing="0" border="0" width="100%">
                                              <thead>
                                                 <tr>
@@ -247,9 +252,23 @@
                                              <tbody>
                                                 <%
                                                    include("../controller/add_suits_to_plan.jag");
+
                                                 %>
+
                                              </tbody>
                                           </table>
+                                          <p>&nbsp;</p>
+                                          <table>
+                                            <tbody>
+                                              <tr>
+                                                <td>&nbsp;</td>
+                                                <td>
+                                                  <input type="submit" value="Submit">
+                                                </td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                          
                                        </form>
                                        <p>&nbsp;</p>
                                        <table>

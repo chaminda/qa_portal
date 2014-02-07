@@ -214,7 +214,8 @@
 
                                     
                                     <%
-                                       var link_redir = "location.href = 'add_plan_suit_mappings.jag?data="+jd2.WSO2_QAP_TEST_PLAN_ID+"'";
+                                      var passjsondata='{"WSO2_QAP_TEST_PLAN_ID" : "'+jd2.WSO2_QAP_TEST_PLAN_ID+'","WSO2_QAP_PRODUCT_NAME" : "'+jd2.WSO2_QAP_PRODUCT_NAME+'","WSO2_QAP_PRODUCT_VERSION" : "'+jd2.WSO2_QAP_PRODUCT_VERSION+'"}';
+                                       var link_redir = "location.href = 'add_plan_suit_mappings.jag?data="+encodeURIComponent(stringify(passjsondata))+"'";
                                     %>
                                     <div>
                                        <table>

@@ -9,7 +9,8 @@
    print('<strong> Test Suit Name <strong/>');
    print('</td>');
    print('<input type="hidden" name="WSO2_QAP_TEST_PLAN_ID" value="'+WSO2_QAP_TEST_PLAN_ID+'">');
-
+   print('<input type="hidden" name="WSO2_QAP_PRODUCT_NAME" value="'+WSO2_QAP_PRODUCT_NAME+'">');
+   print('<input type="hidden" name="WSO2_QAP_PRODUCT_VERSION" value="'+WSO2_QAP_PRODUCT_VERSION+'">');
    var url = SERVICE_SECURE_ROOT+"WSO2_QAP_TEST_SUIT_DataService/get/testsuits_not_in_testplan_mappin_by_testsuit_id/"+WSO2_QAP_TEST_PLAN_ID;
 
    var optionalHeaders = {
@@ -65,6 +66,5 @@
 
         }
    }
-
    // print(list2);
 %>   
