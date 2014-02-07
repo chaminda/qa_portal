@@ -24,7 +24,7 @@ require("template/head.jag");
 <script type="text/javascript" language="javascript" src="../resources/datatables/js/jquery.dataTables.js"></script>
 <script type="text/javascript" charset="utf-8">
    $(document).ready(function() {
-       $('#featuresTable').dataTable( {
+       $('#availablesamplesTable').dataTable( {
            "sPaginationType": "full_numbers"
        } );
    } );
@@ -86,7 +86,7 @@ include("template/product_menu_panel.jag");
       <tr>
          <td id="body">
             <img src="../resources/images/1px.gif" width="735px" height="1px">
-            <script src="../resources/js/logic_availableFeatures.js" type="text/javascript"></script>
+            <script src="../resources/js/logic_availableSamples.js" type="text/javascript"></script>
 
             <script type="text/javascript">
             setCookie('current-breadcrumb', 'manage_menu,webapps_menu,webapps_list_menu#');
@@ -142,7 +142,7 @@ print("Available Samples for "+json_data);
 <p>&nbsp;</p>
 
 
-<form action="../controller/deleteTestresult.jag" name="availablesamplesForm" method="post">
+<form action="../controller/addSamplestoFeature.jag?data=<%=json_data%>" name="availablesamplesForm" method="post">
    <input name="pageNumber" value="0" type="hidden">
    <input name="webappState" value="all" type="hidden">
    <input name="webappType" value="all" type="hidden">
@@ -163,7 +163,11 @@ print("Available Samples for "+json_data);
       <tbody>
 <%
 include("../controller/availablesamples_onload.jag");
+
+var WSO2_QAP_ARTIFACT_ID=json_data;
 %>
+
+
 
 </tbody>
 </table>

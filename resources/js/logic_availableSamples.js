@@ -1,21 +1,21 @@
 var allSelected = false;
 
 
-function isAvailableFeatureSelected() {
+function isAvailableSamplesSelected() {
     var selected = false;
-    if (document.availablefeaturesForm.WSO2_QAP_FEATURE_ID[0] != null) { // there is more than 1
-        for (var j = 0; j < document.availablefeaturesForm.WSO2_QAP_FEATURE_ID.length; j++) {
-            selected = document.availablefeaturesForm.WSO2_QAP_FEATURE_ID[j].checked;
+    if (document.availablesamplesForm.WSO2_QAP_SAMPLE_ID[0] != null) { // there is more than 1
+        for (var j = 0; j < document.availablesamplesForm.WSO2_QAP_SAMPLE_ID.length; j++) {
+            selected = document.availablesamplesForm.WSO2_QAP_SAMPLE_ID[j].checked;
             if (selected) break;
         }
-    } else if (document.availablefeaturesForm.WSO2_QAP_FEATURE_ID != null) { // only 1
-        selected = document.availablefeaturesForm.WSO2_QAP_FEATURE_ID.checked;
+    } else if (document.availablesamplesForm.WSO2_QAP_SAMPLE_ID != null) { // only 1
+        selected = document.availablesamplesForm.WSO2_QAP_SAMPLE_ID.checked;
     }
     return selected;
 }
 
-function deleteFeature() {
-    var selected = isAvailableFeatureSelected();
+function deleteSample() {
+    var selected = isAvailableSamplesSelected();
     if (!selected) {
         CARBON.showInfoDialog('Please select the samples to be deleted.');
         return;
@@ -24,15 +24,15 @@ function deleteFeature() {
         CARBON.showConfirmationDialog("Do you want to delete all samples?",
             function () {
 
-                document.availablefeaturesForm.action = '../controller/deleteSample.jag';
-                document.availablefeaturesForm.submit();
+                document.availablesamplesForm.action = '../controller/deleteSample.jag';
+                document.availablesamplesForm.submit();
             }
         );
     } else {
         CARBON.showConfirmationDialog("Do you want to delete the selected samples?",
             function () {
-                document.availablefeaturesForm.action = '../controller/deleteSample.jag';
-                document.availablefeaturesForm.submit();
+                document.availablesamplesForm.action = '../controller/deleteSample.jag';
+                document.availablesamplesForm.submit();
             }
         );
     }
@@ -40,19 +40,19 @@ function deleteFeature() {
 
 function selectAllInThisPage(isSelected) {
     allSelected = false;
-    if (document.availablefeaturesForm.WSO2_QAP_FEATURE_ID != null &&
-        document.availablefeaturesForm.WSO2_QAP_FEATURE_ID[0] != null) { // there is more than 1
+    if (document.availablesamplesForm.WSO2_QAP_SAMPLE_ID != null &&
+        document.availablesamplesForm.WSO2_QAP_SAMPLE_ID[0] != null) { // there is more than 1
         if (isSelected) {
-            for (var j = 0; j < document.availablefeaturesForm.WSO2_QAP_FEATURE_ID.length; j++) {
-                document.availablefeaturesForm.WSO2_QAP_FEATURE_ID[j].checked = true;
+            for (var j = 0; j < document.availablesamplesForm.WSO2_QAP_SAMPLE_ID.length; j++) {
+                document.availablesamplesForm.WSO2_QAP_SAMPLE_ID[j].checked = true;
             }
         } else {
-            for (j = 0; j < document.availablefeaturesForm.WSO2_QAP_FEATURE_ID.length; j++) {
-                document.availablefeaturesForm.WSO2_QAP_FEATURE_ID[j].checked = false;
+            for (j = 0; j < document.availablesamplesForm.WSO2_QAP_SAMPLE_ID.length; j++) {
+                document.availablesamplesForm.WSO2_QAP_SAMPLE_ID[j].checked = false;
             }
         }
-    } else if (document.availablefeaturesForm.WSO2_QAP_FEATURE_ID != null) { // only 1
-        document.availablefeaturesForm.WSO2_QAP_FEATURE_ID.checked = isSelected;
+    } else if (document.availablesamplesForm.WSO2_QAP_SAMPLE_ID != null) { // only 1
+        document.availablesamplesForm.WSO2_QAP_SAMPLE_ID.checked = isSelected;
     }
     return false;
 }
@@ -67,23 +67,37 @@ function resetVars() {
     allSelected = false;
 
     var isSelected = false;
-    if (document.availablefeaturesForm.WSO2_QAP_FEATURE_ID[0] != null) { // there is more than 1 sg
-        for (var j = 0; j < document.availablefeaturesForm.WSO2_QAP_FEATURE_ID.length; j++) {
-            if (document.availablefeaturesForm.WSO2_QAP_FEATURE_ID[j].checked) {
+    if (document.availablesamplesForm.WSO2_QAP_SAMPLE_ID[0] != null) { // there is more than 1 sg
+        for (var j = 0; j < document.availablesamplesForm.WSO2_QAP_SAMPLE_ID.length; j++) {
+            if (document.availablesamplesForm.WSO2_QAP_SAMPLE_ID[j].checked) {
                 isSelected = true;
             }
         }
-    } else if (document.availablefeaturesForm.WSO2_QAP_FEATURE_ID != null) { // only 1 sg
-        if (document.availablefeaturesForm.WSO2_QAP_FEATURE_ID.checked) {
+    } else if (document.availablesamplesForm.WSO2_QAP_SAMPLE_ID != null) { // only 1 sg
+        if (document.availablesamplesForm.WSO2_QAP_SAMPLE_ID.checked) {
             isSelected = true;
         }
     }
     return false;
 }
 
-function addFeature()
+function addSamples()
 {
-    var selected = isAvailableFeatureSelected();
+
+    var selected = isAvailableSamplesSelected();
+
+    if (!selected) {
+        CARBON.showInfoDialog('Please select the samples to be added');
+        return;
+    }
+     else {
+        CARBON.showConfirmationDialog("Do you want to add the selected samples?",
+            function () {
+                //document.availablesamplesForm.action = '../controller/addSamplestoFeature.jag';
+                document.availablesamplesForm.submit();
+            }
+        );
+    }
 
 }
 
