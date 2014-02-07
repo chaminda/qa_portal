@@ -21,7 +21,7 @@
    print('<strong> Build Name <strong/>');
    print('</td>');
    print('<td>');
-   print('<strong> Release Date <strong/>');
+   print('<strong> Build Date <strong/>');
    print('</td>');
 
 

@@ -16,18 +16,18 @@ var optionalHeadersP = {
 var url = SERVICE_SECURE_ROOT+"WSO2_QAP_TEST_PLAN_TEST_SUIT_MAPPING_DataService/add/data_to_plan_suit_mapping";
 
 
-// print(req_data.testSuitId);
-if(Object.keys(req_data).length===3){
+
+if(req_data.testSuitId==null){
 	response.sendRedirect("../view/test_plan_dashboard.jag?data="+encodeURIComponent(stringify(passjsondata)));
 }
 else{
 	for (var i = 0; i < req_data.testSuitId.length; i++) {
-	var param = '{"_postadd_data_to_plan_suit_mapping":{"WSO2_QAP_TEST_PLAN_ID" : "'+req_data.WSO2_QAP_TEST_PLAN_ID+'","WSO2_QAP_TEST_SUIT_ID" : "'+req_data.testSuitId[i]+'"}}';
-
+		var param = '{"_postadd_data_to_plan_suit_mapping":{"WSO2_QAP_TEST_PLAN_ID" : "'+req_data.WSO2_QAP_TEST_PLAN_ID+'","WSO2_QAP_TEST_SUIT_ID" : "'+req_data.testSuitId[i]+'"}}';
+		post(url, param, optionalHeadersP, "json", function (data, xhr) {
+       		log("Response received");
+   		} );
 	};
-	post(url, param, optionalHeadersP, "json", function (data, xhr) {
-       log("Response received");
-   } );
+	
 
  response.sendRedirect("../view/test_plan_dashboard.jag?data="+encodeURIComponent(stringify(passjsondata)));
 }
