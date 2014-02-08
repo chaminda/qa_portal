@@ -198,8 +198,11 @@ if(name===null){
 																<td><a href="#" id="edit"
 																	onclick="editWebapps();return false;">Edit</a></td>
 																<td width="10%">&nbsp;</td>
-																<td><a href="" id="add2"
-																	>Add Samples</a></td>	
+																<%
+                                                                    var WSO2_QAP_FEATURE_ID = parse(request.getParameter("data"));
+                                                                    var link ="'addsamples_to_feature.jag?data="+encodeURIComponent(stringify(WSO2_QAP_FEATURE_ID))+"'";
+                                                                 %>
+                                                                    <td><a href=<%=link%> id="add2">Add Samples</a></td>
 															</tr>
 														</tbody>
 													</table>
@@ -246,7 +249,11 @@ if(name===null){
 																<td><a href="#" id="edit"
 																	onclick="editWebapps();return false;">Edit</a></td>
 																<td width="10%">&nbsp;</td>
-																<td><a href="" id="add2"
+																<%
+                                                                    var WSO2_QAP_FEATURE_ID = parse(request.getParameter("data"));
+                                                                    var link ="'addsamples_to_feature.jag?data="+encodeURIComponent(stringify(WSO2_QAP_FEATURE_ID))+"'";
+                                                                 %>
+																<td><a href=<%=link%> id="add2"
 																	>Add Samples</a></td>
 						                              </tr>
 						                              
