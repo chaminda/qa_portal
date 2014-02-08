@@ -212,11 +212,14 @@ if(name===null){
                                                    <th>
                                                       <nobr>Description</nobr>
                                                    </th>
+                                                   <th>
+                                                      <nobr>Automation Status</nobr>
+                                                   </th>
                                                 </tr>
                                              </thead>
                                              <tbody>
                                                 <%
-                                                   include("../controller/featureDashboardSamples.jag");                                 
+                                                   include("../controller/scenarioDashboardCases.jag");                                 
                                                 %>
                                              </tbody>
                                           </table>
