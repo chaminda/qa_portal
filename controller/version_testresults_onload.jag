@@ -16,7 +16,7 @@
     var list = obj.WSO2_QAP_TEST_RESULTCollection.WSO2_QAP_TEST_RESULT;
 
     // print(list);
-    print('<input type="hidden" name="WSO2_QAP_BUILD_ID" value="'+WSO2_QAP_BUILD_ID+'">');
+   print('<input type="hidden" name="WSO2_QAP_BUILD_ID" value="'+WSO2_QAP_BUILD_ID+'">');
 
    print('<tr bgcolor="#EEEFFB">');
    print('<td>');

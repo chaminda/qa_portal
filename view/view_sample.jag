@@ -25,6 +25,7 @@ require("template/head.jag");
 <script type="text/javascript" charset="utf-8">
    $(document).ready(function() {
        $('#featuresTable').dataTable( {
+
            "sPaginationType": "full_numbers"
        } );
    } );
