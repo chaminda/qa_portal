@@ -25,7 +25,7 @@ else{
        log("Response received");
    } );
 	
-	response.sendRedirect("../view/add_autotestclass.jag");
+	response.sendRedirect("../view/autotestclass_home.jag");
 }
 
 
