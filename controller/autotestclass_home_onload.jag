@@ -32,12 +32,12 @@
         print(list.WSO2_QAP_AUTO_TEST_CLASS_NAME );
         print('</a>');
         print('</td>');
-        print('</tr>');
         
-        print("&emsp;&emsp;&emsp;");
-        print(list.WSO2_QAP_AUTO_TEST_CLASS_LOCATION );
-        print('</a>');
-        print('</td>');
+        print(' <td>');
+    	print("&emsp;&emsp;&emsp;");
+    	print(list.WSO2_QAP_AUTO_TEST_CLASS_LOCATION);
+    	print('</a>');
+    	print('</td>');
         print('</tr>');
 
     }
@@ -51,19 +51,19 @@
         print('</td>');
 
         print('<td>');
-        var link ="test_scenario_dashboard.jag?data="+encodeURIComponent(stringify(list[i].WSO2_QAP_AUTO_TEST_CLASS_ID));
-        print('<a href="'+link+'">');
+        //var link ="test_scenario_dashboard.jag?data="+encodeURIComponent(stringify(list[i].WSO2_QAP_AUTO_TEST_CLASS_ID));
+        //print('<a href="'+link+'">');
         print("&emsp;&emsp;&emsp;");
         print(list[i].WSO2_QAP_AUTO_TEST_CLASS_NAME );
-        print('</a>');
         print('</td>');
         
-        print('</td>');
+        print('<td>');
+        //var link ="test_scenario_dashboard.jag?data="+encodeURIComponent(stringify(list[i].WSO2_QAP_AUTO_TEST_CLASS_ID));
+        //print('<a href="'+link+'">');
         print("&emsp;&emsp;&emsp;");
-        print(list[i].WSO2_QAP_AUTO_TEST_CLASS_LOCATION);
-        print('</a>');
+        print(list[i].WSO2_QAP_AUTO_TEST_CLASS_LOCATION );
         print('</td>');
-        print('</tr>');
+        print('</tr>'); 
         
         
         //print('</tr>');
