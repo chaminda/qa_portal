@@ -224,7 +224,7 @@ if(name===null){
                                              </tbody>
                                           </table>
                                           <%
-                                          print('<input type="hidden" name="WSO2_QAP_FEATURE_ID" value=\"'+WSO2_QAP_FEATURE_ID +'\">');
+                                          print('<input type="hidden" name="WSO2_QAP_TEST_SCENARIO_ID" value=\"'+WSO2_QAP_TEST_SCENARIO_ID +'\">');
                                           %>
 													</form>
 													<p>&nbsp;</p>
@@ -286,18 +286,22 @@ if(name===null){
                                                 <tr>
                                                    <th>&nbsp;</th>
                                                    <th>
-                                                      <nobr>Name</nobr>
+                                                      <nobr>Test Suit Name</nobr>
+                                                   </th>
+                                                   <th>&nbsp;</th>
+                                                   <th>
+                                                      <nobr>Description</nobr>
                                                    </th>
                                                 </tr>
                                              </thead>
                                              <tbody>
                                                 <%
-                                                   include("../controller/featureDashboardTestSuits.jag");                                
+                                                   include("../controller/scenarioDashboardsuits.jag");                                
                                                 %>
                                              </tbody>
                                           </table>
                                           <%
-                                          print('<input type="hidden" name="WSO2_QAP_FEATURE_ID" value=\"'+WSO2_QAP_FEATURE_ID +'\">');
+                                          print('<input type="hidden" name="WSO2_QAP_TEST_SCENARIO_ID" value=\"'+WSO2_QAP_TEST_SCENARIO_ID +'\">');
                                           %>
                           </form>
                           <p>&nbsp;</p>
