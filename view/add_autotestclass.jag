@@ -102,7 +102,7 @@
 										<h2>Add Auto Test Class</h2>
 
 										<div id="workArea">
-											<form name="add_testscenario" action="../controller/addTestScenario.jag" method="post" onsubmit="return validateInput();return false;">
+											<form name="add_autotestclass" action="../controller/addAutoTestClass.jag" method="post" onsubmit="return validateInput();return false;">
 												<enctype="multipart/form-data" target="_self">
 												<table class="styledLeft" id="archiveTbl">
 													
