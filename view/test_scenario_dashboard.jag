@@ -288,15 +288,12 @@ if(name===null){
                                                    <th>
                                                       <nobr>Test Suit Name</nobr>
                                                    </th>
-                                                   <th>&nbsp;</th>
-                                                   <th>
-                                                      <nobr>Description</nobr>
-                                                   </th>
+                                                   
                                                 </tr>
                                              </thead>
                                              <tbody>
                                                 <%
-                                                   include("../controller/scenarioDashboardsuits.jag");                                
+                                                   include("../controller/scenariodashboardsuits.jag");                                
                                                 %>
                                              </tbody>
                                           </table>
