@@ -93,7 +93,7 @@ function addSamples()
      else {
         CARBON.showConfirmationDialog("Do you want to add the selected samples?",
             function () {
-                //document.availablesamplesForm.action = '../controller/addSamplestoFeature.jag';
+
                 document.availablesamplesForm.submit();
             }
         );

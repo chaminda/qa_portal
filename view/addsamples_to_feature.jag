@@ -164,7 +164,7 @@ print("Available Samples for "+json_data);
 <%
 include("../controller/availablesamples_onload.jag");
 
-var WSO2_QAP_ARTIFACT_ID=json_data;
+
 %>
 
 
