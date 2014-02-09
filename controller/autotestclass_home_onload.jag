@@ -13,7 +13,7 @@
 	var obj = parse(data.data);
 	
 	var list = obj.WSO2_QAP_AUTO_TEST_CLASSCollection.WSO2_QAP_AUTO_TEST_CLASS;
-	print(list);
+	//print(list);
 	
 
 
@@ -30,6 +30,12 @@
         //print('<a href="product_version.jag?product='+list.WSO2_QAP_TEST_SCENARIO_NAME+'&product_id='+list.WSO2_QAP_TEST_SCENARIO_ID'">');
         print("&emsp;&emsp;&emsp;");
         print(list.WSO2_QAP_AUTO_TEST_CLASS_NAME );
+        print('</a>');
+        print('</td>');
+        print('</tr>');
+        
+        print("&emsp;&emsp;&emsp;");
+        print(list.WSO2_QAP_AUTO_TEST_CLASS_LOCATION );
         print('</a>');
         print('</td>');
         print('</tr>');
@@ -51,7 +57,16 @@
         print(list[i].WSO2_QAP_AUTO_TEST_CLASS_NAME );
         print('</a>');
         print('</td>');
+        
+        print('</td>');
+        print("&emsp;&emsp;&emsp;");
+        print(list[i].WSO2_QAP_AUTO_TEST_CLASS_LOCATION);
+        print('</a>');
+        print('</td>');
         print('</tr>');
+        
+        
+        //print('</tr>');
 
 	}
 
