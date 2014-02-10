@@ -15,7 +15,7 @@ function isAvailableTestCasesSelected() {
 }
 
 function deleteTestcase() {
-    var selected = isAvailableSamplesSelected();
+    var selected = isAvailableTestCasesSelected();
     if (!selected) {
         CARBON.showInfoDialog('Please select the test cases to be deleted.');
         return;
@@ -24,14 +24,14 @@ function deleteTestcase() {
         CARBON.showConfirmationDialog("Do you want to delete all test cases?",
             function () {
 
-                document.availabletestcaseForm.action = '../controller/deleteSample.jag';
+                document.availabletestcaseForm.action = '../controller/deleteTestcase.jag';
                 document.availabletestcaseForm.submit();
             }
         );
     } else {
         CARBON.showConfirmationDialog("Do you want to delete the selected test cases?",
             function () {
-                document.availabletestcaseForm.action = '../controller/deleteSample.jag';
+                document.availabletestcaseForm.action = '../controller/deleteTestcase.jag';
                 document.availabletestcaseForm.submit();
             }
         );
@@ -84,7 +84,7 @@ function resetVars() {
 function addTestcase()
 {
 
-    var selected = isAvailableSamplesSelected();
+    var selected = isAvailableTestCasesSelected();
 
     if (!selected) {
         CARBON.showInfoDialog('Please select the test cases to be added');
