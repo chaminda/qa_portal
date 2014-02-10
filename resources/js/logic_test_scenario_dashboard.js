@@ -5,13 +5,13 @@ var allTestSuitsSelected = false;
 //for TestCases
 function isTestcaseSelected() {
     var selected = false;
-    if (document.testcasesForm.WSO2_QAP_TEST_CASE_ID[0] != null) { // there is more than 1
-        for (var j = 0; j < document.testcasesForm.WSO2_QAP_TEST_CASE_ID.length; j++) {
-            selected = document.testcasesForm.WSO2_QAP_TEST_CASE_ID[j].checked;
+    if (document.testcasesForm.testcaseId[0] != null) { // there is more than 1
+        for (var j = 0; j < document.testcasesForm.testcaseId.length; j++) {
+            selected = document.testcasesForm.testcaseId[j].checked;
             if (selected) break;
         }
-    } else if (document.testcasesForm.WSO2_QAP_TEST_CASE_ID != null) { // only 1
-        selected = document.testcasesForm.WSO2_QAP_TEST_CASE_ID.checked;
+    } else if (document.testcasesForm.testcaseId != null) { // only 1
+        selected = document.testcasesForm.testcaseId.checked;
     }
     return selected;
 }
@@ -26,14 +26,14 @@ function deleteTestcase() {
         CARBON.showConfirmationDialog("Do you want to delete all testcases?",
             function () {
                 //location.href = '../controller/deleteTestcase.jag?deleteAllWebapps=true&webappState=all';
-                document.testcasesForm.action = '../controller/deleteTestcase.jag';
+                document.testcasesForm.action = '../controller/deleteTestSuitCase.jag';
                 document.testcasesForm.submit();
             }
         );
     } else {
         CARBON.showConfirmationDialog("Do you want to delete the selected testcase?  are you sure there is no test result entry for this test cases ?",
             function () {
-                document.testcasesForm.action = '../controller/deleteTestcase.jag';
+                document.testcasesForm.action = '../controller/deleteTestSuitCase.jag';
                 document.testcasesForm.submit();
             }
         );
@@ -42,19 +42,19 @@ function deleteTestcase() {
 
 function selectAllInThisPage(isSelected) {
     allSelected = false;
-    if (document.testcasesForm.WSO2_QAP_TEST_CASE_ID != null &&
-        document.testcasesForm.WSO2_QAP_TEST_CASE_ID[0] != null) { // there is more than 1
+    if (document.testcasesForm.testcaseId != null &&
+        document.testcasesForm.testcaseId[0] != null) { // there is more than 1
         if (isSelected) {
-            for (var j = 0; j < document.testcasesForm.WSO2_QAP_TEST_CASE_ID.length; j++) {
-                document.testcasesForm.WSO2_QAP_TEST_CASE_ID[j].checked = true;
+            for (var j = 0; j < document.testcasesForm.testcaseId.length; j++) {
+                document.testcasesForm.testcaseId[j].checked = true;
             }
         } else {
-            for (j = 0; j < document.testcasesForm.WSO2_QAP_TEST_CASE_ID.length; j++) {
-                document.testcasesForm.WSO2_QAP_TEST_CASE_ID[j].checked = false;
+            for (j = 0; j < document.testcasesForm.testcaseId.length; j++) {
+                document.testcasesForm.testcaseId[j].checked = false;
             }
         }
-    } else if (document.testcasesForm.WSO2_QAP_TEST_CASE_ID != null) { // only 1
-        document.testcasesForm.WSO2_QAP_TEST_CASE_ID.checked = isSelected;
+    } else if (document.testcasesForm.testcaseId != null) { // only 1
+        document.testcasesForm.testcaseId.checked = isSelected;
     }
     return false;
 }
@@ -69,14 +69,14 @@ function resetVars() {
     allSelected = false;
 
     var isSelected = false;
-    if (document.testcasesForm.WSO2_QAP_TEST_CASE_ID[0] != null) { // there is more than 1 sg
+    if (document.testcasesForm.testcaseId[0] != null) { // there is more than 1 sg
         for (var j = 0; j < document.testcasesForm.WSO2_QAP_TEST_CASE_ID.length; j++) {
-            if (document.testcasesForm.WSO2_QAP_TEST_CASE_ID[j].checked) {
+            if (document.testcasesForm.testcaseId[j].checked) {
                 isSelected = true;
             }
         }
-    } else if (document.testcasesForm.WSO2_QAP_TEST_CASE_ID != null) { // only 1 sg
-        if (document.testcasesForm.WSO2_QAP_TEST_CASE_ID.checked) {
+    } else if (document.testcasesForm.testcaseId != null) { // only 1 sg
+        if (document.testcasesForm.testcaseId.checked) {
             isSelected = true;
         }
     }
@@ -120,11 +120,11 @@ function selectAllInTestSuitTable(isSelected) {
 function deleteTestSuits() {
     var selected = isTestSuitSelected();
     if (!selected) {
-        CARBON.showInfoDialog('Please select the sample to be deleted.');
+        CARBON.showInfoDialog('Please select the test suits to be deleted.');
         return;
     }
     if (allSelected) {
-        CARBON.showConfirmationDialog("Do you want to delete all samples?",
+        CARBON.showConfirmationDialog("Do you want to delete all the test suits?",
             function () {
 //                location.href = '../controller/deleteProductVersions.jag?deleteAllWebapps=true&webappState=all';
                 document.TestSuitForm.action = '../controller/deleteTestSuitFeatureDashboard.jag';

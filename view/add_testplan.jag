@@ -7,7 +7,7 @@
 	if(name===null){
     	response.sendRedirect("login.jag");
     }
-    require("head.jag");
+    require("template/head.jag");
 %>
 
 
@@ -37,16 +37,16 @@
 			<tr>
 				<td id="header" colspan="3">
 				<%
-					require("header_div.jag");
+					require("template/header_div.jag");
 				%>
 				</td>
 			</tr>
 			<tr>
 				<% 
-					require("product_vertical_menu.jag");
+					require("template/product_vertical_menu.jag");
 				%>
 				<%
-					require("product_menu_panel.jag");
+					require("template/product_menu_panel.jag");
 				%>
 
 
@@ -99,49 +99,36 @@
 									height="1px">
 								
 								<div id="middle">
-										<h2>Add Test Plan</h2>
+								<%
+									
+									var req_data = request.getParameter("data");
+                                    json_data = parse(decodeURIComponent(req_data));
+                                    
+                                    jd2=parse(json_data);
+                                    
+                                    print("<h2>");
+                                    print('Add Test Plan to : ');
+                                    print(jd2.WSO2_QAP_PRODUCT_NAME+" "+jd2.WSO2_QAP_PRODUCT_VERSION);
+                                    print("</h2>");
+                                    var cancle_redir_link="location.href = 'product_version_dashboard.jag?data="+jd2.WSO2_QAP_PRODUCT_VERSION_ID+"'";
+                                    var submit_redir_link="../controller/addTestPlan.jag?data="+jd2.WSO2_QAP_PRODUCT_VERSION_ID;
+								%>
 
 										<div id="workArea">
-											<form method="post" name="jarUpload" action="#"
-												enctype="multipart/form-data" target="_self">
-												<table class="styledLeft" id="archiveTbl">
+											<form method="post" name="testPlan" action="<%=submit_redir_link%>">
+												<table name="testPlan">
 													<!-- 													<thead> -->
 													<!-- 														<tr class="tableEvenRow"> -->
 													<!-- 															<th colspan="2">Step 1 of 3: Upload a new archive</th> -->
 													<!-- 														</tr> -->
 													<!-- 													</thead> -->
 													<tbody>
-														<tr class="tableOddRow">
-															<td class="formRow">Test Plan Name<font color="red">*</font>
-															</td>
-															<td><input type="text" id="planName" name="planName"
-																size="50" onchange="">
-															
-															</td>
-														</tr>
-														<tr class="tableEvenRow">
-															<td class="formRow">Product<font color="red">*</font>
-															</td>
-															<td><select id="productName" name="productName">
-																	<option>Carbon 4.8.0</option>
-																	<option>Carbon 4.7.0</option>
-															</select>
-															</td>
-														</tr>
-														<tr class="tableOddRow">
-															<td class="formRow">Version</td>
-															<td class="formRow"><select name="version" id="version">
-																<option>Version 1</option>
-																<option>Version 2</option>
-																<option>Version 3</option>
-																<option>Version 4</option>
-															</select>
-														</tr>
 														<tr class="tableEvenRow">
 															<td class="formRow">Status</td>
 															<td class="formRow"><select name="status" id="status">
-																<option>Pass</option>
-																<option>Fail</option>
+																<option>NOT STARTED</option>
+																<option>IN PROGRESS</option>
+																<option>COMPLETE</option>
 
 															</select>
 														</tr>
@@ -151,12 +138,9 @@
 												<table class="styledLeft">
 													<tbody>
 														<tr>
-															<td class="buttonRow" colspan="2"><input name="upload"
-																type="submit" class="button" value=" Submit "
-																onclick="submitForm();"> <input type="button"
-																	class="button"
-																	onclick="location.href='../service-mgt/index.jsp';"
-																	value=" Cancel ">
+															<td class="buttonRow" colspan="2"><input type="submit"
+																	class="button"  value=" Submit "> <input type="button"
+																	class="button" onclick="<%=cancle_redir_link%>" value=" Cancel ">
 															
 															</td>
 														</tr>

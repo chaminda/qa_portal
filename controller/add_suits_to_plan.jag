@@ -21,7 +21,6 @@
    var obj = parse(data.data);
    var list = obj.SUIT_DATA_NOT_IN_PLAN_MAPPINGCollection.SUIT_DATA_NOT_IN_PLAN_MAPPING;
 
-
    if(list.length==null && list.WSO2_QAP_TEST_SUIT_NAME!=null){
   
         print('<tr>');

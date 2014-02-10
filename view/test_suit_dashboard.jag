@@ -237,7 +237,7 @@
                                        <p>&nbsp;</p>
                                        <p>&nbsp;</p>
                                        <%
-                                          var link_redir = "" //"location.href = 'add_build.jag'";
+                                          var link_redir = "location.href = 'add_testscenario.jag'";
                                        %>
                                        <lable>
                                         <input type="button" value="Add Test Scenario" onclick="<% print(link_redir); %>" align="left"></label>

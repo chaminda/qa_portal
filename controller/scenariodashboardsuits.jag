@@ -33,7 +33,7 @@
 
         print('<tr>');
         print('<td style="text-align:center; !important" width="10px">');
-        print('<input name="testsuitId" value="'+list.WSO2_QAP_TEST_SUIT_ID+'" onclick="resetSampleVars()" class="chkBox" type="checkbox">');
+        print('<input name="testSuitId" value="'+list.WSO2_QAP_TEST_SUIT_ID+'" onclick="resetSampleVars()" class="chkBox" type="checkbox">');
         print('</td>');
         print('<td>');
 		//print(list.WSO2_QAP_TEST_SUIT_ID);

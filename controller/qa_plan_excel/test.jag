@@ -1,0 +1,49 @@
+<%
+
+include("dataServiceCalls.jag");
+
+var optionalHeaders1 = {
+    "Accept": "application/json"
+};
+
+
+
+var url  = "http://localhost:9763/services/WSO2_QA_PLANS/get/data";
+var data1 = get(url,"",optionalHeaders1);
+var obj1 = JSON.parse(data1.data);
+
+
+
+var list = obj1.TestScenarios.TestScenario;
+
+//print(list.length);
+
+for (var i=0;i<list.length;i++){
+
+    print(list[i].test_case_no);
+    print("<br>");
+    print(list[i].test_case);
+    print("<br>");
+    print(list[i].Automation_Status);
+    print("<br>");
+    print(list[i].Test_Artifacts);
+    print("<hr>");
+
+    if(list[i].Test_Artifacts != null){
+    //print(addArtifact(list[i].Test_Artifacts ,"description", "name"));
+       // break;
+    }
+
+    if(list[i].Automation_Status != null || list[i].Automation_Status.trim() != ""){
+        print(addAutoTestClass(list[i].Automation_Status ,"description"));
+        print(list[i].Automation_Status);
+        break;
+    }
+
+
+
+}
+
+
+
+%>

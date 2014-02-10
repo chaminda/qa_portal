@@ -262,6 +262,7 @@
                                                 <td>
                                                   <input type="submit" value="Submit">
                                                 </td>
+
                                                 <%
                                                 var passjsondata='{"verid_proname_planid":{"WSO2_QAP_TEST_PLAN_ID" : "'+WSO2_QAP_TEST_PLAN_ID+'","WSO2_QAP_PRODUCT_NAME" : "'+WSO2_QAP_PRODUCT_NAME+'","WSO2_QAP_PRODUCT_VERSION" : "'+WSO2_QAP_PRODUCT_VERSION+'"}}';
                                                   var link_redir2 = "location.href = '../view/test_plan_dashboard.jag?data="+encodeURIComponent(stringify(passjsondata))+"'";
