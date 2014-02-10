@@ -20,13 +20,20 @@ if(req_data.testSuitId==null){
 	response.sendRedirect("../view/test_plan_dashboard.jag?data="+encodeURIComponent(stringify(passjsondata)));
 }
 else{
-	
+	if(!(req_data.testSuitId instanceof Array)){
+		var param = '{"_postadd_data_to_plan_suit_mapping":{"WSO2_QAP_TEST_PLAN_ID" : "'+req_data.WSO2_QAP_TEST_PLAN_ID+'","WSO2_QAP_TEST_SUIT_ID" : "'+req_data.testSuitId+'"}}';
+		post(url, param, optionalHeadersP, "json", function (data, xhr) {
+       		log("Response received");
+   		} );
+	}
+	else{
 	for (var i = 0; i < req_data.testSuitId.length; i++) {
 		var param = '{"_postadd_data_to_plan_suit_mapping":{"WSO2_QAP_TEST_PLAN_ID" : "'+req_data.WSO2_QAP_TEST_PLAN_ID+'","WSO2_QAP_TEST_SUIT_ID" : "'+req_data.testSuitId[i]+'"}}';
 		post(url, param, optionalHeadersP, "json", function (data, xhr) {
        		log("Response received");
    		} );
 	};
+}
 	
 
  response.sendRedirect("../view/test_plan_dashboard.jag?data="+encodeURIComponent(stringify(passjsondata)));
