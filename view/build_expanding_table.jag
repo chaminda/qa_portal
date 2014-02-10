@@ -164,7 +164,7 @@ $(function() {
                      <col width="450">
                      <%
                     //include("../controller/version_testresults_onload.jag");
-                            include("../controller/show_testplan_instance.jag");
+                            include("../controller/show_testplan_instance_for_expand.jag");
                      %>
 
 <thead>

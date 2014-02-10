@@ -23,7 +23,7 @@
 
         print('<tr valign="middle">');
         print(' <td style="text-align:center; !important" width="10px">');
-        print('    <input name="autoTestClassId" value="'+list.WSO2_QAP_AUTO_TEST_CLASS_ID+'" onclick="resetVars()" class="chkBox" type="checkbox">');
+        print('    <input name="autotestclassid" value="'+list.WSO2_QAP_AUTO_TEST_CLASS_ID+'" onclick="resetVars()" class="chkBox" type="checkbox">');
         print(' </td>');
 
         print(' <td>');
@@ -47,7 +47,7 @@
 
         print('<tr vertical-align:middle>');
         print('<td style="text-align:center; !important" width="10px">');
-        print('    <input name="autoTestClassId" value="'+list[i].WSO2_QAP_AUTO_TEST_CLASS_ID+'" onclick="resetVars()" class="chkBox" type="checkbox">');
+        print('    <input name="autotestclassid" value="'+list[i].WSO2_QAP_AUTO_TEST_CLASS_ID+'" onclick="resetVars()" class="chkBox" type="checkbox">');
         print('</td>');
 
         print('<td>');
