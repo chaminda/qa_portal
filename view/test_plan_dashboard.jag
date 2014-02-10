@@ -207,7 +207,7 @@
                                         json_data = parse(decodeURIComponent(req_data));
                                         jd2=parse(json_data).verid_proname_planid;
                                         print("<h2>");
-                                        print(jd2.WSO2_QAP_PRODUCT_NAME+" "+jd2.WSO2_QAP_PRODUCT_VERSION);
+                                        print("Test Plan for "+jd2.WSO2_QAP_PRODUCT_NAME+" "+jd2.WSO2_QAP_PRODUCT_VERSION);
                                         print("</h2>");
                                     %>
                                     <div id="workArea">

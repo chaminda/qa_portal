@@ -124,7 +124,7 @@
 													<!-- 													</thead> -->
 													<tbody>
 														<tr class="tableEvenRow">
-															<td class="formRow">Status</td>
+															<td class="formRow" width="100" align="center"> Status </td>
 															<td class="formRow"><select name="status" id="status">
 																<option>NOT STARTED</option>
 																<option>IN PROGRESS</option>
@@ -132,8 +132,9 @@
 
 															</select>
 														</tr>
+														</tbody>
 
-													</tbody>
+
 												</table>
 												<table class="styledLeft">
 													<tbody>
