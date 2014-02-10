@@ -20,7 +20,7 @@
 		<script type="text/javascript" language="javascript" src="../resources/datatables/js/jquery.dataTables.js"></script>
 		<script type="text/javascript" charset="utf-8">
 			$(document).ready(function() {
-				$('#buildsTable').dataTable( {
+				$('#featuresTable').dataTable( {
 					"sPaginationType": "full_numbers"
 				} );
 			} );
@@ -233,7 +233,10 @@
                                                 <tr>
                                                    <th>&nbsp;</th>
                                                    <th>
-                                                      <nobr>Features</nobr>
+                                                      <nobr>Subject</nobr>
+                                                   </th>
+                                                   <th>
+                                                      <nobr>Redmine URL</nobr>
                                                    </th>
                                                 </tr>
                                              </thead>
