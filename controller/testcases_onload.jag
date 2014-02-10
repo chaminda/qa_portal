@@ -11,7 +11,7 @@ var data = get(url,"",optionalHeaders);
 var obj = parse(data.data);
 
 var list = obj.WSO2_QAP_TEST_CASECollection.WSO2_QAP_TEST_CASE;
-print(list);
+
 
 
 
@@ -75,6 +75,7 @@ if(!(list instanceof Array)){
     print('</tr>');
 
 }
+else{
 
 for (var i=0;i<list.length;i++)
 {
@@ -84,12 +85,15 @@ for (var i=0;i<list.length;i++)
     var object1=parse(res1.data);
     var des1=object1.WSO2_QAP_ARTIFACTCollection.WSO2_QAP_ARTIFACT;
 
+
+
      var url2=SERVICE_SECURE_ROOT+"WSO2_QAP_AUTO_TEST_CLASS_DataService/view/autotestclass_with_id";
      var para2="WSO2_QAP_AUTO_TEST_CLASS_ID="+list[i].WSO2_QAP_AUTO_TEST_CLASS_ID ;
 
      var res2=get(url2,para2,optionalHeaders);
      var object2=parse(res2.data);
      var des2=object2.WSO2_QAP_AUTO_TEST_CLASSCollection.WSO2_QAP_AUTO_TEST_CLASS;
+     
 
    
     print('<tr valign="middle">');
@@ -137,8 +141,8 @@ for (var i=0;i<list.length;i++)
 
 
 }
+}
 
-*/
 
 
 %>

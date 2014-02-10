@@ -117,7 +117,8 @@ json_data = parse(decodeURIComponent(req_data));
 include("../controller/base64_encode.jag");
 var SERVICE_SECURE_ROOT = session.get("service_secure_root");
 
-var url  = SERVICE_SECURE_ROOT+"WSO2_QAP_TEST_CASE_DataService/iew/testcase_artifact_autotestclass/"+json_data;
+var url  = SERVICE_SECURE_ROOT+"WSO2_QAP_TEST_CASE_DataService/view/testcase_artifact_autotestclass/"+json_data;
+
 
 var optionalHeaders = {
     "Accept": "application/json",
