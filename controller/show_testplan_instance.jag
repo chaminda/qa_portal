@@ -53,7 +53,7 @@ else{
         var data_testScenarioID=get(url_testScenariosID,"",optionalHeaders);
         var objTestScenarioID=parse(data_testScenarioID.data);
         var list_testscenarioID=objTestScenarioID.WSO2_QAP_TEST_SUIT_TEST_SCENARIO_MAPPINGCollection.WSO2_QAP_TEST_SUIT_TEST_SCENARIO_MAPPING;
-        print(list_testscenarioID);
+        //print(list_testscenarioID);
 
         if (!(list_testscenarioID instanceof Array))
         {
@@ -83,7 +83,7 @@ else{
                 var data_testscenarios=get(url_testScenarios,"",optionalHeaders);
                 var objTestScenarios=parse(data_testscenarios.data);
                 var list_Testscenarios=objTestScenarios.WSO2_QAP_TEST_SCENARIOCollection.WSO2_QAP_TEST_SCENARIO;
-                print(list_Testscenarios);
+                //print(list_Testscenarios);
                 //have to show the test scenario details
 
                 var url_testcaseID=SERVICE_SECURE_ROOT+"WSO2_QAP_TEST_SCENARIO_TEST_CASE_MAPPING_DataService/view/testcase_with_testscenarioid/"+list_testscenarioID[j].WSO2_QAP_TEST_SCENARIO_ID;
