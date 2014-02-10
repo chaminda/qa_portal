@@ -13,7 +13,7 @@ var optionalHeaders = {
 
 if(!(list instanceof Array)){
 
-    var url = SERVICE_SECURE_ROOT+"WSO2_QAP_SAMPLE_DataService/delete/samples/"+list;
+    var url = SERVICE_SECURE_ROOT+"WSO2_QAP_SAMPLE_FEATURE_MAPPING_DataService/delete/sampleid_featureid/"+list+"/"+WSO2_QAP_FEATURE_ID;
 
     del(url, param, optionalHeaders, "json", function (data, xhr) {
         log("Response received");
@@ -23,7 +23,7 @@ if(!(list instanceof Array)){
 else{
 
     for (var i=0;i<list.length;i++){
-        var url = SERVICE_SECURE_ROOT+"WSO2_QAP_SAMPLE_DataService/delete/samples/"+list[i];
+        var url = SERVICE_SECURE_ROOT+"WSO2_QAP_SAMPLE_FEATURE_MAPPING_DataService/delete/sampleid_featureid/"+list[i]+"/"+WSO2_QAP_FEATURE_ID;
 
         del(url, param, optionalHeaders, "json", function (data, xhr) {
             log("Response received");

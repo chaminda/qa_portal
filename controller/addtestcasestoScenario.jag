@@ -29,7 +29,7 @@ else{
     for (var i=0;i<list.length;i++){
         var url = SERVICE_SECURE_ROOT+"WSO2_QAP_TEST_SCENARIO_TEST_CASE_MAPPING_DataService/add/testcases_for_testscenario"
 
-        var para='{"_postadd_testcaseswithscenarios":{"WSO2_QAP_TEST_SCENARIO_ID" : "'+scenario_id+'","WSO2_QAP_TEST_CASE_ID" : "'+list+'"}}';
+        var para='{"_postadd_testcaseswithscenarios":{"WSO2_QAP_TEST_SCENARIO_ID" : "'+scenario_id+'","WSO2_QAP_TEST_CASE_ID" : "'+list[i]+'"}}';
 
         post(url, para, optionalHeaders, "json", function (data, xhr) {
             log("Response received");

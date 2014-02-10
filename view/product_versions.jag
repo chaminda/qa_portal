@@ -116,8 +116,6 @@
                                         print("</h2>");
                                     }
                                     %>
-
-                                    <p>&nbsp;</p>
                                     <div id="workArea">
 
 
