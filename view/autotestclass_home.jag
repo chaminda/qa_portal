@@ -222,6 +222,11 @@
                                                 <td><a href="#" id="delete1" onclick="deleteAutoTestClass();return false;">Delete</a></td>
                                                 <td width="10%">&nbsp;</td>
                                                 <td><a href="#" id="edit" onclick="editWebapps();return false;">Edit</a></td>
+                                                <%
+                                                    //var WSO2_QAP_TEST_SCNARIO_ID = parse(request.getParameter("data"));
+                                                    var link ="'add_autotestclass.jag'";
+                                                %>
+								                <td><a href=<%=link%> id="add2">&nbsp;&nbsp;&nbsp;Add Auto Test Class</a></td>
                                              </tr>
                                           </tbody>
                                        </table>
@@ -260,6 +265,7 @@
                                                 <td><a href="#" id="delete2" onclick="deleteAutoTestClass();return false;">Delete</a></td>
                                                 <td width="10%">&nbsp;</td>
                                                 <td><a href="#" id="edit" onclick="editWebapps();return false;">Edit</a></td>
+                                                
                                              </tr>
                                           </tbody>
                                        </table>

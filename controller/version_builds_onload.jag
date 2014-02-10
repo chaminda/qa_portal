@@ -14,18 +14,10 @@
 
    print('<input type="hidden" name="WSO2_QAP_PRODUCT_VERSION_ID" value="'+WSO2_QAP_PRODUCT_VERSION_ID+'">');
 
-   print('<tr bgcolor="#EEEFFB">');
-   print('<td>');
-   print('</td>');
-   print('<td>');
-   print('<strong> Build Name <strong/>');
-   print('</td>');
-   print('<td>');
-   print('<strong> Build Date <strong/>');
-   print('</td>');
+   if(list2 == null){
 
-
-   if(list2.length==null && list2.WSO2_QAP_BUILD_NAME!=null){
+   }
+   else if(!(list2 instanceof Array)){
 
         print('<tr>');
         print(' <td style="text-align:center; !important" width="10px">');

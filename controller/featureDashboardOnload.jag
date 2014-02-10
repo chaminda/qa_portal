@@ -15,9 +15,11 @@
 
 
 print('<input type="hidden" name="WSO2_QAP_FEATURE_ID" value="'+WSO2_QAP_FEATURE_ID+'">');
-print("<tr class=\"tableOddRow\"><td>Description</td>");
+print("<tr class=\"tableOddRow\"><td>Subject</td>");
+print("<td>"+listFeatureDetails.WSO2_QAP_SUBJECT+"</td></tr>");
+print("<tr class=\"tableEvenRow\"><td>Description</td>");
 print("<td>"+listFeatureDetails.WSO2_QAP_DESCRIPTION+"</td></tr>");
-print("<tr class=\"tableEvenRow\"><td>Redmine URL</td>");
+print("<tr class=\"tableOddRow\"><td>Redmine URL</td>");
 print("<td><a href="+listFeatureDetails.WSO2_QAP_REDMINE_URL+" target=\"_blank\">"+listFeatureDetails.WSO2_QAP_REDMINE_URL+"</a></td></tr>");
 
 
