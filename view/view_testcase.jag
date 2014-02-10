@@ -108,15 +108,38 @@ include("template/product_menu_panel.jag");
 
 <p>&nbsp;</p>
                   <%
+
+
+
 var req_data = request.getParameter("data");
 json_data = parse(decodeURIComponent(req_data));
-if(json_data.list.WSO2_QAP_TEST_CASE_ID===null || json_data.list.WSO2_QAP_TEST_CASE_NAME===null){
+
+include("../controller/base64_encode.jag");
+var SERVICE_SECURE_ROOT = session.get("service_secure_root");
+
+var url  = SERVICE_SECURE_ROOT+"WSO2_QAP_TEST_CASE_DataService/view/testcase_artifact_autotestclass/"+json_data;
+
+
+var optionalHeaders = {
+    "Accept": "application/json",
+    "Authorization": "Basic "+base64_encode("admin:admin") };
+
+    var data = get(url,"",optionalHeaders);
+    var obj = parse(data.data);
+    var list = obj.WSO2_QAP_TEST_CASECollection.WSO2_QAP_TEST_CASE;
+
+
+if(json_data===null || list.WSO2_QAP_TEST_CASE_NAME===null){
     print("Sorry this page isn't available");
 }else{
     print("<h2>");
-    print(json_data.list.WSO2_QAP_TEST_CASE_NAME+" test case");
+    print(list.WSO2_QAP_TEST_CASE_NAME+" test case");
     print("</h2>");
 }
+
+
+
+
 %>
 
 
@@ -131,7 +154,7 @@ if(json_data.list.WSO2_QAP_TEST_CASE_ID===null || json_data.list.WSO2_QAP_TEST_C
 
          <thead>
           <tr class="tableEvenRow">
-            <th colspan="2" align="left"><strong><%= json_data.list.WSO2_QAP_TEST_CASE_NAME%></strong></th>
+            <th colspan="2" align="left"><strong><%= list.WSO2_QAP_TEST_CASE_NAME%></strong></th>
 
           </tr>
           </thead>
@@ -142,7 +165,7 @@ if(json_data.list.WSO2_QAP_TEST_CASE_ID===null || json_data.list.WSO2_QAP_TEST_C
                 <strong>Description</strong>
            </td>
             <td>
-            <%= json_data.list.WSO2_QAP_DESCRIPTION%>
+            <%= list.WSO2_QAP_DESCRIPTION%>
             </td>
            </tr>
 
@@ -151,7 +174,7 @@ if(json_data.list.WSO2_QAP_TEST_CASE_ID===null || json_data.list.WSO2_QAP_TEST_C
                 <strong>Automation Status</strong>
            </td>
             <td>
-            <%= json_data.list.WSO2_QAP_AUTOMATION_STATUS%>
+            <%= list.WSO2_QAP_AUTOMATION_STATUS%>
             </td>
            </tr>
 
@@ -160,7 +183,7 @@ if(json_data.list.WSO2_QAP_TEST_CASE_ID===null || json_data.list.WSO2_QAP_TEST_C
                 <strong>Artifact name</strong>
            </td>
             <td>
-                <%= json_data.artifactName%>
+                <%= list.WSO2_QAP_ARTIFACT_NAME%>
             </td>
            </tr>
 
@@ -169,7 +192,7 @@ if(json_data.list.WSO2_QAP_TEST_CASE_ID===null || json_data.list.WSO2_QAP_TEST_C
                 <strong>Auto test class name</strong>
            </td>
             <td>
-                <%= json_data.autotestclassName%>
+                <%= list.WSO2_QAP_AUTO_TEST_CLASS_NAME%>
             </td>
            </tr>
 
@@ -179,7 +202,7 @@ if(json_data.list.WSO2_QAP_TEST_CASE_ID===null || json_data.list.WSO2_QAP_TEST_C
 </form>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-<h2>Artifact name : <%= json_data.artifactName%></h2>
+<h2>Artifact name : <%= list.WSO2_QAP_ARTIFACT_NAME%></h2>
 
 <form>
     <input name="pageNumber" value="0" type="hidden">
@@ -194,7 +217,7 @@ if(json_data.list.WSO2_QAP_TEST_CASE_ID===null || json_data.list.WSO2_QAP_TEST_C
                 <strong>Description</strong>
            </td>
             <td>
-            <%= json_data.artifactDescription%>
+            <%= list.WSO2_QAP_ARTIFACT_DESCRIPTION%>
             </td>
          </tr>
 
@@ -203,7 +226,7 @@ if(json_data.list.WSO2_QAP_TEST_CASE_ID===null || json_data.list.WSO2_QAP_TEST_C
                 <strong>SVN Location</strong>
            </td>
             <td>
-            <a href="'<%= json_data.artifactLocation%>'"  ><%= json_data.artifactLocation%></a>
+            <a href="'<%= list.WSO2_QAP_LOCATION%>'"  ><%= list.WSO2_QAP_LOCATION%></a>
             </td>
            </tr>
 
@@ -229,7 +252,7 @@ if(json_data.list.WSO2_QAP_TEST_CASE_ID===null || json_data.list.WSO2_QAP_TEST_C
                 <strong>Auto test class name</strong>
            </td>
             <td>
-            <%= json_data.autotestclassName%>
+            <%= list.WSO2_QAP_AUTO_TEST_CLASS_NAME%>
             </td>
          </tr>
 
@@ -238,7 +261,7 @@ if(json_data.list.WSO2_QAP_TEST_CASE_ID===null || json_data.list.WSO2_QAP_TEST_C
                 <strong>Location</strong>
            </td>
             <td>
-            <a href="'<%= json_data.autotestclassLocation%>'" ><%= json_data.autotestclassLocation%></a>
+            <a href="'<%= list.WSO2_QAP_AUTO_TEST_CLASS_LOCATION%>'" ><%= list.WSO2_QAP_AUTO_TEST_CLASS_LOCATION%></a>
             </td>
            </tr>
          </tbody>

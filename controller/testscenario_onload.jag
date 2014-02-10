@@ -8,7 +8,7 @@ var optionalHeaders = {
     "Accept": "application/json",
     "Authorization": "Basic "+base64_encode("admin:admin") };
 
-var param="WSO2_QAP_TEST_CASE_ID="+ json_data.list.WSO2_QAP_TEST_CASE_ID;
+var param="WSO2_QAP_TEST_CASE_ID="+ json_data;
 
 var data = get(url,param,optionalHeaders);
 
