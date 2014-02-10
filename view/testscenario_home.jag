@@ -201,13 +201,11 @@
                                        <form action="index.jsp" name="searchForm">
                                           <table class="styledLeft">
                                              <tbody>
-                                                <tr>
-                                                   <td style="border:0; !important">&nbsp;</td>
-                                                </tr>
+                                                
                                              </tbody>
                                           </table>
                                        </form>
-                                       <p>&nbsp;</p>
+                                      
                                        <table>
                                           <tbody>
                                              <tr></tr>
@@ -225,7 +223,7 @@
                                              </tr>
                                           </tbody>
                                        </table>
-                                       <p>&nbsp;</p>
+                                       
                                        <form action="../controller/deleteTestScenario.jag" name="testScenarioForm" method="post">
                                           <table class="display" id="testScenarioTable" cellpadding="0" cellspacing="0" border="0" width="100%">
                                              <thead>

@@ -201,7 +201,7 @@ if(name===null){
                                                                     var WSO2_QAP_TEST_SCNARIO_ID = parse(request.getParameter("data"));
                                                                     var link ="'addtestcase_to_scenario.jag?data="+encodeURIComponent(stringify(WSO2_QAP_TEST_SCNARIO_ID))+"'";
                                                                  %>
-																<td><a href=<%=link%> id="add2">Add Test cases</a></td>
+																<td><a href=<%=link%> id="add2">&nbsp;&nbsp;&nbsp;Add Test cases</a></td>
 															</tr>
 														</tbody>
 													</table>
