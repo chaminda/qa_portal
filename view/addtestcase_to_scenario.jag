@@ -24,7 +24,7 @@ require("template/head.jag");
 <script type="text/javascript" language="javascript" src="../resources/datatables/js/jquery.dataTables.js"></script>
 <script type="text/javascript" charset="utf-8">
    $(document).ready(function() {
-       $('#availablesamplesTable').dataTable( {
+       $('#availabletestcasesTable').dataTable( {
            "sPaginationType": "full_numbers"
        } );
    } );
@@ -95,7 +95,7 @@ include("template/product_menu_panel.jag");
                   var breadcrumbDiv = document.getElementById('breadcrumb-div');
                   breadcrumbDiv.innerHTML = '<table cellspacing="0"><tr>' +
                    '<td class="breadcrumb-link"><a href="../index.jag">QA Home</a>' +
-                   '<td class="breadcrumb-link"><a href="../view/sample_home.jag">&nbsp;>&nbsp;Features</a>' +
+                   '<td class="breadcrumb-link"><a href="../view/testcase_home.jag">&nbsp;>&nbsp;Test Scenario</a>' +
                    '<td class="breadcrumb-link"><a href="#">&nbsp;>&nbsp;feature</a></td>';
 
               }
@@ -131,7 +131,7 @@ print("Available Test case for "+json_data);
 <td><a href="#" onclick="selectAllInThisPage(true);return false;" style="cursor:pointer">Select all in this page</a>&nbsp;<b>|</b>&nbsp;</td>
 <td><a href="#" onclick="selectAllInThisPage(false);return false;" style="cursor:pointer">Select none</a></td>
 <td width="10%">&nbsp;</td>
-<td><a href="#" id="add2" onclick="addSamples();return false;">Add Test Case</a></td>
+<td><a href="#" id="add2" onclick="addTestcase();return false;">Add Test Case</a></td>
 
 
 
