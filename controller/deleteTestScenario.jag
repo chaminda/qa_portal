@@ -38,6 +38,7 @@ var optionalHeaders = {
 		}
 	}
 
-response.sendRedirect("../view/test_suit_dashboard.jag?data="+params.WSO2_QAP_TEST_SUIT_ID);
+//response.sendRedirect("../view/testscenario_home.jag);
+response.sendRedirect("../view/testscenario_home.jag);
 
 %>
