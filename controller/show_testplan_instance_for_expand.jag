@@ -62,7 +62,7 @@ else{
 
 
 
-            include("show_Testscenario_details.jag");
+            include("show_Testscenario_details_for_expand.jag");
 /*
         var url_testScenariosID=SERVICE_SECURE_ROOT+"WSO2_QAP_TEST_SUIT_TEST_SCENARIO_MAPPING_DataService/get/testscenarios_by_testsuit_ids/"+list_testSuitID[i].WSO2_QAP_TEST_SUIT_ID;
         var data_testScenarioID=get(url_testScenariosID,"",optionalHeaders);
