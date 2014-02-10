@@ -31,14 +31,30 @@
    var data = get(url,"",optionalHeaders);
    var obj = parse(data.data);
    var list = obj.WSO2_QAP_BUILD_RESULTCollection.WSO2_QAP_BUILD_RESULT;
-
    if(list==null){
-    print("")
+    print('<tr>');
+        print(' <td>');
+        
+        print('</td>');
+        print(' <td>');
+        
+        print('</td>');
+        print(' <td>');
+        
+        print('</td>');
+        print(' <td>');
+        
+        print('</td>');
+        print(' <td>');
+        
+        print('</td>');
+        print('</tr>');
+
    }
 
    else{
 
-   if(list.length==null && list.WSO2_QAP_BUILD_NAME!=null){
+   if(!(list instanceof Array)){
   
         print('<tr>');
         print(' <td>');
@@ -73,7 +89,7 @@
             print('<tr>');
           }
         print(' <td>');
-        var link = "build_dashboard.jag?data="+encodeURIComponent(stringify(list.WSO2_QAP_BUILD_ID));
+        var link = "build_dashboard.jag?data="+encodeURIComponent(stringify(list[i].WSO2_QAP_BUILD_ID));
         print('<a href="'+link+'">');
         print(list[i].WSO2_QAP_BUILD_NAME);
         print("</a>");
