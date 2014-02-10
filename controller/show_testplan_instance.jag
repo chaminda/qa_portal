@@ -53,17 +53,43 @@ else{
         var data_testScenarioID=get(url_testScenariosID,"",optionalHeaders);
         var objTestScenarioID=parse(data_testScenarioID.data);
         var list_testscenarioID=objTestScenarioID.WSO2_QAP_TEST_SUIT_TEST_SCENARIO_MAPPINGCollection.WSO2_QAP_TEST_SUIT_TEST_SCENARIO_MAPPING;
-
+        print(list_testscenarioID);
 
         if (!(list_testscenarioID instanceof Array))
         {
+            var url_testScenarios=SERVICE_SECURE_ROOT+"WSO2_QAP_TEST_SCENARIO_DataService/view/testscenario_with_id/"+list_testscenarioID.WSO2_QAP_TEST_SCENARIO_ID;
+            var data_testscenarios=get(url_testScenarios,"",optionalHeaders);
+            var objTestScenarios=parse(data_testscenarios.data);
+            var list_Testscenarios=objTestScenarios.WSO2_QAP_TEST_SCENARIOCollection.WSO2_QAP_TEST_SCENARIO;
+
+            //have to show the test scenario details
+
+
+            //print(list_Testscenarios);
+            var url_testcaseID=SERVICE_SECURE_ROOT+"WSO2_QAP_TEST_SCENARIO_TEST_CASE_MAPPING_DataService/view/testcase_with_testscenarioid/"+list_testscenarioID.WSO2_QAP_TEST_SCENARIO_ID;
+            var data_testcaseID=get(url_testcaseID,"",optionalHeaders);
+            var objTestcaseID=parse(data_testcaseID.data);
+            var list_testcaseID=objTestcaseID.WSO2_QAP_TEST_SCENARIO_TEST_CASE_MAPPINGCollection.WSO2_QAP_TEST_SCENARIO_TEST_CASE_MAPPING;
+
+
+
 
         }
         else{
 
             for(var j=0;j<list_testscenarioID.length;j++)
             {
-                
+                var url_testScenarios=SERVICE_SECURE_ROOT+"WSO2_QAP_TEST_SCENARIO_DataService/view/testscenario_with_id/"+list_testscenarioID[j].WSO2_QAP_TEST_SCENARIO_ID;
+                var data_testscenarios=get(url_testScenarios,"",optionalHeaders);
+                var objTestScenarios=parse(data_testscenarios.data);
+                var list_Testscenarios=objTestScenarios.WSO2_QAP_TEST_SCENARIOCollection.WSO2_QAP_TEST_SCENARIO;
+                print(list_Testscenarios);
+                //have to show the test scenario details
+
+                var url_testcaseID=SERVICE_SECURE_ROOT+"WSO2_QAP_TEST_SCENARIO_TEST_CASE_MAPPING_DataService/view/testcase_with_testscenarioid/"+list_testscenarioID[j].WSO2_QAP_TEST_SCENARIO_ID;
+                var data_testcaseID=get(url_testcaseID,"",optionalHeaders);
+                var objTestcaseID=parse(data_testcaseID.data);
+                var list_testcaseID=objTestcaseID.WSO2_QAP_TEST_SCENARIO_TEST_CASE_MAPPINGCollection.WSO2_QAP_TEST_SCENARIO_TEST_CASE_MAPPING;
             }
         }
 
