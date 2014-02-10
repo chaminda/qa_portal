@@ -120,11 +120,11 @@ function selectAllInTestSuitTable(isSelected) {
 function deleteTestSuits() {
     var selected = isTestSuitSelected();
     if (!selected) {
-        CARBON.showInfoDialog('Please select the sample to be deleted.');
+        CARBON.showInfoDialog('Please select the test suits to be deleted.');
         return;
     }
     if (allSelected) {
-        CARBON.showConfirmationDialog("Do you want to delete all samples?",
+        CARBON.showConfirmationDialog("Do you want to delete all the test suits?",
             function () {
 //                location.href = '../controller/deleteProductVersions.jag?deleteAllWebapps=true&webappState=all';
                 document.TestSuitForm.action = '../controller/deleteTestSuitFeatureDashboard.jag';
