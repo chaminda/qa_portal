@@ -237,7 +237,10 @@
                                                 <tr>
                                                    <th>&nbsp;</th>
                                                    <th>
-                                                      <nobr>Builds</nobr>
+                                                      <nobr>Build Name</nobr>
+                                                   </th>
+                                                   <th>
+                                                      <nobr>Build Date</nobr>
                                                    </th>
                                                 </tr>
                                              </thead>
