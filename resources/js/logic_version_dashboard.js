@@ -156,14 +156,14 @@ function deleteVersionTestPlans() {
         CARBON.showConfirmationDialog("Do you want to delete all test plans test plans?",
             function () {
 //                location.href = '../controller/deleteProductVersions.jag?deleteAllWebapps=true&webappState=all';
-                document.testPlanForm.action = '../controller/deleteVersionFeatures.jag';
+                document.testPlanForm.action = '../controller/deleteTestPlan.jag';
                 document.testPlanForm.submit();
             }
         );
     } else {
         CARBON.showConfirmationDialog("Do you want to delete the selected version test plans?",
             function () {
-                document.testPlanForm.action = '../controller/deleteVersionFeatures.jag';
+                document.testPlanForm.action = '../controller/deleteTestPlan.jag';
                 document.testPlanForm.submit();
             }
         );
