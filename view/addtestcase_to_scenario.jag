@@ -114,7 +114,7 @@ json_data = parse(decodeURIComponent(req_data));
 //}else{
     print("<h2>");
     //print("Available features for "+json_data.WSO2_QAP_SAMPLE_NAME);
-print("Available Samples for "+json_data);
+print("Available Test case for "+json_data);
     print("</h2>");
 //}
                     %>
@@ -131,7 +131,7 @@ print("Available Samples for "+json_data);
 <td><a href="#" onclick="selectAllInThisPage(true);return false;" style="cursor:pointer">Select all in this page</a>&nbsp;<b>|</b>&nbsp;</td>
 <td><a href="#" onclick="selectAllInThisPage(false);return false;" style="cursor:pointer">Select none</a></td>
 <td width="10%">&nbsp;</td>
-<td><a href="#" id="add2" onclick="addSamples();return false;">Add samples</a></td>
+<td><a href="#" id="add2" onclick="addSamples();return false;">Add Test Case</a></td>
 
 
 
@@ -156,13 +156,16 @@ print("Available Samples for "+json_data);
             <th>
             <nobr>Description</nobr>
             </th>
+            <th>
+            <nobr>Automation status</nobr>
+            </th>
 
 
          </tr>
       </thead>
       <tbody>
 <%
-include("../controller/availablesamples_onload.jag");
+include("../controller/availabletestcase_onload.jag");
 
 
 %>
@@ -180,7 +183,7 @@ include("../controller/availablesamples_onload.jag");
 <td><a href="#" onclick="selectAllInThisPage(true);return false;" style="cursor:pointer">Select all in this page</a>&nbsp;<b>|</b>&nbsp;</td>
 <td><a href="#" onclick="selectAllInThisPage(false);return false;" style="cursor:pointer">Select none</a></td>
 <td width="10%">&nbsp;</td>
-<td><a href="#" id="add2" onclick="addSamples();return false;">Add samples</a></td>
+<td><a href="#" id="add2" onclick="addSamples();return false;">Add Test Case</a></td>
 
 
 </tr>
@@ -206,3 +209,4 @@ include("template/footer.jag")
 </table>
 </body>
 </html>
+

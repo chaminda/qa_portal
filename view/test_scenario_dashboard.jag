@@ -197,6 +197,11 @@ if(name===null){
 																<td width="10%">&nbsp;</td>
 																<td><a href="#" id="edit"
 																	onclick="editWebapps();return false;">Edit</a></td>
+																<%
+                                                                    var WSO2_QAP_TEST_SCNARIO_ID = parse(request.getParameter("data"));
+                                                                    var link ="'addtestcase_to_scenario.jag?data="+encodeURIComponent(stringify(WSO2_QAP_TEST_SCNARIO_ID))+"'";
+                                                                 %>
+																<td><a href=<%=link%> id="add2">Add Test cases</a></td>
 															</tr>
 														</tbody>
 													</table>
@@ -212,16 +217,19 @@ if(name===null){
                                                    <th>
                                                       <nobr>Description</nobr>
                                                    </th>
+                                                   <th>
+                                                      <nobr>Automation Status</nobr>
+                                                   </th>
                                                 </tr>
                                              </thead>
                                              <tbody>
                                                 <%
-                                                   include("../controller/featureDashboardSamples.jag");                                 
+                                                   include("../controller/scenarioDashboardCases.jag");                                 
                                                 %>
                                              </tbody>
                                           </table>
                                           <%
-                                          print('<input type="hidden" name="WSO2_QAP_FEATURE_ID" value=\"'+WSO2_QAP_FEATURE_ID +'\">');
+                                          print('<input type="hidden" name="WSO2_QAP_TEST_SCENARIO_ID" value=\"'+WSO2_QAP_TEST_SCENARIO_ID +'\">');
                                           %>
 													</form>
 													<p>&nbsp;</p>
@@ -283,18 +291,19 @@ if(name===null){
                                                 <tr>
                                                    <th>&nbsp;</th>
                                                    <th>
-                                                      <nobr>Name</nobr>
+                                                      <nobr>Test Suit Name</nobr>
                                                    </th>
+                                                   
                                                 </tr>
                                              </thead>
                                              <tbody>
                                                 <%
-                                                   include("../controller/featureDashboardTestSuits.jag");                                
+                                                   include("../controller/scenariodashboardsuits.jag");                                
                                                 %>
                                              </tbody>
                                           </table>
                                           <%
-                                          print('<input type="hidden" name="WSO2_QAP_FEATURE_ID" value=\"'+WSO2_QAP_FEATURE_ID +'\">');
+                                          print('<input type="hidden" name="WSO2_QAP_TEST_SCENARIO_ID" value=\"'+WSO2_QAP_TEST_SCENARIO_ID +'\">');
                                           %>
                           </form>
                           <p>&nbsp;</p>

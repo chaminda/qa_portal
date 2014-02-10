@@ -51,7 +51,9 @@
         print(list[i].WSO2_QAP_TEST_SCENARIO_NAME );
         print('</a>');
         print('</td>');
-        print('</tr>');
+        
+        
+       print('</tr>');
 
 	}
 
