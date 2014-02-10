@@ -102,28 +102,11 @@ require("template/product_menu_panel.jag");
 <h2>Build</h2>
 <div id="workArea">
 <form name="Features">
-   <table class="styledLeft">
-      <tbody>
-         <tr>
-            <td style="border:0; !important">&nbsp;</td>
-         </tr>
-         <tr>
-            <td>
-               <table style="border:0; !important">
-                  <tbody>
-                     <tr style="border:0; !important">
-                        <td style="border:0; !important">
+   <h2>
                            <nobr>
-                              <font size="4">Build Dashboard</font>
+                          <font size="4">Build Dashboard</font>
                            </nobr>
-                        </td>
-                     </tr>
-                  </tbody>
-               </table>
-            </td>
-         </tr>
-      </tbody>
-   </table>
+   </h2>   
 </form>
 
 
