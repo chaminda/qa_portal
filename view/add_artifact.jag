@@ -119,7 +119,7 @@ if(name===null){
 															<tr class="tableEvenRow">
 																<td class="formRow">Description</td>
 																<td class="formRow"><input id="description"
-																	name="WSO2_QAP_DESCRIPTION" class="longInput" value="">
+																	name="WSO2_QAP_ARTIFACT_DESCRIPTION" class="longInput" value="">
 																</td>
 															</tr>
 															<tr class="tableOddRow">

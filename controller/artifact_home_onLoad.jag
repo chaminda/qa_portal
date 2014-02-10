@@ -55,7 +55,7 @@
         print('</nobr>');
         print('</td>');
         print('<td>');
-        print(list[i].WSO2_QAP_DESCRIPTION);
+        print(list[i].WSO2_QAP_ARTIFACT_DESCRIPTION);
         print('</td>');
         print('<td>');
         print(list[i].WSO2_QAP_LOCATION);
