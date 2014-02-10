@@ -42,14 +42,14 @@ function deleteTestPlans() {
         CARBON.showConfirmationDialog("Do you want to remove all test suits from this test plan?",
             function () {
 //                location.href = '../controller/deleteProductVersions.jag?deleteAllWebapps=true&webappState=all';
-                document.testPlanForm.action = '../controller/deleteVersionBuilds.jag';
+                document.testPlanForm.action = '../controller/delete_from_plan_suit_mapping.jag';
                 document.testPlanForm.submit();
             }
         );
     } else {
         CARBON.showConfirmationDialog("Do you want to delete the selected test suits from this test plan?",
             function () {
-                document.testPlanForm.action = '../controller/deleteVersionBuilds.jag';
+                document.testPlanForm.action = '../controller/delete_from_plan_suit_mapping.jag';
                 document.testPlanForm.submit();
             }
         );
