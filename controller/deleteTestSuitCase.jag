@@ -37,7 +37,7 @@ else{
 }
 //print(WSO2_QAP_FEATURE_ID);
 //response.sendRedirect("../view/testscenario_home.jag");
-response.sendRedirect("../view/test_scenario_dashboard?data="+encodeURIComponent(stringify(WSO2_QAP_TEST_SCENARIO_ID)));
+response.sendRedirect("../view/test_scenario_dashboard.jag?data="+encodeURIComponent(stringify(WSO2_QAP_TEST_SCENARIO_ID)));
 
 
 %>
