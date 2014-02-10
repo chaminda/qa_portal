@@ -33,25 +33,4 @@ else{
  response.sendRedirect("../view/add_plan_suit_mappings.jag?data="+encodeURIComponent(stringify(redirParam2)));
 }
 
-// var WSO2_QAP_TEST_SUIT_NAME = request.getParameter("WSO2_QAP_TEST_SUIT_NAME");
-
-// // var param = "{WSO2_QAP_BUILD_NAME: "+WSO2_QAP_BUILD_NAME+","+"WSO2_QAP_TEST_PLAN_ID: "+WSO2_QAP_TEST_PLAN_ID+","+"WSO2_QAP_PRODUCT_VERSION_ID: "+WSO2_QAP_PRODUCT_VERSION_ID+","+"WSO2_QAP_RELEASE_DATE: "+WSO2_QAP_RELEASE_DATE+"}";
-
-
-
-
-// // var url = "https://192.168.3.24:9443/services/WSO2_QAP_PRODUCT_BUILD_DataService/add/builds";
-
-// var optionalHeaders2 = {
-//   "Accept": "application/json",
-//           "Authorization": "Basic "+base64_encode("admin:admin") };
-
-
-
-
-
-
-
-// print(param);
-
 %>
