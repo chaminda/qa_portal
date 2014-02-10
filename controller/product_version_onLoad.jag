@@ -17,8 +17,10 @@
         var obj = parse(data.data);
     //print(obj);
 
+
         var list = obj.WSO2_QAP_PRODUCT_VERSIONCollection.WSO2_QAP_PRODUCT_VERSION;
-        if(list.length=0){
+
+        if(list.length==0){
             print('<tr>');
         print(' <td style="text-align:center; !important" width="10px">');
         
@@ -30,6 +32,7 @@
         print('</tr>');
 
         }
+        else{
 
 
     if(!(list instanceof Array)){
@@ -67,7 +70,7 @@
         print('</tr>');
 
         }
-
+}
 
 
  %>
