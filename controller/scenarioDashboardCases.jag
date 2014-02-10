@@ -38,6 +38,7 @@
         print('<td>');
 
         var link = "view_testcase.jag?data="+encodeURIComponent(stringify(list.WSO2_QAP_TEST_CASE_ID));
+        print(list.WSO2_QAP_TEST_CASE_ID);
         print('<a href="'+link+'">');
         print("&emsp;&emsp;&emsp;");
         print(list.WSO2_QAP_TEST_CASE_NAME );
