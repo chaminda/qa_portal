@@ -20,6 +20,7 @@ var list_testSuitID=objTestSuitID.WSO2_QAP_TESTPLAN_MAPPING_TESTSUITCollection.W
 
 
 
+
 if (!(list_testSuitID instanceof Array))
 {
     var url_testSuits=SERVICE_SECURE_ROOT+"WSO2_QAP_TEST_SUIT_DataService/view/testsuit_by_id/"+list_testSuitID.WSO2_QAP_TEST_SUIT_ID;
@@ -90,6 +91,36 @@ else{
                 var data_testcaseID=get(url_testcaseID,"",optionalHeaders);
                 var objTestcaseID=parse(data_testcaseID.data);
                 var list_testcaseID=objTestcaseID.WSO2_QAP_TEST_SCENARIO_TEST_CASE_MAPPINGCollection.WSO2_QAP_TEST_SCENARIO_TEST_CASE_MAPPING;
+
+
+                if(!(list_testcaseID instanceof Array))
+                {
+                var url_testResultdetails=SERVICE_SECURE_ROOT+"WSO2_QAP_TEST_RESULT_DataService/view/testreults_for_build/"+WSO2_QAP_BUILD_ID+"/"+list_testcaseID.WSO2_QAP_TEST_CASE_ID;
+                var data_testResultdetails=get(url_testResultdetails,"",optionalHeaders);
+                var objTestResultdetails= parse(data_testResultdetails.data);
+                var list_testResultdetails=objTestResultdetails.WSO2_QAP_TEST_RESULTFORBUILDCollection.WSO2_QAP_TEST_RESULTFORBUILD;
+
+
+                    //Have to show the test result details for each test cases
+
+
+                }
+                else{
+
+                    for(var k=0;k<list_testcaseID.length;k++)
+                    {
+                        var url_testResultdetails=SERVICE_SECURE_ROOT+"WSO2_QAP_TEST_RESULT_DataService/view/testreults_for_build/"+WSO2_QAP_BUILD_ID+"/"+list_testcaseID[k].WSO2_QAP_TEST_CASE_ID;
+                        var data_testResultdetails=get(url_testResultdetails,"",optionalHeaders);
+                        var objTestResultdetails= parse(data_testResultdetails.data);
+                        var list_testResultdetails=objTestResultdetails.WSO2_QAP_TEST_RESULTFORBUILDCollection.WSO2_QAP_TEST_RESULTFORBUILD;
+
+                        print(list_testResultdetails);
+
+                        //Have to show the test result details for each test cases
+
+
+                    }
+                }
             }
         }
 
