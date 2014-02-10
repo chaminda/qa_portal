@@ -234,6 +234,10 @@
                                                    <th>
                                                       <nobr>Test Scenario Name</nobr>
                                                    </th>
+                                                   
+                                                   <th>
+                                                      <nobr>Description</nobr>
+                                                   </th>
                                                 </tr>
                                              </thead>
                                              <tbody>
