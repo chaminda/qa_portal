@@ -209,9 +209,12 @@
 
                                     
                                     <%
-                                       var link_redir = "location.href = 'add_testplan.jag'";
+                                    var passjsondata='{"WSO2_QAP_PRODUCT_NAME" : "'+list1.WSO2_QAP_PRODUCT_NAME+'","WSO2_QAP_PRODUCT_VERSION_ID" : "'+WSO2_QAP_PRODUCT_VERSION_ID+'","WSO2_QAP_PRODUCT_VERSION" : "'+list1.WSO2_QAP_PRODUCT_VERSION+'"}';
+                                       var link_redir = "location.href = 'add_testplan.jag?data="+encodeURIComponent(stringify(passjsondata))+"'";
                                        var link_redir2 = "location.href = 'version_feature_dashboard.jag?data="+WSO2_QAP_PRODUCT_VERSION_ID+"'";
                                        var link_redir3 = "location.href = 'version_build_dashboard.jag?data="+WSO2_QAP_PRODUCT_VERSION_ID+"'";
+                                       var passjsondata='{"WSO2_QAP_PRODUCT_NAME" : "'+list1.WSO2_QAP_PRODUCT_NAME+'","WSO2_QAP_PRODUCT_VERSION" : "'+list1.WSO2_QAP_PRODUCT_VERSION+'"}';
+
                                     %>
                                     <div>
                                        <table>
