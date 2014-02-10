@@ -5,7 +5,7 @@ var params = request.getAllParameters("UTF-8");
 var scenario_id=request.getParameter("data");
 
 
-var list = params.WSO2_QAP_TEST_SCENARIO_ID;
+var list = params.WSO2_QAP_TEST_CASE_ID;
 var param = "";
 
 var optionalHeaders = {
@@ -17,8 +17,8 @@ if(!(list instanceof Array)){
 
     var url = SERVICE_SECURE_ROOT+"WSO2_QAP_TEST_SCENARIO_TEST_CASE_MAPPING_DataService/add/testcases_for_testscenario"
 
-    var para='{"_postadd_testcaseswithscenarios":{"WSO2_QAP_TEST_SCENARIO_ID" : "'+list+'","WSO2_QAP_TEST_CASE_ID" : "'+list+'"}}';
-print(para);
+    var para='{"_postadd_testcaseswithscenarios":{"WSO2_QAP_TEST_SCENARIO_ID" : "'+scenario_id+'","WSO2_QAP_TEST_CASE_ID" : "'+list+'"}}';
+//print(para);
     post(url, para, optionalHeaders, "json", function (data, xhr) {
         log("Response received");
     } );
@@ -27,9 +27,9 @@ print(para);
 else{
 
     for (var i=0;i<list.length;i++){
-        var url = SERVICE_SECURE_ROOT+"WSO2_QAP_SAMPLE_FEATURE_MAPPING_DataService/add/featureswithsamples";
+        var url = SERVICE_SECURE_ROOT+"WSO2_QAP_TEST_SCENARIO_TEST_CASE_MAPPING_DataService/add/testcases_for_testscenario"
 
-        var para='{"_postadd_featureswithsamples":{"WSO2_QAP_FEATURE_ID" : "'+feature_id+'","WSO2_QAP_SAMPLE_ID" : "'+list[i]+'"}}';
+        var para='{"_postadd_testcaseswithscenarios":{"WSO2_QAP_TEST_SCENARIO_ID" : "'+scenario_id+'","WSO2_QAP_TEST_CASE_ID" : "'+list+'"}}';
 
         post(url, para, optionalHeaders, "json", function (data, xhr) {
             log("Response received");
@@ -40,7 +40,7 @@ else{
 
 }
 
-response.sendRedirect("../view/feature_dashboard.jag?data="+encodeURIComponent(stringify(feature_id)));
+response.sendRedirect("../view/test_scenario_dashboard.jag?data="+encodeURIComponent(stringify(scenario_id)));
 
 
 %>
