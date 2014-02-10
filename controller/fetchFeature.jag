@@ -25,7 +25,7 @@ var optionalHeadersPost = {
             "Content-Type" : "application/json",
                 "Authorization": "Basic "+base64_encode("admin:admin") };
 
-var offset = 0;
+var offset = 2000;
 var limit = 100;
 var product_versions = new Array();
 var product_versions_fetched = new Array();
@@ -167,9 +167,7 @@ while(list[0] != null){
 									// var listredminenew = objredminenew.WSO2_QAP_FEATURECollection.WSO2_QAP_FEATURE;
 									// fatureId = listredminenew.LAST_INSERTED_ID;
 									// print('<br/>');
-    					// 			print(insertresponse);
-    					// 			print('<br/>');
-
+    					
 									print('<br/>');
     								print("inserted new id " + fatureId);
     								print('<br/>');
@@ -184,6 +182,7 @@ while(list[0] != null){
 								var urladdfeaturetoversion = DB_URL+"WSO2_QAP_PRODUCT_VERSION_FEATURE_MAPPING_DataService/add/productfeature";
 								var paramaddfeaturetoversion = '{"_postadd_productfeature":{"WSO2_QAP_PRODUCT_VERSION_ID" : "'+productversionId+'","WSO2_QAP_FEATURE_ID" : "'+fatureId+'"}}';
 							   	post(urladdfeaturetoversion, paramaddfeaturetoversion, optionalHeadersPost, "json", function (data, xhr) {
+							       
 							       log("Response received");
 							   	} );
 							   	print("added");
@@ -191,6 +190,7 @@ while(list[0] != null){
 								break;
 							}
 						}
+					// }
 					}else{
 						if(((list[i].fixed_version.name).indexOf(product_versions[listproducts[j].WSO2_QAP_PRODUCT_ID].WSO2_QAP_PRODUCT_VERSION))!==-1){
 								print('<br/>');
@@ -228,5 +228,8 @@ while(list[0] != null){
 	obj = JSON.parse(data.data);
 	list = (JSON.parse((get(url,"",optionalHeaders)).data)).issues;
  }
+
+
+ response.sendRedirect("../view/products_home.jag");
 
 %>
