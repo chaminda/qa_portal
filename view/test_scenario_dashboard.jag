@@ -220,6 +220,9 @@ if(name===null){
                                                    <th>
                                                       <nobr>Automation Status</nobr>
                                                    </th>
+                                                   <th>
+                                                      <nobr>Test Status</nobr>
+                                                   </th>
                                                 </tr>
                                              </thead>
                                              <tbody>
