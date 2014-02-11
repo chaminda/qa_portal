@@ -86,20 +86,13 @@
                </td>
             </tr>
             <tr id="middle-container-tr">
-               <td class="vertical-menu-container" id="vertical-menu-container" style="">
-                  <div class="showToHidden" id="menu-panel-button0"></div>
-                  <div id="menu-panel-button1" class="menu-panel-buttons selected"><span>Main</span></div>
-                  <div id="menu-panel-button2" class="menu-panel-buttons"><span>Monitor</span></div>
-                  <div id="menu-panel-button3" class="menu-panel-buttons"><span>Configure</span></div>
-                  <div id="menu-panel-button4" class="menu-panel-buttons"><span>Tools</span></div>
-                  <div style="display: none;" id="menu-panel-button5" class="menu-panel-buttons"><span>Extensions</span></div>
-                  <div id="menu-panel-button_dummy" style="display:none"></div>
-               </td>
                <%
-
-                include("template/product_menu_panel.jag");
-
+                include("template/product_vertical_menu.jag");
                %>
+               <%
+                include("template/product_menu_panel.jag");
+               %>
+
                <td id="middle-content">
                   <table id="content-table" border="0" cellspacing="0">
                      <tbody>
