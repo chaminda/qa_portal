@@ -4,6 +4,7 @@
    
    var url = SERVICE_SECURE_ROOT+"WSO2_QAP_PRODUCT_VERSION_DataService/get/details_by_version_id_version_join_feature/"+WSO2_QAP_PRODUCT_VERSION_ID;
 
+
    var optionalHeaders = {
     "Accept": "application/json",
             "Authorization": "Basic "+base64_encode("admin:admin") };
@@ -12,20 +13,22 @@
    var obj3 = parse(data3.data);
    var list3 = obj3.WSO2_QAP_PRODUCT_VERSIONCollection.WSO2_QAP_PRODUCT_VERSION;
 
-   print('<input type="hidden" name="WSO2_QAP_PRODUCT_VERSION_ID" value="'+WSO2_QAP_PRODUCT_VERSION_ID+'">');
 
-   print('<tr bgcolor="#EEEFFB">');
-   print('<td>');
-   print('</td>');
-   print('<td>');
-   print('<strong> Feature Description <strong/>');
-   print('</td>');
-   print('<td>');
-   print('<strong> Redmine URL <strong/>');
-   print('</td>');
+   if(list3 == null){
+      print('<tr>');
+        print(' <td style="text-align:center; !important" width="10px">');
+       
+        print(' </td>');
 
-
-   if(list3.length==null && list3.WSO2_QAP_DESCRIPTION!=null){
+        print(' <td>');
+       
+        print('</td>');
+        print(' <td>');
+      
+        print('</td>');
+        print('</tr>');
+   }
+   else if(!(list3 instanceof Array)){
 
         print('<tr>');
         print(' <td style="text-align:center; !important" width="10px">');
@@ -36,7 +39,7 @@
         var link = "feature_dashboard.jag?data="+encodeURIComponent(stringify(list3.WSO2_QAP_FEATURE_ID));
         print('<a href="'+link+'">');
         print("&emsp;&emsp;&emsp;");
-        print(list3.WSO2_QAP_DESCRIPTION );
+        print(list3.WSO2_QAP_SUBJECT );
         print('</a>');
         print('</td>');
         print(' <td>');
@@ -61,7 +64,7 @@
         var link = "feature_dashboard.jag?data="+encodeURIComponent(stringify(list3[i].WSO2_QAP_FEATURE_ID));
         print('<a href="'+link+'">');
         print("&emsp;&emsp;&emsp;");
-        print(list3[i].WSO2_QAP_DESCRIPTION );
+        print(list3[i].WSO2_QAP_SUBJECT );
         print('</a>');
         print('</td>');
         var link = list3[i].WSO2_QAP_REDMINE_URL;

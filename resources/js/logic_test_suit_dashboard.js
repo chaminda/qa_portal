@@ -45,14 +45,14 @@ function deleteBuildTestScenarios() {
         CARBON.showConfirmationDialog("Do you want to delete the selected test scenarios?",
             function () {
 //                location.href = '../controller/deleteProductVersions.jag?deleteAllWebapps=true&webappState=all';
-                document.testScenariosForm.action = '../controller/deleteTestScenario.jag';
+                document.testScenariosForm.action = '../controller/delete_test_scenario_suit_mapping.jag';
                 document.testScenariosForm.submit();
             }
         );
     } else {
         CARBON.showConfirmationDialog("Do you want to delete the selected test scenarios?",
             function () {
-                document.testScenariosForm.action = '../controller/deleteTestScenario.jag';
+                document.testScenariosForm.action = '../controller/delete_test_scenario_suit_mapping.jag';
                 document.testScenariosForm.submit();
             }
         );

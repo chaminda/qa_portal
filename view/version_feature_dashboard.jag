@@ -12,21 +12,21 @@
          <!-- datatables imports start  -->
 
         <style type="text/css" title="currentStyle">
-			@import "../resources/datatables/css/page.css";
-			@import "../resources/datatables/css/table.css";
-		</style>
+         @import "../resources/datatables/css/page.css";
+         @import "../resources/datatables/css/table.css";
+      </style>
 
-		<!--<script type="text/javascript" language="javascript" src="../resources/datatables/js/table_jquery.js"></script> -->
-		<script type="text/javascript" language="javascript" src="../resources/datatables/js/jquery.dataTables.js"></script>
-		<script type="text/javascript" charset="utf-8">
-			$(document).ready(function() {
-				$('#buildsTable').dataTable( {
-					"sPaginationType": "full_numbers"
-				} );
-			} );
-		</script>
+      <!--<script type="text/javascript" language="javascript" src="../resources/datatables/js/table_jquery.js"></script> -->
+      <script type="text/javascript" language="javascript" src="../resources/datatables/js/jquery.dataTables.js"></script>
+      <script type="text/javascript" charset="utf-8">
+         $(document).ready(function() {
+            $('#featuresTable').dataTable( {
+               "sPaginationType": "full_numbers"
+            } );
+         } );
+      </script>
 
-		<!-- datatables imports end -->
+      <!-- datatables imports end -->
 
    <noscript>
       <div class="something-wrong">
@@ -202,9 +202,11 @@
                               </script>
 
                                    <div id="middle">
+                                   <h2>Features of 
                                     <%
                                        include("../controller/version_builds_page_name_onload.jag");
                                     %>
+                                    </h2>
                                     </div>
                                     <div id="workArea">
 
@@ -223,7 +225,6 @@
                                                 <td width="20%">&nbsp;</td>
                                                 <td><a href="#" id="delete1" onclick="deleteVersionFeatures();return false;">Delete</a></td>
                                                 <td width="10%">&nbsp;</td>
-                                                <td><a href="#" id="edit" onclick="editWebapps();return false;">Edit</a></td>
                                              </tr>
                                           </tbody>
                                        </table>
@@ -233,16 +234,24 @@
                                                 <tr>
                                                    <th>&nbsp;</th>
                                                    <th>
-                                                      <nobr>Features</nobr>
+                                                      <nobr>Subject</nobr>
+                                                   </th>
+                                                   <th>
+                                                      <nobr>Redmine URL</nobr>
                                                    </th>
                                                 </tr>
                                              </thead>
                                              <tbody>
                                                 <%
+
                                                    include("../controller/version_feature_onload.jag");
+
                                                 %>
                                              </tbody>
                                           </table>
+                                          <%
+                                          print('<input type="hidden" name="WSO2_QAP_PRODUCT_VERSION_ID" value="'+WSO2_QAP_PRODUCT_VERSION_ID+'">');
+                                          %>
                                        </form>
                                        <p>&nbsp;</p>
                                        <table>
@@ -253,7 +262,6 @@
                                                 <td width="20%">&nbsp;</td>
                                                 <td><a href="#" id="delete1" onclick="deleteVersionFeatures();return false;">Delete</a></td>
                                                 <td width="10%">&nbsp;</td>
-                                                <td><a href="#" id="edit" onclick="editWebapps();return false;">Edit</a></td>
                                              </tr>
                                           </tbody>
                                        </table>
