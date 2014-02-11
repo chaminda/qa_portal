@@ -35,6 +35,9 @@ var urlproducts = DB_URL+"WSO2_QAP_PRODUCT_DataService/view/products";
 var urlversions;
 
 var dataproducts = get(urlproducts,"",optionalHeadersDb);
+if(dataproducts.data.WSO2_QAP_PRODUCTCollection != null){
+	
+
 var objproducts = parse(dataproducts.data);
 var listproducts = objproducts.WSO2_QAP_PRODUCTCollection.WSO2_QAP_PRODUCT;
 
@@ -228,7 +231,7 @@ while(list[0] != null){
 	obj = JSON.parse(data.data);
 	list = (JSON.parse((get(url,"",optionalHeaders)).data)).issues;
  }
-
+}
 
  response.sendRedirect("../view/products_home.jag");
 

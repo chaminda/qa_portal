@@ -29,10 +29,10 @@
             print('</td>');
             print('<td>');
             var link = "jira_dashboard.jag?data="+encodeURIComponent(stringify(listResultDetails.WSO2_QAP_JIRA_ID));
-            print('<a href="'+link+'">');
+            // print('<a href="'+link+'">');
             print("&emsp;&emsp;&emsp;");
             print(listResultDetails.WSO2_QAP_DESCRIPTION );
-            print('</a>');
+            // print('</a>');
             print('</td>');
             print('<td>');
             print('<a target=\"_blank\" href="'+listResultDetails.WSO2_QAP_URL+'">');
@@ -51,10 +51,10 @@
             print('</td>');
 print('<td>');
             var link = "jira_dashboard.jag?data="+encodeURIComponent(stringify(listResultDetails[i].WSO2_QAP_JIRA_ID));
-            print('<a href="'+link+'">');
+            // print('<a href="'+link+'">');
             print("&emsp;&emsp;&emsp;");
             print(listResultDetails[i].WSO2_QAP_DESCRIPTION );
-            print('</a>');
+            // print('</a>');
             print('</td>');
             print('<td>');
             print('<a target=\"_blank\" href="'+listResultDetails[i].WSO2_QAP_URL+'">');

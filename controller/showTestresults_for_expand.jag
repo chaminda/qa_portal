@@ -1,4 +1,5 @@
 <%
+
 include("base64_encode.jag");
 var SERVICE_SECURE_ROOT = session.get("service_secure_root");
 
@@ -15,9 +16,15 @@ var objTestcaseID=parse(data_testcaseID.data);
 var list_testcaseID=objTestcaseID.WSO2_QAP_TEST_SCENARIO_TEST_CASE_MAPPINGCollection.WSO2_QAP_TEST_SCENARIO_TEST_CASE_MAPPING;
 
 
-if(!(list_testcaseID instanceof Array))
+
+if(list_testcaseID == null){
+
+}
+
+
+else if(!(list_testcaseID instanceof Array))
 {
-    var url_testResultdetails=SERVICE_SECURE_ROOT+"WSO2_QAP_TEST_RESULT_DataService/view/testreults_for_build/"+WSO2_QAP_BUILD_ID+"/"+list_testcaseID.WSO2_QAP_TEST_CASE_ID;
+    /*var url_testResultdetails=SERVICE_SECURE_ROOT+"WSO2_QAP_TEST_RESULT_DataService/view/testreults_for_build/"+WSO2_QAP_BUILD_ID+"/"+list_testcaseID.WSO2_QAP_TEST_CASE_ID;
     var data_testResultdetails=get(url_testResultdetails,"",optionalHeaders);
     var objTestResultdetails= parse(data_testResultdetails.data);
     var list_testResultdetails=objTestResultdetails.WSO2_QAP_TEST_RESULTFORBUILDCollection.WSO2_QAP_TEST_RESULTFORBUILD;
@@ -48,20 +55,26 @@ if(!(list_testcaseID instanceof Array))
     print('</a>');
     print('</td>');
 
+*/
 }
 else{
 
+    //print(list_testcaseID.length);
+
     for(var k=0;k<list_testcaseID.length;k++)
     {
-        var url_testResultdetails=SERVICE_SECURE_ROOT+"WSO2_QAP_TEST_RESULT_DataService/view/testreults_for_build/"+WSO2_QAP_BUILD_ID+"/"+list_testcaseID[k].WSO2_QAP_TEST_CASE_ID;
-        var data_testResultdetails=get(url_testResultdetails,"",optionalHeaders);
-        var objTestResultdetails= parse(data_testResultdetails.data);
-        var list_testResultdetails=objTestResultdetails.WSO2_QAP_TEST_RESULTFORBUILDCollection.WSO2_QAP_TEST_RESULTFORBUILD;
 
-        print(list_testResultdetails);
+
+
+        var url_testResultdetails=SERVICE_SECURE_ROOT+"WSO2_QAP_TEST_RESULT_DataService/view/testreults_for_build/"+WSO2_QAP_BUILD_ID+"/"+list_testcaseID[k].WSO2_QAP_TEST_CASE_ID;
+        //var data_testResultdetails=get(url_testResultdetails,"",optionalHeaders);
+        //var objTestResultdetails= parse(data_testResultdetails.data);
+       // var list_testResultdetails=objTestResultdetails.WSO2_QAP_TEST_RESULTFORBUILDCollection.WSO2_QAP_TEST_RESULTFORBUILD;
+
+        //print(url_testResultdetails);
 
         //Have to show the test result details for each test cases
-
+        /*
         print(' <td>');
         print("&emsp;&emsp;&emsp;");
         print(list_testResultdetails.WSO2_QAP_TEST_CASE_NAME);
@@ -85,6 +98,8 @@ else{
         print(list_testResultdetails.WSO2_QAP_TESTED_BY);
         print('</a>');
         print('</td>');
+
+        */
 
     }
 }
