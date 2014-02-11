@@ -189,6 +189,9 @@
                                                 %>
                                              </tbody>
                                           </table>
+                                          <%
+                                            print('<input type="hidden" name="WSO2_QAP_PRODUCT_VERSION_ID" value="'+WSO2_QAP_PRODUCT_VERSION_ID+'">');
+                                            %>
                                        </form>
                                        <p>&nbsp;</p>
                                        <table>

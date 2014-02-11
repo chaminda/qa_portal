@@ -6,11 +6,8 @@ var DB_URL = "https://localhost:9443/services/";
 
 var param = "";
 
-// var username = request.getParameter("username");
-// var password = request.getParameter("password");
-	var username = "maduranga@wso2.com";
-	var password = "mps@1990X";
-
+var username = request.getParameter("username");
+var password = request.getParameter("password");
 
 var optionalHeaders = {
         "Accept":"application/json",
