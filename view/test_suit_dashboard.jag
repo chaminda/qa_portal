@@ -237,7 +237,7 @@
                                        <p>&nbsp;</p>
                                        <p>&nbsp;</p>
                                        <%
-                                          var link_redir = "location.href = 'add_testscenario.jag'";
+                                          var link_redir = "location.href = 'add_suit_scenario_mapping.jag?data="+WSO2_QAP_TEST_SUIT_ID+"'";
                                        %>
                                        <lable>
                                         <input type="button" value="Add Test Scenario" onclick="<% print(link_redir); %>" align="left"></label>
@@ -250,7 +250,6 @@
                                                 <td width="20%">&nbsp;</td>
                                                 <td><a href="#" id="delete1" onclick="deleteBuildTestScenarios();return false;">Delete</a></td>
                                                 <td width="10%">&nbsp;</td>
-                                                <td><a href="#" id="edit" onclick="editWebapps();return false;">Edit</a></td>
                                              </tr>
                                           </tbody>
                                        </table>
@@ -282,7 +281,6 @@
                                                 <td width="20%">&nbsp;</td>
                                                 <td><a href="#" id="delete1" onclick="deleteBuildTestScenarios();return false;">Delete</a></td>
                                                 <td width="10%">&nbsp;</td>
-                                                <td><a href="#" id="edit" onclick="editWebapps();return false;">Edit</a></td>
                                              </tr>
                                           </tbody>
                                        </table>
