@@ -26,10 +26,12 @@
         print('</td>');
         print('<td>');
         print('</td>');
+        print('<td>');
+        print('</td>');
         print('</tr>');
     }
 
-    else if(!(list instanceof Array)){
+    else{ if(!(list instanceof Array)){
 
         print('<tr>');
         print('<td style="text-align:center; !important" width="10px">');
@@ -50,7 +52,22 @@
         print('<td>&nbsp;&nbsp;&nbsp;');
         print(list.WSO2_QAP_AUTOMATION_STATUS);
         print('</td>');
+       /* print('<td>&nbsp;&nbsp;&nbsp;');
+        print('<td><select  id="WSO2_QAP_TEST_CASE_STATUS" name="WSO2_QAP_TEST_CASE_STATUS">
+      			<option value="Yes">Yes</option>
+        		<option value="No">No</option>
         
+        </select> </td> ');
+        print('</td>');*/
+        print('<td>');
+        print('<td>');
+        print('<select  id="WSO2_QAP_TEST_CASE_STATUS" name="WSO2_QAP_TEST_CASE_STATUS">');
+        print('<option value="PASSED">PASSED</option>');
+        print('<option value="FAILED">FAILED</option>');
+        print('<option value="INPROGRESS">IN PROGRESS</option>');
+        print('</select>');
+        print('</td>');
+        print('</td>');
         print('</tr>');
 
     }
@@ -70,16 +87,27 @@ else{
         print(list[i].WSO2_QAP_TEST_CASE_NAME);
         print('</a>');
         print('</td>')
-        print('<td>&nbsp;&nbsp;&nbsp;')
+        print('<td>')
         print(list[i].WSO2_QAP_DESCRIPTION);
         print('</td>');
         print('<td>&nbsp;&nbsp;&nbsp;')
         print(list[i].WSO2_QAP_AUTOMATION_STATUS);
-        print('</td>')
+        print('</td>');
+        //print('<td>&nbsp;&nbsp;&nbsp;');
+                print('<td>');
+                print('<select  id="WSO2_QAP_TEST_CASE_STATUS" name="WSO2_QAP_TEST_CASE_STATUS">');
+                print('<option value="PASSED">PASSED</option>');
+                print('<option value="FAILED">FAILED</option>');
+                print('<option value="INPROGRESS">IN PROGRESS</option>');
+                print('</select>');
+                print('</td>');
+                print('</td>');
+                
         print('</tr>');
         
 
     }
+}
 }
 
 

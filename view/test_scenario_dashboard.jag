@@ -201,7 +201,7 @@ if(name===null){
                                                                     var WSO2_QAP_TEST_SCNARIO_ID = parse(request.getParameter("data"));
                                                                     var link ="'addtestcase_to_scenario.jag?data="+encodeURIComponent(stringify(WSO2_QAP_TEST_SCNARIO_ID))+"'";
                                                                  %>
-																<td><a href=<%=link%> id="add2">&nbsp;&nbsp;&nbsp;Add Test cases</a></td>
+																<td><a href=<%=link%> id="add2">Add Test cases</a></td>
 															</tr>
 														</tbody>
 													</table>
@@ -220,6 +220,9 @@ if(name===null){
                                                    <th>
                                                       <nobr>Automation Status</nobr>
                                                    </th>
+                                                   <th>
+                                                      <nobr>Test Status</nobr>
+                                                   </th>
                                                 </tr>
                                              </thead>
                                              <tbody>
@@ -233,6 +236,7 @@ if(name===null){
                                           %>
 													</form>
 													<p>&nbsp;</p>
+													
 													<table>
 														<tbody>
 															<tr></tr>
@@ -253,6 +257,11 @@ if(name===null){
                                 <td width="10%">&nbsp;</td>
                                 <td><a href="#" id="edit"
                                   onclick="editWebapps();return false;">Edit</a></td>
+                                 <%
+                                  var WSO2_QAP_TEST_SCNARIO_ID = parse(request.getParameter("data"));
+                                  var link ="'addtestcase_to_scenario.jag?data="+encodeURIComponent(stringify(WSO2_QAP_TEST_SCNARIO_ID))+"'";
+                                 %>
+                                 <td><a href=<%=link%> id="add2">Add Test cases</a></td>
                               </tr>
                             </tbody>
                           </table>
