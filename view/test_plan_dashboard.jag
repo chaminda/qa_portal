@@ -199,6 +199,12 @@
                                                 %>
                                              </tbody>
                                           </table>
+                                          <%
+                                            print('<input type="hidden" name="WSO2_QAP_TEST_PLAN_ID" value="'+jd2.WSO2_QAP_TEST_PLAN_ID+'">');
+                                            print('<input type="hidden" name="WSO2_QAP_PRODUCT_NAME" value="'+jd2.WSO2_QAP_PRODUCT_NAME+'">');
+                                            print('<input type="hidden" name="WSO2_QAP_PRODUCT_VERSION" value="'+jd2.WSO2_QAP_PRODUCT_VERSION+'">');
+
+                                          %>
                                        </form>
                                        <p>&nbsp;</p>
                                        <table>
