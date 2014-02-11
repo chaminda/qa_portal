@@ -3,7 +3,16 @@
 var username = request.getParameter("username");
 var  password = request.getParameter("password");
 
-if(username==="sudheera" && password==="pass"){
+
+var ldapAuth = Packages.com.asiri.ldapAuthenticate;
+var ldapAuthentication = new ldapAuth();
+
+
+var resultArray = ldapAuthentication.ldapAuth(username,password);
+
+
+
+if(resultArray == true){
 session.put("username",username);
 session.put("role", "admin");
 
@@ -14,3 +23,6 @@ else{
 }
 
 %>
+
+
+
