@@ -151,7 +151,7 @@
                                     %>
                                     <div id="workArea">
 
-                                    
+                                    <h2>Available Test Suits</h2>
                                     <%
                                        var link_redir = "location.href = 'add_test_suit.jag?data="+encodeURIComponent(stringify(passjsondata))+"'";
                                     %>

@@ -135,16 +135,8 @@ print(name);
 <div id="middle">
 <h2>Test Cases</h2>
 <div id="workArea">
-<form action="index.jsp" name="searchForm">
-   <table class="styledLeft">
-      <tbody>
-         <tr>
-            <td style="border:0; !important">&nbsp;</td>
-         </tr>
-      </tbody>
-   </table>
-</form>
-<p>&nbsp;</p>
+
+
 <table>
    <tbody>
       <tr></tr>
