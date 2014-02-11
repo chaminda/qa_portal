@@ -202,9 +202,11 @@
                               </script>
 
                                    <div id="middle">
+                                   <h2>Features of 
                                     <%
                                        include("../controller/version_builds_page_name_onload.jag");
                                     %>
+                                    </h2>
                                     </div>
                                     <div id="workArea">
 
