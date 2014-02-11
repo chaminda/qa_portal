@@ -196,7 +196,11 @@
                               <script src="../resources/js/logic_add_feature_to_version.js" type="text/javascript"></script>
 
                                    <div id="middle">
-                                    <h2>Add feature to product</h2>
+                                    <h2>Add features to 
+                                    <%
+                                    include("../controller/version_builds_page_name_onload.jag");
+                                    %>
+                                    </h2>
                                     <div id="workArea">
                                        
                                        <table>

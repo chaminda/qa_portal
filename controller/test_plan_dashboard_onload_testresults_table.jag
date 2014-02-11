@@ -3,23 +3,7 @@
    var SERVICE_SECURE_ROOT = session.get("service_secure_root");
    // print('<input type="hidden" name="WSO2_QAP_PRODUCT_VERSION_ID" value="'+WSO2_QAP_PRODUCT_VERSION_ID+'">');
 
-   print('<tr bgcolor="#EEEFFB">');
-   print('<td>');
-   print('<strong> Build Name <strong/>');
-   print('</td>');
-   print('<td>');
-   print('<strong> Test Case Name <strong/>');
-   print('</td>');
-   print('<td>');
-   print('<strong> Test Status <strong/>');
-   print('</td>');
-   print('<td>');
-   print('<strong> Automation Results <strong/>');
-   print('</td>');
-   print('<td>');
-   print('<strong> Tested By <strong/>');
-   print('</td>');
-   print('</tr>');
+   
    print('<input type="hidden" name="WSO2_QAP_TEST_PLAN_ID" value="'+jd2.WSO2_QAP_TEST_PLAN_ID+'">');
 
    var url = SERVICE_SECURE_ROOT+"WSO2_QAP_TEST_PLAN_DataService/view/map_build_with_results/"+jd2.WSO2_QAP_TEST_PLAN_ID;
@@ -57,7 +41,7 @@
    if(!(list instanceof Array)){
   
         print('<tr>');
-        print(' <td>');
+        print(' <td><p>&nbsp;</p>');
         var link = "build_dashboard.jag?data="+encodeURIComponent(stringify(list.WSO2_QAP_BUILD_ID));
         print('<a href="'+link+'">');
         print(list.WSO2_QAP_BUILD_NAME);
@@ -88,7 +72,7 @@
           else{
             print('<tr>');
           }
-        print(' <td>');
+        print(' <td>&nbsp;&nbsp;');
         var link = "build_dashboard.jag?data="+encodeURIComponent(stringify(list[i].WSO2_QAP_BUILD_ID));
         print('<a href="'+link+'">');
         print(list[i].WSO2_QAP_BUILD_NAME);

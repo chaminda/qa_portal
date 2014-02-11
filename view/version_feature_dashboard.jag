@@ -12,21 +12,21 @@
          <!-- datatables imports start  -->
 
         <style type="text/css" title="currentStyle">
-			@import "../resources/datatables/css/page.css";
-			@import "../resources/datatables/css/table.css";
-		</style>
+         @import "../resources/datatables/css/page.css";
+         @import "../resources/datatables/css/table.css";
+      </style>
 
-		<!--<script type="text/javascript" language="javascript" src="../resources/datatables/js/table_jquery.js"></script> -->
-		<script type="text/javascript" language="javascript" src="../resources/datatables/js/jquery.dataTables.js"></script>
-		<script type="text/javascript" charset="utf-8">
-			$(document).ready(function() {
-				$('#featuresTable').dataTable( {
-					"sPaginationType": "full_numbers"
-				} );
-			} );
-		</script>
+      <!--<script type="text/javascript" language="javascript" src="../resources/datatables/js/table_jquery.js"></script> -->
+      <script type="text/javascript" language="javascript" src="../resources/datatables/js/jquery.dataTables.js"></script>
+      <script type="text/javascript" charset="utf-8">
+         $(document).ready(function() {
+            $('#featuresTable').dataTable( {
+               "sPaginationType": "full_numbers"
+            } );
+         } );
+      </script>
 
-		<!-- datatables imports end -->
+      <!-- datatables imports end -->
 
    <noscript>
       <div class="something-wrong">

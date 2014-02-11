@@ -27,7 +27,7 @@
         print('</tr>');
     }
 
-    if(!(list instanceof Array)){
+    else if(!(list instanceof Array)){
 
 
         print('<tr vertical-align:middle>');
