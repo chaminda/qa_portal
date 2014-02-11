@@ -25,7 +25,7 @@ else{
        log("Response received");
    } );
 	
-	//response.sendRedirect("../view/testResult_home.jag");
+	response.sendRedirect("../view/products_home.jag");
 }
 
 %>

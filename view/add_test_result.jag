@@ -150,7 +150,7 @@ if(name===null){
                                </tr>
                                 <tr class="tableEvenRow">
                                 <td class="formRow">Tested By</td>
-                                <td class="formRow"><input id="testedby"
+                                <td class="formRow"><input id="WSO2_QAP_TESTED_BY"
                                   name="WSO2_QAP_TESTED_BY" class="longInput" value="">
                                 </td>
                               </tr>
@@ -162,7 +162,7 @@ if(name===null){
                               <tr>
                                 <td class="buttonRow"><input class="button" value="Save" type="submit"> 
                                 <input class="button" value="Cancel"
-                                    onclick="location.href = 'test_result_home.jag'"
+                                    onclick="location.href = 'products_home.jag'"
                                     type="button">
                                 </td>
                               </tr>
