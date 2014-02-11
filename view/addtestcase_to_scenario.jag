@@ -112,12 +112,15 @@ json_data = parse(decodeURIComponent(req_data));
 //if(json_data.WSO2_QAP_SAMPLE_ID===null || json_data.WSO2_QAP_SAMPLE_NAME===null){
    // print("Sorry this page isn't available");
 //}else{
-    print("<h2>");
-    //print("Available features for "+json_data.WSO2_QAP_SAMPLE_NAME);
-print("Available Test case for "+json_data);
-    print("</h2>");
+    //print("<h2>");
+    //print("Available ftures for "+json_data.WSO2_QAP_TEST_CASE_NAME);
+//print("Available Test case for "+json_data);
+    //print("</h2>");
+    //print(json_data);
+    //include("../controller/availabletestcase_heading.jag?data="+json_data);
 //}
                     %>
+                    
 
 
 <div id="workArea">

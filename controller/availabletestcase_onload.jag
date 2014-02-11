@@ -4,7 +4,7 @@ include("base64_encode.jag");
 var SERVICE_SECURE_ROOT = session.get("service_secure_root");
 
 var url  = SERVICE_SECURE_ROOT+"WSO2_QAP_TEST_SCENARIO_TEST_CASE_MAPPING_DataService/view/testcases_for_testscenario/"+json_data;
-
+var url1 = SERVICE_SECURE_ROOT+"WSO2_QAP_TEST_SCENARIO_DataService/view/testscenario_with_id/"+json_data;
 
 var optionalHeaders = {
     "Accept": "application/json",
@@ -13,12 +13,19 @@ var optionalHeaders = {
 var param ="";
 
 var data = get(url,param,optionalHeaders);
+var data1=get(url1,param,optionalHeaders);
 
 var obj = parse(data.data);
+var obj1 = parse(data1.data);
 
 
 var list=obj.WSO2_QAP_TEST_SCENARIO_TEST_CASE_MAPPINGCollection.WSO2_QAP_TEST_SCENARIO_TEST_CASE_MAPPING;
+var list1 = obj1.WSO2_QAP_TEST_SCENARIOCollection.WSO2_QAP_TEST_SCENARIO;
 
+print("<h2>");
+	    //print("Available features for "+json_data.WSO2_QAP_TEST_CASE_NAME);
+	print("Available Test case for "+list1.WSO2_QAP_TEST_SCENARIO_NAME);
+	    print("</h2>");
 
 if(list == null){
         print('<tr>');
