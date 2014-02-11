@@ -33,8 +33,9 @@ var optionalHeaders = {
 			
 		}
 	}
-	var passjsondata='{"verid_proname_planid":{"WSO2_QAP_TEST_PLAN_ID" : "'+params.WSO2_QAP_TEST_PLAN_ID+'","WSO2_QAP_PRODUCT_NAME" : "'+params.WSO2_QAP_PRODUCT_NAME+'","WSO2_QAP_PRODUCT_VERSION" : "'+params.WSO2_QAP_PRODUCT_VERSION+'"}}';
 
+	var passjsondata='{"verid_proname_planid":{"WSO2_QAP_TEST_PLAN_ID" : "'+params.WSO2_QAP_TEST_PLAN_ID+'","WSO2_QAP_PRODUCT_NAME" : "'+params.WSO2_QAP_PRODUCT_NAME+'","WSO2_QAP_PRODUCT_VERSION" : "'+params.WSO2_QAP_PRODUCT_VERSION+'"}}';
+// print(passjsondata)
 response.sendRedirect("../view/test_plan_dashboard.jag?data="+encodeURIComponent(stringify(passjsondata)));
 
 %>

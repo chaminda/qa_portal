@@ -20,7 +20,14 @@
     <script type="text/javascript" language="javascript" src="../resources/datatables/js/jquery.dataTables.js"></script>
     <script type="text/javascript" charset="utf-8">
       $(document).ready(function() {
-        $('#buildsTable').dataTable( {
+        $('#BuildResultsTable').dataTable( {
+          "sPaginationType": "full_numbers"
+        } );
+      } );
+    </script>
+    <script type="text/javascript" charset="utf-8">
+      $(document).ready(function() {
+        $('#testPlanTable').dataTable( {
           "sPaginationType": "full_numbers"
         } );
       } );
@@ -207,7 +214,7 @@
                                         json_data = parse(decodeURIComponent(req_data));
                                         jd2=parse(json_data).verid_proname_planid;
                                         print("<h2>");
-                                        print(jd2.WSO2_QAP_PRODUCT_NAME+" "+jd2.WSO2_QAP_PRODUCT_VERSION);
+                                        print("Test Plan for "+jd2.WSO2_QAP_PRODUCT_NAME+" "+jd2.WSO2_QAP_PRODUCT_VERSION);
                                         print("</h2>");
                                     %>
                                     <div id="workArea">
@@ -218,6 +225,7 @@
                                        var link_redir = "location.href = 'add_plan_suit_mappings.jag?data="+encodeURIComponent(stringify(passjsondata))+"'";
                                     %>
                                     <div>
+                                    <h2>Test Suits</h2>
                                        <table>
                                           <tbody>
                                              <tr>
@@ -244,7 +252,7 @@
                                                 <tr>
                                                    <th>&nbsp;</th>
                                                    <th>
-                                                      <nobr>Test Suits</nobr>
+                                                      <nobr>Test Suit Name</nobr>
                                                    </th>
                                                 </tr>
                                              </thead>
@@ -268,15 +276,28 @@
                                        </table>
                                     </div>
                                     <p>&nbsp;</p>
+                                    <h2>Test Results</h2>
                                     <p>&nbsp;</p>
                                     <div>
                                       <form name="buildResultsForm">
                                           <table class="display" id="BuildResultsTable" cellpadding="0" cellspacing="0" border="0" width="100%">
                                              <thead>
+
                                                 <tr>
-                                                   <p>&nbsp;</p>
                                                    <th>
-                                                      <nobr>Test Results</nobr>
+                                                      <nobr>Build Name</nobr>
+                                                   </th>
+                                                   <th>
+                                                      <nobr>Test Case Name</nobr>
+                                                   </th>
+                                                   <th>
+                                                      <nobr>Test Status</nobr>
+                                                   </th>
+                                                   <th>
+                                                      <nobr>Automation Results</nobr>
+                                                   </th>
+                                                   <th>
+                                                      <nobr>Tested By</nobr>
                                                    </th>
                                                 </tr>
                                              </thead>

@@ -202,9 +202,11 @@
                               </script>
 
                                    <div id="middle">
+                                   <h2>Builds of
                                     <%
                                        include("../controller/version_builds_page_name_onload.jag");
                                     %>
+                                    </h2>
                                     </div>
                                     <div id="workArea">
 
@@ -237,7 +239,10 @@
                                                 <tr>
                                                    <th>&nbsp;</th>
                                                    <th>
-                                                      <nobr>Builds</nobr>
+                                                      <nobr>Build Name</nobr>
+                                                   </th>
+                                                   <th>
+                                                      <nobr>Build Date</nobr>
                                                    </th>
                                                 </tr>
                                              </thead>

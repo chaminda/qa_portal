@@ -32,6 +32,12 @@
         print(list.WSO2_QAP_TEST_SCENARIO_NAME );
         print('</a>');
         print('</td>');
+        print(' <td>');
+        //print('<a href="product_version.jag?product='+list.WSO2_QAP_TEST_SCENARIO_NAME+'&product_id='+list.WSO2_QAP_TEST_SCENARIO_ID'">');
+        print("&emsp;&emsp;&emsp;");
+        print(list.WSO2_QAP_DESCRIPTION );
+        print('</a>');
+        print('</td>');
         print('</tr>');
 
     }
@@ -49,6 +55,13 @@
         print('<a href="'+link+'">');
         print("&emsp;&emsp;&emsp;");
         print(list[i].WSO2_QAP_TEST_SCENARIO_NAME );
+        print('</a>');
+        print('</td>');
+        print('<td>');
+        var link ="test_scenario_dashboard.jag?data="+encodeURIComponent(stringify(list[i].WSO2_QAP_TEST_SCENARIO_ID));
+        print('<a href="'+link+'">');
+        print("&emsp;&emsp;&emsp;");
+        print(list[i].WSO2_QAP_DESCRIPTION );
         print('</a>');
         print('</td>');
         

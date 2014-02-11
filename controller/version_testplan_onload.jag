@@ -13,20 +13,21 @@
    var list4 = obj4.WSO2_QAP_TEST_PLANCollection.WSO2_QAP_TEST_PLAN;
    print('<input type="hidden" name="WSO2_QAP_PRODUCT_VERSION_ID" value="'+WSO2_QAP_PRODUCT_VERSION_ID+'">');
 
-   print('<tr bgcolor="#EEEFFB">');
-   print('<td>');
-   print('</td>');
-   print('<td>');
-   print('<strong> Test Plan Name <strong/>');
-   print('</td>');
-   print('<td>');
-   print('<strong> Status <strong/>');
-   print('</td>');
+   // print('<tr bgcolor="#EEEFFB">');
+   // print('<td>');
+   // print('</td>');
+   // print('<td>');
+   // print('<strong> Test Plan Name <strong/>');
+   // print('</td>');
+   // print('<td>');
+   // print('<strong> Status <strong/>');
+   // print('</td>');
 
    var passjsondata='{"verid_proname_planid":{"WSO2_QAP_TEST_PLAN_ID" : "'+list4.WSO2_QAP_TEST_PLAN_ID+'","WSO2_QAP_PRODUCT_NAME" : "'+list1.WSO2_QAP_PRODUCT_NAME+'","WSO2_QAP_PRODUCT_VERSION" : "'+list1.WSO2_QAP_PRODUCT_VERSION+'"}}';
 
 
-   if(list4.length==null && list4.WSO2_QAP_PLANNING_STATUS!=null){
+   // if(list4.length==null && list4.WSO2_QAP_PLANNING_STATUS!=null){
+    if(!(list4 instanceof Array)){
 
         print('<tr>');
         print(' <td style="text-align:center; !important" width="10px">');

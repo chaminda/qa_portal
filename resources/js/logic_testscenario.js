@@ -1,38 +1,38 @@
 var allSelected = false;
 
 
-function isProductSelected() {
+function isTestScenarioSelected() {
     var selected = false;
-    if (document.productsForm.productId[0] != null) { // there is more than 1
-        for (var j = 0; j < document.productsForm.productId.length; j++) {
-            selected = document.productsForm.productId[j].checked;
+    if (document.testScenarioForm.scenarioId[0] != null) { // there is more than 1
+        for (var j = 0; j < document.testScenarioForm.scenarioId.length; j++) {
+            selected = document.testScenarioForm.scenarioId[j].checked;
             if (selected) break;
         }
-    } else if (document.productsForm.productId != null) { // only 1
-        selected = document.productsForm.productId.checked;
+    } else if (document.testScenarioForm.scenarioId != null) { // only 1
+        selected = document.testScenarioForm.scenarioId.checked;
     }
     return selected;
 }
 
-function deleteProducts() {
-    var selected = isProductSelected();
+function deleteTestScenario() {
+    var selected = isTestScenarioSelected();
     if (!selected) {
         CARBON.showInfoDialog('Please select the applications to be deleted.');
         return;
     }
     if (allSelected) {
-        CARBON.showConfirmationDialog("Do you want to delete all products?",
+        CARBON.showConfirmationDialog("Do you want to delete all test scenarios?",
             function () {
                 //location.href = '../controller/deleteProducts.jag?deleteAllWebapps=true&webappState=all';
-                document.productsForm.action = '../controller/deleteProducts.jag';
-                document.productsForm.submit();
+                document.testScenarioForm.action = '../controller/deleteTestScenario.jag';
+                document.testScenarioForm.submit();
             }
         );
     } else {
-        CARBON.showConfirmationDialog("Do you want to delete the selected products?",
+        CARBON.showConfirmationDialog("Do you want to delete the selected test scenarios?",
             function () {
-                document.productsForm.action = '../controller/deleteProducts.jag';
-                document.productsForm.submit();
+                document.testScenarioForm.action = '../controller/deleteTestScenario.jag';
+                document.testScenarioForm.submit();
             }
         );
     }
@@ -40,19 +40,19 @@ function deleteProducts() {
 
 function selectAllInThisPage(isSelected) {
     allSelected = false;
-    if (document.productsForm.productId != null &&
-        document.productsForm.productId[0] != null) { // there is more than 1
+    if (document.testScenarioForm.scenarioId != null &&
+        document.testScenarioForm.scenarioId[0] != null) { // there is more than 1
         if (isSelected) {
-            for (var j = 0; j < document.productsForm.productId.length; j++) {
-                document.productsForm.productId[j].checked = true;
+            for (var j = 0; j < document.testScenarioForm.scenarioId.length; j++) {
+                document.testScenarioForm.scenarioId[j].checked = true;
             }
         } else {
-            for (j = 0; j < document.productsForm.productId.length; j++) {
-                document.productsForm.productId[j].checked = false;
+            for (j = 0; j < document.testScenarioForm.scenarioId.length; j++) {
+                document.testScenarioForm.scenarioId[j].checked = false;
             }
         }
-    } else if (document.productsForm.productId != null) { // only 1
-        document.productsForm.productId.checked = isSelected;
+    } else if (document.testScenarioForm.scenarioId != null) { // only 1
+        document.testScenarioForm.scenarioId.checked = isSelected;
     }
     return false;
 }
@@ -67,14 +67,14 @@ function resetVars() {
     allSelected = false;
 
     var isSelected = false;
-    if (document.productsForm.productId[0] != null) { // there is more than 1 sg
-        for (var j = 0; j < document.productsForm.productId.length; j++) {
-            if (document.productsForm.productId[j].checked) {
+    if (document.testScenarioForm.scenarioId[0] != null) { // there is more than 1 sg
+        for (var j = 0; j < document.testScenarioForm.scenarioId.length; j++) {
+            if (document.testScenarioForm.scenarioId[j].checked) {
                 isSelected = true;
             }
         }
-    } else if (document.productsForm.productId != null) { // only 1 sg
-        if (document.productsForm.productId.checked) {
+    } else if (document.testScenarioForm.scenarioId != null) { // only 1 sg
+        if (document.testScenarioForm.scenarioId.checked) {
             isSelected = true;
         }
     }

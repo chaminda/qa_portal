@@ -358,14 +358,21 @@ if(name===null){
 														<!-- 														</tr> -->
 														<!-- 													</thead> -->
 														<tbody>
-															<tr class="tableOddRow">
-																<td class="formRow">Description<span class="required">*</span></td>
+                            <tr class="tableOddRow">
+                                <td class="formRow">Subject<span class="required">*</span></td>
+                                <td class="formRow"><input id="WSO2_QAP_SUBJECT"
+                                  name="WSO2_QAP_SUBJECT" type="text">
+                                
+                                </td>
+                              </tr>
+															<tr class="tableEvenRow">
+																<td class="formRow">Description</td>
 																<td class="formRow"><input id="WSO2_QAP_DESCRIPTION"
 																	name="WSO2_QAP_DESCRIPTION" class="longInput">
 																
 																</td>
 															</tr>
-															<tr class="tableEvenRow">
+															<tr class="tableOddRow">
 																<td class="formRow">Redmine URI<span class="required">*</span>
 																</td>
 																<td class="formRow"><input type="text" id="WSO2_QAP_REDMINE_URL"

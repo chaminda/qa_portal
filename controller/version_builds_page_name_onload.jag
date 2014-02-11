@@ -19,8 +19,7 @@
    if(WSO2_QAP_PRODUCT_VERSION_ID===null){
       print("Sorry this page isn't available");
    }else{
-      print("<h2>");
       print(list1.WSO2_QAP_PRODUCT_NAME+" "+list1.WSO2_QAP_PRODUCT_VERSION);
-      print("</h2>");
+      
    }
 %>   

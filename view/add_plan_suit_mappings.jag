@@ -146,12 +146,14 @@
                                         var WSO2_QAP_TEST_PLAN_ID = decoded_data2.WSO2_QAP_TEST_PLAN_ID;
                                         var WSO2_QAP_PRODUCT_NAME = decoded_data2.WSO2_QAP_PRODUCT_NAME;
                                         var WSO2_QAP_PRODUCT_VERSION = decoded_data2.WSO2_QAP_PRODUCT_VERSION;
+                                        var passjsondata='{"verid_proname_planid":{"WSO2_QAP_TEST_PLAN_ID" : "'+WSO2_QAP_TEST_PLAN_ID+'","WSO2_QAP_PRODUCT_NAME" : "'+WSO2_QAP_PRODUCT_NAME+'","WSO2_QAP_PRODUCT_VERSION" : "'+WSO2_QAP_PRODUCT_VERSION+'"}}';
+
                                     %>
                                     <div id="workArea">
 
                                     
                                     <%
-                                       var link_redir = "location.href = 'add_test_suit.jag'";
+                                       var link_redir = "location.href = 'add_test_suit.jag?data="+encodeURIComponent(stringify(passjsondata))+"'";
                                     %>
                                     <div>
                                        <table>
@@ -199,6 +201,7 @@
                                                 <td>
                                                   <input type="submit" value="Submit">
                                                 </td>
+
                                                 <%
                                                 var passjsondata='{"verid_proname_planid":{"WSO2_QAP_TEST_PLAN_ID" : "'+WSO2_QAP_TEST_PLAN_ID+'","WSO2_QAP_PRODUCT_NAME" : "'+WSO2_QAP_PRODUCT_NAME+'","WSO2_QAP_PRODUCT_VERSION" : "'+WSO2_QAP_PRODUCT_VERSION+'"}}';
                                                   var link_redir2 = "location.href = '../view/test_plan_dashboard.jag?data="+encodeURIComponent(stringify(passjsondata))+"'";
