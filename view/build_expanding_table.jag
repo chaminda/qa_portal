@@ -28,7 +28,6 @@
          
              //collapsible management
              $('.collapsible').collapsible({
-                 defaultOpen: '',
                  cookieName: 'nav',
                  speed: 'slow',
                  animateOpen: function (elem, opts) { //replace the standard slideUp with custom function
@@ -45,7 +44,6 @@
                  }
              });
              $('.page_collapsible').collapsible({
-                 defaultOpen: '',
                  cookieName: 'body2',
                  speed: 'slow',
                  animateOpen: function (elem, opts) { //replace the standard slideUp with custom function
@@ -81,6 +79,9 @@
                  event.preventDefault();
                  openAll();
              });
+
+                 event.preventDefault();
+                 openAll();
          
          });
       </script>
