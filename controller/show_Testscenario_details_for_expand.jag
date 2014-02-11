@@ -33,26 +33,38 @@ if (!(list_testscenarioID instanceof Array))
     var objTestcaseID=parse(data_testcaseID.data);
     var list_testcaseID=objTestcaseID.WSO2_QAP_TEST_SCENARIO_TEST_CASE_MAPPINGCollection.WSO2_QAP_TEST_SCENARIO_TEST_CASE_MAPPING;
 
-    print(' <td>');
-    print("&emsp;&emsp;&emsp;");
-    print(list_Testscenarios.WSO2_QAP_TEST_SCENARIO_NAME);
-    print('</a>');
-    print('</td>');
-    print(' <td>');
+    print('<table>');
 
-    print(' <td>');
+    print('<div class="page_collapsible collapse-close" id="body-section1">');
+
+
+
+    print(list_Testscenarios.WSO2_QAP_TEST_SCENARIO_NAME);
+
     print("&emsp;&emsp;&emsp;");
     print(list_Testscenarios.WSO2_QAP_DESCRIPTION);
-    print('</a>');
-    print('</td>');
-    print(' <td>')
 
+
+    print('<span></span></div>');
+
+
+    print('<div class="container" style="display: none;">');
+    print(' <div class="content">');
+
+    print('</div>');
+    print('</div>');
+
+
+    print('</table>');
 
 }
 else{
+    print('<table>');
 
     for(var j=0;j<list_testscenarioID.length;j++)
     {
+
+
         var url_testScenarios=SERVICE_SECURE_ROOT+"WSO2_QAP_TEST_SCENARIO_DataService/view/testscenario_with_id/"+list_testscenarioID[j].WSO2_QAP_TEST_SCENARIO_ID;
         var data_testscenarios=get(url_testScenarios,"",optionalHeaders);
         var objTestScenarios=parse(data_testscenarios.data);
@@ -60,22 +72,33 @@ else{
         //print(list_Testscenarios);
         //have to show the test scenario details
 
-        print(' <td>');
-        print("&emsp;&emsp;&emsp;");
+
+        print('<div class="page_collapsible collapse-close" id="body-section1">');
+
+
+
         print(list_Testscenarios.WSO2_QAP_TEST_SCENARIO_NAME);
-        print('</a>');
-        print('</td>');
 
-
-        print(' <td>');
         print("&emsp;&emsp;&emsp;");
         print(list_Testscenarios.WSO2_QAP_DESCRIPTION);
-        print('</a>');
-        print('</td>');
 
 
-        include("showTestresults_for_expand.jag");
+        print('<span></span></div>');
 
+
+        print('<div class="container" style="display: none;">');
+        print(' <div class="content">');
+
+        include("../controller/showTestresults_for_expand.jag");
+
+        print('</div>');
+        print('</div>');
+
+
+    }
+
+    print('</table>');
+}
 
 
         /*
@@ -119,10 +142,10 @@ else{
             }
         }
             */
-    }
+    ///}
 
 
-}
+//}
 
 
 %>
