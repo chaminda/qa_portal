@@ -200,6 +200,7 @@
                                      '</td><td class="breadcrumb-link">&nbsp;>&nbsp;List</td>';
                                 }
                               </script>
+                                          
 
                                    <div id="middle">
                                     <%
@@ -207,18 +208,16 @@
                                         include("../controller/test_suit_page_name_onload.jag");
                                     %>
                                     <div id="workArea">
-                                    
+                                     <p>&nbsp;</p>
+                                    <table>
+                                                <tr>
+                                                      <h2>Test Plans</h2>
+                                                </tr>
+                                             </table>
                                        <p>&nbsp;</p>
                                        <form name="testPlanForm" method="post">
                                           <table class="display" id="testPlansTable" name="testPlansTable" cellpadding="0" cellspacing="0" border="0" width="100%">
-                                             <thead>
-                                                <tr>
-                                                   <p>&nbsp;</p>
-                                                   <th>
-                                                      <nobr>Test Plans</nobr>
-                                                   </th>
-                                                </tr>
-                                             </thead>
+                                             
                                              <tbody>
                                                 <%
                                                    include("../controller/testsuit_testplans_onload.jag");
@@ -236,11 +235,17 @@
                                        </table>
                                        <p>&nbsp;</p>
                                        <p>&nbsp;</p>
+                                       <table>
+                                                <tr>
+                                                      <h2>Test Scenarios</h2>
+                                                </tr>
+                                             </table>
                                        <%
                                           var link_redir = "location.href = 'add_suit_scenario_mapping.jag?data="+WSO2_QAP_TEST_SUIT_ID+"'";
                                        %>
                                        <lable>
                                         <input type="button" value="Add Test Scenario" onclick="<% print(link_redir); %>" align="left"></label>
+                                         <p>&nbsp;</p>
 
                                        <table>
                                           <tbody>
@@ -257,14 +262,7 @@
                                        <p>&nbsp;</p>
                                        <form name="testScenariosForm" method="post">
                                           <table class="display" id="testScenariosTable" name="testScenariosTable" cellpadding="0" cellspacing="0" border="0" width="100%">
-                                             <thead>
-                                                <tr>
-                                                   <p>&nbsp;</p>
-                                                   <th>
-                                                      <nobr>Test Scenarios</nobr>
-                                                   </th>
-                                                </tr>
-                                             </thead>
+                                             
                                              <tbody>
                                                 <%
                                                    include("../controller/testsuit_testscenario_onload.jag");
