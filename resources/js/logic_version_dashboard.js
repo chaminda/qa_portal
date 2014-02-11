@@ -170,6 +170,21 @@ function deleteVersionTestPlans() {
     }
 }
 
+function editVersionTestPlans() {
+    var selected = isVersionTestPlanSelected();
+    if (!selected) {
+        CARBON.showInfoDialog('Please select the version test plans to be edited.');
+        return;
+    }
+    
+    CARBON.showConfirmationDialog("Do you want to edit the status of test plan?",
+        function () {
+            document.testPlanForm.action = '../controller/editTestPlan.jag';
+            document.testPlanForm.submit();
+        }
+    );
+}
+
 
 function resetVars() {
     allSelected = false;
