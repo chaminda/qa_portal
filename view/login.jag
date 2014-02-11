@@ -258,7 +258,7 @@ function doLoginValidation() {
                                                    <tbody>
                                                       <tr class="feature feature-top">
                                                          <td>
-                                                            <a target="_blank" href="http://docs.wso2.org/wiki/display/AS521/WSO2+Application+Server+Documentation"><img src="../resources/user-guide.gif"></a>
+                                                            <a target="_blank" href="http://docs.wso2.org/wiki/display/AS521/WSO2+Application+Server+Documentation"><img src="../resources/images/user-guide.gif"></a>
                                                          </td>
                                                          <td>
                                                             <h3><a onclick="doLoginValidation();return false;" href="products_home.jag">Products</a></h3>
@@ -267,7 +267,7 @@ function doLoginValidation() {
                                                       </tr>
                                                       <tr class="feature">
                                                          <td>
-                                                            <a target="_blank" href="http://stackoverflow.com/questions/tagged/wso2/"><img src="../resources/forum.gif"></a>
+                                                            <a target="_blank" href="http://stackoverflow.com/questions/tagged/wso2/"><img src="../resources/images/forum.gif"></a>
                                                          </td>
                                                          <td>
                                                             <h3><a target="_blank" href="http://stackoverflow.com/questions/tagged/wso2/">Feature</a>
@@ -277,7 +277,7 @@ function doLoginValidation() {
                                                       </tr>
                                                       <tr class="feature">
                                                          <td>
-                                                            <a target="_blank" href="https://wso2.org/jira/browse/WSAS"><img src="../resources/issue-tracker.gif"></a>
+                                                            <a target="_blank" href="https://wso2.org/jira/browse/WSAS"><img src="../resources/images/issue-tracker.gif"></a>
                                                          </td>
                                                          <td>
                                                             <h3><a target="_blank" href="https://wso2.org/jira/browse/WSAS">
@@ -292,7 +292,7 @@ function doLoginValidation() {
                                                       </tr>
                                                       <tr class="feature">
                                                          <td>
-                                                            <a target="_blank" href="http://wso2.org/mail"><img src="../resources/mailing-list.gif"></a>
+                                                            <a target="_blank" href="http://wso2.org/mail"><img src="../resources/images/mailing-list.gif"></a>
                                                          </td>
                                                          <td>
                                                             <h3><a target="_blank" href="http://wso2.org/mail">
