@@ -119,18 +119,18 @@
                                     <div id="workArea">
 
 
-                                    <div id="buttonAreaGrid_left" class="buttonAreaGrid_left">
 
-                                    </div>
                                     <%
                                     var link_redir = "location.href = 'add_product_version.jag?data="+encodeURIComponent(req_data)+"'";
                                     %>
-                                    <div class="buttonAreaGrid_right" id="buttonAreaGrid_right">
+
+                                    <div class="buttonAreaGrid_left" id="buttonAreaGrid_left">
 
                                         <input type="button" class="button" value="Add Version to this Product" onclick="<% print(link_redir); %>"></label>
                                     </div>
 
-                                    <p>&nbsp;</p><p>&nbsp;</p>
+                                    <p>&nbsp;</p>
+                                    <p>&nbsp;</p>
 
                                        <table>
                                           <tbody>
