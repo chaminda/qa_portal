@@ -152,7 +152,8 @@
                                     %>
                                     <div>
                                     <lable>
-                                        <input type="button" value="Add Feature" onclick="<% print(link_redir); %>"></label>
+                                        <!--<input type="button" value="Add Feature" onclick="<% print(link_redir); %>">-->
+                                     </label>
                                         <p>&nbsp;</p>
                                     <table>
                                           <tbody>
@@ -161,6 +162,8 @@
                                                 <td><a href="#" onclick="selectAllInFeatureTable(false);return false;" style="cursor:pointer">Select none</a></td>
                                                 <td width="20%">&nbsp;</td>
                                                 <td><a href="#" id="delete1" onclick="deleteVersionFeatures();return false;">Delete</a></td>
+                                                <td>  </td>
+                                                <td><a href="#" id="add2" onclick="<% print(link_redir); %>">Add Feature</a></td>
                                                 <td width="10%">&nbsp;</td>
                                              </tr>
                                           </tbody>
@@ -198,6 +201,7 @@
                                                 <td><a href="#" onclick="selectAllInFeatureTable(false);return false;" style="cursor:pointer">Select none</a></td>
                                                 <td width="20%">&nbsp;</td>
                                                 <td><a href="#" id="delete1" onclick="deleteVersionFeatures();return false;">Delete</a></td>
+                                                 <td><a href="#" id="add2" onclick="<% print(link_redir); %>">Add Feature</a></td>
                                                 <td width="10%">&nbsp;</td>
                                              </tr>
                                           </tbody>
