@@ -146,39 +146,6 @@ else{
 
 
 
-
-
-
-
-
-
-
-/*
-        print(' <tr>');
-        print(' <td>');
-        print(list_testResultdetails.WSO2_QAP_TEST_CASE_NAME);
-        print('</a>');
-        print('</td>');
-
-
-        print(' <td>');
-        print(list_testResultdetails.WSO2_QAP_TESTED_BY);
-        print('</a>');
-        print('</td>');
-
-
-        print(' <td>');
-        print(list_testResultdetails.WSO2_QAP_AUTOMATION_TEST_RESULT);
-        print('</a>');
-        print('</td>');
-
-        print(' <td>');
-        print(list_testResultdetails.WSO2_QAP_TEST_STATUS);
-        print('</a>');
-        print('</td>');
-        print('</tr>');
-*/
-
     }
 
 

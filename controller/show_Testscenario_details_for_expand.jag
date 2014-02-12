@@ -96,7 +96,7 @@ else{
 
         print('<table id="baram" width="100\%">');
         print('<tr>');
-        print('<th>Test Class Name</th>');
+        print('<th>Test Case Name</th>');
         print('<th>Tested by</th>');
         print('<th>Automation Test Status</th>');
         print('<th>Test Status</th>');
