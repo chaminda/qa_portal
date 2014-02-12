@@ -20,7 +20,7 @@
     <script type="text/javascript" language="javascript" src="../resources/datatables/js/jquery.dataTables.js"></script>
     <script type="text/javascript" charset="utf-8">
       $(document).ready(function() {
-        $('#buildsTable').dataTable( {
+        $('#testSuitPlanMappingTable').dataTable( {
           "sPaginationType": "full_numbers"
         } );
       } );
@@ -151,7 +151,7 @@
                                     %>
                                     <div id="workArea">
 
-                                    
+                                    <h2>Available Test Suits</h2>
                                     <%
                                        var link_redir = "location.href = 'add_test_suit.jag?data="+encodeURIComponent(stringify(passjsondata))+"'";
                                     %>
@@ -193,11 +193,17 @@
 
                                              </tbody>
                                           </table>
+                                          <%
+                                            print('<input type="hidden" name="WSO2_QAP_TEST_PLAN_ID" value="'+WSO2_QAP_TEST_PLAN_ID+'">');
+                                            print('<input type="hidden" name="WSO2_QAP_PRODUCT_NAME" value="'+WSO2_QAP_PRODUCT_NAME+'">');
+                                            print('<input type="hidden" name="WSO2_QAP_PRODUCT_VERSION" value="'+WSO2_QAP_PRODUCT_VERSION+'">');
+                                          %>
                                           <p>&nbsp;</p>
                                           <table>
                                             <tbody>
                                               <tr>
-                                                <td>&nbsp;</td>
+                                                <br>
+                                                <br>
                                                 <td>
                                                   <input type="submit" value="Submit">
                                                 </td>

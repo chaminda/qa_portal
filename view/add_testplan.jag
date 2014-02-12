@@ -105,13 +105,16 @@
                                     json_data = parse(decodeURIComponent(req_data));
                                     
                                     jd2=parse(json_data);
-                                    
                                     print("<h2>");
+                                    if(jd2.WSO2_QAP_PLANNING_STATUS == null){
                                     print('Add Test Plan to : ');
+                                    }else{
+                                    	print('Edit Test Plan of : ');
+                                    }
                                     print(jd2.WSO2_QAP_PRODUCT_NAME+" "+jd2.WSO2_QAP_PRODUCT_VERSION);
                                     print("</h2>");
                                     var cancle_redir_link="location.href = 'product_version_dashboard.jag?data="+jd2.WSO2_QAP_PRODUCT_VERSION_ID+"'";
-                                    var submit_redir_link="../controller/addTestPlan.jag?data="+jd2.WSO2_QAP_PRODUCT_VERSION_ID;
+                                    var submit_redir_link="../controller/addTestPlan.jag?data="+encodeURIComponent(stringify(jd2));
 								%>
 
 										<div id="workArea">
@@ -125,13 +128,60 @@
 													<tbody>
 														<tr class="tableEvenRow">
 															<td class="formRow" width="100" align="center"> Status </td>
-															<td class="formRow"><select name="status" id="status">
-																<option>NOT STARTED</option>
-																<option>IN PROGRESS</option>
-																<option>COMPLETE</option>
+															<td class="formRow">
+															<select name="WSO2_QAP_PLANNING_STATUS" id="WSO2_QAP_PLANNING_STATUS">
 
+															<%
+
+															if(jd2.WSO2_QAP_PLANNING_STATUS == null){
+																print('<option  selected="selected">');
+																print("NOT STARTED");
+																print("</option>");
+																print("<option>");
+																print("IN PROGRESS");
+																print("</option>");
+																print("<option>");
+																print("COMPLETE");
+																print("</option>");
+															}
+															else{
+															print(jd2.WSO2_QAP_PLANNING_STATUS)
+																if(jd2.WSO2_QAP_PLANNING_STATUS == "NOT STARTED"){
+																print('<option  selected="selected">');
+																print("NOT STARTED");
+																print("</option>");
+																print("<option>");
+																print("IN PROGRESS");
+																print("</option>");
+																print("<option>");
+																print("COMPLETE");
+																print("</option>");
+																}else if(jd2.WSO2_QAP_PLANNING_STATUS == "IN PROGRESS"){
+																print("<option>");
+																print("NOT STARTED");
+																print("</option>");
+																print('<option  selected="selected">');
+																print("IN PROGRESS");
+																print("</option>");
+																print("<option>");
+																print("COMPLETE");
+																print("</option>");
+																}else if(jd2.WSO2_QAP_PLANNING_STATUS == "COMPLETE"){
+																print("<option>");
+																print("NOT STARTED");
+																print("</option>");
+																print("<option>");
+																print("IN PROGRESS");
+																print("</option>");
+																print('<option  selected="selected">');
+																print("COMPLETE");
+																print("</option>");
+																}
+
+															}
+															%>
 															</select>
-														</tr>
+															</td>														</tr>
 														</tbody>
 
 

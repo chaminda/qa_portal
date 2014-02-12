@@ -4,7 +4,7 @@ var SERVICE_SECURE_ROOT= session.get("service_secure_root");
 
 var params = request.getAllParameters("UTF-8");
 var list = params.testSuitId;
-print(list)
+// print(params)
 var param = "";
 
 

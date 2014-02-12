@@ -2,12 +2,7 @@
    include("base64_encode.jag");
    var SERVICE_SECURE_ROOT = session.get("service_secure_root");
 
-   print('<tr bgcolor="#EEEFFB">');
-   print('<td>');
-   print('</td>');
-   print('<td>');
-   print('<strong> Test Suit Name <strong/>');
-   print('</td>');
+
    print('<input type="hidden" name="WSO2_QAP_TEST_PLAN_ID" value="'+WSO2_QAP_TEST_PLAN_ID+'">');
    print('<input type="hidden" name="WSO2_QAP_PRODUCT_NAME" value="'+WSO2_QAP_PRODUCT_NAME+'">');
    print('<input type="hidden" name="WSO2_QAP_PRODUCT_VERSION" value="'+WSO2_QAP_PRODUCT_VERSION+'">');
@@ -21,7 +16,18 @@
    var obj = parse(data.data);
    var list = obj.SUIT_DATA_NOT_IN_PLAN_MAPPINGCollection.SUIT_DATA_NOT_IN_PLAN_MAPPING;
 
-   if(list.length==null && list.WSO2_QAP_TEST_SUIT_NAME!=null){
+   if(list == null){
+        print('<tr>');
+        print(' <td style="text-align:center; !important" width="10px">');
+      
+        print(' </td>');
+
+        print(' <td>');
+        
+        print('</td>');
+        print('</tr>');
+   }
+   else if(!(list instanceof Array)){
   
         print('<tr>');
         print(' <td style="text-align:center; !important" width="10px">');

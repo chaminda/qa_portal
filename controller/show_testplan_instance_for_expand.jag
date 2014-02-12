@@ -18,7 +18,7 @@ var objTestSuitID=parse(data_testSuitID.data);
 
 var list_testSuitID=objTestSuitID.WSO2_QAP_TESTPLAN_MAPPING_TESTSUITCollection.WSO2_QAP_TESTPLAN_MAPPING_TESTSUIT;
 
-//print(list_testSuitID);
+
 
 
 if (!(list_testSuitID instanceof Array))
@@ -33,10 +33,19 @@ if (!(list_testSuitID instanceof Array))
 
     //have to show the test suit details
 
-    print(' <td>');
-    print("&emsp;&emsp;&emsp;");
-    print(list_testSuits.WSO2_QAP_TEST_SUIT_NAME );
-    print('</td>');
+    print('<div class="page_collapsible collapse-close" id="body-section1">'+list_testSuits.WSO2_QAP_TEST_SUIT_NAME+'<span></span></div>');
+
+
+    print('<div class="container" style="display: none;">');
+    print(' <div class="content">');
+
+
+
+    include("../controller/show_Testscenario_details_for_expand.jag");
+
+
+    print('</div>');
+    print('</div>');
 
 }
 else{
@@ -53,7 +62,6 @@ else{
 
 
         //have to show the test suit details
-
 
         print('<div class="page_collapsible collapse-close" id="body-section1">'+list_testSuits.WSO2_QAP_TEST_SUIT_NAME+'<span></span></div>');
 

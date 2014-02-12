@@ -163,7 +163,7 @@
 															</td>
 														</tr>
 														<tr class="tableEvenRow">
-															<td class="formRow">Release Date<font color="red">*</font>
+															<td class="formRow">Build Date<font color="red">*</font>
 															</td>
 															<td class="formRow"><input type="text" id="WSO2_QAP_RELEASE_DATE" name="WSO2_QAP_RELEASE_DATE" />
 

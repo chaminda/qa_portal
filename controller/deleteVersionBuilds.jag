@@ -40,7 +40,7 @@ var optionalHeaders = {
 		}
 	}
 
-response.sendRedirect("../view/product_version_dashboard.jag?data="+params.WSO2_QAP_PRODUCT_VERSION_ID);
+response.sendRedirect("../view/version_build_dashboard.jag?data="+params.WSO2_QAP_PRODUCT_VERSION_ID);
 
 %>
 
