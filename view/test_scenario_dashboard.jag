@@ -278,27 +278,27 @@ if(name===null){
                           
                           
                           <p>&nbsp;</p>
-                                  <form name="TestSuitForm" method="post">
-                                          <table class="display" id="testSuitTable" cellpadding="0" cellspacing="0" border="0" width="100%">
-                                             <thead>
-                                                <tr>
-                                                   <th>&nbsp;</th>
-                                                   <th>
-                                                      <nobr>Test Suit Name</nobr>
-                                                   </th>
-                                                   
-                                                </tr>
-                                             </thead>
-                                             <tbody>
-                                                <%
-                                                   include("../controller/scenariodashboardsuits.jag");                                
-                                                %>
-                                             </tbody>
-                                          </table>
-                                          <%
-                                          print('<input type="hidden" name="WSO2_QAP_TEST_SCENARIO_ID" value=\"'+WSO2_QAP_TEST_SCENARIO_ID +'\">');
-                                          %>
-                          </form>
+                            <form name="TestSuitForm" method="post">
+                              <table class="display" id="testSuitTable" cellpadding="0" cellspacing="0" border="0" width="100%">
+                                 <thead>
+                                    <tr>
+                                       <th>&nbsp;</th>
+                                       <th>
+                                          <nobr>Test Suit Name</nobr>
+                                       </th>
+
+                                    </tr>
+                                 </thead>
+                                 <tbody>
+                                    <%
+                                       include("../controller/scenariodashboardsuits.jag");
+                                    %>
+                                 </tbody>
+                              </table>
+                              <%
+                              print('<input type="hidden" name="WSO2_QAP_TEST_SCENARIO_ID" value=\"'+WSO2_QAP_TEST_SCENARIO_ID +'\">');
+                              %>
+                            </form>
                           <p>&nbsp;</p>
                           <table>
                             <tbody>

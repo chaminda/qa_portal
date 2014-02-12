@@ -32,7 +32,7 @@
 	<link rel="stylesheet"
 	href="resources/css/jquery-ui.css">
 	
-	<table id="main-table" border="0" cellspacing="0">
+	<table id="main-table" border="0" cellspacing="0" >
 		<tbody>
 			<tr>
 				<td id="header" colspan="3">
@@ -154,16 +154,12 @@
 			</tr>
 			<tr>
 				<% 
-				require("footer.jag")
+				require("template/footer.jag")
 				%>
 			</tr>
 		</tbody>
 	</table>
-	<script type="text/javascript">
-         if (Function('/*@cc_on return document.documentMode===10@*/')()){
-          document.documentElement.className+=' ie10';
-         }
-      </script>
+
 </body>
 </html>
 

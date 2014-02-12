@@ -34,10 +34,12 @@ else if(!(list_testcaseID instanceof Array))
 
     }
     else{
-
+        //print(list_testResultdetails);
         print(' <tr>');
 
         print(' <td>');
+        var link = "test_result_dashboard.jag?data="+encodeURIComponent(stringify(list_testResultdetails.WSO2_QAP_TEST_RESULT_ID));
+        print('<a href="'+link+'">');
         print(list_testResultdetails.WSO2_QAP_TEST_CASE_NAME);
         print('</a>');
         print('</td>');
@@ -45,20 +47,17 @@ else if(!(list_testcaseID instanceof Array))
 
         print(' <td>');
         print(list_testResultdetails.WSO2_QAP_TEST_STATUS);
-        print('</a>');
         print('</td>');
 
 
         print(' <td>');
         print(list_testResultdetails.WSO2_QAP_AUTOMATION_TEST_RESULT);
-        print('</a>');
         print('</td>');
 
 
 
         print(' <td>');
         print(list_testResultdetails.WSO2_QAP_TESTED_BY);
-        print('</a>');
         print('</td>');
 
         print('</tr>');
@@ -89,6 +88,8 @@ else{
             print(' <tr>');
 
             print(' <td>');
+            var link = "test_result_dashboard.jag?data="+encodeURIComponent(stringify(list_testResultdetails.WSO2_QAP_TEST_RESULT_ID));
+            print('<a href="'+link+'">');
             print(list_testResultdetails.WSO2_QAP_TEST_CASE_NAME);
             print('</a>');
             print('</td>');
@@ -96,19 +97,16 @@ else{
 
             print(' <td>');
             print(list_testResultdetails.WSO2_QAP_TEST_STATUS);
-            print('</a>');
             print('</td>');
 
 
             print(' <td>');
             print(list_testResultdetails.WSO2_QAP_AUTOMATION_TEST_RESULT);
-            print('</a>');
             print('</td>');
 
 
             print(' <td>');
             print(list_testResultdetails.WSO2_QAP_TESTED_BY);
-            print('</a>');
             print('</td>');
 
             print('</tr>');
@@ -123,6 +121,8 @@ else{
                 print(' <tr>');
 
                 print(' <td>');
+                var link = "test_result_dashboard.jag?data="+encodeURIComponent(stringify(list_testResultdetails[b].WSO2_QAP_TEST_RESULT_ID));
+                print('<a href="'+link+'">');
                 print(list_testResultdetails[b].WSO2_QAP_TEST_CASE_NAME);
                 print('</a>');
                 print('</td>');
@@ -130,20 +130,17 @@ else{
 
                 print(' <td>');
                 print(list_testResultdetails[b].WSO2_QAP_TEST_STATUS);
-                print('</a>');
                 print('</td>');
 
 
                 print(' <td>');
                 print(list_testResultdetails[b].WSO2_QAP_AUTOMATION_TEST_RESULT);
-                print('</a>');
                 print('</td>');
 
 
 
                 print(' <td>');
                 print(list_testResultdetails[b].WSO2_QAP_TESTED_BY);
-                print('</a>');
                 print('</td>');
 
                 print('</tr>');
