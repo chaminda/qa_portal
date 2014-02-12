@@ -61,7 +61,7 @@
         print('</td>');*/
         print('<td>');
         print('<td>');
-        print('<select  id="WSO2_QAP_TEST_CASE_STATUS" name="WSO2_QAP_TEST_CASE_STATUS">');
+        print('<select  id="WSO2_QAP_TEST_CASE_STATUS_'+list.WSO2_QAP_TEST_CASE_ID+'" name="WSO2_QAP_TEST_CASE_STATUS_'+list.WSO2_QAP_TEST_CASE_ID+'">');
         print('<option value="NONE">NONE</option>');
         print('<option value="PASSED">PASSED</option>');
         print('<option value="FAILED">FAILED</option>');
@@ -97,7 +97,7 @@ else{
         print('</td>');
         //print('<td>&nbsp;&nbsp;&nbsp;');
         print('<td>');
-        print('<select  id="WSO2_QAP_TEST_CASE_STATUS_'+i+'" name="WSO2_QAP_TEST_CASE_STATUS_'+i+'">');
+        print('<select  id="WSO2_QAP_TEST_CASE_STATUS_'+list[i].WSO2_QAP_TEST_CASE_ID+'" name="WSO2_QAP_TEST_CASE_STATUS_'+list[i].WSO2_QAP_TEST_CASE_ID+'">');
         print('<option value="NONE">NONE</option>');
         print('<option value="PASSED">PASSED</option>');
         print('<option value="FAILED">FAILED</option>');
