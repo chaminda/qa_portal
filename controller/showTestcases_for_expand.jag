@@ -23,42 +23,36 @@ if(list_testcaseID == null){
 
 else if(!(list_testcaseID instanceof Array))
 {
-    var url_testResultdetails=SERVICE_SECURE_ROOT+"WSO2_QAP_TEST_RESULT_DataService/view/testresults_for_build/"+WSO2_QAP_BUILD_ID+"/"+list_testcaseID.WSO2_QAP_TEST_CASE_ID;
-    var data_testResultdetails=get(url_testResultdetails,"",optionalHeaders);
-    var objTestResultdetails= parse(data_testResultdetails.data);
-    var list_testResultdetails=objTestResultdetails.WSO2_QAP_TEST_RESULTFORBUILDCollection.WSO2_QAP_TEST_RESULTFORBUILD;
 
-    //print(url_testResultdetails);
+    var url_testcasedetails=SERVICE_SECURE_ROOT+"WSO2_QAP_TEST_CASE_DataService/view/testcase_by_id/"+list_testcaseID.WSO2_QAP_TEST_CASE_ID;
+    var data_testcasedetails=get(url_testcasedetails,"",optionalHeaders);
+    var objTestcasedetails=parse(data_testcasedetails.data);
+    var list_testcasedetails=objTestcasedetails.WSO2_QAP_TEST_CASECollection.WSO2_QAP_TEST_CASE;
 
-    if(list_testResultdetails==null){
+    if(list_testcasedetails==null){
 
     }
     else{
-        //print(list_testResultdetails);
+
         print(' <tr>');
 
         print(' <td>');
-        var link = "test_result_dashboard.jag?data="+encodeURIComponent(stringify(list_testResultdetails.WSO2_QAP_TEST_RESULT_ID));
+        var link = "view_testcase.jag?data="+encodeURIComponent(stringify(list_testcasedetails.WSO2_QAP_TEST_CASE_ID));
         print('<a href="'+link+'">');
-        print(list_testResultdetails.WSO2_QAP_TEST_CASE_NAME);
+        print(list_testcasedetails.WSO2_QAP_TEST_CASE_NAME);
         print('</a>');
         print('</td>');
 
 
         print(' <td>');
-        print(list_testResultdetails.WSO2_QAP_TEST_STATUS);
+        print(list_testcasedetails.WSO2_QAP_DESCRIPTION);
         print('</td>');
 
 
         print(' <td>');
-        print(list_testResultdetails.WSO2_QAP_AUTOMATION_TEST_RESULT);
+        print(list_testcasedetails.WSO2_QAP_AUTOMATION_STATUS);
         print('</td>');
 
-
-
-        print(' <td>');
-        print(list_testResultdetails.WSO2_QAP_TESTED_BY);
-        print('</td>');
 
         print('</tr>');
     }
@@ -72,87 +66,45 @@ else{
     {
 
 
+        var url_testcasedetails=SERVICE_SECURE_ROOT+"WSO2_QAP_TEST_CASE_DataService/view/testcase_by_id/"+list_testcaseID[k].WSO2_QAP_TEST_CASE_ID;
+        var data_testcasedetails=get(url_testcasedetails,"",optionalHeaders);
+        var objTestcasedetails=parse(data_testcasedetails.data);
+        var list_testcasedetails=objTestcasedetails.WSO2_QAP_TEST_CASECollection.WSO2_QAP_TEST_CASE;
 
-        var url_testResultdetails=SERVICE_SECURE_ROOT+"WSO2_QAP_TEST_RESULT_DataService/view/testresults_for_build/"+WSO2_QAP_BUILD_ID+"/"+list_testcaseID[k].WSO2_QAP_TEST_CASE_ID;
-        var data_testResultdetails=get(url_testResultdetails,"",optionalHeaders);
-        var objTestResultdetails= parse(data_testResultdetails.data);
-        var list_testResultdetails=objTestResultdetails.WSO2_QAP_TEST_RESULTFORBUILDCollection.WSO2_QAP_TEST_RESULTFORBUILD;
-
-
-        if(list_testResultdetails==null){
-
-        }
-
-       else if(!(list_testResultdetails instanceof Array)){
 
             print(' <tr>');
 
             print(' <td>');
-            var link = "test_result_dashboard.jag?data="+encodeURIComponent(stringify(list_testResultdetails.WSO2_QAP_TEST_RESULT_ID));
+            var link = "view_testcase.jag?data="+encodeURIComponent(stringify(list_testcasedetails.WSO2_QAP_TEST_CASE_ID));
             print('<a href="'+link+'">');
-            print(list_testResultdetails.WSO2_QAP_TEST_CASE_NAME);
+            print(list_testcasedetails.WSO2_QAP_TEST_CASE_NAME);
             print('</a>');
             print('</td>');
 
 
             print(' <td>');
-            print(list_testResultdetails.WSO2_QAP_TEST_STATUS);
+            print(list_testcasedetails.WSO2_QAP_DESCRIPTION);
             print('</td>');
 
 
             print(' <td>');
-            print(list_testResultdetails.WSO2_QAP_AUTOMATION_TEST_RESULT);
+            print(list_testcasedetails.WSO2_QAP_AUTOMATION_TEST_RESULT);
             print('</td>');
 
 
             print(' <td>');
-            print(list_testResultdetails.WSO2_QAP_TESTED_BY);
+            print(list_testcasedetails.WSO2_QAP_AUTOMATION_STATUS);
             print('</td>');
 
             print('</tr>');
 
         }
 
-        else{
 
-            for(var b=0;b<list_testcaseID.length;b++)
-            {
-
-                print(' <tr>');
-
-                print(' <td>');
-                var link = "test_result_dashboard.jag?data="+encodeURIComponent(stringify(list_testResultdetails[b].WSO2_QAP_TEST_RESULT_ID));
-                print('<a href="'+link+'">');
-                print(list_testResultdetails[b].WSO2_QAP_TEST_CASE_NAME);
-                print('</a>');
-                print('</td>');
-
-
-                print(' <td>');
-                print(list_testResultdetails[b].WSO2_QAP_TEST_STATUS);
-                print('</td>');
-
-
-                print(' <td>');
-                print(list_testResultdetails[b].WSO2_QAP_AUTOMATION_TEST_RESULT);
-                print('</td>');
-
-
-
-                print(' <td>');
-                print(list_testResultdetails[b].WSO2_QAP_TESTED_BY);
-                print('</td>');
-
-                print('</tr>');
-
-
-            }
-
-        }
 
     }
 
 
-}
+
 
 %>
