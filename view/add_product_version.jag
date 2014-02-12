@@ -88,8 +88,20 @@
                                 <%
                                 var req_data = request.getParameter("data");
                                 json_data = parse(decodeURIComponent(req_data));
+                                if(json_data.WSO2_QAP_PRODUCT_NAME == null){
+                                 json_data = parse(json_data);
+                                }
+
+                                print("<h2>");
+                                if(json_data.WSO2_QAP_PRODUCT_VERSION == null){
+                                    print("Add Product Version to WSO2 ");
+                                }
+                                 else{
+                                    print("Edit Product Version of WSO2 ");
+                                 }
+                                print(json_data.WSO2_QAP_PRODUCT_NAME);
+                                print("</h2>");
                                 %>
-                                <h2>Add Product Version to WSO2 <%print(json_data.WSO2_QAP_PRODUCT_NAME);%></h2>
                                  <div id="workArea">
                                  <%
                                     var link_redir = "../controller/addProductVersion.jag?data="+encodeURIComponent(req_data);
@@ -110,9 +122,22 @@
                                                          <tr>
                                                             <td>Enter Product Version<font color="red">*</font>
                                                             </td>
-                                                            <td>
-                                                               <input size="35" name="WSO2_QAP_PRODUCT_VERSION" id="WSO2_QAP_PRODUCT_VERSION" class="text-not-empty" value="" type="text">
-                                                            </td>
+                                                            <%
+                                                               if(json_data.WSO2_QAP_PRODUCT_VERSION == null){
+                                                                  print("<td>");
+                                                                  print('<input size="35" name="WSO2_QAP_PRODUCT_VERSION" id="WSO2_QAP_PRODUCT_VERSION" class="text-not-empty" value="" type="text">');
+                                                                  print("</td>");
+                                                                  
+                                                               }
+                                                               else{
+                                                                  print("<td>");
+                                                                  print('<input size="35" name="WSO2_QAP_PRODUCT_VERSION" id="WSO2_QAP_PRODUCT_VERSION" class="text-not-empty" value="'+json_data.WSO2_QAP_PRODUCT_VERSION+'" type="text">');
+                                                                  print("</td>");
+                                                               }
+                                                            %>
+                                                            
+                                                               
+                                                            
                                                          </tr>
                                                          <tr>
                                                             <td class="buttonRow">

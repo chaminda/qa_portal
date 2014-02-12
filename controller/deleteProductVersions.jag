@@ -20,7 +20,6 @@ var optionalHeaders = {
  	var url = SERVICE_SECURE_ROOT+"WSO2_QAP_PRODUCT_VERSION_DataService/delete/product_version/"+list;
 
 
-
          del(url, param, optionalHeaders, "json", function (data, xhr) {
          log("Response received");
     } );
@@ -38,7 +37,6 @@ var optionalHeaders = {
 			
 		}
 	}
-
 response.sendRedirect("../view/product_versions.jag?data="+params.redirect_url);
 
 %>

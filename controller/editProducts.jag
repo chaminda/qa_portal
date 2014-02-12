@@ -23,6 +23,3 @@ var optionalHeaders = {
 response.sendRedirect("../view/add_product.jag?data="+encodeURIComponent(stringify(passjsondata)));
 
 %>
-
-
-
