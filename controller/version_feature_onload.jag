@@ -43,7 +43,11 @@
         print('</a>');
         print('</td>');
         print(' <td>');
+        var link2 = list3.WSO2_QAP_REDMINE_URL;
+        print(' <td>');
+        print('<a href="'+link2+'"target="_blank">');
         print(list3.WSO2_QAP_REDMINE_URL);
+        print('</a>');
         print('</td>');
         print('</tr>');
 
@@ -67,9 +71,9 @@
         print(list3[i].WSO2_QAP_SUBJECT );
         print('</a>');
         print('</td>');
-        var link = list3[i].WSO2_QAP_REDMINE_URL;
+        var link2 = list3[i].WSO2_QAP_REDMINE_URL;
         print(' <td>');
-        print('<a href="'+link+'">');
+        print('<a href="'+link2+'"target="_blank">');
         print(list3[i].WSO2_QAP_REDMINE_URL);
         print('</a>');
         print('</td>');

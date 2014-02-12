@@ -1,13 +1,15 @@
 <%
 include("base64_encode.jag");
-//var SERVICE_SECURE_ROOT = session.get("service_secure_root");
+var DB_URL = session.get("service_secure_root");
+// var DB_URL = "https://localhost:9443/services/";
 var REDMINE_BASE_URL = 'https://redmine.wso2.com/';
-var DB_URL = "https://localhost:9443/services/";
+
 
 var param = "";
 
 var username = request.getParameter("username");
 var password = request.getParameter("password");
+
 
 var optionalHeaders = {
         "Accept":"application/json",
@@ -22,7 +24,7 @@ var optionalHeadersPost = {
             "Content-Type" : "application/json",
                 "Authorization": "Basic "+base64_encode("admin:admin") };
 
-var offset = 2000;
+var offset = 0;
 var limit = 100;
 var product_versions = new Array();
 var product_versions_fetched = new Array();
@@ -32,10 +34,14 @@ var urlproducts = DB_URL+"WSO2_QAP_PRODUCT_DataService/view/products";
 var urlversions;
 
 var dataproducts = get(urlproducts,"",optionalHeadersDb);
-if(dataproducts.data.WSO2_QAP_PRODUCTCollection != null){
-	
+print(dataproducts.data.WSO2_QAP_PRODUCTCollection);
 
 var objproducts = parse(dataproducts.data);
+if(objproducts.WSO2_QAP_PRODUCTCollection != null){
+
+	
+
+
 var listproducts = objproducts.WSO2_QAP_PRODUCTCollection.WSO2_QAP_PRODUCT;
 
 for(var a=0; a<listproducts.lenght; a++){
@@ -190,7 +196,7 @@ while(list[0] != null){
 								break;
 							}
 						}
-					// }
+					
 					}else{
 						if(((list[i].fixed_version.name).indexOf(product_versions[listproducts[j].WSO2_QAP_PRODUCT_ID].WSO2_QAP_PRODUCT_VERSION))!==-1){
 								print('<br/>');
@@ -230,6 +236,10 @@ while(list[0] != null){
  }
 }
 
- response.sendRedirect("../view/products_home.jag");
+if(name==null || ROOT==null || SERVICE_ROOT==null){
+    response.status=307;
+    response.addHeader('Location','../view/products_home.jag');
+}
+// response.sendRedirect("../view/products_home.jag");
 
 %>
