@@ -236,10 +236,10 @@ while(list[0] != null){
  }
 }
 
-if(name==null || ROOT==null || SERVICE_ROOT==null){
+// if(name==null || ROOT==null || SERVICE_ROOT==null){
     response.status=307;
     response.addHeader('Location','../view/products_home.jag');
-}
+// }
 // response.sendRedirect("../view/products_home.jag");
 
 %>
