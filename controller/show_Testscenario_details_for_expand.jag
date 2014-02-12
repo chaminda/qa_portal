@@ -97,9 +97,9 @@ else{
         print('<table id="baram" width="100\%">');
         print('<tr>');
         print('<th>Test Case Name</th>');
-        print('<th>Tested by</th>');
-        print('<th>Automation Test Status</th>');
         print('<th>Test Status</th>');
+        print('<th>Automation Test Status</th>');
+        print('<th>Tested by</th>');
 
         include("../controller/showTestresults_for_expand.jag");
 
