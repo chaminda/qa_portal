@@ -35,7 +35,7 @@ else{
 var url = SERVICE_SECURE_ROOT+"WSO2_QAP_TEST_PLAN_DataService/update/test_plan";
 var param = '{"_updateupdate_test_plan":{"WSO2_QAP_PRODUCT_VERSION_ID" : "'+jdata.WSO2_QAP_PRODUCT_VERSION_ID+'","WSO2_QAP_PLANNING_STATUS" : "'+WSO2_QAP_PLANNING_STATUS+'","WSO2_QAP_TEST_PLAN_ID" : "'+jdata.WSO2_QAP_TEST_PLAN_ID+'"}}';
 // var param = "WSO2_QAP_PRODUCT_NAME="+product_name;
-print(param);
+
 
 // if(product_name===null){
 
