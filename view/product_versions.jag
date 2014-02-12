@@ -119,18 +119,18 @@
                                     <div id="workArea">
 
 
-                                    <div id="buttonAreaGrid_left" class="buttonAreaGrid_left">
 
-                                    </div>
                                     <%
                                     var link_redir = "location.href = 'add_product_version.jag?data="+encodeURIComponent(req_data)+"'";
                                     %>
-                                    <div class="buttonAreaGrid_right" id="buttonAreaGrid_right">
+
+                                    <div class="buttonAreaGrid_left" id="buttonAreaGrid_left">
 
                                         <input type="button" class="button" value="Add Version to this Product" onclick="<% print(link_redir); %>"></label>
                                     </div>
 
-                                    <p>&nbsp;</p><p>&nbsp;</p>
+                                    <p>&nbsp;</p>
+                                    <p>&nbsp;</p>
 
                                        <table>
                                           <tbody>
@@ -140,7 +140,7 @@
                                                 <td width="20%">&nbsp;</td>
                                                 <td><a href="#" id="delete1" onclick="deleteProductVersions();return false;">Delete</a></td>
                                                 <td width="10%">&nbsp;</td>
-                                                <td><a href="#" id="edit" onclick="editWebapps();return false;">Edit</a></td>
+                                                <td><a href="#" id="edit" onclick="editProductVersion();return false;">Edit</a></td>
                                              </tr>
                                           </tbody>
                                        </table>
@@ -163,6 +163,11 @@
                                                
                                              </tbody>
                                           </table>
+                                          <%
+                                          print('    <input name="WSO2_QAP_PRODUCT_NAME" value="'+json_data.WSO2_QAP_PRODUCT_NAME+'" type="hidden">');
+
+                                          %>
+                                          
                                        </form>
                                        <p>&nbsp;</p>
                                        <table>
@@ -173,7 +178,7 @@
                                                 <td width="20%">&nbsp;</td>
                                                 <td><a href="#" id="delete2" onclick="deleteProductVersions(); return false;">Delete</a></td>
                                                 <td width="10%">&nbsp;</td>
-                                                <td><a href="#" id="edit" onclick="editWebapps();return false;">Edit</a></td>
+                                                <td><a href="#" id="edit" onclick="editProductVersion();return false;">Edit</a></td>
                                              </tr>
                                           </tbody>
                                        </table>

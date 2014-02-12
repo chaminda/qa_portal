@@ -42,7 +42,7 @@ function editProducts() {
 
     var selected = isProductSelected();
     if (!selected) {
-        CARBON.showInfoDialog('Please select the applications to be edited.');
+        CARBON.showInfoDialog('Please select the product to be edited.');
         return;
     }
     var count=0;
@@ -52,7 +52,7 @@ function editProducts() {
 		}
 	}
 	if(count > 1){
-		CARBON.showInfoDialog('Please select only one application to edit.');
+		CARBON.showInfoDialog('Please select only one product to edit.');
         return;
 	}
 	else{

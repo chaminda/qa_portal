@@ -37,6 +37,34 @@ function deleteProductVersions() {
     }
 }
 
+function editProductVersion() {
+
+    var selected = isProductVersionSelected();
+    if (!selected) {
+        CARBON.showInfoDialog('Please select the product version to be edited.');
+        return;
+    }
+    var count=0;
+    for(var j=0; j< document.productVersionForm.versionId.length; j++){
+        if(document.productVersionForm.versionId[j].checked){
+            count=count+1;
+        }
+    }
+    if(count > 1){
+        CARBON.showInfoDialog('Please select only one product version to edit.');
+        return;
+    }
+    else{
+        CARBON.showConfirmationDialog("Do you want to edit the selected product version?",
+        function () {
+            document.productVersionForm.action = '../controller/editProductVersion.jag';
+            document.productVersionForm.submit();
+        }
+        );
+    }
+    
+}
+
 function selectAllInThisPage(isSelected) {
     allSelected = false;
     if (document.productVersionForm.versionId != null &&
