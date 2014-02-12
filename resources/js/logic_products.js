@@ -38,6 +38,34 @@ function deleteProducts() {
     }
 }
 
+function editProducts() {
+
+    var selected = isProductSelected();
+    if (!selected) {
+        CARBON.showInfoDialog('Please select the applications to be edited.');
+        return;
+    }
+    var count=0;
+	for(var j=0; j< document.productsForm.productId.length; j++){
+		if(document.productsForm.productId[j].checked){
+			count=count+1;
+		}
+	}
+	if(count > 1){
+		CARBON.showInfoDialog('Please select only one application to edit.');
+        return;
+	}
+	else{
+		CARBON.showConfirmationDialog("Do you want to edit the selected product?",
+        function () {
+            document.productsForm.action = '../controller/editProducts.jag';
+            document.productsForm.submit();
+        }
+    	);
+	}
+    
+}
+
 function selectAllInThisPage(isSelected) {
     allSelected = false;
     if (document.productsForm.productId != null &&
