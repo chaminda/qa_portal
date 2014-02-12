@@ -47,9 +47,11 @@
         print('</a>');
         print('</td>');
         print('<td>&nbsp;&nbsp;&nbsp;');
+        print("&emsp;&emsp;&emsp;");
         print(list.WSO2_QAP_DESCRIPTION);
         print('</td>');
         print('<td>&nbsp;&nbsp;&nbsp;');
+        print("&emsp;&emsp;&emsp;");
         print(list.WSO2_QAP_AUTOMATION_STATUS);
         print('</td>');
        /* print('<td>&nbsp;&nbsp;&nbsp;');
@@ -59,16 +61,7 @@
         
         </select> </td> ');
         print('</td>');*/
-        print('<td>');
-        print('<td>');
-        print('<select  id="WSO2_QAP_TEST_CASE_STATUS_'+list.WSO2_QAP_TEST_CASE_ID+'" name="WSO2_QAP_TEST_CASE_STATUS_'+list.WSO2_QAP_TEST_CASE_ID+'">');
-        print('<option value="NONE">NONE</option>');
-        print('<option value="PASSED">PASSED</option>');
-        print('<option value="FAILED">FAILED</option>');
-        print('<option value="INPROGRESS">IN PROGRESS</option>');
-        print('</select>');
-        print('</td>');
-        print('</td>');
+        
         //print(WSO2_QAP_TEST_CASE_STATUS);
         print('</tr>');
         
@@ -90,21 +83,15 @@ else{
         print('</a>');
         print('</td>')
         print('<td>')
+        print("&emsp;&emsp;&emsp;");
         print(list[i].WSO2_QAP_DESCRIPTION);
         print('</td>');
         print('<td>&nbsp;&nbsp;&nbsp;')
+        print("&emsp;&emsp;&emsp;");
         print(list[i].WSO2_QAP_AUTOMATION_STATUS);
         print('</td>');
         //print('<td>&nbsp;&nbsp;&nbsp;');
-        print('<td>');
-        print('<select  id="WSO2_QAP_TEST_CASE_STATUS_'+list[i].WSO2_QAP_TEST_CASE_ID+'" name="WSO2_QAP_TEST_CASE_STATUS_'+list[i].WSO2_QAP_TEST_CASE_ID+'">');
-        print('<option value="NONE">NONE</option>');
-        print('<option value="PASSED">PASSED</option>');
-        print('<option value="FAILED">FAILED</option>');
-        print('<option value="INPROGRESS">IN PROGRESS</option>');
-        print('</select>');
-        print('</td>');
-        print('</td>');
+        
         //print(WSO2_QAP_TEST_CASE_STATUS);
         print('</tr>');
         
