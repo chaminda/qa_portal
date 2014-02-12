@@ -84,27 +84,57 @@
                               </script>
                               <script type="text/javascript" src="../resources/js/ui_validator.js"></script>
                               <div id="middle">
-                                 <h2>Enter Product Name</h2>
+                              <%
+
+                                 data=request.getParameter("data");
+                                 if(!(data == null)){
+                                    obj=parse(data);
+                                    obj2=parse(obj);
+                                    WSO2_QAP_PRODUCT_NAME = obj2.WSO2_QAP_PRODUCT_NAME;
+                                    WSO2_QAP_PRODUCT_ID = obj2.WSO2_QAP_PRODUCT_ID;
+                                 }
+                                 if(!(data == null)){
+                                    print("<h2>");
+                                    print("Edit Product Name");
+                                    print("</h2>");
+                                 }else{
+                                    print("<h2>");
+                                    print("Enter Product Name");
+                                    print("</h2>");
+                                 }
+                                 %>
+                                 
                                  <div id="workArea">
                                  <!--  -->
                                     <form name="add_product" action="../controller/addProduct.jag" method="post" onsubmit="return validateTextInput();return false;">
                                        <table class="styledLeft">
                                           <thead>
                                              <tr>
-                                                <th colspan="2">Wso2 Product</th>
+                                                <th colspan="2">WSO2 Product</th>
                                              </tr>
                                           </thead>
                                           <tbody>
                                              <tr>
                                                 <td>
+                                                
                                                    <table class="normal">
                                                       <tbody>
                                                          <tr>
                                                             <td>Product Name<font color="red">*</font>
                                                             </td>
-                                                            <td>
-                                                               <input size="35" name="WSO2_QAP_PRODUCT_NAME" class="text-not-empty" id="WSO2_QAP_PRODUCT_NAME" value="" type="text">
-                                                            </td>
+                                                            <%
+                                                               if(!(data == null)){
+                                                                  print("<td>");
+                                                                  print('<input size="35" name="WSO2_QAP_PRODUCT_NAME" class="text-not-empty" id="WSO2_QAP_PRODUCT_NAME" value="'+WSO2_QAP_PRODUCT_NAME+'" type="text">');
+                                                                  print("</td>");
+                                                               }
+                                                            else{
+                                                               print("<td>");
+                                                                  print('<input size="35" name="WSO2_QAP_PRODUCT_NAME" class="text-not-empty" id="WSO2_QAP_PRODUCT_NAME" value="" type="text">');
+                                                                  print("</td>");
+                                                            }
+                                                            %>
+                                                            
                                                          </tr>
                                                          <tr>
                                                             <td class="buttonRow">
@@ -114,10 +144,16 @@
                                                          </tr>
                                                       </tbody>
                                                    </table>
+
                                                 </td>
                                              </tr>
                                           </tbody>
                                        </table>
+                                       <%
+                                          if(!(data == null)){
+                                             print('<input type="hidden" name="WSO2_QAP_PRODUCT_ID" value="'+WSO2_QAP_PRODUCT_ID+'">');
+                                          }
+                                       %>
                                     </form>
                                  </div>
                               </div>

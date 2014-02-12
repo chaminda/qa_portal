@@ -9,12 +9,11 @@ var optionalHeaders = {
     "Accept": "application/json",
     "Authorization": "Basic "+base64_encode("admin:admin") };
 
- if(typeof list === 'string'){
+ if(!(list instanceof Array)){
  	var url = SERVICE_SECURE_ROOT+"WSO2_QAP_PRODUCT_DataService/delete/products/"+list;
-
      del(url, param, optionalHeaders, "json", function (data, xhr) {
-         log("Response received");
-     } );
+                log("Response received");
+            } );
 
  	}
  	else{

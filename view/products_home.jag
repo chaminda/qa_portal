@@ -144,7 +144,7 @@
                                                 <td width="20%">&nbsp;</td>
                                                 <td><a href="#" id="delete1" onclick="deleteProducts();return false;">Delete</a></td>
                                                 <td width="10%">&nbsp;</td>
-                                                <td><a href="#" id="edit" onclick="editWebapps();return false;">Edit</a></td>
+                                                <td><a href="#" id="edit" onclick="editProducts();return false;">Edit</a></td>
                                              </tr>
                                           </tbody>
                                        </table>
@@ -176,7 +176,7 @@
                                                 <td width="20%">&nbsp;</td>
                                                 <td><a href="#" id="delete2" onclick="deleteProducts();return false;">Delete</a></td>
                                                 <td width="10%">&nbsp;</td>
-                                                <td><a href="#" id="edit" onclick="editWebapps();return false;">Edit</a></td>
+                                                <td><a href="#" id="edit" onclick="editProducts();return false;">Edit</a></td>
                                              </tr>
                                           </tbody>
                                        </table>
