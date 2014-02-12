@@ -231,16 +231,7 @@
                                                       <nobr>Build Name</nobr>
                                                    </th>
                                                    <th>
-                                                      <nobr>Test Case Name</nobr>
-                                                   </th>
-                                                   <th>
-                                                      <nobr>Test Status</nobr>
-                                                   </th>
-                                                   <th>
-                                                      <nobr>Automation Results</nobr>
-                                                   </th>
-                                                   <th>
-                                                      <nobr>Tested By</nobr>
+                                                      <nobr>Release Date</nobr>
                                                    </th>
                                                 </tr>
                                              </thead>

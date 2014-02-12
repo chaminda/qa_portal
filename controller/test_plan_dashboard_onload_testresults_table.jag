@@ -14,8 +14,8 @@
 
    var data = get(url,"",optionalHeaders);
    var obj = parse(data.data);
-   var list = obj.WSO2_QAP_BUILD_RESULTCollection.WSO2_QAP_BUILD_RESULT;
 
+   var list = obj.WSO2_QAP_BUILD_RESULTCollection.WSO2_QAP_BUILD_RESULT;
 
    if(list==null){
     print('<tr>');
@@ -25,15 +25,7 @@
         print(' <td>');
         
         print('</td>');
-        print(' <td>');
         
-        print('</td>');
-        print(' <td>');
-        
-        print('</td>');
-        print(' <td>');
-        
-        print('</td>');
         print('</tr>');
 
    }
@@ -50,17 +42,9 @@
         print("</a>");
         print('</td>');
         print(' <td>');
-        print(list.WSO2_QAP_TEST_CASE_NAME);
+        print(list.WSO2_QAP_RELEASE_DATE);
         print('</td>');
-        print(' <td>');
-        print(list.WSO2_QAP_TEST_STATUS);
-        print('</td>');
-        print(' <td>');
-        print(list.WSO2_QAP_AUTOMATION_TEST_RESULT);
-        print('</td>');
-        print(' <td>');
-        print(list.WSO2_QAP_TESTED_BY);
-        print('</td>');
+        
         print('</tr>');
 
     }
@@ -81,17 +65,9 @@
         print("</a>");
         print('</td>');
         print(' <td>');
-        print(list[i].WSO2_QAP_TEST_CASE_NAME);
+        print(list[i].WSO2_QAP_RELEASE_DATE);
         print('</td>');
-        print(' <td>');
-        print(list[i].WSO2_QAP_TEST_STATUS);
-        print('</td>');
-        print(' <td>');
-        print(list[i].WSO2_QAP_AUTOMATION_TEST_RESULT);
-        print('</td>');
-        print(' <td>');
-        print(list[i].WSO2_QAP_TESTED_BY);
-        print('</td>');
+        
         print('</tr>');
 
         }
