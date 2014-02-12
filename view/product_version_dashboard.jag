@@ -182,7 +182,7 @@
                                                 <td width="20%">&nbsp;</td>
                                                 <td><a href="#" id="delete1" onclick="deleteVersionTestPlans();return false;">Delete</a></td>
                                                 <td width="10%">&nbsp;</td>
-                                                <td><a href="#" id="edit" onclick="editWebapps();return false;">Edit</a></td>
+                                                <td><a href="#" id="edit" onclick="editVersionTestPlans();return false;">Edit</a></td>
                                              </tr>
                                           </tbody>
                                        </table>
@@ -207,7 +207,11 @@
                                              </tbody>
                                           </table>
                                           <%
-                                          print('<input type="hidden" name="WSO2_QAP_FEATURE_ID" value=\"'+WSO2_QAP_FEATURE_ID +'\">');
+                                          print('<input type="hidden" name="WSO2_QAP_PRODUCT_VERSION_ID" value="'+WSO2_QAP_PRODUCT_VERSION_ID+'">');
+
+                                          print('<input type="hidden" name="WSO2_QAP_PRODUCT_NAME" value=\"'+list1.WSO2_QAP_PRODUCT_NAME +'\">');
+
+                                          print('<input type="hidden" name="WSO2_QAP_PRODUCT_VERSION" value=\"'+list1.WSO2_QAP_PRODUCT_VERSION +'\">');
                                           %>
                                        </form>
                                     
@@ -220,7 +224,7 @@
                                                 <td width="20%">&nbsp;</td>
                                                 <td><a href="#" id="delete1" onclick="deleteVersionTestPlans();return false;">Delete</a></td>
                                                 <td width="10%">&nbsp;</td>
-                                                <td><a href="#" id="edit" onclick="editWebapps();return false;">Edit</a></td>
+                                                <td><a href="#" id="edit" onclick="editVersionTestPlans();return false;">Edit</a></td>
                                              </tr>
                                           </tbody>
                                        </table>

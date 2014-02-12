@@ -16,8 +16,12 @@ var data_testScenarioID=get(url_testScenariosID,"",optionalHeaders);
 var objTestScenarioID=parse(data_testScenarioID.data);
 var list_testscenarioID=objTestScenarioID.WSO2_QAP_TEST_SUIT_TEST_SCENARIO_MAPPINGCollection.WSO2_QAP_TEST_SUIT_TEST_SCENARIO_MAPPING;
 
+if(list_testscenarioID == null){
 
-if (!(list_testscenarioID instanceof Array))
+}
+
+
+else if (!(list_testscenarioID instanceof Array))
 {
     var url_testScenarios=SERVICE_SECURE_ROOT+"WSO2_QAP_TEST_SCENARIO_DataService/view/testscenario_with_id/"+list_testscenarioID.WSO2_QAP_TEST_SCENARIO_ID;
     var data_testscenarios=get(url_testScenarios,"",optionalHeaders);
@@ -33,7 +37,7 @@ if (!(list_testscenarioID instanceof Array))
     var objTestcaseID=parse(data_testcaseID.data);
     var list_testcaseID=objTestcaseID.WSO2_QAP_TEST_SCENARIO_TEST_CASE_MAPPINGCollection.WSO2_QAP_TEST_SCENARIO_TEST_CASE_MAPPING;
 
-    print('<table>');
+
 
     print('<div class="page_collapsible collapse-close" id="body-section1">');
 
@@ -55,11 +59,14 @@ if (!(list_testscenarioID instanceof Array))
     print('</div>');
 
 
-    print('</table>');
+
 
 }
+
+
+
 else{
-    print('<table>');
+
 
     for(var j=0;j<list_testscenarioID.length;j++)
     {
@@ -79,8 +86,6 @@ else{
 
         print(list_Testscenarios.WSO2_QAP_TEST_SCENARIO_NAME);
 
-        print("&emsp;&emsp;&emsp;");
-        print(list_Testscenarios.WSO2_QAP_DESCRIPTION);
 
 
         print('<span></span></div>');
@@ -89,63 +94,23 @@ else{
         print('<div class="container" style="display: none;">');
         print(' <div class="content">');
 
+        print('<table id="baram" width="100\%">');
+        print('<tr>');
+        print('<th>Test Case Name</th>');
+        print('<th>Test Status</th>');
+        print('<th>Automation Test Status</th>');
+        print('<th>Tested by</th>');
+
         include("../controller/showTestresults_for_expand.jag");
 
+        print('</table>');
+
+
         print('</div>');
         print('</div>');
-
-
-    }
-
-    print('</table>');
-}
-
-
-        /*
-        var url_testcaseID=SERVICE_SECURE_ROOT+"WSO2_QAP_TEST_SCENARIO_TEST_CASE_MAPPING_DataService/view/testcase_with_testscenarioid/"+list_testscenarioID[j].WSO2_QAP_TEST_SCENARIO_ID;
-        var data_testcaseID=get(url_testcaseID,"",optionalHeaders);
-        var objTestcaseID=parse(data_testcaseID.data);
-        var list_testcaseID=objTestcaseID.WSO2_QAP_TEST_SCENARIO_TEST_CASE_MAPPINGCollection.WSO2_QAP_TEST_SCENARIO_TEST_CASE_MAPPING;
-
-
-
-
-
-
-
-        if(!(list_testcaseID instanceof Array))
-        {
-            var url_testResultdetails=SERVICE_SECURE_ROOT+"WSO2_QAP_TEST_RESULT_DataService/view/testreults_for_build/"+WSO2_QAP_BUILD_ID+"/"+list_testcaseID.WSO2_QAP_TEST_CASE_ID;
-            var data_testResultdetails=get(url_testResultdetails,"",optionalHeaders);
-            var objTestResultdetails= parse(data_testResultdetails.data);
-            var list_testResultdetails=objTestResultdetails.WSO2_QAP_TEST_RESULTFORBUILDCollection.WSO2_QAP_TEST_RESULTFORBUILD;
-
-
-            //Have to show the test result details for each test cases
-
-
         }
-        else{
-
-            for(var k=0;k<list_testcaseID.length;k++)
-            {
-                var url_testResultdetails=SERVICE_SECURE_ROOT+"WSO2_QAP_TEST_RESULT_DataService/view/testreults_for_build/"+WSO2_QAP_BUILD_ID+"/"+list_testcaseID[k].WSO2_QAP_TEST_CASE_ID;
-                var data_testResultdetails=get(url_testResultdetails,"",optionalHeaders);
-                var objTestResultdetails= parse(data_testResultdetails.data);
-                var list_testResultdetails=objTestResultdetails.WSO2_QAP_TEST_RESULTFORBUILDCollection.WSO2_QAP_TEST_RESULTFORBUILD;
-
-                print(list_testResultdetails);
-
-                //Have to show the test result details for each test cases
-
-
-            }
         }
-            */
-    ///}
 
-
-//}
 
 
 %>

@@ -11,8 +11,7 @@
    var data4 = get(url,"",optionalHeaders);
    var obj4 = parse(data4.data);
    var list4 = obj4.WSO2_QAP_TEST_PLANCollection.WSO2_QAP_TEST_PLAN;
-   print('<input type="hidden" name="WSO2_QAP_PRODUCT_VERSION_ID" value="'+WSO2_QAP_PRODUCT_VERSION_ID+'">');
-
+   
    // print('<tr bgcolor="#EEEFFB">');
    // print('<td>');
    // print('</td>');
@@ -64,7 +63,7 @@
         print("&emsp;&emsp;&emsp;");
         var link = "test_plan_dashboard.jag?data="+encodeURIComponent(stringify(passjsondata));
         print('<a href="'+link+'">');
-        print(list4[i].WSO2_QAP_TEST_PLAN_ID );
+        print(list1.WSO2_QAP_PRODUCT_NAME+" "+list1.WSO2_QAP_PRODUCT_VERSION);
         print('</a>');
         print('</td>');
         print(' <td>');
