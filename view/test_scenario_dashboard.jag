@@ -207,7 +207,7 @@ if(name===null){
 														</tbody>
 													</table>
 													<p>&nbsp;</p>
-																	<form name="testcasesForm" method="post">
+									<form name="testcasesForm" method="post">
                                           <table class="display" id="testcasesTable" cellpadding="0" cellspacing="0" border="0" width="100%">
                                              <thead>
                                                 <tr>
@@ -239,15 +239,11 @@ if(name===null){
                                           			print('<input type="hidden" name="WSO2_QAP_TEST_SCENARIO_ID" value=\"'+WSO2_QAP_TEST_SCENARIO_ID +'\">');
                                           	%>
                                           
-													</form>
-													<p>&nbsp;</p>
 													
-													<table>
-														<tbody>
-															<tr></tr>
-														</tbody>
-													</table>
-														<table>
+													<p>&nbsp;</p
+													
+													
+						<table>
                             <tbody>
                               <tr>
                                 <td><a href="#"
@@ -267,10 +263,13 @@ if(name===null){
                                   var link ="'addtestcase_to_scenario.jag?data="+encodeURIComponent(stringify(WSO2_QAP_TEST_SCNARIO_ID))+"'";
                                  %>
                                  <td><a href=<%=link%> id="add2">Add Test cases</a></td>
+                                 <input type="button" name="addTestStatus" id="addTestStatus" value="Add Test Status" onClick="addTestStatus();return false;" />
+                                 
+                                 
                               </tr>
                             </tbody>
                           </table>
-
+						</form>
 
                         <p>&nbsp;</p>
                         
