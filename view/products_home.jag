@@ -3,8 +3,7 @@
 
 <head>
    <%
-   var name = session.get("username");
-   require("template/head.jag");
+   include("template/head.jag");
   %>
 </head>
 

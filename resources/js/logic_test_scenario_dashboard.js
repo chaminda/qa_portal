@@ -40,6 +40,31 @@ function deleteTestcase() {
     }
 }
 
+function addTestStatus() {
+	alert("ok");
+    /*var selected = isTestcaseSelected();
+    if (!selected) {
+        CARBON.showInfoDialog('Please select the testcase to be added.');
+        return;
+    }
+    if (allSelected) {
+        CARBON.showConfirmationDialog("Do you want to add all testcases?",
+            function () {
+                //location.href = '../controller/deleteTestcase.jag?deleteAllWebapps=true&webappState=all';
+                document.testcasesForm.action = '../controller/InsertTestCaseResults.jag';
+                document.testcasesForm.submit();
+            }
+        );
+    } else {
+        CARBON.showConfirmationDialog("Do you want to add the selected testcase?",
+            function () {
+                document.testcasesForm.action = '../controller/InsertTestCaseResults.jag';
+                document.testcasesForm.submit();
+            }
+        );
+    }*/
+}
+
 function selectAllInThisPage(isSelected) {
     allSelected = false;
     if (document.testcasesForm.testcaseId != null &&

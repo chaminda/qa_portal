@@ -28,32 +28,41 @@ else if(!(list_testcaseID instanceof Array))
     var objTestResultdetails= parse(data_testResultdetails.data);
     var list_testResultdetails=objTestResultdetails.WSO2_QAP_TEST_RESULTFORBUILDCollection.WSO2_QAP_TEST_RESULTFORBUILD;
 
-    //print(objTestResultdetails);
+    //print(url_testResultdetails);
+
+    if(list_testResultdetails==null){
+
+    }
+    else{
+
+        print(' <tr>');
+
+        print(' <td>');
+        print(list_testResultdetails.WSO2_QAP_TEST_CASE_NAME);
+        print('</a>');
+        print('</td>');
 
 
-    print(' <tr>');
-    print(' <td>');
-    print(list_testResultdetails.WSO2_QAP_TEST_CASE_NAME);
-    print('</a>');
-    print('</td>');
+        print(' <td>');
+        print(list_testResultdetails.WSO2_QAP_TEST_STATUS);
+        print('</a>');
+        print('</td>');
 
 
-    print(' <td>');
-    print(list_testResultdetails.WSO2_QAP_TESTED_BY);
-    print('</a>');
-    print('</td>');
+        print(' <td>');
+        print(list_testResultdetails.WSO2_QAP_AUTOMATION_TEST_RESULT);
+        print('</a>');
+        print('</td>');
 
 
-    print(' <td>');
-    print(list_testResultdetails.WSO2_QAP_AUTOMATION_TEST_RESULT);
-    print('</a>');
-    print('</td>');
 
-    print(' <td>');
-    print(list_testResultdetails.WSO2_QAP_TEST_STATUS);
-    print('</a>');
-    print('</td>');
-    print('</tr>');
+        print(' <td>');
+        print(list_testResultdetails.WSO2_QAP_TESTED_BY);
+        print('</a>');
+        print('</td>');
+
+        print('</tr>');
+    }
 
 
 }
@@ -78,6 +87,7 @@ else{
        else if(!(list_testResultdetails instanceof Array)){
 
             print(' <tr>');
+
             print(' <td>');
             print(list_testResultdetails.WSO2_QAP_TEST_CASE_NAME);
             print('</a>');
@@ -85,7 +95,7 @@ else{
 
 
             print(' <td>');
-            print(list_testResultdetails.WSO2_QAP_TESTED_BY);
+            print(list_testResultdetails.WSO2_QAP_TEST_STATUS);
             print('</a>');
             print('</td>');
 
@@ -95,10 +105,12 @@ else{
             print('</a>');
             print('</td>');
 
+
             print(' <td>');
-            print(list_testResultdetails.WSO2_QAP_TEST_STATUS);
+            print(list_testResultdetails.WSO2_QAP_TESTED_BY);
             print('</a>');
             print('</td>');
+
             print('</tr>');
 
         }
@@ -109,6 +121,7 @@ else{
             {
 
                 print(' <tr>');
+
                 print(' <td>');
                 print(list_testResultdetails[b].WSO2_QAP_TEST_CASE_NAME);
                 print('</a>');
@@ -116,7 +129,7 @@ else{
 
 
                 print(' <td>');
-                print(list_testResultdetails[b].WSO2_QAP_TESTED_BY);
+                print(list_testResultdetails[b].WSO2_QAP_TEST_STATUS);
                 print('</a>');
                 print('</td>');
 
@@ -126,58 +139,19 @@ else{
                 print('</a>');
                 print('</td>');
 
+
+
                 print(' <td>');
-                print(list_testResultdetails[b].WSO2_QAP_TEST_STATUS);
+                print(list_testResultdetails[b].WSO2_QAP_TESTED_BY);
                 print('</a>');
                 print('</td>');
+
                 print('</tr>');
-
-
-
-
 
 
             }
 
-
-
         }
-
-
-
-
-
-
-
-
-
-
-
-/*
-        print(' <tr>');
-        print(' <td>');
-        print(list_testResultdetails.WSO2_QAP_TEST_CASE_NAME);
-        print('</a>');
-        print('</td>');
-
-
-        print(' <td>');
-        print(list_testResultdetails.WSO2_QAP_TESTED_BY);
-        print('</a>');
-        print('</td>');
-
-
-        print(' <td>');
-        print(list_testResultdetails.WSO2_QAP_AUTOMATION_TEST_RESULT);
-        print('</a>');
-        print('</td>');
-
-        print(' <td>');
-        print(list_testResultdetails.WSO2_QAP_TEST_STATUS);
-        print('</a>');
-        print('</td>');
-        print('</tr>');
-*/
 
     }
 
