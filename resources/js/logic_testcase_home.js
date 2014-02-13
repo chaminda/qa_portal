@@ -81,3 +81,22 @@ function resetVars() {
     return false;
 }
 
+
+function editTestcase()
+{
+    var selected = isTestcaseSelected();
+    if(!selected)
+    {
+        CARBON.showInfoDialog('Please select the testcase to edit');
+        return;
+    }
+    else if(document.testcasesForm.WSO2_QAP_TEST_CASE_ID != null)
+    {
+        document.testcasesForm.action = 'editTestcase.jag';
+        document.testcasesForm.submit();
+
+    }else{
+        CARBON.showInfoDialog('Please select only one testcase to edit');
+        return;
+    }
+}
