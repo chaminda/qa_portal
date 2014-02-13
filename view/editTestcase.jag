@@ -171,12 +171,12 @@ var list_testcase=obj_testcase.WSO2_QAP_TEST_CASECollection.WSO2_QAP_TEST_CASE;
                                 </td>
 
                                 <td><select  id="WSO2_QAP_TEST_CASE_STATUS" name="WSO2_QAP_TEST_CASE_STATUS" value="<%=list_testcase.WSO2_QAP_AUTOMATION_STATUS %>">
-                                    <option value="Yes">Yes</option>
-                                    <option value="No">No</option>
+                                    <option id="Yes" value="Yes">Yes</option>
+                                    <option id="No" value="No">No</option>
 
                                 </select>
                                 <script type="text/javascript">
-                                    document.getElementById("WSO2_QAP_TEST_CASE_STATUS").option[1].selected;
+                                    document.getElementById("<%=list_testcase.WSO2_QAP_AUTOMATION_STATUS %>").selected="true";
                                 </script>
                             </tr>
                             <tr class="tableEvenRow">
@@ -190,7 +190,7 @@ var list_testcase=obj_testcase.WSO2_QAP_TEST_CASECollection.WSO2_QAP_TEST_CASE;
                                 <script type="text/javascript">
                                     document.getElementById("WSO2_QAP_TEST_CASE_DESCRIPTION").value="<%=list_testcase.WSO2_QAP_DESCRIPTION %>";
 
-                                  </script>
+                                </script>
                             </tr>
                             <tr class="tableOddRow">
                                 <td class="formRow">Artifact name<font color="red">*</font></td>
