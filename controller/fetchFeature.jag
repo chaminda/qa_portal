@@ -10,6 +10,9 @@ var param = "";
 var username = request.getParameter("username");
 var password = request.getParameter("password");
 
+// var username = 'maduranga@wso2.com';
+// var password = 'mps@1990X';
+
 
 var optionalHeaders = {
         "Accept":"application/json",
@@ -130,6 +133,12 @@ while(list[0] != null){
 								}else{
 									description = (list[i].description).trim();
 								}	 
+								description = description.replace(/'/g, '\\\'').replace(/"/g, '\\"');
+
+								print('<br/>');
+								print('description = ' + description);
+								print('<br/>');
+
 								var subject = (list[i].subject).trim();
 								var fatureId;
 								var productversionId = product_versions[listproducts[j].WSO2_QAP_PRODUCT_ID][k].WSO2_QAP_PRODUCT_VERSION_ID;
@@ -150,29 +159,45 @@ while(list[0] != null){
 									print('<br/>');
 									print(urladdfeature);
 									print('<br/>');
-									post(urladdfeature, paramfeature, optionalHeadersPost, "json", function (data, xhr) {
+									// post(urladdfeature, paramfeature, optionalHeadersPost, "json", function (data, xhr) {
 										
-								       log("Response received");
-								   	} );
+								 //       log("Response received");
+								 //   	} );
 
-									var urllastinsertedid = DB_URL+"WSO2_QAP_FEATURE_DataService/view/last_id";
-    								var dataredminenew = get(urllastinsertedid,"",optionalHeadersDb);
-									var objredminenew = parse(dataredminenew.data);
-									var listredminenew = objredminenew.WSO2_QAP_FEATURECollection.WSO2_QAP_FEATURE;
-									fatureId = listredminenew.LAST_INSERTED_ID;
-
-									if(fatureId == 0){
-										var urlmaxinsertedid = DB_URL+"WSO2_QAP_FEATURE_DataService/view/max_id";
-    									var dataredminemax = get(urlmaxinsertedid,"",optionalHeadersDb);
-										var objredminemax = parse(dataredminemax.data);
-										var listredminemax = objredminemax.WSO2_QAP_FEATURECollection.WSO2_QAP_FEATURE;
-										fatureId = listredminemax.LAST_INSERTED_ID;
-									}
-
-									// var objredminenew = parse(insertresponse.data);
+									// var urllastinsertedid = DB_URL+"WSO2_QAP_FEATURE_DataService/view/last_id";
+    					// 			var dataredminenew = get(urllastinsertedid,"",optionalHeadersDb);
+									// var objredminenew = parse(dataredminenew.data);
 									// var listredminenew = objredminenew.WSO2_QAP_FEATURECollection.WSO2_QAP_FEATURE;
 									// fatureId = listredminenew.LAST_INSERTED_ID;
-									// print('<br/>');
+
+									// if(fatureId == 0){
+									// 	var urlmaxinsertedid = DB_URL+"WSO2_QAP_FEATURE_DataService/view/max_id";
+    					// 				var dataredminemax = get(urlmaxinsertedid,"",optionalHeadersDb);
+									// 	var objredminemax = parse(dataredminemax.data);
+									// 	var listredminemax = objredminemax.WSO2_QAP_FEATURECollection.WSO2_QAP_FEATURE;
+									// 	fatureId = listredminemax.LAST_INSERTED_ID;
+									// }
+
+									var xhr = new XMLHttpRequest();
+							        xhr.open("POST", urladdfeature);
+							        xhr.setRequestHeader("Content-Type" , "application/json");
+							        xhr.send(paramfeature);
+
+							        print("<br>ReadyState : "+xhr.readyState);
+							        print("<br>ResponseStatus : "+xhr.status);
+							        print("<br>ResponseText : "+xhr.responseText);
+
+									var objredminenew = parse(xhr.responseText);
+
+									if(objredminenew.GeneratedKeys != null){
+										var listredminenew = objredminenew.GeneratedKeys.Entry;
+										fatureId = listredminenew.ID;
+									}else{
+										fatureId = null;
+									}
+									
+									
+									print('<br/>');
     					
 									print('<br/>');
     								print("inserted new id " + fatureId);
@@ -235,11 +260,13 @@ while(list[0] != null){
 	list = (JSON.parse((get(url,"",optionalHeaders)).data)).issues;
  }
 }
-
+print('<br>');
+print("end");
 // if(name==null || ROOT==null || SERVICE_ROOT==null){
-    response.status=307;
-    response.addHeader('Location','../view/products_home.jag');
+    // response.status=307;
+    //response.addHeader('Location','../view/products_home.jag');
 // }
-// response.sendRedirect("../view/products_home.jag");
+ response.sendRedirect("../view/products_home.jag");
+ //../view/products_home.jag
 
 %>
