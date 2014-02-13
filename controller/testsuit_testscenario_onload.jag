@@ -8,15 +8,7 @@
    var obj2 = parse(data2.data);
    // print(obj2)
    var list2 = obj2.WSO2_QAP_DATA_TESTSUIT_join_TESTSCENARIOCollection.WSO2_QAP_DATA_TESTSUIT_join_TESTSCENARIO;
-   print('<tr bgcolor="#EEEFFB">');
-   print('<td>');
-   print('</td>');
-   print('<td>');
-   print('<strong> Test Scenario Name <strong/>');
-   print('</td>');
-   print('<td>');
-   print('<strong> Description <strong/>');
-   print('</td>');
+
    print('<input type="hidden" name="WSO2_QAP_TEST_SUIT_ID" value="'+WSO2_QAP_TEST_SUIT_ID+'">');
 
    if(list2.length==null && list2.WSO2_QAP_TEST_SCENARIO_NAME!=null){
