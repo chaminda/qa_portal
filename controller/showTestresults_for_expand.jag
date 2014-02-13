@@ -247,7 +247,7 @@ function jiraPrint(jira_list){
     else if(!(jira_list instanceof Array)){
 
         print(' <td>');
-        print('<a href="'+jira_list.WSO2_QAP_URL+'">');
+        print('<a href="jira_dashboard.jag?data='+jira_list.WSO2_QAP_JIRA_ID+'">');
         print("go to jira");
         print('</a>');
         print('</td>');
@@ -259,7 +259,7 @@ function jiraPrint(jira_list){
 
             print(' <td>');
 
-            print('<a href="'+jira_list[n].WSO2_QAP_URL+'">');
+            print('<a href="jira_dashboard.jag?data='+jira_list[n].WSO2_QAP_JIRA_ID+'">');
             print("go to jira");
             print('</a>');
             print('</td>');
