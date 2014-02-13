@@ -20,7 +20,7 @@
 		<script type="text/javascript" language="javascript" src="../resources/datatables/js/jquery.dataTables.js"></script>
 		<script type="text/javascript" charset="utf-8">
 			$(document).ready(function() {
-				$('#buildsTable').dataTable( {
+				$('#testScenariosTable').dataTable( {
 					"sPaginationType": "full_numbers"
 				} );
 			} );
@@ -148,7 +148,7 @@
                                      <p>&nbsp;</p>
                                     <table>
                                                 <tr>
-                                                      <h2>Test Plans</h2>
+                                                      <h2>Test Plans that includes this Test Suit</h2>
                                                 </tr>
                                              </table>
                                        <p>&nbsp;</p>
@@ -199,7 +199,17 @@
                                        <p>&nbsp;</p>
                                        <form name="testScenariosForm" method="post">
                                           <table class="display" id="testScenariosTable" name="testScenariosTable" cellpadding="0" cellspacing="0" border="0" width="100%">
-                                             
+                                          <thead>
+                                                <tr>
+                                                   <th>&nbsp;</th>
+                                                   <th>
+                                                      <nobr>Test Scenario Name</nobr>
+                                                   </th>
+                                                   <th>
+                                                      <nobr>Description</nobr>
+                                                   </th>
+                                                </tr>
+                                             </thead>                                                
                                              <tbody>
                                                 <%
                                                    include("../controller/testsuit_testscenario_onload.jag");
