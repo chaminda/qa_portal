@@ -1,0 +1,62 @@
+<%
+include("base64_encode.jag");
+var SERVICE_SECURE_ROOT = session.get("service_root");
+var WSO2_QAP_PRODUCT_VERSION_ID=request.getParameter("WSO2_QAP_PRODUCT_VERSION_ID");
+
+
+var optionalHeadersPost = {
+    "Accept":"application/json",
+    "Content-Type" : "application/json"
+};
+
+var param= request.getAllParameters("UTF-8");
+
+var url  = SERVICE_SECURE_ROOT+"WSO2_QAP_TEST_RESULT_DataService/add/testresults";
+print(url);
+
+
+
+
+//print(param);
+
+var WSO2_QAP_BUILD_ID="";
+var username= session.get("username");
+var automationresult  = "YET TO RUN";
+
+for(var i in param){
+
+    if(i.trim() == "WSO2_QAP_BUILD_ID"){
+        WSO2_QAP_BUILD_ID = param[i];
+    }
+
+}
+
+
+for(var i in param){
+
+    if(i.trim() == "WSO2_QAP_BUILD_ID"){
+
+    }
+    else{
+        var test_result = param[i];
+        var post_data = '{"_postadd_testresults":{"WSO2_QAP_TEST_CASE_ID" : "'+i.trim()+'","WSO2_QAP_TEST_STATUS" : "'+test_result+'","WSO2_QAP_AUTOMATION_TEST_RESULT" : "'+automationresult+'","WSO2_QAP_TESTED_BY" : "'+username+'"}}';
+
+        //print(post_data);
+
+
+
+        var data_post_result = post(url, post_data, optionalHeadersPost, "json", function (data, xhr) {
+            log("Response received");
+        } );
+
+        //var obj = parse(data_post_result.data);
+
+        print(data_post_result);
+        print("<br>");
+
+
+    }
+
+}
+
+%>

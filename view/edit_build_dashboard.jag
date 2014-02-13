@@ -193,31 +193,29 @@
                                        <col width="10"/>
                                        <col width="450"/>
                                        <%
-                                          include("../controller/build_dashboard_onload.jag")
+                                          include("../controller/build_dashboard_onload.jag");
                                           
-                                          %>
+                                       %>
                                     </table>
+                                </div>
+                              </div>
                                     <p>&nbsp;</p>
-                                    <form name="test_results">
-                                       <table class="styledLeft">
-                                          <tbody>
-                                             <tr>
-                                                <td style="border:0; !important">&nbsp;</td>
-                                             </tr>
-                                             <p>&nbsp;</p>
-                                          </tbody>
-                                       </table>
-                                    </form>
                                     <h2>Test plan for the build</h2>
                                     <p>&nbsp;</p>
-                                    <div id="content">
-                                       <a href="./jQuery Collapsible Demo_files/jQuery Collapsible Demo.html" id="closeAll" title="Open all">Open All</a> | <a href="./jQuery Collapsible Demo_files/jQuery Collapsible Demo.html" id="openAll" title="Close All">Close All</a>
-                                       <%
-                                          include("../controller/show_testplan_instance_for_expand.jag");
-                                          %>
-                                    </div>
-                                 </div>
-                              </div>
+
+                                        <div id="content">
+                                    <form method="post" name="test_results" action="../controller/add_testresults_batch.jag">
+                                        <input type="hidden" name="WSO2_QAP_BUILD_ID" value=<% print(WSO2_QAP_BUILD_ID+""); %> >
+                                           <a href="./jQuery Collapsible Demo_files/jQuery Collapsible Demo.html" id="closeAll" title="Open all">Open All</a> | <a href="./jQuery Collapsible Demo_files/jQuery Collapsible Demo.html" id="openAll" title="Close All">Close All</a>
+                                           <%
+                                              include("../controller/edit_show_testplan_instance_for_expand.jag");
+                                              %>
+
+                                      <input type="submit" value="Submit">
+                                    </form>
+                                        </div>
+
+
                            </td>
                         </tr>
                      </tbody>
