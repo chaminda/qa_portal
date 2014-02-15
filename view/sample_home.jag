@@ -141,7 +141,7 @@ require("template/product_menu_panel.jag");
          <td width="20%">&nbsp;</td>
          <td><a href="#" id="delete1" onclick="deleteSamples();return false;">Delete</a></td>
          <td width="10%">&nbsp;</td>
-         <td><a href="#" id="edit" onclick="editWebapps();return false;">Edit</a></td>
+         <td><a href="#" id="edit" onclick="editSample()">Edit</a></td>
       </tr>
    </tbody>
 </table>
@@ -184,7 +184,7 @@ include("../controller/sample_onload.jag");
 <td width="20%">&nbsp;</td>
 <td><a href="#" id="delete2" onclick="deleteSamples();return false;">Delete</a></td>
 <td width="10%">&nbsp;</td>
-<td><a href="#" id="edit" onclick="editWebapps();return false;">Edit</a></td>
+<td><a href="#" id="edit" onclick="editSample()">Edit</a></td>
 </tr>
 </tbody>
 </table>
