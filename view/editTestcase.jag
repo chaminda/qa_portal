@@ -55,6 +55,12 @@ require("template/head.jag");
 
 		  });
 	</script>
+	<script type="text/javascript">
+	$( document ).ready(function() {
+	$("#WSO2_QAP_TEST_CASE_ARTIFACT [value='6']").attr("selected","selected");
+
+});
+</script>
 
 
 	<table id="main-table" border="0" cellspacing="0">
@@ -157,7 +163,7 @@ var list_testcase=obj_testcase.WSO2_QAP_TEST_CASECollection.WSO2_QAP_TEST_CASE;
                     >
                     <table class="styledLeft" id="archiveTbl">
 
-                        <input type="hidden" id="WSO2_QAP_TEST_CASE_ID" name="WSO2_QAP_TEST_CASE_ID" value="<%=list_testcase.WSO2_QAP_TEST_CASE_ID%>"
+                        <input type="hidden" id="WSO2_QAP_TEST_CASE_ID" name="WSO2_QAP_TEST_CASE_ID" value="<%=list_testcase.WSO2_QAP_TEST_CASE_ID%>">
                         <tbody>
                             <tr class="tableEvenRow">
                                 <td class="formRow">Test Case name<font color="red">*</font>
@@ -171,12 +177,13 @@ var list_testcase=obj_testcase.WSO2_QAP_TEST_CASECollection.WSO2_QAP_TEST_CASE;
                                 </td>
 
                                 <td><select  id="WSO2_QAP_TEST_CASE_STATUS" name="WSO2_QAP_TEST_CASE_STATUS" value="<%=list_testcase.WSO2_QAP_AUTOMATION_STATUS %>">
-                                    <option id="Yes" value="Yes">Yes</option>
-                                    <option id="No" value="No">No</option>
+                                    <option   value="Yes">Yes</option>
+                                    <option   value="No">No</option>
 
                                 </select>
                                 <script type="text/javascript">
-                                    document.getElementById("<%=list_testcase.WSO2_QAP_AUTOMATION_STATUS %>").selected="true";
+
+                                    $("#WSO2_QAP_TEST_CASE_STATUS [value='<%=list_testcase.WSO2_QAP_AUTOMATION_STATUS %>']").attr("selected","selected");
                                 </script>
                             </tr>
                             <tr class="tableEvenRow">
@@ -198,6 +205,11 @@ var list_testcase=obj_testcase.WSO2_QAP_TEST_CASECollection.WSO2_QAP_TEST_CASE;
                                 <select name="WSO2_QAP_TEST_CASE_ARTIFACT" id="WSO2_QAP_TEST_CASE_ARTIFACT">
 
                                 </select>
+                                <script type="text/javascript">
+
+
+                                </script>
+
                                 <input type="button" value="Create new Artifact" onclick="window.open('add_artifact.jag')" target="_blank">
                                 </td>
 
