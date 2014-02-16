@@ -19,7 +19,7 @@ session.put("role", "admin");
 	response.sendRedirect("../view/products_home.jag");
 }
 else{
-    response.sendRedirect("../view/login.jag");
+    response.sendRedirect("../view/login.jag?login=false");
 }
 
 %>
