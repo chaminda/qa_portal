@@ -19,15 +19,6 @@
     var listCaseDetails = objCaseDetails.WSO2_QAP_TEST_CASECollection.WSO2_QAP_TEST_CASE;
 
 if(listResultDetails != null){
-// print("<tr class=\"tableOddRow\"><td>Test Case Name</td>");
-// print("<td>"+listCaseDetails.WSO2_QAP_TEST_CASE_NAME+"</td></tr>");
-// print("<tr class=\"tableEvenRow\"><td>Status</td>");
-// print("<td>"+listResultDetails.WSO2_QAP_TEST_STATUS+"</td></tr>");
-// print("<tr class=\"tableOddRow\"><td>Automation Test Result</td>");
-// print("<td>"+listResultDetails.WSO2_QAP_AUTOMATION_TEST_RESULT+"</td></tr>");
-// print("<tr class=\"tableEvenRow\"><td>Tested By</td>");
-// print("<td>"+listResultDetails.WSO2_QAP_TESTED_BY+"</td></tr>");
-
 
 print('<tr class="tableOddRow">');
 print('<td class="formRow">Test Case Name<span class="required">*</span></td>');

@@ -14,6 +14,41 @@ function isSamplesSelected() {
     return selected;
 }
 
+function isoneSelected(){
+
+    var oneselected=false;
+    var count=0;
+    if(document.sampleForm.WSO2_QAP_SAMPLE_ID[0] != null)
+    {
+        for (var j = 0; j < document.sampleForm.WSO2_QAP_SAMPLE_ID.length; j++) {
+            var select = document.sampleForm.WSO2_QAP_SAMPLE_ID[j].checked;
+            if (select)
+            {
+                count=count +1;
+                if(count>1)
+                {
+                    oneselected=false;
+                    break;
+                }
+            }
+        }
+
+
+    }
+    else if(document.sampleForm.WSO2_QAP_SAMPLE_ID != null)
+    {
+        oneselected=document.sampleForm.WSO2_QAP_SAMPLE_ID.checked;
+    }
+
+
+    if(count==1)
+    {
+        oneselected=true;
+    }
+
+    return oneselected;
+}
+
 function deleteSamples() {
     var selected = isSamplesSelected();
     if (!selected) {
@@ -79,5 +114,30 @@ function resetVars() {
         }
     }
     return false;
+}
+
+function editSample()
+{
+    var selected = isSamplesSelected();
+    var oneselected=isoneSelected();
+
+
+
+    if(!selected)
+    {
+        CARBON.showInfoDialog('Please select a sample to edit');
+        return;
+    }
+    else if(oneselected)
+    {
+        document.sampleForm.action = 'edit_sample.jag';
+        document.sampleForm.submit();
+
+
+    }else{
+        CARBON.showInfoDialog('Please select only one sample to edit');
+        return;
+
+    }
 }
 

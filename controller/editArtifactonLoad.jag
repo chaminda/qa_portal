@@ -29,7 +29,7 @@ print('</tr>');
 
 print('<tr class="tableOddRow">');
 print('<td class="formRow">Artifact Description</td>');
-print('<td><input name="WSO2_QAP_ARTIFACT_DESCRIPTION" id="WSO2_QAP_ARTIFACT_DESCRIPTION" value="'+listDetails.WSO2_QAP_ARTIFACT_DESCRIPTION +'"></td>')
+print('<td><input rows="10" cols="50" name="WSO2_QAP_ARTIFACT_DESCRIPTION" id="WSO2_QAP_ARTIFACT_DESCRIPTION" value="'+listDetails.WSO2_QAP_ARTIFACT_DESCRIPTION +'"></td>')
 print('</tr>');
 print('<input type=hidden name=WSO2_QAP_ARTIFACT_ID id=WSO2_QAP_ARTIFACT_ID value='+WSO2_QAP_ARTIFACT_ID+'>');
 

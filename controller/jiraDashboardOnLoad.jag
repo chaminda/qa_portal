@@ -16,7 +16,7 @@
     
 if(listDetails != null){
 print("<tr class=\"tableOddRow\"><td>Jira URL</td>");
-print("<td>"+listDetails.WSO2_QAP_URL+"</td></tr>");
+print("<td><a href=\"http://"+listDetails.WSO2_QAP_URL+"\" target=\"_blank\" > http://"+listDetails.WSO2_QAP_URL+"</td></tr>");
 print("<tr class=\"tableEvenRow\"><td>Jira Description</td>");
 print("<td>"+listDetails.WSO2_QAP_DESCRIPTION+"</td></tr>");
 }

@@ -14,10 +14,45 @@ function isTestcaseSelected() {
     return selected;
 }
 
+function isoneSelected(){
+
+    var oneselected=false;
+    var count=0;
+    if(document.testcasesForm.WSO2_QAP_TEST_CASE_ID[0] != null)
+    {
+        for (var j = 0; j < document.testcasesForm.WSO2_QAP_TEST_CASE_ID.length; j++) {
+            var select = document.testcasesForm.WSO2_QAP_TEST_CASE_ID[j].checked;
+            if (select)
+            {
+                count=count +1;
+                if(count>1)
+                {
+                    oneselected=false;
+                    break;
+                }
+            }
+        }
+
+
+    }
+    else if(document.testcasesForm.WSO2_QAP_TEST_CASE_ID != null)
+    {
+        oneselected=document.testcasesForm.WSO2_QAP_TEST_CASE_ID.checked;
+    }
+
+
+    if(count==1)
+    {
+        oneselected=true;
+    }
+
+    return oneselected;
+}
+
 function deleteTestcase() {
     var selected = isTestcaseSelected();
     if (!selected) {
-        CARBON.showInfoDialog('Please select the testcase to be deleted.');
+        CARBON.showInfoDialog('Please select a testcase to be deleted.');
         return;
     }
     if (allSelected) {
@@ -81,3 +116,25 @@ function resetVars() {
     return false;
 }
 
+
+function editTestcase()
+{
+    var selected = isTestcaseSelected();
+    var oneselected=isoneSelected();
+    if(!selected)
+    {
+        CARBON.showInfoDialog('Please select a testcase to edit');
+        return;
+    }
+    else if(oneselected)
+    {
+        document.testcasesForm.action = 'editTestcase.jag';
+        document.testcasesForm.submit();
+
+
+    }else{
+        CARBON.showInfoDialog('Please select only one testcase to edit');
+        return;
+
+    }
+}
