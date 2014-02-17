@@ -183,8 +183,8 @@ var list_sample=obj_sample.WSO2_QAP_SAMPLECollection.WSO2_QAP_SAMPLE;
 
 </tr>
 <tr>
-<%
-require("footer.jag")
+<% 
+require("template/footer.jag")
 %>
 </tr>
 </tbody>

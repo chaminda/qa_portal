@@ -275,13 +275,10 @@ if(name===null){
 
 							</tr>
 							<tr>
-								<% 
-								require("footer.jag");
-
-								%>
-
-
-							</tr>
+							<% 
+							require("template/footer.jag")
+							%>
+						</tr>
 						</tbody>
 					</table> <script type="text/javascript">
          if (Function('/*@cc_on return document.documentMode===10@*/')()){
