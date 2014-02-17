@@ -58,7 +58,7 @@
         print(list[i].WSO2_QAP_ARTIFACT_DESCRIPTION);
         print('</td>');
         print('<td>');
-        print(list[i].WSO2_QAP_LOCATION);
+        print("<a href=\"http://"+list[i].WSO2_QAP_LOCATION+"\" target=\"_blank\" > http://"+list[i].WSO2_QAP_LOCATION);
         print('</td>');
         print('</tr>');
 	}
