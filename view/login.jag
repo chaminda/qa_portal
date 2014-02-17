@@ -306,7 +306,7 @@
                                                     print('Invalid Username or Password');
                                                     print('</span>');
                                                 }
-                                                
+
                                              %>
                                                 <h2>Sign-in</h2>
                                                 <form action="../controller/login_action.jag" method="POST" onsubmit="return doValidation();" target="_self">
