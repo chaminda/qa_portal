@@ -198,8 +198,8 @@
 
 			</tr>
 			<tr>
-				<%
-				include("footer.jag")
+				<% 
+				require("template/footer.jag")
 				%>
 			</tr>
 		</tbody>

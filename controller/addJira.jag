@@ -12,22 +12,22 @@ var optionalHeaders = {
             	"Authorization": "Basic "+base64_encode("admin:admin") };
 
 var url = SERVICE_SECURE_ROOT+"WSO2_QAP_JIRA_DataService/add/jira";
-var url2=SERVICE_SECURE_ROOT+"WSO2_QAP_JIRA_DataService/get/jira_id"
+/*var url2=SERVICE_SECURE_ROOT+"WSO2_QAP_JIRA_DataService/get/jira_id"
 var data = get(url2,param,optionalHeaders);
 var obj = parse(data.data);
 var list=obj.GeneratedKeys.Entry; 
-print(list);
+print(list);*/
 
 if(jira_url===null){
 
-	//response.sendRedirect("../view/add_jira.jag");
+	response.sendRedirect("../view/add_jira.jag");
 }
 else{
 	post(url, param, optionalHeaders, "json", function (data, xhr) {
        log("Response received");
    } );
 	
-	//response.sendRedirect("../view/jira_home.jag");
+	response.sendRedirect("../view/jira_home.jag");
 }
 
 %>

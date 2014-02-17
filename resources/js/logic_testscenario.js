@@ -38,6 +38,34 @@ function deleteTestScenario() {
     }
 }
 
+function editTestScenario() {
+
+    var selected = isTestScenarioSelected();
+    if (!selected) {
+        CARBON.showInfoDialog('Please select the test scenario to be edited.');
+        return;
+    }
+    var count=0;
+	for(var j=0; j< document.testScenarioForm.scenarioId.length; j++){
+		if(document.testScenarioForm.scenarioId[j].checked){
+			count=count+1;
+		}
+	}
+	if(count > 1){
+		CARBON.showInfoDialog('Please select only one test scenario to edit.');
+        return;
+	}
+	else{
+		CARBON.showConfirmationDialog("Do you want to edit the selected test scenario?",
+        function () {
+            document.testScenarioForm.action = '../controller/editTestScenario.jag';
+            document.testScenarioForm.submit();
+        }
+    	);
+	}
+    
+}
+
 function selectAllInThisPage(isSelected) {
     allSelected = false;
     if (document.testScenarioForm.scenarioId != null &&
