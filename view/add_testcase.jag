@@ -127,7 +127,7 @@
 										<h2>Add Test Case</h2>
 
 										<div id="workArea">
-											<form name="add_testcase" method="post"  action="../controller/addTestcase.jag"
+											<form name="add_testcase" method="post" onsubmit="return validateTextInput();return false;" action="../controller/addTestcase.jag"
 												>
 												<table class="styledLeft" id="archiveTbl">
 													<!-- 													<thead> -->
@@ -139,7 +139,7 @@
 														<tr class="tableEvenRow">
 															<td class="formRow">Test Case name<font color="red">*</font>
 															</td>
-															<td><input type="text" id="WSO2_QAP_TEST_CASE_NAME" name="WSO2_QAP_TEST_CASE_NAME"
+															<td><input type="text" class="text-not-empty" id="WSO2_QAP_TEST_CASE_NAME" name="WSO2_QAP_TEST_CASE_NAME"
 																 onchange="">
 															
 															</td>
@@ -161,7 +161,7 @@
 																 onchange="">
 															</td> -->
 															<td>
-																<textarea rows="4" cols="50" name="WSO2_QAP_TEST_CASE_DESCRIPTION"  id="WSO2_QAP_TEST_CASE_DESCRIPTION">
+																<textarea rows="4" class="text-not-empty" cols="50" name="WSO2_QAP_TEST_CASE_DESCRIPTION"  id="WSO2_QAP_TEST_CASE_DESCRIPTION">
 																</textarea>
 															</td>	
 														</tr>
