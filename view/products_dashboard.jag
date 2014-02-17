@@ -57,20 +57,7 @@
                                                 <tr>
                                                    <td>
                                                       <div id="breadcrumb-div">
-                                                         <table cellspacing="0">
-                                                            <tbody>
-                                                               <tr>
-                                                                  <td class="breadcrumb-link">
-                                                                     <a href="index.jag">QA Home</a>
-                                                                  </td>
-                                                                  <td class="breadcrumb-link">
-                                                                     <a href="product_home.jag">&nbsp;&gt;&nbsp;Products</a>
-                                                                  </td>
-                                                                  <td class="breadcrumb-link">&nbsp;&gt;&nbsp;List</td>
-                                                                  <td class="breadcrumb-link">&nbsp;&gt;&nbsp;Feature dashboard</td>
-                                                                </tr>
-                                                            </tbody>
-                                                         </table>
+                                                         
                                                       </div>
                                                    </td>
                                                 </tr>
@@ -111,11 +98,7 @@
                               </script>
                               <script type="text/javascript">
                               setCookie('current-breadcrumb', 'manage_menu,webapps_menu,webapps_list_menu#');
-                              document.onload=setBreadcrumDiv();
-                              function setBreadcrumDiv () {
-                                var breadcrumbDiv = document.getElementById('breadcrumb-div');
-                                breadcrumbDiv.innerHTML = '<table cellspacing="0"><tr><td class="breadcrumb-link"><a href="index.html">QA Home</a></td><td class="breadcrumb-link"><a href="product_home.html">&nbsp;&gt;&nbsp;Products</a></td><td class="breadcrumb-link">&nbsp;&gt;&nbsp;List</td><td class="breadcrumb-link">&nbsp;&gt;&nbsp;Product dashboard</td>';
-                             }
+                              
                             </script>
 
                               <script type="text/javascript" src="resources/global-params.js"></script>
