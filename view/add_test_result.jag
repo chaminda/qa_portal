@@ -1,4 +1,3 @@
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -117,7 +116,7 @@ if(name===null){
 
                         <form name="add_test_result"
                           action="../controller/addTestResult.jag" method="post"
-                          onsubmit="return validateInput('add_test_result','WSO2_QAP_TEST_CASE_ID');return false;">
+                          onsubmit="return validateTextInput();return false;">
                            <table class="styledLeft" id="archiveTbl">
                               <tbody>
                               <tr class="tableOddRow">
@@ -151,7 +150,7 @@ if(name===null){
                                 <tr class="tableEvenRow">
                                 <td class="formRow">Tested By</td>
                                 <td class="formRow"><input id="WSO2_QAP_TESTED_BY"
-                                  name="WSO2_QAP_TESTED_BY" class="longInput" value="">
+                                  name="WSO2_QAP_TESTED_BY" class="text-not-empty" class="longInput" value="">
                                 </td>
                               </tr>
                               </tbody>

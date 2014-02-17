@@ -7,7 +7,7 @@
 	if(name===null){
     	response.sendRedirect("login.jag");
     }
-    require("head.jag");
+    include("template/head.jag");
 %>
 
 
@@ -38,16 +38,16 @@
 			<tr>
 				<td id="header" colspan="3">
 				<%
-					require("header_div.jag");
+					include("template/header_div.jag");
 				%>
 				</td>
 			</tr>
 			<tr>
 				<% 
-					require("product_vertical_menu.jag");
+					include("template/product_vertical_menu.jag");
 				%>
 				<%
-					require("product_menu_panel.jag");
+					include("template/product_menu_panel.jag");
 				%>
 
 
@@ -103,7 +103,7 @@
 
 										<div id="workArea">
 											<form method="post" name="jarUpload" action="#"
-												enctype="multipart/form-data" target="_self">
+												enctype="multipart/form-data" onsubmit="return validateTextInput();return false;" target="_self">
 												<table class="styledLeft" id="archiveTbl">
 													<!-- 													<thead> -->
 													<!-- 														<tr class="tableEvenRow"> -->
@@ -123,7 +123,7 @@
 															<td class="formRow">Test class location<font color="red">*</font>
 															</td>
 															
-															<td><input type="text" id="testclasslocation" name="testclasslocation"
+															<td><input type="text" class="text-not-empty" id="testclasslocation" name="testclasslocation"
 																size="60" onchange="">
 															</td>
 															
