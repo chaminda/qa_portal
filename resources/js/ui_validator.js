@@ -1805,8 +1805,10 @@ function validateTextInput(){
     for (var i = 0; i < inputs.length; ++i) {
         var item = inputs[i];
         if(item.value===null || item.value.trim()===""){
-            CARBON.showWarningDialog(item.name+"  is mandatory");
-            //alert(item.name+"  is mandatory");
+
+
+            CARBON.showWarningDialog(item.name.toLowerCase().replace("wso2_qap","").replace(/_/g," ")+"  is mandatory");
+
             return false;
         }
     }
