@@ -170,25 +170,11 @@
                                              <tr>
                                                 <td style="border:0; !important">&nbsp;</td>
                                              </tr>
-                                             <tr>
-                                                <td>
-                                                   <table style="border:0; !important">
-                                                      <tbody>
-                                                         <tr style="border:0; !important">
-                                                            <td style="border:0; !important">
-                                                               <nobr>
-                                                                  <font size="4">Build Dashboard</font>
-                                                               </nobr>
-                                                            </td>
-                                                         </tr>
-                                                      </tbody>
-                                                   </table>
-                                                </td>
-                                             </tr>
+                                             <h2>Build Dashboard</h2>
                                           </tbody>
                                        </table>
                                     </form>
-                                    <p>&nbsp;</p>
+
                                     <table class="styledLeft" id="WSO2_QAP_BUILD_table" width="100%">
                                        <col width="10"/>
                                        <col width="450"/>
