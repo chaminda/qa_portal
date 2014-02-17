@@ -96,15 +96,7 @@ if(name===null){
 															<tr>
 																<td>
 																	<div id="breadcrumb-div">
-																		<table cellspacing="0">
-																			<tbody>
-																				<tr>
-																					<td class="breadcrumb-link"><a href="index.jag">QA
-																							Home</a></td>
-																					<td class="breadcrumb-link">&nbsp;&gt;&nbsp;Products</td>
-																				</tr>
-																			</tbody>
-																		</table>
+																		
 																	</div>
 																</td>
 															</tr>
@@ -128,11 +120,7 @@ if(name===null){
 
                                 </script> <script type="text/javascript">
                                 setCookie('current-breadcrumb', 'manage_menu,webapps_menu,webapps_list_menu#');
-                                document.onload=setBreadcrumDiv();
-                                function setBreadcrumDiv () {
-                                  var breadcrumbDiv = document.getElementById('breadcrumb-div');
-                                  breadcrumbDiv.innerHTML = '<table cellspacing="0"><tr><td class="breadcrumb-link"><a href="index.jag">QA Home</a></td><td class="breadcrumb-link">&nbsp;>&nbsp;Products</td>';
-                               }
+                                
                                </script> <script
 											type="text/javascript">
                                      function searchWebapps() {
@@ -146,20 +134,14 @@ if(name===null){
 												<form name="add_product"
 													action="../controller/addFeature.jag" method="post"
 													onsubmit="return validateTextInput();return false;">
-													<table class="styledLeft" id="archiveTbl">
-														<!-- 													<thead> -->
-														<!-- 														<tr class="tableEvenRow"> -->
-														<!-- 															<th colspan="2">Step 1 of 3: Upload a new archive</th> -->
-														<!-- 														</tr> -->
-														<!-- 													</thead> -->
-														<tbody>
-                            <tr class="tableOddRow">
-                                <td class="formRow">Subject<span class="required">*</span></td>
-                                <td class="formRow"><input id="WSO2_QAP_SUBJECT"
-                                  name="WSO2_QAP_SUBJECT" class="text-not-empty" type="text">
-                                
-                                </td>
-                              </tr>
+													<table class="styledLeft" id="archiveTbl"><tbody>
+							                            <tr class="tableOddRow">
+							                                <td class="formRow">Subject<span class="required">*</span></td>
+							                                <td class="formRow"><input id="WSO2_QAP_SUBJECT"
+							                                  name="WSO2_QAP_SUBJECT" class="text-not-empty" type="text">
+							                                
+							                                </td>
+						                              	</tr>
 															<tr class="tableEvenRow">
 																<td class="formRow">Description</td>
 																<td class="formRow"><input id="WSO2_QAP_DESCRIPTION"
