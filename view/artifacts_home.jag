@@ -141,7 +141,7 @@ if(name===null){
                                               <td width="10%">&nbsp;</nobr></td>
                                               <td><a href="#" id="delete2" onclick="deleteArtifacts();return false;">Delete</a></td>
                                               <td width="10%">&nbsp;</td>
-                                              <td><a href="#" id="edit" onclick="editWebapps();return false;">Edit</a></td>
+                                              <td><a href="#" id="edit" onclick="editArtifact()">Edit</a></td>
                                               <td width="10%">&nbsp;</td>
                                                 <td><a href="#" id="add2" onclick="location.href = 'add_artifact.jag'" >Add new</a> </td>
                                             </tr>
@@ -183,7 +183,7 @@ if(name===null){
                                               <td width="10%">&nbsp;</nobr></td>
                                               <td><a href="#" id="delete2" onclick="deleteArtifacts();return false;">Delete</a></td>
                                               <td width="10%">&nbsp;</td>
-                                              <td><a href="#" id="edit" onclick="editWebapps();return false;">Edit</a></td>
+                                              <td><a href="#" id="edit" onclick="editArtifact()">Edit</a></td>
                                               <td width="10%">&nbsp;</td>
                                               <td><a href="#" id="add2" onclick="location.href = 'add_artifact.jag'" >Add new</a> </td>
                                             </tr>
