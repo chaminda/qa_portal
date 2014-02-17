@@ -14,6 +14,42 @@ function isArtifactSelected() {
     return selected;
 }
 
+
+function isoneSelected(){
+
+    var oneselected=false;
+    var count=0;
+    if(document.artifactsForm.artifactId[0] != null)
+    {
+        for (var j = 0; j < document.artifactsForm.artifactId.length; j++) {
+            var select = document.artifactsForm.artifactId[j].checked;
+            if (select)
+            {
+                count=count +1;
+                if(count>1)
+                {
+                    oneselected=false;
+                    break;
+                }
+            }
+        }
+
+
+    }
+    else if(document.artifactsForm.artifactId != null)
+    {
+        oneselected=document.artifactsForm.artifactId.checked;
+    }
+
+
+    if(count==1)
+    {
+        oneselected=true;
+    }
+
+    return oneselected;
+}
+
 function deleteArtifacts() {
     var selected = isArtifactSelected();
     if (!selected) {
@@ -80,3 +116,27 @@ function resetVars() {
     return false;
 }
 
+function editArtifact()
+{
+    var selected = isArtifactSelected();
+    var oneselected=isoneSelected();
+
+
+
+    if(!selected)
+    {
+        CARBON.showInfoDialog('Please select a artifact to edit');
+        return;
+    }
+    else if(oneselected)
+    {
+        document.artifactsForm.action = 'edit_artifact.jag';
+        document.artifactsForm.submit();
+
+
+    }else{
+        CARBON.showInfoDialog('Please select only one artifact to edit');
+        return;
+
+    }
+}
