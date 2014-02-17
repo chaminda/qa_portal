@@ -10,10 +10,6 @@ var param = "";
 var username = request.getParameter("username");
 var password = request.getParameter("password");
 
-// var username = 'maduranga@wso2.com';
-// var password = 'mps@1990X';
-
-
 var optionalHeaders = {
         "Accept":"application/json",
     	"Authorization": "Basic "+base64_encode(username+":"+password) };
@@ -37,7 +33,7 @@ var urlproducts = DB_URL+"WSO2_QAP_PRODUCT_DataService/view/products";
 var urlversions;
 
 var dataproducts = get(urlproducts,"",optionalHeadersDb);
-print(dataproducts.data.WSO2_QAP_PRODUCTCollection);
+//print(dataproducts.data.WSO2_QAP_PRODUCTCollection);
 
 var objproducts = parse(dataproducts.data);
 if(objproducts.WSO2_QAP_PRODUCTCollection != null){
@@ -56,34 +52,30 @@ var data = get(url,"",optionalHeaders);
 var obj = JSON.parse(data.data);
 var list = obj.issues;
 
-// print(listproducts);
-// for (var i =  0; i<listproducts.length; i++) {
-// 	print(listproducts[i].WSO2_QAP_PRODUCT_NAME);
-// 	print('<hr/>');
-// };
+
 
 var objtemp;
 
 while(list[0] != null){
 
 	for(var i=0; i<list.length; i++){
-		print(offset+i);
-		print('<br/>');
-		print('project name = ');
-		if(list[i].project != null){
-			print(list[i].project.name);
-		}
-		else{
-			print(list[i].project);
-		}
-		print('<br/>');
-		print('fixed version = ');
-		if(list[i].fixed_version != null){
-			print(list[i].fixed_version.name);
-		}
-		else{
-			print(list[i].fixed_version);
-		}
+		// print(offset+i);
+		// print('<br/>');
+		// print('project name = ');
+		// if(list[i].project != null){
+		// 	print(list[i].project.name);
+		// }
+		// else{
+		// 	print(list[i].project);
+		// }
+		// print('<br/>');
+		// print('fixed version = ');
+		// if(list[i].fixed_version != null){
+		// 	print(list[i].fixed_version.name);
+		// }
+		// else{
+		// 	print(list[i].fixed_version);
+		// }
 		
 		if(list[i].project != null && list[i].fixed_version != null){
 			for (var j =  0; j<listproducts.length;j++) {
@@ -95,9 +87,9 @@ while(list[0] != null){
 						var objversions = parse(dataversions.data);
 						objtemp = objversions.WSO2_QAP_PRODUCT_VERSIONCollection.WSO2_QAP_PRODUCT_VERSION;
 						product_versions[listproducts[j].WSO2_QAP_PRODUCT_ID] = objtemp;
-						print('<br/>');
-						print("fetched");
-						print('<br/>');
+						//print('<br/>');
+						//print("fetched");
+						//print('<br/>');
 						product_versions_fetched[listproducts[j].WSO2_QAP_PRODUCT_ID] = true;
 					}
 					
@@ -108,23 +100,23 @@ while(list[0] != null){
 						for (var k = 0; k < product_versions[listproducts[j].WSO2_QAP_PRODUCT_ID].length; k++) {
 							// print(String(list[i].fixed_version.name));
 							if(((list[i].fixed_version.name).indexOf(product_versions[listproducts[j].WSO2_QAP_PRODUCT_ID][k].WSO2_QAP_PRODUCT_VERSION))!==-1){
-								print('<br/>');
-								print('<br/>');
-								print('<br/>');
-								print('project and version contains in db');
-								print('<br/>');
+								// print('<br/>');
+								// print('<br/>');
+								// print('<br/>');
+								// print('project and version contains in db');
+								// print('<br/>');
 
-								print('project name = ');
-								print(listproducts[j].WSO2_QAP_PRODUCT_NAME);
-								print('<br/>');
-								print('fixed version = ');
-								print(product_versions[listproducts[j].WSO2_QAP_PRODUCT_ID][k].WSO2_QAP_PRODUCT_VERSION);
-								print('<br/>');
-								print('subject = ' + list[i].subject);
-								print('<br/>');
-								print('description = ' + list[i].description);
-								print('<br/>');
-								print('id = ' + list[i].id);
+								// print('project name = ');
+								// print(listproducts[j].WSO2_QAP_PRODUCT_NAME);
+								// print('<br/>');
+								// print('fixed version = ');
+								// print(product_versions[listproducts[j].WSO2_QAP_PRODUCT_ID][k].WSO2_QAP_PRODUCT_VERSION);
+								// print('<br/>');
+								// print('subject = ' + list[i].subject);
+								// print('<br/>');
+								// print('description = ' + list[i].description);
+								// print('<br/>');
+								// print('id = ' + list[i].id);
 
 								var redmine = REDMINE_BASE_URL+ "issues/" + list[i].id;
 								var description;
@@ -135,9 +127,9 @@ while(list[0] != null){
 								}	 
 								description = description.replace(/'/g, '\\\'').replace(/"/g, '\\"');
 
-								print('<br/>');
-								print('description = ' + description);
-								print('<br/>');
+								// print('<br/>');
+								// print('description = ' + description);
+								// print('<br/>');
 
 								var subject = (list[i].subject).trim();
 								var fatureId;
@@ -154,38 +146,22 @@ while(list[0] != null){
 								if(listredmine == null){
 									var urladdfeature = DB_URL+"WSO2_QAP_FEATURE_DataService/add/feature";
 									var paramfeature = '{"_postadd_feature":{"WSO2_QAP_DESCRIPTION" : "'+description+'","WSO2_QAP_REDMINE_URL" : "'+redmine+'","WSO2_QAP_SUBJECT" : "'+subject+'"}}';
-									print('<br/>');
-									print(paramfeature);
-									print('<br/>');
-									print(urladdfeature);
-									print('<br/>');
+									// print('<br/>');
+									// print(paramfeature);
+									// print('<br/>');
+									// print(urladdfeature);
+									// print('<br/>');
 									// post(urladdfeature, paramfeature, optionalHeadersPost, "json", function (data, xhr) {
-										
-								 //       log("Response received");
-								 //   	} );
 
-									// var urllastinsertedid = DB_URL+"WSO2_QAP_FEATURE_DataService/view/last_id";
-    					// 			var dataredminenew = get(urllastinsertedid,"",optionalHeadersDb);
-									// var objredminenew = parse(dataredminenew.data);
-									// var listredminenew = objredminenew.WSO2_QAP_FEATURECollection.WSO2_QAP_FEATURE;
-									// fatureId = listredminenew.LAST_INSERTED_ID;
-
-									// if(fatureId == 0){
-									// 	var urlmaxinsertedid = DB_URL+"WSO2_QAP_FEATURE_DataService/view/max_id";
-    					// 				var dataredminemax = get(urlmaxinsertedid,"",optionalHeadersDb);
-									// 	var objredminemax = parse(dataredminemax.data);
-									// 	var listredminemax = objredminemax.WSO2_QAP_FEATURECollection.WSO2_QAP_FEATURE;
-									// 	fatureId = listredminemax.LAST_INSERTED_ID;
-									// }
 
 									var xhr = new XMLHttpRequest();
 							        xhr.open("POST", urladdfeature);
 							        xhr.setRequestHeader("Content-Type" , "application/json");
 							        xhr.send(paramfeature);
 
-							        print("<br>ReadyState : "+xhr.readyState);
-							        print("<br>ResponseStatus : "+xhr.status);
-							        print("<br>ResponseText : "+xhr.responseText);
+							        // print("<br>ReadyState : "+xhr.readyState);
+							        // print("<br>ResponseStatus : "+xhr.status);
+							        // print("<br>ResponseText : "+xhr.responseText);
 
 									var objredminenew = parse(xhr.responseText);
 
@@ -197,17 +173,17 @@ while(list[0] != null){
 									}
 									
 									
-									print('<br/>');
+									// print('<br/>');
     					
-									print('<br/>');
-    								print("inserted new id " + fatureId);
-    								print('<br/>');
+									// print('<br/>');
+    					// 			print("inserted new id " + fatureId);
+    					// 			print('<br/>');
     								
 								}else{
-									print('<br/>');
-									print("already exist id " + listredmine.WSO2_QAP_FEATURE_ID);
-									fatureId = listredmine.WSO2_QAP_FEATURE_ID;
-									print('<br/>');
+									// print('<br/>');
+									// print("already exist id " + listredmine.WSO2_QAP_FEATURE_ID);
+									// fatureId = listredmine.WSO2_QAP_FEATURE_ID;
+									// print('<br/>');
 								}
 
 								var urladdfeaturetoversion = DB_URL+"WSO2_QAP_PRODUCT_VERSION_FEATURE_MAPPING_DataService/add/productfeature";
@@ -216,7 +192,7 @@ while(list[0] != null){
 							       
 							       log("Response received");
 							   	} );
-							   	print("added");
+							   	// print("added");
 
 								break;
 							}
@@ -224,23 +200,23 @@ while(list[0] != null){
 					
 					}else{
 						if(((list[i].fixed_version.name).indexOf(product_versions[listproducts[j].WSO2_QAP_PRODUCT_ID].WSO2_QAP_PRODUCT_VERSION))!==-1){
-								print('<br/>');
-								print('<br/>');
-								print('<br/>');
-								print('project and version contains in db');
-								print('<br/>');
+								// print('<br/>');
+								// print('<br/>');
+								// print('<br/>');
+								// print('project and version contains in db');
+								// print('<br/>');
 
-								print('project name = ');
-								print(listproducts[j].WSO2_QAP_PRODUCT_NAME);
-								print('<br/>');
-								print('fixed version = ');
-								print(product_versions[listproducts[j].WSO2_QAP_PRODUCT_ID].WSO2_QAP_PRODUCT_VERSION);
-								print('<br/>');
-								print('subject = ' + list[i].subject);
-								print('<br/>');
-								print('description = ' + list[i].description);
-								print('<br/>');
-								print('id = ' + list[i].id);
+								// print('project name = ');
+								// print(listproducts[j].WSO2_QAP_PRODUCT_NAME);
+								// print('<br/>');
+								// print('fixed version = ');
+								// print(product_versions[listproducts[j].WSO2_QAP_PRODUCT_ID].WSO2_QAP_PRODUCT_VERSION);
+								// print('<br/>');
+								// print('subject = ' + list[i].subject);
+								// print('<br/>');
+								// print('description = ' + list[i].description);
+								// print('<br/>');
+								// print('id = ' + list[i].id);
 								break;
 							}
 					}
@@ -249,7 +225,7 @@ while(list[0] != null){
 				
 			}
 		}
-		print('<hr/>');
+		// print('<hr/>');
 			
 	}
 	offset = offset+limit;
@@ -260,13 +236,8 @@ while(list[0] != null){
 	list = (JSON.parse((get(url,"",optionalHeaders)).data)).issues;
  }
 }
-print('<br>');
-print("end");
-// if(name==null || ROOT==null || SERVICE_ROOT==null){
-    // response.status=307;
-    //response.addHeader('Location','../view/products_home.jag');
-// }
+
  response.sendRedirect("../view/products_home.jag");
- //../view/products_home.jag
+
 
 %>
