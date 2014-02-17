@@ -64,6 +64,6 @@ print('<td class="formRow">Tested By</td>');
 print('<td class="formRow"><input id="WSO2_QAP_TESTED_BY" name="WSO2_QAP_TESTED_BY" value="'+name+'"></td>');
 print('</tr>');
 print('<input type=hidden name=WSO2_QAP_TEST_RESULT_ID id=WSO2_QAP_TEST_RESULT_ID value='+WSO2_QAP_TEST_RESULT_ID+'>');
-
+print('<input name=WSO2_QAP_BUILD_ID id=WSO2_QAP_BUILD_ID  value="'+WSO2_QAP_BUILD_ID+'" type="hidden">');
 }
  %>
