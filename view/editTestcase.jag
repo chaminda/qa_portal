@@ -118,20 +118,7 @@ require("template/product_menu_panel.jag");
                                             <tr>
                                                 <td>
                                                     <div id="breadcrumb-div">
-                                                        <table cellspacing="0">
-                                                            <tbody>
-                                                                <tr>
-                                                                    <td class="breadcrumb-link"><a
-                                                                        href="../admin/index.jsp">Home</a></td>
-                                                                    <td class="breadcrumb-link">&nbsp;&gt;&nbsp;Products</td>
-                                                                    <td class="breadcrumb-link">&nbsp;&gt;&nbsp;List</td>
-                                                                    <td class="breadcrumb-link">&nbsp;&gt;&nbsp;Test
-                                                                        case</td>
-                                                                    <td class="breadcrumb-link">&nbsp;&gt;&nbsp;
-                                                                        Edit Test case</td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
+                                                        
                                                     </div>
                                                 </td>
                                             </tr>
