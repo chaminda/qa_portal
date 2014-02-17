@@ -127,13 +127,13 @@
                                                             <%
                                                                if(!(data == null)){
                                                                   print("<td>");
-                                                                  print('<input size="35" name="WSO2_QAP_TEST_SCENARIO_NAME" class="text-not-empty" id="WSO2_QAP_TEST_SCENARIO_NAME" value="'+WSO2_QAP_TEST_SCENARIO_NAME+'" type="text">');
+                                                                  print('<input size="35" class="text-not-empty" name="WSO2_QAP_TEST_SCENARIO_NAME" class="text-not-empty" id="WSO2_QAP_TEST_SCENARIO_NAME" value="'+WSO2_QAP_TEST_SCENARIO_NAME+'" type="text">');
                                                                   print("</td>");
                                                                }
                                                             else{
 																//print("ok");
                                                                print("<td>");
-                                                                  print('<input size="35" name="WSO2_QAP_TEST_SCENARIO_NAME" class="text-not-empty" id="WSO2_QAP_TEST_SCENARIO_NAME" value="" type="text">');
+                                                                  print('<input size="35" class="text-not-empty" name="WSO2_QAP_TEST_SCENARIO_NAME" class="text-not-empty" id="WSO2_QAP_TEST_SCENARIO_NAME" value="" type="text">');
                                                                   print("</td>");
                                                             }
                                                             %>
@@ -145,12 +145,12 @@
                                                             <%
                                                                if(!(data == null)){
                                                                   print("<td>");
-                                                                  print('<input size="35" name="WSO2_QAP_DESCRIPTION" class="text-not-empty" id="WSO2_QAP_DESCRIPTION" value="'+WSO2_QAP_DESCRIPTION+'" type="text">');
+                                                                  print('<input size="35" class="text-not-empty" name="WSO2_QAP_DESCRIPTION" class="text-not-empty" id="WSO2_QAP_DESCRIPTION" value="'+WSO2_QAP_DESCRIPTION+'" type="text">');
                                                                   print("</td>");
                                                                }
                                                             else{
                                                                print("<td>");
-                                                                  print('<input size="35" name="WSO2_QAP_DESCRIPTION" class="text-not-empty" id="WSO2_QAP_DESCRIPTION" value="" type="text">');
+                                                                  print('<input size="35" class="text-not-empty" name="WSO2_QAP_DESCRIPTION" class="text-not-empty" id="WSO2_QAP_DESCRIPTION" value="" type="text">');
                                                                   print("</td>");
                                                             }
                                                             %>
