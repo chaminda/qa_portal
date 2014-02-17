@@ -64,20 +64,7 @@
 															<tr>
 																<td>
 																	<div id="breadcrumb-div">
-																		<table cellspacing="0">
-																			<tbody>
-																				<tr>
-																					<td class="breadcrumb-link"><a
-																						href="../admin/index.jsp">Home</a></td>
-																					<td class="breadcrumb-link">&nbsp;&gt;&nbsp;Products</td>
-																					<td class="breadcrumb-link">&nbsp;&gt;&nbsp;List</td>
-																					<td class="breadcrumb-link">&nbsp;&gt;&nbsp;Test
-																						Plan</td>
-																					<td class="breadcrumb-link">&nbsp;&gt;&nbsp;
-																						Add Test Plan</td>
-																				</tr>
-																			</tbody>
-																		</table>
+																		
 																	</div>
 																</td>
 															</tr>
@@ -120,11 +107,6 @@
 										<div id="workArea">
 											<form method="post" name="testPlan" onsubmit="return validateTextInput();return false;" action="<%=submit_redir_link%>">
 												<table name="testPlan">
-													<!-- 													<thead> -->
-													<!-- 														<tr class="tableEvenRow"> -->
-													<!-- 															<th colspan="2">Step 1 of 3: Upload a new archive</th> -->
-													<!-- 														</tr> -->
-													<!-- 													</thead> -->
 													<tbody>
 														<tr class="tableEvenRow">
 															<td class="formRow" width="100" align="center"> Status </td>
