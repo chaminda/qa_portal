@@ -171,6 +171,7 @@
 																
 															</select>
 															<input type="button" value="Create new Artifact" onclick="window.open('add_artifact.jag')" target="_blank">
+															<input type="button" value="Artifact home" onclick="window.open('artifacts_home.jag')" target="_blank">
 															</td>
 															
 														</tr>
@@ -182,7 +183,7 @@
 															</select>
 															
 															<input type="button" value="Create new Auto Test case" onclick="window.open('add_autotestclass.jag')" target="_blank">
-
+                                                            <input type="button" value="Auto test case home" onclick="window.open('autotestclass_home.jag')" target="_blank">
 															</td>
 														</tr>
 
