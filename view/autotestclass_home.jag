@@ -107,14 +107,7 @@
                                                 <tr>
                                                    <td>
                                                       <div id="breadcrumb-div">
-                                                         <table cellspacing="0">
-                                                            <tbody>
-                                                               <tr>
-                                                                  <td class="breadcrumb-link"><a href="../index.jag">QA Home</a></td>
-                                                                  <td class="breadcrumb-link">&nbsp;&gt;&nbsp;Auto Test Class</td>
-                                                               </tr>
-                                                            </tbody>
-                                                         </table>
+                                                         
                                                       </div>
                                                    </td>
                                                 </tr>
