@@ -51,7 +51,7 @@ else{
        log("Response received");
    } );
 	
-	//response.sendRedirect("../view/build_dashboard.jag?data="+build_id");
+	response.sendRedirect("../view/build_dashboard.jag?data="+build_id");
 	
 }
 
