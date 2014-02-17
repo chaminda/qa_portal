@@ -52,9 +52,7 @@
                                                 <tr>
                                                    <td>
                                                       <div id="breadcrumb-div">
-                                                         <table cellspacing="0">
-
-                                                         </table>
+                                                         
                                                       </div>
                                                    </td>
                                                 </tr>
@@ -72,16 +70,7 @@
                               <img src="../resources/images/1px.gif" width="735px" height="1px">
                               <script type="text/javascript">
                                  setCookie('current-breadcrumb', 'manage_menu,services_menu,services_add_menu,ds_menu,ds_generate_menu#');
-                                 document.onload=setBreadcrumDiv();
-                                 function setBreadcrumDiv () {
-                                     var breadcrumbDiv = document.getElementById('breadcrumb-div');
-                                     breadcrumbDiv.innerHTML = '<table cellspacing="0"> ' +
-                                      '<tr>' +
-                                       '<td class="breadcrumb-link"><a href="../index.jag">QA Home</a><td>' +
-                                        '<td class="breadcrumb-link">&nbsp;>&nbsp;Add Product Version</td>' +
-                                         '</tr>' +
-                                          '</table>';
-                                 }
+                                 
                               </script>
                               <script type="text/javascript" src="../resources/js/ui_validator.js"></script>
                               <div id="middle">
