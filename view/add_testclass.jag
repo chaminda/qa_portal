@@ -65,20 +65,7 @@
 															<tr>
 																<td>
 																	<div id="breadcrumb-div">
-																		<table cellspacing="0">
-																			<tbody>
-																				<tr>
-																					<td class="breadcrumb-link"><a
-																						href="../admin/index.jsp">Home</a></td>
-																					<td class="breadcrumb-link">&nbsp;&gt;&nbsp;Products</td>
-																					<td class="breadcrumb-link">&nbsp;&gt;&nbsp;List</td>
-																					<td class="breadcrumb-link">&nbsp;&gt;&nbsp;Test
-																						case</td>
-																					<td class="breadcrumb-link">&nbsp;&gt;&nbsp;
-																						Add Test class</td>
-																				</tr>
-																			</tbody>
-																		</table>
+																		
 																	</div>
 																</td>
 															</tr>
@@ -105,11 +92,6 @@
 											<form method="post" name="jarUpload" action="#"
 												enctype="multipart/form-data" onsubmit="return validateTextInput();return false;" target="_self">
 												<table class="styledLeft" id="archiveTbl">
-													<!-- 													<thead> -->
-													<!-- 														<tr class="tableEvenRow"> -->
-													<!-- 															<th colspan="2">Step 1 of 3: Upload a new archive</th> -->
-													<!-- 														</tr> -->
-													<!-- 													</thead> -->
 													<tbody>
 														<tr class="tableOddRow">
 															<td class="formRow">Test class ID<font color="red">*</font>
