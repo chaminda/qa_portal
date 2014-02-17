@@ -105,13 +105,13 @@ if(name===null){
 
 												<form name="add_artifact"
 													action="../controller/addArtifact.jag" method="post"
-													onsubmit="return validateInput('add_artifact','WSO2_QAP_ARTIFACT_NAME');return false;">
+													onsubmit="return validateTextInput();return false;">
 													 <table class="styledLeft" id="archiveTbl">
 														  <tbody>
 															<tr class="tableOddRow">
 																<td class="formRow">Artifact Name<span class="required">*</span>
 																</td>
-																<td align="left"><input type="text" id="artifactname"
+																<td align="left"><input type="text" class="text-not-empty" id="artifactname"
 																	name="WSO2_QAP_ARTIFACT_NAME">
 																
 																</td>
@@ -119,12 +119,12 @@ if(name===null){
 															<tr class="tableEvenRow">
 																<td class="formRow">Description</td>
 																<td class="formRow"><input id="description"
-																	name="WSO2_QAP_ARTIFACT_DESCRIPTION" class="longInput" value="">
+																	name="WSO2_QAP_ARTIFACT_DESCRIPTION"  class="text-not-empty"class="longInput" value="">
 																</td>
 															</tr>
 															<tr class="tableOddRow">
 																<td class="formRow">Location URI</td>
-																<td class="formRow"><input type="text" id="locationuri"
+																<td class="formRow"><input type="text" class="text-not-empty" id="locationuri"
 																	name="WSO2_QAP_LOCATION">
 																</td>
 															 </tr>
