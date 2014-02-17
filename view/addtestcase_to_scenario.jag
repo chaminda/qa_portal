@@ -90,15 +90,7 @@ include("template/product_menu_panel.jag");
 
             <script type="text/javascript">
             setCookie('current-breadcrumb', 'manage_menu,webapps_menu,webapps_list_menu#');
-              document.onload = setBreadcrumDiv();
-              function setBreadcrumDiv() {
-                  var breadcrumbDiv = document.getElementById('breadcrumb-div');
-                  breadcrumbDiv.innerHTML = '<table cellspacing="0"><tr>' +
-                   '<td class="breadcrumb-link"><a href="../index.jag">QA Home</a>' +
-                   '<td class="breadcrumb-link"><a href="../view/testcase_home.jag">&nbsp;>&nbsp;Test Scenario</a>' +
-                   '<td class="breadcrumb-link"><a href="#">&nbsp;>&nbsp;feature</a></td>';
-
-              }
+              
             </script>
 
 

@@ -89,20 +89,7 @@
 															<tr>
 																<td>
 																	<div id="breadcrumb-div">
-																		<table cellspacing="0">
-																			<tbody>
-																				<tr>
-																					<td class="breadcrumb-link"><a
-																						href="../admin/index.jsp">Home</a></td>
-																					<td class="breadcrumb-link">&nbsp;&gt;&nbsp;Products</td>
-																					<td class="breadcrumb-link">&nbsp;&gt;&nbsp;List</td>
-																					<td class="breadcrumb-link">&nbsp;&gt;&nbsp;Test
-																						case</td>
-																					<td class="breadcrumb-link">&nbsp;&gt;&nbsp;
-																						Add Test case</td>
-																				</tr>
-																			</tbody>
-																		</table>
+																		
 																	</div>
 																</td>
 															</tr>
@@ -130,11 +117,6 @@
 											<form name="add_testcase" method="post" onsubmit="return validateTextInput();return false;" action="../controller/addTestcase.jag"
 												>
 												<table class="styledLeft" id="archiveTbl">
-													<!-- 													<thead> -->
-													<!-- 														<tr class="tableEvenRow"> -->
-													<!-- 															<th colspan="2">Step 1 of 3: Upload a new archive</th> -->
-													<!-- 														</tr> -->
-													<!-- 													</thead> -->
 													<tbody>
 														<tr class="tableEvenRow">
 															<td class="formRow">Test Case name<font color="red">*</font>
