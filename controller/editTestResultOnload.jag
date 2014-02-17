@@ -2,6 +2,7 @@
     include("base64_encode.jag");
     var SERVICE_SECURE_ROOT = session.get("service_secure_root");
     var WSO2_QAP_TEST_RESULT_ID = parse(request.getParameter("data"));
+    var WSO2_QAP_BUILD_ID = parse(request.getParameter("build_id"));
     var urlResultDetails  = SERVICE_SECURE_ROOT+"WSO2_QAP_TEST_RESULT_DataService/view/testresult_by_id/"+WSO2_QAP_TEST_RESULT_ID;
 
    	var optionalHeaders = {
@@ -63,6 +64,6 @@ print('<td class="formRow">Tested By</td>');
 print('<td class="formRow"><input id="WSO2_QAP_TESTED_BY" name="WSO2_QAP_TESTED_BY" value="'+name+'"></td>');
 print('</tr>');
 print('<input type=hidden name=WSO2_QAP_TEST_RESULT_ID id=WSO2_QAP_TEST_RESULT_ID value='+WSO2_QAP_TEST_RESULT_ID+'>');
-
+print('<input name=WSO2_QAP_BUILD_ID id=WSO2_QAP_BUILD_ID  value="'+WSO2_QAP_BUILD_ID+'" type="hidden">');
 }
  %>

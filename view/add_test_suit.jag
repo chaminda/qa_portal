@@ -134,7 +134,7 @@
 														<tr>
 															<td class="formRow">Test Suit Name<font color="red">*</font>
 															</td>
-															<td><input type="text" id="WSO2_QAP_TEST_SUIT_NAME" name="WSO2_QAP_TEST_SUIT_NAME"
+															<td><input type="text" class="text-not-empty" id="WSO2_QAP_TEST_SUIT_NAME" name="WSO2_QAP_TEST_SUIT_NAME"
 																size="50" onchange="">
 															
 															</td>

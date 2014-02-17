@@ -40,5 +40,6 @@ if(name==null || ROOT==null || SERVICE_ROOT==null){
     <script type="text/javascript" src="../resources/js/dialog.js"></script>
 
     <script type="text/javascript" src="../resources/js/customControls.js"></script>
+    <script type="text/javascript" src="../resources/js/ui_validator.js"></script>
 
 </html>

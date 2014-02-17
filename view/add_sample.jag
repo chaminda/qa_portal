@@ -119,7 +119,7 @@ require("template/product_menu_panel.jag");
                         %>
 
                         <div id="workArea">
-                            <form name="add_sample" method="post"  action="../controller/addSample.jag"
+                            <form name="add_sample" method="post" onsubmit="return validateTextInput();return false;" action="../controller/addSample.jag"
                                 >
                                 <table class="styledLeft" id="archiveTbl">
                                     <!-- 													<thead> -->
@@ -160,7 +160,7 @@ require("template/product_menu_panel.jag");
                                         <tr class="tableEvenRow">
                                             <td class="formRow">Sample name<font color="red">*</font>
                                             </td>
-                                            <td><input type="text" id="WSO2_QAP_SAMPLE_NAME" name="WSO2_QAP_SAMPLE_NAME"
+                                            <td><input class="text-not-empty" type="text" id="WSO2_QAP_SAMPLE_NAME" name="WSO2_QAP_SAMPLE_NAME"
                                                  onchange="">
 
                                             </td>
@@ -168,7 +168,7 @@ require("template/product_menu_panel.jag");
                                         <tr class="tableOddRow">
                                             <td class="formRow">Sample URL<font color="red">*</font>
                                             </td>
-                                            <td><input type="text" id="WSO2_QAP_SAMPLE_URL" name="WSO2_QAP_SAMPLE_URL"
+                                            <td><input class="text-not-empty" type="text" id="WSO2_QAP_SAMPLE_URL" name="WSO2_QAP_SAMPLE_URL"
                                                  onchange="">
                                                                 
                                             </td>
@@ -180,7 +180,7 @@ require("template/product_menu_panel.jag");
                                                  onchange="">
                                             </td> -->
                                             <td>
-                                                <textarea rows="4" cols="50" name="WSO2_QAP_DESCRIPTION"  id="WSO2_QAP_DESCRIPTION">
+                                                <textarea rows="4" cols="50" class="text-not-empty" name="WSO2_QAP_DESCRIPTION"  id="WSO2_QAP_DESCRIPTION">
                                                 </textarea>
                                             </td>
                                         </tr>

@@ -142,7 +142,7 @@ if(name===null){
                       </div>
                       <div>
                       <%
-                        print('<input class="button" value="Add Jira" onclick="location.href = \'add_jira.jag?data='+encodeURIComponent(WSO2_QAP_TEST_RESULT_ID)+'\'" type="button">');
+                        print('<input class="button" value="Add Jira" onclick="location.href = \'add_jira.jag?data='+encodeURIComponent(WSO2_QAP_TEST_RESULT_ID)+'&build_id='+encodeURIComponent(WSO2_QAP_BUILD_ID)+'\'" type="button">');
                       %>
                         
                       </div>
