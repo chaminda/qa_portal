@@ -2,36 +2,57 @@
 include("base64_encode.jag");
 var SERVICE_SECURE_ROOT = session.get("service_secure_root");
 
-var scenario_description= request.getParameter("WSO2_QAP_TESTSCENARIO_DESCRIPTION");
-var scenario_name=request.getParameter("WSO2_QAP_TESTSCENARIO_NAME");
-// var param = '{"_postadd_products":{"WSO2_QAP_PRODUCT_NAME" : "'+product_name+'"}}';
-//var param = "WSO2_QAP_TESTSCENARIO_DESCRIPTION="+scenario_description;
-var param = '{"_postadd_test_scenario":{"WSO2_QAP_DESCRIPTION" : "'+scenario_description+'","WSO2_QAP_TEST_SCENARIO_NAME" : "'+scenario_name+'"}}';
-print(param);
+var scenario_name = request.getParameter("WSO2_QAP_TEST_SCENARIO_NAME");
+//print(scenario_name);
+var scenario_id= request.getParameter("WSO2_QAP_TEST_SCENARIO_ID");
+//print(scenario_id);
+var scenario_description=request.getParameter("WSO2_QAP_DESCRIPTION");
+//print(scenario_description);
 
+// var param = '{"_postadd_products":{"WSO2_QAP_PRODUCT_NAME" : "'+product_name+'"}}';
+if((scenario_id===null)){
+//var param = '{"_postadd_test_scenario":{"WSO2_QAP_DESCRIPTION" : "'+scenario_description+'","WSO2_QAP_TEST_SCENARIO_NAME" : "'+scenario_name+'"}}';
+var param = '{"WSO2_QAP_DESCRIPTION" : "'+scenario_description+'","WSO2_QAP_TEST_SCENARIO_NAME" : "'+scenario_name+'"}';
 var optionalHeaders = {
         "Accept":"application/json",
-	"Content-Type" : "application/json",
             "Authorization": "Basic "+base64_encode("admin:admin") };
 
 var url = SERVICE_SECURE_ROOT+"WSO2_QAP_TEST_SCENARIO_DataService/add/testscenario";
+print(url);
 
-if(scenario_description===null || scenario_name===null){
+if(scenario_name===null || scenario_description===null){
 
 	response.sendRedirect("../view/add_testscenario.jag");
 }
 else{
-	post(url, param, optionalHeaders, "json", function (data,xhr) {
+	//print("ok");
+	post(url, param, optionalHeaders, "json", function (data, xhr) {
+       log("Response received");
+   } );
+	//print("ok");
+	//response.sendRedirect("../view/testscenario_home.jag");
+}
+}
+else{
+	var url = SERVICE_SECURE_ROOT+"WSO2_QAP_TEST_SCENARIO_DataService/edit/testscenario/"+scenario_id;
+	var optionalHeaders = {
+        "Accept":"application/json",
+            "Content-Type" : "application/json",
+                "Authorization": "Basic "+base64_encode("admin:admin") };
+    var param = '{"_putedit_scenario":{"WSO2_QAP_TEST_SCENARIO_NAME" : "'+scenario_name+'","WSO2_QAP_TEST_SCENARIO_ID" : "'+scenario_id+'","WSO2_QAP_DESCRIPTION" : "'+scenario_description+'" }}';
+    if(scenario_name===null || scenario_description===null){
+
+	response.sendRedirect("../view/add_testscenario.jag");
+}
+else{
+
+	put(url, param, optionalHeaders, "json", function (data, xhr) {
        log("Response received");
    } );
 	
 	response.sendRedirect("../view/testscenario_home.jag");
 }
-
+}
 
 
 %>
-
-
- /*curl --data '{"_postadd_products":{"WSO2_QAP_PRODUCT_NAME" : "jjj123"}}' http://localhost:9764/services/WSO2_QAP_PRODUCT_DataService/add/products --header Content-Type:"application/json"
-//curl -X POST --data "WSO2_QAP_PRODUCT_NAME=Sherlok" -H "Accept: application/json" http://localhost:9764/services/WSO2_QAP_PRODUCT_DataService/add/products */
