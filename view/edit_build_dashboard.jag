@@ -125,20 +125,7 @@
                                                 <tr>
                                                    <td>
                                                       <div id="breadcrumb-div">
-                                                         <table cellspacing="0">
-                                                            <tbody>
-                                                               <tr>
-                                                                  <td class="breadcrumb-link">
-                                                                     <a href="index.jag">QA Home</a>
-                                                                  </td>
-                                                                  <td class="breadcrumb-link">
-                                                                     <a href="product_home.jag">&nbsp;&gt;&nbsp;Products</a>
-                                                                  </td>
-                                                                  <td class="breadcrumb-link">&nbsp;&gt;&nbsp;List</td>
-                                                                  <td class="breadcrumb-link">&nbsp;&gt;&nbsp;Build Dashboard</td>
-                                                               </tr>
-                                                            </tbody>
-                                                         </table>
+                                                         
                                                       </div>
                                                    </td>
                                                 </tr>

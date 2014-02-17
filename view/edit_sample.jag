@@ -165,7 +165,7 @@ var list_sample=obj_sample.WSO2_QAP_SAMPLECollection.WSO2_QAP_SAMPLE;
     type="submit" class="button" value=" Submit "
     onclick="submitForm();"> <input type="button"
         class="button"
-        onclick="location.href='../service-mgt/index.jsp';"
+        onclick="location.href='sample_home.jag';"
         value=" Cancel ">
 
 </td>

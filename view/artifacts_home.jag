@@ -80,20 +80,7 @@ if(name===null){
                                                   <tr>
                                                      <td>
                                                         <div id="breadcrumb-div">
-                                                           <table cellspacing="0">
-                                                              <tbody>
-                                                                 <tr>
-                                                                    <td class="breadcrumb-link">
-                                                                       <a href="index.jag">QA Home</a>
-                                                                    </td>
-                                                                    <td class="breadcrumb-link">
-                                                                       <a href="product_home.jag">&nbsp;&gt;&nbsp;Products</a>
-                                                                    </td>
-                                                                    <td class="breadcrumb-link">&nbsp;&gt;&nbsp;List</td>
-                                                                    <td class="breadcrumb-link">&nbsp;&gt;&nbsp;Test Artifact</td>
-                                                                 </tr>
-                                                              </tbody>
-                                                           </table>
+                                                           
                                                         </div>
                                                      </td>
                                                   </tr>
@@ -114,11 +101,7 @@ if(name===null){
  
                     <script type="text/javascript">
                                 setCookie('current-breadcrumb', 'manage_menu,webapps_menu,webapps_list_menu#');
-                                document.onload=setBreadcrumDiv();
-                                function setBreadcrumDiv () {
-                                  var breadcrumbDiv = document.getElementById('breadcrumb-div');
-                                  breadcrumbDiv.innerHTML = '<table cellspacing="0"><tr><td class="breadcrumb-link"><a href="index.jag">QA Home</a></td><td class="breadcrumb-link"><a href="product_home.jag">&nbsp;>&nbsp;Products</a></td><td class="breadcrumb-link">&nbsp;>&nbsp;List</td><td class="breadcrumb-link">&nbsp;>&nbsp;Test Artifact</td>';
-                               }
+                                
                     </script> 
                                   
                         <div id="middle">
@@ -153,10 +136,10 @@ if(name===null){
                                             <input name="pageNumber" value="0" type="hidden">
                                             <input name="webappState" value="all" type="hidden">
                                             <input name="webappType" value="all" type="hidden">
-                                            <table class="styledLeft" id="artifactsTable" width="100%">
-                                                    <col width="10">
+                                            <table class="display" id="artifactsTable" cellpadding="0" cellspacing="0" border="0" width="100%">
+                                                    <!-- <col width="10">
                                                     <col width="100">
-                                                    <col width="450">
+                                                    <col width="450"> -->
                                                <thead>
                                                   <tr>
                                                      <th>&nbsp;</th>
