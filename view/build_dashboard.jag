@@ -76,7 +76,7 @@
              });
          
                  event.preventDefault();
-                 closeAll();
+                 openAll();
          
          });
       </script>
@@ -224,7 +224,7 @@
                                     <div id="content">
                                        <a href="./jQuery Collapsible Demo_files/jQuery Collapsible Demo.html" id="closeAll" title="Open all">Open All</a> | <a href="./jQuery Collapsible Demo_files/jQuery Collapsible Demo.html" id="openAll" title="Close All">Close All</a>
                                        <%
-                                          //include("../controller/show_testplan_instance_for_expand.jag");
+                                          include("../controller/show_testplan_instance_for_expand.jag");
                                           %>
                                     </div>
                                  </div>

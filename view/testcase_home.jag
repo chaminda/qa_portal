@@ -86,7 +86,7 @@ print(name);
 </td>
 </tr>
 <tr id="middle-container-tr">
-<%
+                <%
                 include("template/product_vertical_menu.jag");
                %>
                <%
@@ -150,7 +150,7 @@ print(name);
          <td width="20%">&nbsp;</td>
          <td><a href="#" id="delete1" onclick="deleteTestcase();return false;">Delete</a></td>
          <td width="10%">&nbsp;</td>
-         <td><a href="#" id="edit" onclick="editWebapps();return false;">Edit</a></td>
+         <td><a href="#" id="edit" onclick="editTestcase();return false;">Edit</a></td>
       </tr>
    </tbody>
 </table>
@@ -197,7 +197,7 @@ include("../controller/testcases_onload.jag");
 <td width="20%">&nbsp;</td>
 <td><a href="#" id="delete2" onclick="deleteTestcase();return false;">Delete</a></td>
 <td width="10%">&nbsp;</td>
-<td><a href="#" id="edit" onclick="editWebapps();return false;">Edit</a></td>
+<td><a href="#" id="edit" onclick="editTestcase();return false;">Edit</a></td>
 </tr>
 </tbody>
 </table>

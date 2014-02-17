@@ -109,12 +109,25 @@ include("template/product_menu_panel.jag");
 var req_data = request.getParameter("data");
 json_data = parse(decodeURIComponent(req_data));
 
+include("../controller/base64_encode.jag");
+var SERVICE_SECURE_ROOT= session.get("service_secure_root");
+var optionalHeaders = {
+    "Accept": "application/json",
+    "Authorization": "Basic "+base64_encode("admin:admin") };
+
+var url_feature=SERVICE_SECURE_ROOT+"WSO2_QAP_FEATURE_DataService/view/feature_by_id/"+json_data;
+var data_feature=get(url_feature,"",optionalHeaders);
+
+var obj_feature=parse(data_feature.data);
+var listfeature=obj_feature.WSO2_QAP_FEATURECollection.WSO2_QAP_FEATURE;
+
+
 //if(json_data.WSO2_QAP_SAMPLE_ID===null || json_data.WSO2_QAP_SAMPLE_NAME===null){
    // print("Sorry this page isn't available");
 //}else{
     print("<h2>");
-    //print("Available features for "+json_data.WSO2_QAP_SAMPLE_NAME);
-print("Available Samples for "+json_data);
+
+print("Available Samples for "+listfeature.WSO2_QAP_SUBJECT);
     print("</h2>");
 //}
                     %>

@@ -9,14 +9,14 @@ var artifact=request.getParameter("WSO2_QAP_TEST_CASE_ARTIFACT");
 var autotestcase=request.getParameter("WSO2_QAP_TEST_CASE_AUTOMATIONTESTCASE");
 
 
-var param='{"_postadd_addtestcase":{"WSO2_QAP_TEST_CASE_NAME" : "'+TestCaseName+'","WSO2_QAP_AUTOMATION_STATUS" : "'+status+'","WSO2_QAP_DESCRIPTION" : "'+description+'","WSO2_QAP_QA_ARTIFACT_ID" : "'+artifact+'","WSO2_QAP_AUTOMATION_TEST_CASE_ID" : "'+autotestcase+'"}}';
+var param='{"_postadd_addtestcase":{"WSO2_QAP_TEST_CASE_NAME" : "'+TestCaseName+'","WSO2_QAP_AUTOMATION_STATUS" : "'+status+'","WSO2_QAP_DESCRIPTION" : "'+description+'","WSO2_QAP_ARTIFACT_ID" : "'+artifact+'","WSO2_QAP_AUTO_TEST_CLASS_ID" : "'+autotestcase+'"}}';
 var optionalHeaders = {
         "Accept":"application/json",
             "Content-Type" :"application/json",
             "Authorization": "Basic "+base64_encode("admin:admin") };
 
 
-           
+
 var url = SERVICE_SECURE_ROOT+"WSO2_QAP_TEST_CASE_DataService/add/testcase";
 
 if(TestCaseName===""||status==="")

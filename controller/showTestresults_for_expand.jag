@@ -28,13 +28,25 @@ else if(!(list_testcaseID instanceof Array))
     var objTestResultdetails= parse(data_testResultdetails.data);
     var list_testResultdetails=objTestResultdetails.WSO2_QAP_TEST_RESULTFORBUILDCollection.WSO2_QAP_TEST_RESULTFORBUILD;
 
+
     //print(url_testResultdetails);
+
+
 
     if(list_testResultdetails==null){
 
     }
-    else{
-        //print(list_testResultdetails);
+    else if(!(list_testResultdetails instanceof Array))
+    {
+
+        var url_jiradetails=SERVICE_SECURE_ROOT+"WSO2_QAP_JIRA_DataService/view/jira_for_resultID/"+list_testResultdetails.WSO2_QAP_TEST_RESULT_ID;
+        //var data_jiradetails=get(url_jiradetails,"",optionalHeaders);
+        //var objJiradetails= parse(data_jiradetails.data);
+        //var list_jiradetails=objJiradetails.WSO2_QAP_JIRACollection.WSO2_QAP_JIRA;
+
+
+       // print(url_jiradetails);
+
         print(' <tr>');
 
         print(' <td>');
@@ -60,9 +72,57 @@ else if(!(list_testcaseID instanceof Array))
         print(list_testResultdetails.WSO2_QAP_TESTED_BY);
         print('</td>');
 
-        print('</tr>');
-    }
 
+
+        print('</tr>');
+
+    }
+    else{
+
+        for(var k=0;k<list_testResultdetails.length;k++)
+        {
+            var url_jiradetails=SERVICE_SECURE_ROOT+"WSO2_QAP_JIRA_DataService/view/jira_for_resultID/"+list_testResultdetails[k].WSO2_QAP_TEST_RESULT_ID;
+            var data_jiradetails=get(url_jiradetails,"",optionalHeaders);
+            var objJiradetails= parse(data_jiradetails.data);
+            var list_jiradetails=objJiradetails.WSO2_QAP_JIRACollection.WSO2_QAP_JIRA;
+
+            //print(url_jiradetails);
+
+            print(' <tr>');
+
+            print(' <td>');
+            var link = "test_result_dashboard.jag?data="+encodeURIComponent(stringify(list_testResultdetails[k].WSO2_QAP_TEST_RESULT_ID));
+            print('<a href="'+link+'">');
+            print(list_testResultdetails[k].WSO2_QAP_TEST_CASE_NAME);
+            print('</a>');
+            print('</td>');
+
+
+            print(' <td>');
+            print(list_testResultdetails[k].WSO2_QAP_TEST_STATUS);
+            print('</td>');
+
+
+            print(' <td>');
+            print(list_testResultdetails[k].WSO2_QAP_AUTOMATION_TEST_RESULT);
+            print('</td>');
+
+
+
+            print(' <td>');
+            print(list_testResultdetails[k].WSO2_QAP_TESTED_BY);
+            print('</td>');
+
+            jiraPrint(list_jiradetails);
+
+
+            print('</tr>');
+
+        }
+
+
+
+    }
 
 }
 else{
@@ -71,19 +131,26 @@ else{
     for(var k=0;k<list_testcaseID.length;k++)
     {
 
-
-
         var url_testResultdetails=SERVICE_SECURE_ROOT+"WSO2_QAP_TEST_RESULT_DataService/view/testresults_for_build/"+WSO2_QAP_BUILD_ID+"/"+list_testcaseID[k].WSO2_QAP_TEST_CASE_ID;
-        var data_testResultdetails=get(url_testResultdetails,"",optionalHeaders);
-        var objTestResultdetails= parse(data_testResultdetails.data);
-        var list_testResultdetails=objTestResultdetails.WSO2_QAP_TEST_RESULTFORBUILDCollection.WSO2_QAP_TEST_RESULTFORBUILD;
+        //var data_testResultdetails=get(url_testResultdetails,"",optionalHeaders);
+        //var objTestResultdetails= parse(data_testResultdetails.data);
+        ///var list_testResultdetails=objTestResultdetails.WSO2_QAP_TEST_RESULTFORBUILDCollection.WSO2_QAP_TEST_RESULTFORBUILD;
 
+
+        //print(url_testResultdetails);
 
         if(list_testResultdetails==null){
 
         }
 
        else if(!(list_testResultdetails instanceof Array)){
+
+            var url_jiradetails=SERVICE_SECURE_ROOT+"WSO2_QAP_JIRA_DataService/view/jira_for_resultID/"+list_testResultdetails.WSO2_QAP_TEST_RESULT_ID;
+            var data_jiradetails=get(url_jiradetails,"",optionalHeaders);
+            var objJiradetails= parse(data_jiradetails.data);
+            var list_jiradetails=objJiradetails.WSO2_QAP_JIRACollection.WSO2_QAP_JIRA;
+
+            //print(list_jiradetails);
 
             print(' <tr>');
 
@@ -109,14 +176,23 @@ else{
             print(list_testResultdetails.WSO2_QAP_TESTED_BY);
             print('</td>');
 
+
+            jiraPrint(list_jiradetails);
+
+
             print('</tr>');
 
         }
 
         else{
 
-            for(var b=0;b<list_testcaseID.length;b++)
+            for(var b=0;b<list_testResultdetails.length;b++)
             {
+                var url_jiradetails=SERVICE_SECURE_ROOT+"WSO2_QAP_JIRA_DataService/view/jira_for_resultID/"+list_testResultdetails[b].WSO2_QAP_TEST_RESULT_ID;
+                var data_jiradetails=get(url_jiradetails,"",optionalHeaders);
+                var objJiradetails= parse(data_jiradetails.data);
+                var list_jiradetails=objJiradetails.WSO2_QAP_JIRACollection.WSO2_QAP_JIRA;
+
 
                 print(' <tr>');
 
@@ -143,6 +219,8 @@ else{
                 print(list_testResultdetails[b].WSO2_QAP_TESTED_BY);
                 print('</td>');
 
+                jiraPrint(list_jiradetails);
+
                 print('</tr>');
 
 
@@ -153,6 +231,57 @@ else{
     }
 
 
+}
+
+
+
+function jiraPrint(jira_list){
+    //print(jira_list);
+    if(jira_list==null){
+
+        print(' <td>');
+        print('</td>');
+
+    }
+
+    else if(!(jira_list instanceof Array)){
+
+        print(' <td>');
+        print('<a href="jira_dashboard.jag?data='+jira_list.WSO2_QAP_JIRA_ID+'">');
+        print("go to jira");
+        print('</a>');
+        print('</td>');
+
+
+    }
+    else{
+        for(var n=0;n<jira_list.length;n++){
+
+            print(' <td>');
+
+            print('<a href="jira_dashboard.jag?data='+jira_list[n].WSO2_QAP_JIRA_ID+'">');
+            print("go to jira");
+            print('</a>');
+            print('</td>');
+
+            print(' <td>');
+            print('</td>');
+
+            print(' <td>');
+            print('</td>');
+
+            print(' <td>');
+            print('</td>');
+
+            print(' <td>');
+            print('</td>');
+
+            print('</tr>');
+            print('<tr>');
+
+        }
+
+    }
 }
 
 %>

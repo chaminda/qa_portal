@@ -167,7 +167,7 @@
                                           <tbody>
                                              <tr>
                                                 <td>
-                                                   <input type="button" value="Add Test Suit" onclick="<% print(link_redir); %>"></label>
+                                                   <!--<input type="button" value="Add Test Suit" onclick="<% print(link_redir); %>"></label>-->
                                                    <p>&nbsp;</p>
                                                 </td>
                                              </tr>
@@ -180,6 +180,7 @@
                                                 <td><a href="#" onclick="selectAllInPlanTable(false);return false;" style="cursor:pointer">Select none</a></td>
                                                 <td width="20%">&nbsp;</td>
                                                 <td><a href="#" id="delete1" onclick="deleteTestPlans();return false;">Delete</a></td>
+                                                <td><a href="#" id="add2" onclick="<% print(link_redir); %>">Add Test Suits</a></td>
                                              </tr>
                                           </tbody>
                                        </table>
@@ -214,12 +215,14 @@
                                                 <td><a href="#" onclick="selectAllInPlanTable(false);return false;" style="cursor:pointer">Select none</a></td>
                                                 <td width="20%">&nbsp;</td>
                                                 <td><a href="#" id="delete1" onclick="deleteTestPlans();return false;">Delete</a></td>
+                                                <td><a href="#" id="add2" onclick="<% print(link_redir); %>">Add Test Suits</a></td>
                                              </tr>
                                           </tbody>
                                        </table>
                                     </div>
                                     <p>&nbsp;</p>
-                                    <h2>Test Results</h2>
+                                     <p>&nbsp;</p>
+                                    <h2>Builds for Test plan</h2>
                                     <p>&nbsp;</p>
                                     <div>
                                       <form name="buildResultsForm">
@@ -231,7 +234,7 @@
                                                       <nobr>Build Name</nobr>
                                                    </th>
                                                    <th>
-                                                      <nobr>Release Date</nobr>
+                                                      <nobr>Build Date</nobr>
                                                    </th>
                                                 </tr>
                                              </thead>

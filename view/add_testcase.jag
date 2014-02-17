@@ -40,7 +40,7 @@
 
 			document.getElementById("WSO2_QAP_TEST_CASE_ARTIFACT").innerHTML = data;
 		}).fail(function() {
-			alert("fail");
+
 		  });
 	</script>
 
@@ -52,7 +52,7 @@
 			
 			document.getElementById("WSO2_QAP_TEST_CASE_AUTOMATIONTESTCASE").innerHTML = data;
 		}).fail(function() {
-			alert("fail 2");
+
 		  });
 	</script>
 
@@ -195,7 +195,7 @@
 																type="submit" class="button" value=" Submit "
 																onclick="submitForm();"> <input type="button"
 																	class="button"
-																	onclick="location.href='../service-mgt/index.jsp';"
+																	onclick="location.href='products_home.jag';"
 																	value=" Cancel ">
 															
 															</td>
