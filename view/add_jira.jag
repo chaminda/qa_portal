@@ -156,7 +156,7 @@
 			</tr>
 			<tr>
 				<% 
-				require("footer.jag")
+				require("template/footer.jag")
 				%>
 			</tr>
 		</tbody>
