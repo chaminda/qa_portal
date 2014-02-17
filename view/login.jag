@@ -306,7 +306,7 @@
                                                     print('Invalid Username or Password');
                                                     print('</span>');
                                                 }
-                                                
+
                                              %>
                                                 <h2>Sign-in</h2>
                                                 <form action="../controller/login_action.jag" method="POST" onsubmit="return doValidation();" target="_self">
@@ -377,16 +377,10 @@
                </td>
             </tr>
             <tr>
-               <td id="footer" colspan="3">
-                  <div id="footer-div">
-                     <div class="footer-content">
-                        <div class="copyright">
-                           © 2005 - 2014 WSO2 Inc. All Rights Reserved.
-                        </div>
-                     </div>
-                  </div>
-               </td>
-            </tr>
+            <% 
+            require("template/footer.jag")
+            %>
+         </tr>
          </tbody>
       </table>
    </body>
