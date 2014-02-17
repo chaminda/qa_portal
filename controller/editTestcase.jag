@@ -20,8 +20,8 @@ var optionalHeaders = {
 
 var url = SERVICE_SECURE_ROOT+"WSO2_QAP_TEST_CASE_DataService/edit/testcase";
 
-print(param);
-/*
+
+
 if(TestCaseID=="")
 {
     print("can't update");
@@ -32,6 +32,7 @@ else{
 
     } );
 }
-*/
+
+response.sendRedirect("../view/testcase_home.jag");
 
 %>
