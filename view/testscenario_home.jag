@@ -192,7 +192,7 @@
                                                 <td><a href="#" onclick="selectAllInThisPage(true);return false;" style="cursor:pointer">Select all in this page</a>&nbsp;<b>|</b>&nbsp;</td>
                                                 <td><a href="#" onclick="selectAllInThisPage(false);return false;" style="cursor:pointer">Select none</a></td>
                                                 <td width="20%">&nbsp;</td>
-                                                <td><a href="#" id="delete2" onclick="deleteTestScenario();return false;">Delete</a></td>
+                                                <td><a href="#" id="delete1" onclick="deleteTestScenario();return false;">Delete</a></td>
                                                 <td width="10%">&nbsp;</td>
                                                 <td><a href="#" id="edit" onclick="editTestScenario();return false;">Edit</a></td>
                                              </tr>
@@ -212,17 +212,9 @@
                   </td>
                </tr>
                <tr>
-                  <td id="footer" colspan="3">
-                     <div id="footer-div">
-                        <div class="footer-content">
-                           <div class="copyright">
-                              © 2005 - 2013 WSO2 Inc. All Rights Reserved.
-                           </div>
-                        <!--div class="poweredby">
-                     </div-->
-                  </div>
-               </div>
-            </td>
+            <% 
+            require("template/footer.jag")
+            %>
          </tr>
       </tbody>
    </table>

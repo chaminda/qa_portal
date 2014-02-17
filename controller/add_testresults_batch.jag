@@ -63,7 +63,7 @@ for(var i in param){
         } );
 
 
-        response.sendRedirect("build_dashboard.jag?data="+WSO2_QAP_BUILD_ID);
+        response.sendRedirect("../view/build_dashboard.jag?data="+WSO2_QAP_BUILD_ID);
 
 
 

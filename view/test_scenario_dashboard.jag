@@ -239,12 +239,12 @@ if(name===null){
                                           
 													
 													<p>&nbsp;</p>
+													</br></br>
 													
 													
 						<table>
-                            <tbody>
-                            
-                              <tr>
+														<tbody>
+															<tr>
 																<td><a href="#"
 																	onclick="selectAllInThisPage(true);return false;"
 																	style="cursor: pointer">Select all in this page</a>&nbsp;<b>|</b>&nbsp;</td>
@@ -264,8 +264,8 @@ if(name===null){
 																<td><a href=<%=link%> id="add2">Add Test cases</a></td>
 																
 															</tr>
-                            </tbody>
-                          </table>
+														</tbody>
+													</table>
 						</form>
 
                         <p>&nbsp;</p>
@@ -318,13 +318,10 @@ if(name===null){
 
 							</tr>
 							<tr>
-								<% 
-								require("footer.jag");
-
-								%>
-
-
-							</tr>
+				<% 
+				require("template/footer.jag")
+				%>
+			</tr>
 						</tbody>
 					</table> <script type="text/javascript">
          if (Function('/*@cc_on return document.documentMode===10@*/')()){

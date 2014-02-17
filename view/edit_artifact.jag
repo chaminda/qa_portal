@@ -113,7 +113,12 @@ if(name===null){
                               <%
                                 include("../controller/editArtifactonLoad.jag")
                               %>
+                              
                               </tbody>
+                              <script type="text/javascript">
+                              document.getElementById("WSO2_QAP_ARTIFACT_DESCRIPTION").value="<%= listDetails.WSO2_QAP_ARTIFACT_DESCRIPTION %>";
+
+                              </script>
                              </table>
 
                            <table class="styledLeft">

@@ -143,6 +143,10 @@
 															
 															</td>
 														</tr>
+														<%
+                        								var test_results_id=request.getParameter("data");
+                        								print('<input type="hidden" name="WSO2_QAP_TEST_RESULTS_ID" value=\"'+test_results_id +'\">');
+                      									%>
 													</tbody>
 												</table>
 											</form>
