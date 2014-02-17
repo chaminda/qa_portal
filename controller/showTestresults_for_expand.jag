@@ -50,7 +50,7 @@ else if(!(list_testcaseID instanceof Array))
         print(' <tr>');
 
         print(' <td>');
-        var link = "test_result_dashboard.jag?data="+encodeURIComponent(stringify(list_testResultdetails.WSO2_QAP_TEST_RESULT_ID));
+        var link = "edit_test_result.jag?data="+encodeURIComponent(stringify(list_testResultdetails.WSO2_QAP_TEST_RESULT_ID));
         print('<a href="'+link+'">');
         print(list_testResultdetails.WSO2_QAP_TEST_CASE_NAME);
         print('</a>');
@@ -91,7 +91,7 @@ else if(!(list_testcaseID instanceof Array))
             print(' <tr>');
 
             print(' <td>');
-            var link = "test_result_dashboard.jag?data="+encodeURIComponent(stringify(list_testResultdetails[k].WSO2_QAP_TEST_RESULT_ID));
+            var link = "edit_test_result.jag?data="+encodeURIComponent(stringify(list_testResultdetails[k].WSO2_QAP_TEST_RESULT_ID));
             print('<a href="'+link+'">');
             print(list_testResultdetails[k].WSO2_QAP_TEST_CASE_NAME);
             print('</a>');
@@ -155,7 +155,7 @@ else{
             print(' <tr>');
 
             print(' <td>');
-            var link = "test_result_dashboard.jag?data="+encodeURIComponent(stringify(list_testResultdetails.WSO2_QAP_TEST_RESULT_ID));
+            var link = "edit_test_result.jag?data="+encodeURIComponent(stringify(list_testResultdetails.WSO2_QAP_TEST_RESULT_ID));
             print('<a href="'+link+'">');
             print(list_testResultdetails.WSO2_QAP_TEST_CASE_NAME);
             print('</a>');
@@ -197,7 +197,7 @@ else{
                 print(' <tr>');
 
                 print(' <td>');
-                var link = "test_result_dashboard.jag?data="+encodeURIComponent(stringify(list_testResultdetails[b].WSO2_QAP_TEST_RESULT_ID));
+                var link = "edit_test_result.jag?data="+encodeURIComponent(stringify(list_testResultdetails[b].WSO2_QAP_TEST_RESULT_ID));
                 print('<a href="'+link+'">');
                 print(list_testResultdetails[b].WSO2_QAP_TEST_CASE_NAME);
                 print('</a>');
