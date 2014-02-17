@@ -138,10 +138,11 @@ if(name===null){
 
                   </tr>
                   <tr>
-                <% 
-                require("footer.jag");
-
-                %>
+               <tr>
+              <% 
+              require("template/footer.jag")
+              %>
+              </tr>
 
 
               </tr>

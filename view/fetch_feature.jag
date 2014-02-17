@@ -19,13 +19,13 @@ if(name===null){
 		</div>
 	</noscript>
 	<div id="dcontainer"></div>
-	<script type="text/javascript" src="resources/js/dialog.js"></script>
+	<script type="text/javascript" src="../resources/js/dialog.js"></script>
 	<!-- JS imports for collapsible menu -->
-	<script src="resources/js/yahoo-dom-event.js" type="text/javascript"></script>
-	<script src="resources/js/animation-min.js" type="text/javascript"></script>
-	<script src="resources/js/template.js" type="text/javascript"></script>
-	<script src="resources/js/yahoo-min.js" type="text/javascript"></script>
-	<script src="resources/js/selector-min.js" type="text/javascript"></script>
+	<!--<script src="../resources/js/yahoo-dom-event.js" type="text/javascript"></script>
+	<script src="../resources/js/animation-min.js" type="text/javascript"></script>
+	<script src="../resources/js/template.js" type="text/javascript"></script>
+	<script src="../resources/js/yahoo-min.js" type="text/javascript"></script>
+	<script src="../resources/js/selector-min.js" type="text/javascript"></script>-->
 	
 	<!--<script type="text/javascript">
 	$.ajax({
@@ -47,22 +47,34 @@ if(name===null){
 		}).fail(function() {
 			document.getElementById("WSO2_QAP_SAMPLE_ID").innerHTML = "<option>No sample found</option>";
 		  });
-	</script>
+	</script>-->
 	
 	<script type="text/javascript">
-		function loadVersions(){
-			var WSO2_QAP_PRODUCT_ID = document.getElementById("WSO2_QAP_PRODUCT_ID").value;
+		function validateUser(){
+			bindSpinner();
+			var username = document.getElementById("username").value;
+			var password = document.getElementById("password").value;
+			//alert(password);
 			$.ajax({
-				  url: "../controller/getVersionDropdown.jag",
+				  url: "../controller/validateUser.jag",
 				  context: document.body,
-				  data: {"WSO2_QAP_PRODUCT_ID": WSO2_QAP_PRODUCT_ID}
+				  data: {"username": username, "password": password}
 				}).done(function(data) {
-					document.getElementById("WSO2_QAP_PRODUCT_VERSION_ID").innerHTML = data;
+					if(data != null){
+						document.add_product.action = '../controller/fetchFeature.jag';
+                		document.add_product.submit();
+
+					}
+					else{
+						CARBON.showWarningDialog('User Name or Password Incorrect');
+						document.getElementById("spinnerContainer").style.visibility="hidden";
+					}
 				}).fail(function() {
-					document.getElementById("WSO2_QAP_PRODUCT_VERSION_ID").innerHTML = "<option>No version found</option>";
+					CARBON.showWarningDialog('User Name or Password Incorrect');
+					document.getElementById("spinnerContainer").style.visibility="hidden";
 				  });
 		}
-	</script>-->
+	</script>
 	
 	<table id="main-table" border="0" cellspacing="0">
 		<tbody>
@@ -171,7 +183,7 @@ if(name===null){
 
 												<form name="add_product"
 													action="../controller/fetchFeature.jag" method="post"
-													onsubmit="return validateInput();return false;">
+													onsubmit="return validateUser();return false;">
 													<table class="styledLeft" id="archiveTbl">
 														<tbody>
 															<tr class="tableOddRow">
@@ -194,7 +206,7 @@ if(name===null){
 														<tbody>
 															<tr>
 																<td class="buttonRow">
-                                  <input class="button" value="Fetch" type="submit" onclick="bindSpinner()">
+                                  <input class="button" value="Fetch" type="button" onclick="validateUser()">
                                   <input class="button" value="Cancel" onclick="location.href = 'products_home.jag'" type="button">
 																
 																</td>
@@ -246,7 +258,7 @@ if(name===null){
 			</tr>
 			<tr>
 				<% 
-				require("footer.jag")
+				require("template/footer.jag")
 				%>
 			</tr>
 		</tbody>
