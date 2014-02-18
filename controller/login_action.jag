@@ -1,10 +1,10 @@
-<% 
+<%
 
 var username = request.getParameter("username");
 var  password = request.getParameter("password");
 
 
-var ldapAuth = Packages.com.asiri.ldapAuthenticate;
+var ldapAuth = Packages.com.sudheera.ldapLogin;
 var ldapAuthentication = new ldapAuth();
 
 
@@ -13,10 +13,10 @@ var resultArray = ldapAuthentication.ldapAuth(username,password);
 
 
 if(resultArray == true){
-session.put("username",username);
-session.put("role", "admin");
+    session.put("username",username);
+    session.put("role", "admin");
 
-	response.sendRedirect("../view/products_home.jag");
+    response.sendRedirect("../view/products_home.jag");
 }
 else{
     response.sendRedirect("../view/login.jag?login=false");
