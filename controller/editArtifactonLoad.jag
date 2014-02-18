@@ -1,8 +1,12 @@
 <%
     include("base64_encode.jag");
     var SERVICE_SECURE_ROOT = session.get("service_secure_root");
-    var WSO2_QAP_ARTIFACT_ID = parse(request.getParameter("data"));
-    var urlDetails  = SERVICE_SECURE_ROOT+"WSO2_QAP_ARTIFACT_DataService/view/artifacts_with_id/"+WSO2_QAP_ARTIFACT_ID;
+    var params = request.getAllParameters("UTF-8");
+    var list = params.artifactId;
+    //var param = "";
+
+    //var WSO2_QAP_ARTIFACT_ID = parse(request.getParameter("data"));
+    var urlDetails  = SERVICE_SECURE_ROOT+"WSO2_QAP_ARTIFACT_DataService/view/artifacts_with_id/"+list;
 
    	var optionalHeaders = {
     "Accept": "application/json",
@@ -29,9 +33,9 @@ print('</tr>');
 
 print('<tr class="tableOddRow">');
 print('<td class="formRow">Artifact Description</td>');
-print('<td><textarea rows="4" cols="50" name="WSO2_QAP_ARTIFACT_DESCRIPTION" id="WSO2_QAP_ARTIFACT_DESCRIPTION" value="'+listDetails.WSO2_QAP_ARTIFACT_DESCRIPTION +'"></textarea></td>')
+print('<td><textarea rows="4" cols="50" name="WSO2_QAP_ARTIFACT_DESCRIPTION" id="WSO2_QAP_ARTIFACT_DESCRIPTION" ></textarea></td>')
 print('</tr>');
-print('<input type=hidden name=WSO2_QAP_ARTIFACT_ID id=WSO2_QAP_ARTIFACT_ID value='+WSO2_QAP_ARTIFACT_ID+'>');
+print('<input type=hidden name=WSO2_QAP_ARTIFACT_ID id=WSO2_QAP_ARTIFACT_ID value='+list+'>');
 
 
 }

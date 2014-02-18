@@ -107,14 +107,7 @@
                                                 <tr>
                                                    <td>
                                                       <div id="breadcrumb-div">
-                                                         <table cellspacing="0">
-                                                            <tbody>
-                                                               <tr>
-                                                                  <td class="breadcrumb-link"><a href="../index.jag">QA Home</a></td>
-                                                                  <td class="breadcrumb-link">&nbsp;&gt;&nbsp;Auto Test Class</td>
-                                                               </tr>
-                                                            </tbody>
-                                                         </table>
+                                                         
                                                       </div>
                                                    </td>
                                                 </tr>
@@ -193,19 +186,24 @@
                                           </table>
                                        </form>
                                        <p>&nbsp;</p>
+                                       </br>
+                                       </br>
                                        <table>
                                           <tbody>
                                              <tr>
                                                 <td><a href="#" onclick="selectAllInThisPage(true);return false;" style="cursor:pointer">Select all in this page</a>&nbsp;<b>|</b>&nbsp;</td>
                                                 <td><a href="#" onclick="selectAllInThisPage(false);return false;" style="cursor:pointer">Select none</a></td>
                                                 <td width="20%">&nbsp;</td>
-                                                <td><a href="#" id="delete2" onclick="deleteAutoTestClass();return false;">Delete</a></td>
+                                                <td><a href="#" id="delete1" onclick="deleteAutoTestClass();return false;">Delete</a></td>
                                                 <td width="10%">&nbsp;</td>
                                                 <td><a href="#" id="edit" onclick="editWebapps();return false;">Edit</a></td>
-                                                
+                                                <%
+                                                    //var WSO2_QAP_TEST_SCNARIO_ID = parse(request.getParameter("data"));
+                                                    var link ="'add_autotestclass.jag'";
+                                                %>
+								                <td><a href=<%=link%> id="add2">&nbsp;&nbsp;&nbsp;Add Auto Test Class</a></td>
                                              </tr>
                                           </tbody>
-                                       </table>
                                        <table>
                                           <tbody>
                                              <tr></tr>

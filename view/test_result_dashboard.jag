@@ -71,20 +71,7 @@ if(name===null){
 															<tr>
 																<td>
 																	<div id="breadcrumb-div">
-																		<table cellspacing="0">
-																			<tbody>
-																				<tr>
-																					<td class="breadcrumb-link"><a href="index.jag">QA
-																							Home</a>
-																					</td>
-																					<td class="breadcrumb-link"><a
-																						href="product_home.jag">&nbsp;&gt;&nbsp;Products</a>
-																					</td>
-																					<td class="breadcrumb-link">&nbsp;&gt;&nbsp;List</td>
-																					<td class="breadcrumb-link">&nbsp;&gt;&nbsp;Test Result dashboard</td>
-																				</tr>
-																			</tbody>
-																		</table>
+																		
 																	</div>
 																</td>
 															</tr>
@@ -126,11 +113,7 @@ if(name===null){
 
                               </script> <script type="text/javascript">
                               setCookie('current-breadcrumb', 'manage_menu,webapps_menu,webapps_list_menu#');
-                              document.onload=setBreadcrumDiv();
-                              function setBreadcrumDiv () {
-                               var breadcrumbDiv = document.getElementById('breadcrumb-div');
-                               breadcrumbDiv.innerHTML = '<table cellspacing="0"><tr><td class="breadcrumb-link"><a href="index.jag">QA Home</a></td><td class="breadcrumb-link"><a href="product_home.jag">&nbsp;&gt;&nbsp;Products</a></td><td class="breadcrumb-link">&nbsp;&gt;&nbsp;List</td><td class="breadcrumb-link">&nbsp;&gt;&nbsp;Test Result dashboard</td>';
-                            }
+                              
                             </script> <!--
                                  ~ Copyright (c) 2005-2010, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
                                  ~

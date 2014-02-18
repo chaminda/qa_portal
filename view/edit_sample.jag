@@ -67,17 +67,7 @@ require("template/product_menu_panel.jag");
                                             <tr>
                                                 <td>
                                                     <div id="breadcrumb-div">
-                                                        <table cellspacing="0">
-                                                            <tbody>
-                                                                <tr>
-                                                                    <td class="breadcrumb-link"><a
-                                                                        href="../admin/index.jsp">Home</a></td>
-                                                                    <td class="breadcrumb-link">&nbsp;&gt;&nbsp;Sample</td>
-                                                                    <td class="breadcrumb-link">&nbsp;&gt;&nbsp;Add Sample</td>
-
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
+                                                        
                                                     </div>
                                                 </td>
                                             </tr>
@@ -165,7 +155,7 @@ var list_sample=obj_sample.WSO2_QAP_SAMPLECollection.WSO2_QAP_SAMPLE;
     type="submit" class="button" value=" Submit "
     onclick="submitForm();"> <input type="button"
         class="button"
-        onclick="location.href='../service-mgt/index.jsp';"
+        onclick="location.href='sample_home.jag';"
         value=" Cancel ">
 
 </td>

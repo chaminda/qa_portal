@@ -107,14 +107,7 @@
                                                 <tr>
                                                    <td>
                                                       <div id="breadcrumb-div">
-                                                         <table cellspacing="0">
-                                                            <tbody>
-                                                               <tr>
-                                                                  <td class="breadcrumb-link"><a href="../index.jag">QA Home</a></td>
-                                                                  <td class="breadcrumb-link">&nbsp;&gt;&nbsp;Test Scenario</td>
-                                                               </tr>
-                                                            </tbody>
-                                                         </table>
+                                                         
                                                       </div>
                                                    </td>
                                                 </tr>
@@ -135,19 +128,7 @@
                                    <div id="middle">
                                     <h2>Test Scenario</h2>
                                     <div id="workArea">
-                                       <form action="index.jsp" name="searchForm">
-                                          <table class="styledLeft">
-                                             <tbody>
-                                                
-                                             </tbody>
-                                          </table>
-                                       </form>
-                                      
-                                       <table>
-                                          <tbody>
-                                             <tr></tr>
-                                          </tbody>
-                                       </table>
+                                       
                                        <table>
                                           <tbody>
                                              <tr>
