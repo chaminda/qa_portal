@@ -29,6 +29,7 @@ if(name===null){
 	
 	<script type="text/javascript">
 		function validateUser(){
+		    if(validateTextInput()){
 			bindSpinner();
 			var username = document.getElementById("username").value;
 			var password = document.getElementById("password").value;
@@ -51,6 +52,7 @@ if(name===null){
 					CARBON.showWarningDialog('User Name or Password Incorrect');
 					document.getElementById("spinnerContainer").style.visibility="hidden";
 				  });
+		    }
 		}
 	</script>
 	
@@ -154,14 +156,14 @@ if(name===null){
 														<tbody>
 															<tr class="tableOddRow">
 																<td class="formRow">User Name</td>
-																<td class="formRow"><input id="username"
+																<td class="formRow"><input id="username" class="text-not-empty"
 																	name="username">
 																
 																</td>
 															</tr>
 															<tr class="tableEvenRow">
 																<td class="formRow">Password</td>
-																<td class="formRow"><input type="password" id="password"
+																<td class="formRow"><input type="password" id="password" class="text-not-empty"
 																	name="password">
 																
 																</td>
