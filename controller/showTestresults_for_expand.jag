@@ -36,13 +36,6 @@ else if(!(list_testcaseID instanceof Array))
     else if(!(list_testResultdetails instanceof Array))
     {
 
-        var url_jiradetails=SERVICE_SECURE_ROOT+"WSO2_QAP_JIRA_DataService/view/jira_for_resultID/"+list_testResultdetails.WSO2_QAP_TEST_RESULT_ID;
-        var data_jiradetails=get(url_jiradetails,"",optionalHeaders);
-        var objJiradetails= parse(data_jiradetails.data);
-        var list_jiradetails=objJiradetails.WSO2_QAP_JIRACollection.WSO2_QAP_JIRA;
-
-
-
 
         print(' <tr>');
 
@@ -78,12 +71,6 @@ else if(!(list_testcaseID instanceof Array))
 
         for(var k=0;k<list_testResultdetails.length;k++)
         {
-            var url_jiradetails=SERVICE_SECURE_ROOT+"WSO2_QAP_JIRA_DataService/view/jira_for_resultID/"+list_testResultdetails[k].WSO2_QAP_TEST_RESULT_ID;
-            var data_jiradetails=get(url_jiradetails,"",optionalHeaders);
-            var objJiradetails= parse(data_jiradetails.data);
-            var list_jiradetails=objJiradetails.WSO2_QAP_JIRACollection.WSO2_QAP_JIRA;
-
-
 
             print(' <tr>');
 
@@ -110,7 +97,7 @@ else if(!(list_testcaseID instanceof Array))
             print(list_testResultdetails[k].WSO2_QAP_TESTED_BY);
             print('</td>');
 
-            jiraPrint(list_jiradetails);
+            jiraPrint(list_testResultdetails[k].WSO2_QAP_TEST_RESULT_ID);
 
 
             print('</tr>');
@@ -141,13 +128,6 @@ else{
 
        else if(!(list_testResultdetails instanceof Array)){
 
-            var url_jiradetails=SERVICE_SECURE_ROOT+"WSO2_QAP_JIRA_DataService/view/jira_for_resultID/"+list_testResultdetails.WSO2_QAP_TEST_RESULT_ID;
-            var data_jiradetails=get(url_jiradetails,"",optionalHeaders);
-            var objJiradetails= parse(data_jiradetails.data);
-            var list_jiradetails=objJiradetails.WSO2_QAP_JIRACollection.WSO2_QAP_JIRA;
-
-
-
             print(' <tr>');
 
             print(' <td>');
@@ -173,7 +153,7 @@ else{
             print('</td>');
 
 
-            jiraPrint(list_jiradetails);
+            jiraPrint(list_testResultdetails.WSO2_QAP_TEST_RESULT_ID);
 
 
             print('</tr>');
@@ -184,11 +164,6 @@ else{
 
             for(var b=0;b<list_testResultdetails.length;b++)
             {
-                var url_jiradetails=SERVICE_SECURE_ROOT+"WSO2_QAP_JIRA_DataService/view/jira_for_resultID/"+list_testResultdetails[b].WSO2_QAP_TEST_RESULT_ID;
-                var data_jiradetails=get(url_jiradetails,"",optionalHeaders);
-                var objJiradetails= parse(data_jiradetails.data);
-                var list_jiradetails=objJiradetails.WSO2_QAP_JIRACollection.WSO2_QAP_JIRA;
-
 
                 print(' <tr>');
 
@@ -215,7 +190,7 @@ else{
                 print(list_testResultdetails[b].WSO2_QAP_TESTED_BY);
                 print('</td>');
 
-                jiraPrint(list_jiradetails);
+                jiraPrint(list_testResultdetails[b].WSO2_QAP_TEST_RESULT_ID);
 
                 print('</tr>');
 
@@ -229,59 +204,13 @@ else{
 
 }
 
+function jiraPrint(test_result_id){
 
-
-function jiraPrint(jira_list){
-
-    if(jira_list==null){
-
-        print(' <td>');
-        print('</td>');
-
-    }
-
-    else if(!(jira_list instanceof Array)){
-
-        print(' <td>');
-        print('<a href="jira_dashboard.jag?data='+jira_list.WSO2_QAP_JIRA_ID+'">');
-        print("go to jira");
-        print('</a>');
-        print('</td>');
-
-
-    }
-    else{
-        for(var n=0;n<jira_list.length;n++){
-
-            if(n!=0){
-
-                print(' <td>');
-                print('</td>');
-
-                print(' <td>');
-                print('</td>');
-
-                print(' <td>');
-                print('</td>');
-
-                print(' <td>');
-                print('</td>');
-
-
-            }
-
-            print(' <td>');
-            print('<a href="jira_dashboard.jag?data='+jira_list[n].WSO2_QAP_JIRA_ID+'">');
-            print("go to jira");
-            print('</a>');
-            print('</td>');
-
-            print('</tr>');
-            print('<tr>');
-
-        }
-
-    }
+    print(' <td>');
+    print('<a href="test_result_dashboard.jag?data='+test_result_id+'">');
+    print("jira list");
+    print('</a>');
+    print('</td>');
 }
 
 %>
