@@ -24,7 +24,10 @@
             );
         print(' </td>');
         print(' <td>');
+        var link = "jira_dashboard.jag?data="+encodeURIComponent(stringify(list.WSO2_QAP_JIRA_ID));
+        print('<a href="'+link+'">');
         print(list.WSO2_QAP_URL);
+        print('</a>');
         print('</td>');
         print('<td>');
         print("&nbsp;");
@@ -42,7 +45,7 @@
             );
         print('</td>');
         print(' <td>');
-        var link = "jira_dashboard.jag?data="+encodeURIComponent(stringify(list[i]));
+        var link = "jira_dashboard.jag?data="+encodeURIComponent(stringify(list[i].WSO2_QAP_JIRA_ID));
         print('<a href="'+link+'">');
         print(list[i].WSO2_QAP_URL );
         print('</a>');
