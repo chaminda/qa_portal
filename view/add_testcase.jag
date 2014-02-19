@@ -21,17 +21,16 @@
 		</div>
 	</noscript>
 	<div id="dcontainer"></div>
-	<script type="text/javascript" src="resources/js/dialog.js"></script>
-	<script type="text/javascript" src="resources/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="../resources/js/dialog.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
 	<!-- JS imports for collapsible menu -->
-	<script src="resources/js/yahoo-dom-event.js" type="text/javascript"></script>
-	<script src="resources/js/animation-min.js" type="text/javascript"></script>
-	<script src="resources/js/template.js" type="text/javascript"></script>
-	<script src="resources/js/yahoo-min.js" type="text/javascript"></script>
-	<script src="resources/js/selector-min.js" type="text/javascript"></script>
+	<script src="../resources/js/yahoo-dom-event.js" type="text/javascript"></script>
+	<script src="../resources/js/animation-min.js" type="text/javascript"></script>
+	<script src="../resources/js/template.js" type="text/javascript"></script>
+	<script src="../resources/js/yahoo-min.js" type="text/javascript"></script>
+	<script src="../resources/js/selector-min.js" type="text/javascript"></script>
 	
-<!-- 	<script type="text/javascript" src="resources/js/jquery-ui.js"></script> -->
-<!-- 	<link rel="stylesheet" href="resources/css/jquery-ui.css"> -->
+
 	<script type="text/javascript">
 	$.ajax({
 		  url: "../controller/getArtifactDropdown.jag",
@@ -139,9 +138,7 @@
 														<tr class="tableEvenRow">
 															<td class="formRow">Description<font color="red">*</font>
 															</td>
-															<!-- <td><input type="text" id="description" name="description"
-																 onchange="">
-															</td> -->
+
 															<td>
 																<textarea rows="4" class="text-not-empty" cols="50" name="WSO2_QAP_TEST_CASE_DESCRIPTION"  id="WSO2_QAP_TEST_CASE_DESCRIPTION">
 																</textarea>
