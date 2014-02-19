@@ -96,11 +96,11 @@ else{
 
         print('<table id="baram" width="100\%">');
         print('<tr>');
-        print('<th>Test Case Name</th>');
-        print('<th>Test Status</th>');
-        print('<th>Automation Test Status</th>');
-        print('<th>Tested by</th>');
-        print('<th>Jira link</th>');
+        print('<th width="30\%">Test Case Name</th>');
+        print('<th width="15\%">Test Status</th>');
+        print('<th width="20\%">Automation Test Status</th>');
+        print('<th width="20\%">Tested by</th>');
+        print('<th width="15\%">Jira link</th>');
 
         include("../controller/showTestresults_for_expand.jag");
 
