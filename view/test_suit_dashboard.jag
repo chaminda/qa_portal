@@ -189,7 +189,7 @@ var link_redir = "location.href = 'add_suit_scenario_mapping.jag?data="+WSO2_QAP
                                        </table>
 
                                        <p>&nbsp;</p>
-                                       <form name="testScenariosForm" method="post">
+                                       <form name="testScenariosForm" method="post" action="deleteBuildTestScenarios();">
                                           <table class="display" id="testScenariosTable" name="testScenariosTable" cellpadding="0" cellspacing="0" border="0" width="100%">
                                           <thead>
                                                 <tr>
@@ -208,6 +208,9 @@ include("../controller/testsuit_testscenario_onload.jag");
 %>
 </tbody>
 </table>
+<%
+	print('<input type="hidden" name="WSO2_QAP_TEST_SUIT_ID" value="'+WSO2_QAP_TEST_SUIT_ID+'">');
+%>
 </form>
 <p>&nbsp;</p>
 <br/>

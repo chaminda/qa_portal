@@ -209,7 +209,9 @@
                                               </tr>
                                             </tbody>
                                           </table>
-                                          
+                                          <%
+                                            print('<input type="hidden" name="WSO2_QAP_TEST_SUIT_ID" value="'+WSO2_QAP_TEST_SUIT_ID+'">');
+                                          %>
                                        </form>
                                        <p>&nbsp;</p>
                                        <table>
