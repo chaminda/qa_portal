@@ -2,15 +2,7 @@
    include("base64_encode.jag");
    var SERVICE_SECURE_ROOT = session.get("service_secure_root");
 
-   print('<tr bgcolor="#EEEFFB">');
-   print('<td>');
-   print('</td>');
-   print('<td>');
-   print('<strong> Test Scenario Name <strong/>');
-   print('</td>');
-   print('<td>');
-   print('<strong> Description <strong/>');
-   print('</td>');
+
    print('<input type="hidden" name="WSO2_QAP_TEST_SUIT_ID" value="'+WSO2_QAP_TEST_SUIT_ID+'">');
 
 
