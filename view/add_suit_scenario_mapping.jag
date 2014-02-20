@@ -195,7 +195,7 @@
                                               <tr>
                                                 <td>&nbsp;</td>
                                                 <td>
-                                                  <input type="submit" value="Submit">
+                                                  <!--<input type="submit" value="Submit">-->
                                                 </td>
 
                                                 <%
@@ -204,7 +204,7 @@
                                                 %>
                                                 <td width="10%">&nbsp;</td>
                                                 <td>
-                                                  <input type="button" value="Cancel" onclick="<% print(link_redir2); %>">
+                                                  <!--<input type="button" value="Cancel" onclick="<% print(link_redir2); %>">-->
                                                 </td>
                                               </tr>
                                             </tbody>
@@ -213,7 +213,7 @@
                                             print('<input type="hidden" name="WSO2_QAP_TEST_SUIT_ID" value="'+WSO2_QAP_TEST_SUIT_ID+'">');
                                           %>
                                        </form>
-                                       <p>&nbsp;</p>
+                                      
                                        <table>
                                           <tbody>
                                              <tr>
