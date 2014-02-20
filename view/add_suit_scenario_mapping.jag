@@ -152,7 +152,7 @@
                                           <tbody>
                                              <tr>
                                                 <td>
-                                                   <input type="button" value="Create Test Scenario" onclick="<% print(link_redir); %>"></label>
+                                                   <!--<input type="button" value="Create Test Scenario" onclick="<% print(link_redir); %>"></label>-->
                                                    <p>&nbsp;</p>
                                                 </td>
                                              </tr>
@@ -164,7 +164,7 @@
                                                 <td><a href="#" onclick="selectAllInScenarioTable(true);return false;" style="cursor:pointer">Select all in this page</a>&nbsp;<b>|</b>&nbsp;</td>
                                                 <td><a href="#" onclick="selectAllInScenarioTable(false);return false;" style="cursor:pointer">Select none</a></td>
                                                 <td width="10%">&nbsp;</td>
-                                                <!--<td><a href="#" id="add2" onclick=document.testSuitScenarioMappingForm.submit()>Add Test Scenarios to suit</a> </td>-->
+                                                <td><a href="#" id="add2" onclick=document.testSuitScenarioMappingForm.submit()>Add Test Scenarios to suit</a> </td>
                                              </tr>
                                           </tbody>
                                        </table>
@@ -220,7 +220,7 @@
                                                 <td><a href="#" onclick="selectAllInScenarioTable(true);return false;" style="cursor:pointer">Select all in this page</a>&nbsp;<b>|</b>&nbsp;</td>
                                                 <td><a href="#" onclick="selectAllInScenarioTable(false);return false;" style="cursor:pointer">Select none</a></td>
                                                 <td width="10%">&nbsp;</td>
-                                                <!--<td><a href="#" id="add2" onclick=document.testSuitScenarioMappingForm.submit()>Add Test Scenarios to suit</a> </td>-->
+                                                <td><a href="#" id="add2" onclick=document.testSuitScenarioMappingForm.submit()>Add Test Scenarios to suit</a> </td>
                                              </tr>
                                           </tbody>
                                        </table>
