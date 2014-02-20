@@ -1,49 +1,25 @@
-<%
-
-include("dataServiceCalls.jag");
-
-var optionalHeaders1 = {
-    "Accept": "application/json"
-};
+<script type="text/javascript" src="../../resources/js/jquery-1.js"></script>
+<script type="text/javascript" src="getData.js"></script>
 
 
+<script type="text/javascript" charset="utf-8">
+    $(document).ready(function() {
+        var data = getDataFromExcel("http://localhost:9763/services/WSO2_QA_PLANS/get/data");
 
-var url  = "http://localhost:9763/services/WSO2_QA_PLANS/get/data";
-var data1 = get(url,"",optionalHeaders1);
-var obj1 = JSON.parse(data1.data);
+        data = data.replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
+        document.getElementById("dataInput").value = data;
+        document.getElementById("dataSubmit").submit();
 
+    });
 
-var list = obj1.TestScenarios.TestScenario;
+</script>
 
-//print(list.length);
+<html>
 
-for (var i=0;i<list.length;i++){
-
-    print(list[i].test_case_no);
-    print("<br>");
-    print(list[i].test_case);
-    print("<br>");
-    print(list[i].Automation_Status);
-    print("<br>");
-    print(list[i].Test_Artifacts);
-    print("<hr>");
-
-    if(list[i].Test_Artifacts != null){
-    //print(addArtifact(list[i].Test_Artifacts ,"description", "name"));
-       // break;
-    }
-
-    if(list[i].Automation_Status != null || list[i].Automation_Status.trim() != ""){
-        print(addAutoTestClass(list[i].Automation_Status ,"description"));
-        print(list[i].Automation_Status);
-        break;
-    }
+    <form id="dataSubmit" action="addFromExcel.jag" method="post">
+        <input name="dataInput" id="dataInput" type="hidden"/>
+    </form>
 
 
-
-}
-
-
-
-%>
+</html>
