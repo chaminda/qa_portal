@@ -9,7 +9,7 @@
    // print(obj2)
    var list2 = obj2.WSO2_QAP_DATA_TESTSUIT_join_TESTSCENARIOCollection.WSO2_QAP_DATA_TESTSUIT_join_TESTSCENARIO;
 
-   print('<input type="hidden" name="WSO2_QAP_TEST_SUIT_ID" value="'+WSO2_QAP_TEST_SUIT_ID+'">');
+
 
    if(list2.length==null && list2.WSO2_QAP_TEST_SCENARIO_NAME!=null){
 
