@@ -16,19 +16,23 @@ var getHeaders = {
 
 
 
-function addArtifact(artifact_location, artifact_description, artifact_name){
+function addArtifact( artifact_name, artifact_location, artifact_description){
+    artifact_location= artifact_location.substr(0,500);
+    artifact_description= artifact_description.substr(0,500);
 
-    var param = '{"_postadd_artifacts":{"WSO2_QAP_ARTIFACT_NAME" : "'+artifact_name+'","WSO2_QAP_DESCRIPTION" : "'+artifact_description+'","WSO2_QAP_LOCATION" : "'+artifact_location+'"}}';
+    var param = '{"_postadd_artifacts":{"WSO2_QAP_ARTIFACT_NAME" : "'+artifact_name+'","WSO2_QAP_ARTIFACT_DESCRIPTION" : "'+artifact_description+'","WSO2_QAP_LOCATION" : "'+artifact_location+'"}}';
     var url = SERVICE_SECURE_ROOT+"WSO2_QAP_ARTIFACT_DataService/add/artifacts";
 
-     post(url, param, optionalHeaders, "json", function (data, xhr) {
-        log("Response received");
-    } );
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", url);
+    xhr.setRequestHeader("Content-Type" , "application/json");
+    xhr.send(param);
+    var result = parse(xhr.responseText);
 
-    var url = SERVICE_SECURE_ROOT+"WSO2_QAP_ARTIFACT_DataService/view/last_id";
-    var data =get(url,"",getHeaders);
-    var result = parse(data.data);
-    return result.WSO2_QAP_ARTIFACTCollection.WSO2_QAP_ARTIFACT.LAST_INSERTED_ID;
+    return result.GeneratedKeys.Entry.ID;
+
+
+
 }
 
 function addAutoTestClass(WSO2_QAP_AUTO_TEST_CLASS_LOCATION, WSO2_QAP_AUTO_TEST_CLASS_NAME){
@@ -48,23 +52,56 @@ function addAutoTestClass(WSO2_QAP_AUTO_TEST_CLASS_LOCATION, WSO2_QAP_AUTO_TEST_
 }
 
 function addTestCase(TestCaseName,status, description, artifact, autotestcase){
-    var param='{"_postadd_addtestcase":{"WSO2_QAP_TEST_CASE_NAME" : "'+TestCaseName+'","WSO2_QAP_AUTOMATION_STATUS" : "'+status+'","WSO2_QAP_DESCRIPTION" : "'+description+'","WSO2_QAP_QA_ARTIFACT_ID" : "'+artifact+'","WSO2_QAP_AUTOMATION_TEST_CASE_ID" : "'+autotestcase+'"}}';
+
+    TestCaseName= TestCaseName.substr(0,45);
+    description= description.substr(0,500);
+    artifact= artifact.substr(0,10);
+    autotestcase= autotestcase.substr(0,10);
+    status= status.substr(0,10);
+    var param='{"_postadd_addtestcase":{"WSO2_QAP_TEST_CASE_NAME" : "'+TestCaseName+'","WSO2_QAP_AUTOMATION_STATUS" : "'+status+'","WSO2_QAP_DESCRIPTION" : "'+description+'","WSO2_QAP_ARTIFACT_ID" : "'+artifact+'","WSO2_QAP_AUTO_TEST_CLASS_ID" : "'+autotestcase+'"}}';
+
     var url = SERVICE_SECURE_ROOT+"WSO2_QAP_TEST_CASE_DataService/add/testcase";
 
-    post(url, param, optionalHeaders, "json",  function (data, xhr) {
-        log("Response received");
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", url);
+    xhr.setRequestHeader("Content-Type" , "application/json");
+    xhr.send(param);
+    var result = parse(xhr.responseText);
 
-    } );
+    return result.GeneratedKeys.Entry.ID;
+
 
 }
 
-function addTestScenario(scenario_description, scenario_name){
+function addTestScenario(scenario_name, scenario_description){
+
+    scenario_name= scenario_name.substr(0,100);
+    scenario_description= scenario_description.substr(0,500);
+
+
     var param = '{"_postadd_test_scenario":{"WSO2_QAP_DESCRIPTION" : "'+scenario_description+'","WSO2_QAP_TEST_SCENARIO_NAME" : "'+scenario_name+'"}}';
     var url = SERVICE_SECURE_ROOT+"WSO2_QAP_TEST_SCENARIO_DataService/add/testscenario";
 
-    post(url, param, optionalHeaders, "json", function (data,xhr) {
-        log("Response received");
-    } );
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", url);
+    xhr.setRequestHeader("Content-Type" , "application/json");
+    xhr.send(param);
+    var result = parse(xhr.responseText);
+
+    return result.GeneratedKeys.Entry.ID;
+
+}
+
+
+function testscenarioMappingTestcase(scenarioID, testcaseID){
+
+    var param = '{"_postadd_testcases_for_testscenario":{"WSO2_QAP_TEST_SCENARIO_ID" : "'+scenarioID+'","WSO2_QAP_TEST_CASE_ID" : "'+testcaseID+'"}}';
+    var url = SERVICE_SECURE_ROOT+"WSO2_QAP_TEST_SCENARIO_TEST_CASE_MAPPING_DataService/add/testcases_for_testscenario";
+
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", url);
+    xhr.setRequestHeader("Content-Type" , "application/json");
+    xhr.send(param);
 
 }
 
