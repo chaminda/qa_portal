@@ -144,7 +144,7 @@
                                     %>
                                     <div id="buttonAreaGrid_left" class="buttonAreaGrid_left">
                                     <lable>
-                                        <input type="button" value="Add Build" onclick="<% print(link_redir); %>" align="left"></label>
+                                        <input class="fancybutton" type="button" value="Add Build" onclick="<% print(link_redir); %>" align="left"></label>
                                         <th>&nbsp;</th>
                                         
                                        <table>
