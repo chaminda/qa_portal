@@ -20,7 +20,7 @@
     <script type="text/javascript" language="javascript" src="../resources/datatables/js/jquery.dataTables.js"></script>
     <script type="text/javascript" charset="utf-8">
       $(document).ready(function() {
-        $('#buildsTable').dataTable( {
+        $('#testSuitScenarioMappingTable').dataTable( {
           "sPaginationType": "full_numbers"
         } );
       } );
@@ -143,7 +143,7 @@
                                     %>
                                     <div id="workArea">
 
-                                    
+                                    <h2>Available Test Scenarios for Test Suit</h2>
                                     <%
                                        var link_redir = "location.href = 'add_testscenario.jag'";
                                     %>
@@ -152,7 +152,7 @@
                                           <tbody>
                                              <tr>
                                                 <td>
-                                                   <input type="button" value="Create Test Scenario" onclick="<% print(link_redir); %>"></label>
+                                                   <!--<input type="button" value="Create Test Scenario" onclick="<% print(link_redir); %>"></label>-->
                                                    <p>&nbsp;</p>
                                                 </td>
                                              </tr>
@@ -163,7 +163,8 @@
                                              <tr>
                                                 <td><a href="#" onclick="selectAllInScenarioTable(true);return false;" style="cursor:pointer">Select all in this page</a>&nbsp;<b>|</b>&nbsp;</td>
                                                 <td><a href="#" onclick="selectAllInScenarioTable(false);return false;" style="cursor:pointer">Select none</a></td>
-                                                
+                                                <td width="10%">&nbsp;</td>
+                                                <td><a href="#" id="add2" onclick=document.testSuitScenarioMappingForm.submit()>Add Test Scenarios to suit</a> </td>
                                              </tr>
                                           </tbody>
                                        </table>
@@ -173,7 +174,10 @@
                                                 <tr>
                                                    <th>&nbsp;</th>
                                                    <th>
-                                                      <nobr>Test Scenarios</nobr>
+                                                      <nobr>Test Scenario Name</nobr>
+                                                   </th>
+                                                   <th>
+                                                      <nobr>Description</nobr>
                                                    </th>
                                                 </tr>
                                              </thead>
@@ -191,7 +195,7 @@
                                               <tr>
                                                 <td>&nbsp;</td>
                                                 <td>
-                                                  <input type="submit" value="Submit">
+                                                  <!--<input type="submit" value="Submit">-->
                                                 </td>
 
                                                 <%
@@ -200,20 +204,23 @@
                                                 %>
                                                 <td width="10%">&nbsp;</td>
                                                 <td>
-                                                  <input type="button" value="Cancel" onclick="<% print(link_redir2); %>">
+                                                  <!--<input type="button" value="Cancel" onclick="<% print(link_redir2); %>">-->
                                                 </td>
                                               </tr>
                                             </tbody>
                                           </table>
-                                          
+                                          <%
+                                            print('<input type="hidden" name="WSO2_QAP_TEST_SUIT_ID" value="'+WSO2_QAP_TEST_SUIT_ID+'">');
+                                          %>
                                        </form>
-                                       <p>&nbsp;</p>
+                                      
                                        <table>
                                           <tbody>
                                              <tr>
                                                 <td><a href="#" onclick="selectAllInScenarioTable(true);return false;" style="cursor:pointer">Select all in this page</a>&nbsp;<b>|</b>&nbsp;</td>
                                                 <td><a href="#" onclick="selectAllInScenarioTable(false);return false;" style="cursor:pointer">Select none</a></td>
-                                                
+                                                <td width="10%">&nbsp;</td>
+                                                <td><a href="#" id="add2" onclick=document.testSuitScenarioMappingForm.submit()>Add Test Scenarios to suit</a> </td>
                                              </tr>
                                           </tbody>
                                        </table>

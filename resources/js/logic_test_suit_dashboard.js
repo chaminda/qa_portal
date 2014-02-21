@@ -36,7 +36,6 @@ function selectAllInTestScenarioTable(isSelected) {
 
 function deleteBuildTestScenarios() {
     var selected = isTestScenarioSelected();
-
     if (!selected) {
         CARBON.showInfoDialog('Please select the test scenarios to be deleted.');
         return;

@@ -37,6 +37,34 @@ function deleteJira() {
     }
 }
 
+function editJira() {
+
+    var selected = isJiraSelected();
+    if (!selected) {
+        CARBON.showInfoDialog('Please select the jira to be edited.');
+        return;
+    }
+    var count=0;
+	for(var j=0; j< document.jiraForm.jiraId.length; j++){
+		if(document.jiraForm.jiraId[j].checked){
+			count=count+1;
+		}
+	}
+	if(count > 1){
+		CARBON.showInfoDialog('Please select only one jira to edit.');
+        return;
+	}
+	else{
+		CARBON.showConfirmationDialog("Do you want to edit the selected test scenario?",
+        function () {
+            document.jiraForm.action = '../controller/editJira.jag';
+            document.jiraForm.submit();
+        }
+    	);
+	}
+    
+}
+
 function selectAllInThisPage(isSelected) {
     allSelected = false;
     if (document.jiraForm.jiraId != null &&

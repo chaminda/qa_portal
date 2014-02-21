@@ -16,7 +16,13 @@
     
 if(listDetails != null){
 print("<tr class=\"tableOddRow\"><td>Jira URL</td>");
+if(listDetails.WSO2_QAP_URL.indexOf("http://")!==-1 || (listDetails.WSO2_QAP_URL).indexOf("https://")!==-1){
+
+    print("<td><a href=\""+listDetails.WSO2_QAP_URL+"\" target=\"_blank\" >" + listDetails.WSO2_QAP_URL+ "</td></tr>");
+}
+else{
 print("<td><a href=\"http://"+listDetails.WSO2_QAP_URL+"\" target=\"_blank\" > http://"+listDetails.WSO2_QAP_URL+"</td></tr>");
+}
 print("<tr class=\"tableEvenRow\"><td>Jira Description</td>");
 print("<td>"+listDetails.WSO2_QAP_DESCRIPTION+"</td></tr>");
 }

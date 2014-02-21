@@ -20,7 +20,13 @@ print("<td>"+listFeatureDetails.WSO2_QAP_SUBJECT+"</td></tr>");
 print("<tr class=\"tableEvenRow\"><td>Description</td>");
 print("<td>"+listFeatureDetails.WSO2_QAP_DESCRIPTION+"</td></tr>");
 print("<tr class=\"tableOddRow\"><td>Redmine URL</td>");
-print("<td><a href="+listFeatureDetails.WSO2_QAP_REDMINE_URL+" target=\"_blank\">"+listFeatureDetails.WSO2_QAP_REDMINE_URL+"</a></td></tr>");
+var redminelink;
+if((listFeatureDetails.WSO2_QAP_REDMINE_URL).indexOf("http://")!==-1 || (listFeatureDetails.WSO2_QAP_REDMINE_URL).indexOf("https://")!==-1){
+    redminelink = listFeatureDetails.WSO2_QAP_REDMINE_URL;
+}else{
+    redminelink = "http://"+listFeatureDetails.WSO2_QAP_REDMINE_URL;
+}
+print("<td><a href="+listFeatureDetails.WSO2_QAP_REDMINE_URL+" target=\"_blank\">"+redminelink+"</a></td></tr>");
 
 
  %>

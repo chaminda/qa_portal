@@ -57,6 +57,34 @@ function deleteJira() {
     }
 }
 
+function editJira() {
+
+    var selected = isSelected();
+    if (!selected) {
+        CARBON.showInfoDialog('Please select the jira to be edited.');
+        return;
+    }
+    var count=0;
+	for(var j=0; j< document.testResultForm.jiraId.length; j++){
+		if(document.testResultForm.jiraId[j].checked){
+			count=count+1;
+		}
+	}
+	if(count > 1){
+		CARBON.showInfoDialog('Please select only one jira to edit.');
+        return;
+	}
+	else{
+		CARBON.showConfirmationDialog("Do you want to edit the selected test scenario?",
+        function () {
+            document.testResultForm.action = '../controller/editJira.jag';
+            document.testResultForm.submit();
+        }
+    	);
+	}
+    
+}
+
 
 function resetVars() {
     allSelected = false;
