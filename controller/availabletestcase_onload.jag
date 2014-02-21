@@ -21,12 +21,6 @@ var obj1 = parse(data1.data);
 
 var list=obj.WSO2_QAP_TEST_SCENARIO_TEST_CASE_MAPPINGCollection.WSO2_QAP_TEST_SCENARIO_TEST_CASE_MAPPING;
 var list1 = obj1.WSO2_QAP_TEST_SCENARIOCollection.WSO2_QAP_TEST_SCENARIO;
-
-print("<h2>");
-	    //print("Available features for "+json_data.WSO2_QAP_TEST_CASE_NAME);
-	print("Available Test case for "+list1.WSO2_QAP_TEST_SCENARIO_NAME);
-	    print("</h2>");
-
 if(list == null){
         print('<tr>');
         print('<td>');
