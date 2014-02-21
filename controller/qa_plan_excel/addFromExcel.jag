@@ -5,7 +5,7 @@ data = JSON.parse(request.getParameter("dataInput"));
 
 var list = data.TestScenarios.TestScenario;
 var TestSenarioID;
-var lastArtifactLocation;
+var lastArtifactLocation="default";
 var artifactID;
 var testCaseID;
 
@@ -34,7 +34,10 @@ for(var i=0;i<list.length;i++){
         //check if the artifact location is available
         if(list[i].Test_Artifacts.search("http")!=-1){
             lastArtifactLocation = list[i].Test_Artifacts; //store location for following -do-'s
+            lastArtifactLocation = lastArtifactLocation.replace(/\r?\n/g, "<br />").replace(/"/g, "&quot;").replace(/'/g, "&#39;"); // escape newline
+
             artifactID =  addArtifact("artifact fetched from file "+i,lastArtifactLocation,"no description available");
+
 
         }
         //check if -do- or -same- is available as the location
@@ -44,11 +47,12 @@ for(var i=0;i<list.length;i++){
             artifactID =  addArtifact("artifact fetched from file "+i,lastArtifactLocation,"no description available");
 
 
+
+
         }
         //anything else is available as artifact description
         else{
-
-            artifactID =  addArtifact("artifact fetched from file "+i,"no location available",list[i].Test_Artifacts.trim());
+            artifactID =  addArtifact("artifact fetched from file "+i,"no location available",list[i].Test_Artifacts.replace(/\r?\n/g, "<br />").replace(/"/g, "&quot;").replace(/'/g, "&#39;").trim());
 
         }
     }
@@ -56,16 +60,16 @@ for(var i=0;i<list.length;i++){
     if(list[i].test_case_no!=null && list[i].test_case_no.trim()!="" && !isNaN(list[i].test_case_no)){
 
         if(artifactID="no"){
-            var testcasename = list[i].test_case.substring(0,15);
-            testCaseID = addTestCase(testcasename,"no", list[i].test_case , "1", "1");
+            var testcasename = list[i].test_case.replace(/\r?\n/g, "<br />").replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+            testCaseID = addTestCase(testcasename,"no", testcasename , "1", "1");
         } else{
-            var testcasename = list[i].test_case.substring(0,15);
-            testCaseID = addTestCase(testcasename,"no", list[i].test_case , artifactID, "1");
+            var testcasename = list[i].test_case.replace(/\r?\n/g, "<br />").replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+            testCaseID = addTestCase(testcasename,"no", testcasename , artifactID, "1");
 
         }
 
 
-        testscenarioMappingTestcase(TestSenarioID,testCaseID);
+       testscenarioMappingTestcase(TestSenarioID,testCaseID);
 
 
     }
