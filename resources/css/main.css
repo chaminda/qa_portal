@@ -208,6 +208,47 @@ div#workArea table.styledLeft tbody tr td.buttonRow {
 #menu-table{
 	margin-right:2px;
 	}
+
+
+
+
+.fancybutton {
+    background-color:#79bbff;
+    -webkit-border-top-left-radius:16px;
+    -moz-border-radius-topleft:16px;
+    border-top-left-radius:16px;
+    -webkit-border-top-right-radius:16px;
+    -moz-border-radius-topright:16px;
+    border-top-right-radius:16px;
+    -webkit-border-bottom-right-radius:16px;
+    -moz-border-radius-bottomright:16px;
+    border-bottom-right-radius:16px;
+    -webkit-border-bottom-left-radius:16px;
+    -moz-border-radius-bottomleft:16px;
+    border-bottom-left-radius:16px;
+    text-indent:0px;
+    display:inline-block;
+    color:#0D4d79;
+    font-family:Arial;
+    font-size:13px;
+    font-weight:bold;
+    font-style:italic;
+    height:25px;
+    line-height:25px;
+    width:130px;
+    text-decoration:none;
+    text-align:center;
+}.fancybutton:hover {
+     background-color:#378de5;
+ }.fancybutton:active {
+      position:relative;
+      top:1px;
+  }
+         /* This button was generated using CSSButtonGenerator.com */
+         /* This button was generated using CSSButtonGenerator.com */
+         /* This button was generated using CSSButtonGenerator.com */
+         /* This button was generated using CSSButtonGenerator.com */
+
 /* --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
 

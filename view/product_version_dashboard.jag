@@ -151,15 +151,15 @@
                                           <tbody>
                                              <tr>
                                                 <td>
-                                                   <input type="button" value="Add Test Plan" onclick="<% print(link_redir); %>"></label>
+                                                   <input class="fancybutton" type="button" value="Add Test Plan" onclick="<% print(link_redir); %>"></label>
                                                    <p>&nbsp;</p>
                                                 </td>
                                                 <td>
-                                                   <input type="button" value="View Features" onclick="<% print(link_redir2); %>"></label>
+                                                   <input class="fancybutton" type="button" value="View Features" onclick="<% print(link_redir2); %>"></label>
                                                    <p>&nbsp;</p>
                                                 </td>
                                                 <td>
-                                                   <input type="button" value="View Builds" onclick="<% print(link_redir3); %>"></label>
+                                                   <input class="fancybutton" type="button" value="View Builds" onclick="<% print(link_redir3); %>"></label>
                                                    <p>&nbsp;</p>
                                                 </td>
                                              </tr>

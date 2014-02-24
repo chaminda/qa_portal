@@ -151,7 +151,7 @@
                                           <tbody>
                                              <tr>
                                                 <td>
-                                                   <input type="button" class="button" value="Create Test Suit" onclick="<% print(link_redir); %>"></label>
+                                                   <input class="fancybutton" type="button" value="Create Test Suit" onclick="<% print(link_redir); %>"></label>
                                                    <p>&nbsp;</p>
                                                 </td>
                                              </tr>
@@ -162,7 +162,8 @@
                                              <tr>
                                                 <td><a href="#" onclick="selectAllInSuitTable(true);return false;" style="cursor:pointer">Select all in this page</a>&nbsp;<b>|</b>&nbsp;</td>
                                                 <td><a href="#" onclick="selectAllInSuitTable(false);return false;" style="cursor:pointer">Select none</a></td>
-                                                
+                                                 <td width="10%">&nbsp;</td>
+                                                <td><a href="#" id="add2" onclick=document.testSuitPlanMappingForm.submit()>Add Test Suits to Plan</a> </td>
                                              </tr>
                                           </tbody>
                                        </table>
@@ -193,32 +194,32 @@
                                           <table>
                                             <tbody>
                                               <tr>
-                                                <br>
-                                                <br>
+
                                                 <td>
-                                                  <input type="submit" value="Submit">
+                                                  <!--<input type="submit" value="Submit">-->
                                                 </td>
 
                                                 <%
                                                 var passjsondata='{"verid_proname_planid":{"WSO2_QAP_TEST_PLAN_ID" : "'+WSO2_QAP_TEST_PLAN_ID+'","WSO2_QAP_PRODUCT_NAME" : "'+WSO2_QAP_PRODUCT_NAME+'","WSO2_QAP_PRODUCT_VERSION" : "'+WSO2_QAP_PRODUCT_VERSION+'"}}';
                                                   var link_redir2 = "location.href = '../view/test_plan_dashboard.jag?data="+encodeURIComponent(stringify(passjsondata))+"'";
                                                 %>
-                                                <td width="10%">&nbsp;</td>
+
                                                 <td>
-                                                  <input type="button" class="button" value="Cancel" onclick="<% print(link_redir2); %>">
+                                                  <!--<input type="button" class="button" value="Cancel" onclick="<% print(link_redir2); %>">-->
                                                 </td>
                                               </tr>
                                             </tbody>
                                           </table>
                                           
                                        </form>
-                                       <p>&nbsp;</p>
+
                                        <table>
                                           <tbody>
                                              <tr>
                                                 <td><a href="#" onclick="selectAllInSuitTable(true);return false;" style="cursor:pointer">Select all in this page</a>&nbsp;<b>|</b>&nbsp;</td>
                                                 <td><a href="#" onclick="selectAllInSuitTable(false);return false;" style="cursor:pointer">Select none</a></td>
-                                                
+                                                <td width="10%">&nbsp;</td>
+                                                <td><a href="#" id="add2" onclick=document.testSuitPlanMappingForm.submit()>Add Test Suits to Plan</a> </td>
                                              </tr>
                                           </tbody>
                                        </table>
