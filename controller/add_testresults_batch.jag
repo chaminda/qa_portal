@@ -13,12 +13,6 @@ var param= request.getAllParameters("UTF-8");
 
 var url  = SERVICE_SECURE_ROOT+"WSO2_QAP_TEST_RESULT_DataService/add/testresults";
 var mapping_url = SERVICE_SECURE_ROOT+"WSO2_QAP_BUILD_MAPPING_TESTRESULT_DataService/add/builds_results";
-//print(url);
-
-
-
-
-//print(param);
 
 var WSO2_QAP_BUILD_ID="";
 var username= session.get("username");
@@ -42,10 +36,6 @@ for(var i in param){
         var test_result = param[i];
         var post_data = '{"_postadd_testresults":{"WSO2_QAP_TEST_CASE_ID" : "'+i.trim()+'","WSO2_QAP_TEST_STATUS" : "'+test_result+'","WSO2_QAP_AUTOMATION_TEST_RESULT" : "'+automationresult+'","WSO2_QAP_TESTED_BY" : "'+username+'"}}';
 
-        //print(post_data);
-
-
-
         var xhr = new XMLHttpRequest();
         xhr.open("POST", url);
         xhr.setRequestHeader("Content-Type" , "application/json");
@@ -64,10 +54,6 @@ for(var i in param){
 
 
         response.sendRedirect("../view/build_dashboard.jag?data="+WSO2_QAP_BUILD_ID);
-
-
-
-
 
 
     }
