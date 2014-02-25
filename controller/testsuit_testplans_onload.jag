@@ -1,5 +1,27 @@
 <%
-   // print(list);
+
+include("base64_encode.jag");
+var SERVICE_SECURE_ROOT = session.get("service_secure_root");
+
+
+data=request.getParameter("data");
+WSO2_QAP_TEST_SUIT_ID=parse(data);
+
+
+var url= SERVICE_SECURE_ROOT+"WSO2_QAP_TEST_PLAN_TEST_SUIT_MAPPING_DataService/get/testplans_by_testsuitid/"+WSO2_QAP_TEST_SUIT_ID;
+//print(url);
+
+var optionalHeaders = {
+    "Accept": "application/json",
+    "Authorization": "Basic "+base64_encode("admin:admin") };
+
+
+var details = get(url,"",optionalHeaders);
+//print(suit)
+var obj = parse(details.data);
+//print(obj);
+var list = obj.WSO2_QAP_TEST_PLAN_TEST_SUIT_MAPPINGCollection.WSO2_QAP_TEST_PLAN_TEST_SUIT_MAPPING;
+//print(list);
 
    // print('<input type="hidden" name="WSO2_QAP_PRODUCT_VERSION_ID" value="'+WSO2_QAP_PRODUCT_VERSION_ID+'">');
 
@@ -12,6 +34,9 @@
    print('<strong> Test Plan Status <strong/>');
    print('</td>');
    print('<input type="hidden" name="WSO2_QAP_TEST_SUIT_ID" value="'+WSO2_QAP_TEST_SUIT_ID+'">');
+if(list==null){
+
+}else{
 
 
    if(list.length==null && list.WSO2_QAP_PLANNING_STATUS!=null){
@@ -56,6 +81,7 @@
         print('</tr>');
 
         }
+   }
    }
 
 %>   

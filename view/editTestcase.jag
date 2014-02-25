@@ -217,7 +217,7 @@ require("template/product_menu_panel.jag");
                                     type="submit" class="button" value=" Submit "
                                     onclick="submitForm();"> <input type="button"
                                         class="button"
-                                        onclick="location.href='../service-mgt/index.jsp';"
+                                        onclick="location.href='testcase_home.jag';"
                                         value=" Cancel ">
 
                                 </td>

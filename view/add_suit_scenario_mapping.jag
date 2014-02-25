@@ -164,7 +164,7 @@
                                                 <td><a href="#" onclick="selectAllInScenarioTable(true);return false;" style="cursor:pointer">Select all in this page</a>&nbsp;<b>|</b>&nbsp;</td>
                                                 <td><a href="#" onclick="selectAllInScenarioTable(false);return false;" style="cursor:pointer">Select none</a></td>
                                                 <td width="10%">&nbsp;</td>
-                                                <td><a href="#" id="add2" onclick=document.testSuitScenarioMappingForm.submit()>Add Test Scenarios to suit</a> </td>
+                                                <!--<td><a href="#" id="add2" onclick=document.testSuitScenarioMappingForm.submit()>Add Test Scenarios to suit</a> </td>-->
                                              </tr>
                                           </tbody>
                                        </table>
@@ -190,25 +190,7 @@
                                              </tbody>
                                           </table>
                                           <p>&nbsp;</p>
-                                          <table>
-                                            <tbody>
-                                              <tr>
-                                                <td>&nbsp;</td>
-                                                <td>
-                                                  <!--<input type="submit" value="Submit">-->
-                                                </td>
 
-                                                <%
-                                                // var passjsondata='{"verid_proname_planid":{"WSO2_QAP_TEST_PLAN_ID" : "'+WSO2_QAP_TEST_PLAN_ID+'","WSO2_QAP_PRODUCT_NAME" : "'+WSO2_QAP_PRODUCT_NAME+'","WSO2_QAP_PRODUCT_VERSION" : "'+WSO2_QAP_PRODUCT_VERSION+'"}}';
-                                                  var link_redir2 = "location.href = '../view/test_suit_dashboard.jag?data="+encodeURIComponent(stringify(WSO2_QAP_TEST_SUIT_ID))+"'";
-                                                %>
-                                                <td width="10%">&nbsp;</td>
-                                                <td>
-                                                  <!--<input type="button" value="Cancel" onclick="<% print(link_redir2); %>">-->
-                                                </td>
-                                              </tr>
-                                            </tbody>
-                                          </table>
                                           <%
                                             print('<input type="hidden" name="WSO2_QAP_TEST_SUIT_ID" value="'+WSO2_QAP_TEST_SUIT_ID+'">');
                                           %>
@@ -220,22 +202,32 @@
                                                 <td><a href="#" onclick="selectAllInScenarioTable(true);return false;" style="cursor:pointer">Select all in this page</a>&nbsp;<b>|</b>&nbsp;</td>
                                                 <td><a href="#" onclick="selectAllInScenarioTable(false);return false;" style="cursor:pointer">Select none</a></td>
                                                 <td width="10%">&nbsp;</td>
-                                                <td><a href="#" id="add2" onclick=document.testSuitScenarioMappingForm.submit()>Add Test Scenarios to suit</a> </td>
+                                                <!--<td><a href="#" id="add2" onclick=document.testSuitScenarioMappingForm.submit()>Add Test Scenarios to suit</a> </td>-->
                                              </tr>
-                                          </tbody>
-                                       </table>
-                                    </div>
-                                    <p>&nbsp;</p>
-                                    <p>&nbsp;</p>
-                                 </div>
-                              </td>
-                           </tr>
-                        </tbody>
-                     </table>
-                  </td>
-               </tr>
-               <tr>
-               <% 
+
+                                              <%
+// var passjsondata='{"verid_proname_planid":{"WSO2_QAP_TEST_PLAN_ID" : "'+WSO2_QAP_TEST_PLAN_ID+'","WSO2_QAP_PRODUCT_NAME" : "'+WSO2_QAP_PRODUCT_NAME+'","WSO2_QAP_PRODUCT_VERSION" : "'+WSO2_QAP_PRODUCT_VERSION+'"}}';
+var link_redir2 = "location.href = '../view/test_suit_dashboard.jag?data="+encodeURIComponent(stringify(WSO2_QAP_TEST_SUIT_ID))+"'";
+%>
+                                                <td>
+                                                <p>&nbsp;</p>
+                                                  <input type="button" value="Add to Test Suit" onclick="document.testSuitScenarioMappingForm.submit()">
+                                                   <input type="button" value="Cancel" onclick="<% print(link_redir2); %>">
+                                                </td>
+</tbody>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<%
               require("template/footer.jag")
                %>
       </tr>
