@@ -35,7 +35,7 @@ if(name===null){
 
       document.getElementById("WSO2_QAP_TEST_CASE").innerHTML = data;
     }).fail(function() {
-      alert("fail");
+      //alert("fail");
       });
   </script>
     
@@ -125,8 +125,11 @@ if(name===null){
                       </div>
                       <div>
                       <%
-                        print('<input class="button" value="Add Jira" onclick="location.href = \'add_jira.jag?data='+encodeURIComponent(WSO2_QAP_TEST_RESULT_ID)+'&build_id='+encodeURIComponent(WSO2_QAP_BUILD_ID)+'\'" type="button">');
-                      %>
+                      	//print(WSO2_QAP_BUILD_ID);
+                      //print(WSO2_QAP_TEST_RESULT_ID);
+                        print('<input class="button" value="Add Jira" onclick="location.href = \'add_jira.jag?result_id='+encodeURIComponent(WSO2_QAP_TEST_RESULT_ID)+'&build_id='+encodeURIComponent(WSO2_QAP_BUILD_ID)+'\'" type="button">');
+                        //print('<input class="button" value="Add Jir/" onclick="location.href = \'add_jira.jag+'\'" type="button">');
+                        %>
                         
                       </div>
                     </div>

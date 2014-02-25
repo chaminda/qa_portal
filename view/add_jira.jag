@@ -72,7 +72,14 @@
                               <div id="middle">
                               <%
 
-                                 data=request.getParameter("data");
+                                 var data=request.getParameter("data");
+                                 var result_id=request.getParameter("result_id");
+                                 var res_id=parse(result_id);
+                                 //print(res_id);
+                                 var build_id=request.getParameter("build_id");
+                                 var buildid=parse(build_id);
+                                 
+                                 //print(build_id);
                                  if(!(data == null)){
                                     obj=parse(data);
                                     obj2=parse(obj);
@@ -155,9 +162,12 @@
                                           </tbody>
                                        </table>
                                        <%
-                                          if(!(data == null)){
-                                             print('<input type="hidden" name="WSO2_QAP_JIRA_ID" value="'+WSO2_QAP_JIRA_ID+'">');
-                                          }
+                                       	  
+                                          print('<input type="hidden" name="WSO2_QAP_TEST_RESULTS_ID" value="'+res_id+'">');
+                                          //print('<input type="hidden" name="WSO2_QAP_JIRA_ID" value="'+WSO2_QAP_JIRA_ID+'">');
+                                          print('<input type="hidden" name="WSO2_QAP_BUILD_ID" value="'+buildid+'">');
+                                          //print(buildid);
+//                                           }
                                        %>
                                     </form>
                                  </div>
