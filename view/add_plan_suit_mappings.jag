@@ -151,7 +151,7 @@
                                           <tbody>
                                              <tr>
                                                 <td>
-                                                   <input class="fancybutton" type="button" value="Create Test Suit" onclick="<% print(link_redir); %>"></label>
+                                                   <input  type="button" value="Create Test Suit" onclick="<% print(link_redir); %>"></label>
                                                    <p>&nbsp;</p>
                                                 </td>
                                              </tr>
